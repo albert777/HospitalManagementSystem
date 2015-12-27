@@ -1,0 +1,61 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+HospitalManagementSystem
+</name>
+</assembly>
+<members>
+<member name="M:HospitalManagementSystem.DTO.Account.#ctor(System.String,System.String)">
+ <summary>
+     Khởi tạo Account Object
+ </summary>
+ <param name="Username">Tên tài khoản</param>
+ <param name="Password">Mật khẩu</param>
+</member>
+<member name="M:HospitalManagementSystem.GlobalClass.GlobalFunction.DateTimeConverter(System.String,System.String)">
+ <summary>
+ Hàm chuyển đổi chuỗi ngày tháng sang định dạng Datetime
+ </summary>
+ <param name="date">Chuỗi ngày tháng cần chuyển đổi (định dạng MM/dd/yyyy)</param>
+ <param name="dateFormat">Định dạng chuỗi date truyền vào (dmy, mdy,ymd,ydm)</param>
+ <returns>Đối tượng Datetime đã được chuyển đổi (nếu tham số format truyền vào không đúng định dạng hàm sẽ trả về ngày hiện tại)</returns>
+</member>
+<member name="T:HospitalManagementSystem.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:HospitalManagementSystem.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:HospitalManagementSystem.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:HospitalManagementSystem.My.Resources.Resources.banner">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:HospitalManagementSystem.My.Resources.Resources.Button_psd">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:HospitalManagementSystem.My.Resources.Resources.frmChild">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:HospitalManagementSystem.My.Resources.Resources.frmMain">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+</members>
+</doc>
