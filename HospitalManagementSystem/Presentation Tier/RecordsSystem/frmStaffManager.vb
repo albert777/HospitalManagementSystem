@@ -2,7 +2,7 @@
 Imports HospitalManagementSystem.DTO
 Imports HospitalManagementSystem.GlobalClass.GlobalFunction
 
-Public Class frmRecordsSystem
+Public Class frmStaffManager
     Dim _employeeData As New DTO.Employee()
     Dim _employeeBus As New BUS.BusiEmployee()
 
@@ -30,6 +30,7 @@ Public Class frmRecordsSystem
 
     Private Sub frmRecordsSystem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtSearch_Empl_ID.Focus()
+        cboxEmployeeSex.SelectedIndex = 0
 
         cmdDeleteCus.Enabled = False
         cmdUpdateEmpl.Enabled = False
@@ -55,7 +56,7 @@ Public Class frmRecordsSystem
                     txtEmployeeId.Text = .Cells(0).FormattedValue.ToString()
                     txtEmployeePosition.Text = .Cells(1).FormattedValue.ToString()
                     txtEmployeeName.Text = .Cells(2).FormattedValue.ToString()
-                    txtEmployeeSex.Text = .Cells(3).FormattedValue.ToString()
+                    cboxEmployeeSex.SelectedItem = .Cells(3).FormattedValue.ToString()
                     txtEmployeeIdCard.Text = .Cells(4).FormattedValue.ToString()
 
                     'dtpEmployeeDoB.Value = GlobalClass.GlobalFunction.DateTimeConverter(.Cells(5).FormattedValue.ToString(), "mdy")
@@ -91,7 +92,7 @@ Public Class frmRecordsSystem
     Private Sub AddDataToList(ByVal empl As Employee)
         Try
             With dgrEmplResult.Rows(_selectedRow)
-                .Cells(0).Value = empl.Ratio
+                .Cells(0).Value = empl.Id
                 .Cells(1).Value = empl.Position
                 .Cells(2).Value = empl.Name
 
@@ -125,7 +126,7 @@ Public Class frmRecordsSystem
             empl.Position = txtEmployeePosition.Text.Trim()
             empl.Name = txtEmployeeName.Text.Trim()
 
-            If (txtEmployeeSex.Text.Trim().ToUpper() = "NAM") Then
+            If (cboxEmployeeSex.SelectedText = "Nam") Then
                 empl.Sex = True
             Else
                 empl.Sex = False
@@ -136,10 +137,8 @@ Public Class frmRecordsSystem
             empl.Address = txtEmployeeAddress.Text.Trim()
             empl.Phone = txtEmployeePhone.Text.Trim()
             empl.Folk = txtEmployeeFolk.Text.Trim()
-            empl.Specialized = New Specialized
-            empl.Specialized.Department = New Department
-            empl.Specialized.Department.Name = txtEmployeeSpecialized.Text.Trim()
-            empl.Specialized.Name = txtEmployeeDepartment.Text.Trim()
+            empl.Specialized = New Specialized(txtEmployeeDepartment.Text.Trim())
+            empl.Specialized.Department = New Department(txtEmployeeSpecialized.Text.Trim())
 
         Catch ex As Exception
 

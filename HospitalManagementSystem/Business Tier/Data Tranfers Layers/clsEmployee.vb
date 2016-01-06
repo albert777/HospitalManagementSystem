@@ -16,17 +16,7 @@
         Protected _firstYear As Integer         'Năm đầu tiên công tác
         Protected _ratio As Double              'Bậc lương
         Protected _position As String          'Chức danh, vị trí
-        Protected _specialized As Specialized   'Chuyên ngành (Bác sĩ)
-#End Region
 
-#Region "Constructor"
-        Public Sub New()
-            Id = 0
-            FirstYear = 0
-            Ratio = 0
-            Position = String.Empty
-            Specialized = Nothing
-        End Sub
 #End Region
 
 #Region "Property"
@@ -67,14 +57,16 @@
         End Property
 
         Public Property Specialized As Specialized
-            Get
-                Return _specialized
-            End Get
-            Set(value As Specialized)
-                _specialized = value
-            End Set
-        End Property
 
+#End Region
+
+#Region "Constructor"
+        Public Sub New()
+            Id = 0
+            FirstYear = 0
+            Ratio = 0
+            Position = String.Empty
+        End Sub
 #End Region
 
     End Class

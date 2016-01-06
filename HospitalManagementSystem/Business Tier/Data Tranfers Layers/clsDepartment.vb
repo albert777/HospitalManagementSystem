@@ -14,6 +14,12 @@
             Name = String.Empty
             Chief = Nothing
         End Sub
+
+        Public Sub New(Name As String)
+            Id = 0
+            Me.Name = Name
+            Chief = Nothing
+        End Sub
 #End Region
 
 #Region "Property"
@@ -28,7 +34,11 @@
 
         Public Property Name As String
             Get
-                Return _name
+                If Me Is Nothing Then
+                    Return "Không có"
+                Else
+                    Return _name
+                End If
             End Get
             Set(value As String)
                 _name = value

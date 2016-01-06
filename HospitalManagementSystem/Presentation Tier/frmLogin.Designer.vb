@@ -190,8 +190,10 @@ Partial Class frmLogin
         Me.Controls.Add(Me.chkboxShowPassword)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.Name = "frmLogin"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Đăng nhập Hệ thống"
         Me.ResumeLayout(False)
         Me.PerformLayout()

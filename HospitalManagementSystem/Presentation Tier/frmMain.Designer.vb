@@ -110,6 +110,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.lblEmployeeName)
         Me.Controls.Add(Me.lblEmployee)
         Me.Controls.Add(Me.mitemMain)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.IsMdiContainer = True
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

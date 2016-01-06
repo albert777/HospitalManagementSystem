@@ -20,7 +20,7 @@
         ''' <param name="Username">Tên tài khoản</param>
         ''' <param name="Password">Mật khẩu</param>
         Public Sub New(Username As String, Password As String)
-            Employee = New Employee()
+            Employee = Nothing
             Me.Username = Username
             Me.Password = Password
         End Sub
@@ -30,6 +30,8 @@
             Me.Username = Account.Username
             Me.Password = Account.Password
         End Sub
+
+
 #End Region
 
 #Region "Property"

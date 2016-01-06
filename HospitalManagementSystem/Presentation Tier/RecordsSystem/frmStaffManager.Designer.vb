@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmRecordsSystem
+Partial Class frmStaffManager
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class frmRecordsSystem
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmRecordsSystem))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmStaffManager))
         Me.cmdSearch = New System.Windows.Forms.Button()
         Me.txtSearch_Empl_Phone = New System.Windows.Forms.TextBox()
         Me.txtSearch_Empl_IDCard = New System.Windows.Forms.TextBox()
@@ -41,6 +41,17 @@ Partial Class frmRecordsSystem
         Me.label7 = New System.Windows.Forms.Label()
         Me.label1 = New System.Windows.Forms.Label()
         Me.dgrEmplResult = New System.Windows.Forms.DataGridView()
+        Me.colEmplId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colEmplPosition = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colEmplName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colEmplSex = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colEmplIdCard = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colEmplDoB = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colEmplAddress = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colEmplPhone = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colEmplFolk = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EMPLSPEC = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EMPLDEPT = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cmdUpdateEmpl = New System.Windows.Forms.Button()
         Me.cmdClose = New System.Windows.Forms.Button()
         Me.cmdCustomer = New System.Windows.Forms.Button()
@@ -48,7 +59,6 @@ Partial Class frmRecordsSystem
         Me.txtEmployeeIdCard = New System.Windows.Forms.MaskedTextBox()
         Me.groupBox2 = New System.Windows.Forms.GroupBox()
         Me.txtEmployeeSpecialized = New System.Windows.Forms.TextBox()
-        Me.txtEmployeeSex = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.txtEmployeePhone = New System.Windows.Forms.MaskedTextBox()
@@ -69,17 +79,7 @@ Partial Class frmRecordsSystem
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.lblTitle = New System.Windows.Forms.Label()
-        Me.colEmplId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colEmplPosition = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colEmplName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colEmplSex = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colEmplIdCard = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colEmplDoB = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colEmplAddress = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colEmplPhone = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colEmplFolk = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EMPLSPEC = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EMPLDEPT = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cboxEmployeeSex = New System.Windows.Forms.ComboBox()
         CType(Me.dgrEmplResult, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.groupBox2.SuspendLayout()
         Me.groupBox1.SuspendLayout()
@@ -261,6 +261,105 @@ Partial Class frmRecordsSystem
         Me.dgrEmplResult.Size = New System.Drawing.Size(976, 249)
         Me.dgrEmplResult.TabIndex = 31
         '
+        'colEmplId
+        '
+        Me.colEmplId.DataPropertyName = "EMPLID"
+        Me.colEmplId.Frozen = True
+        Me.colEmplId.HeaderText = "Mã nhân viên"
+        Me.colEmplId.Name = "colEmplId"
+        Me.colEmplId.ReadOnly = True
+        Me.colEmplId.Width = 97
+        '
+        'colEmplPosition
+        '
+        Me.colEmplPosition.DataPropertyName = "EMPLPOS"
+        Me.colEmplPosition.Frozen = True
+        Me.colEmplPosition.HeaderText = "Chức danh"
+        Me.colEmplPosition.Name = "colEmplPosition"
+        Me.colEmplPosition.ReadOnly = True
+        Me.colEmplPosition.Width = 84
+        '
+        'colEmplName
+        '
+        Me.colEmplName.DataPropertyName = "EMPLNAME"
+        Me.colEmplName.Frozen = True
+        Me.colEmplName.HeaderText = "Họ tên"
+        Me.colEmplName.Name = "colEmplName"
+        Me.colEmplName.ReadOnly = True
+        Me.colEmplName.Width = 64
+        '
+        'colEmplSex
+        '
+        Me.colEmplSex.DataPropertyName = "EMPLSEX"
+        Me.colEmplSex.Frozen = True
+        Me.colEmplSex.HeaderText = "Giới tính"
+        Me.colEmplSex.Name = "colEmplSex"
+        Me.colEmplSex.ReadOnly = True
+        Me.colEmplSex.Width = 72
+        '
+        'colEmplIdCard
+        '
+        Me.colEmplIdCard.DataPropertyName = "EMPLIDCARD"
+        Me.colEmplIdCard.Frozen = True
+        Me.colEmplIdCard.HeaderText = "Số CMND"
+        Me.colEmplIdCard.Name = "colEmplIdCard"
+        Me.colEmplIdCard.ReadOnly = True
+        Me.colEmplIdCard.Width = 80
+        '
+        'colEmplDoB
+        '
+        Me.colEmplDoB.DataPropertyName = "EMPL_DOB"
+        Me.colEmplDoB.Frozen = True
+        Me.colEmplDoB.HeaderText = "Ngày sinh"
+        Me.colEmplDoB.Name = "colEmplDoB"
+        Me.colEmplDoB.ReadOnly = True
+        Me.colEmplDoB.Width = 79
+        '
+        'colEmplAddress
+        '
+        Me.colEmplAddress.DataPropertyName = "EMPLADD"
+        Me.colEmplAddress.Frozen = True
+        Me.colEmplAddress.HeaderText = "Địa chỉ"
+        Me.colEmplAddress.Name = "colEmplAddress"
+        Me.colEmplAddress.ReadOnly = True
+        Me.colEmplAddress.Width = 65
+        '
+        'colEmplPhone
+        '
+        Me.colEmplPhone.DataPropertyName = "EMPLPHONE"
+        Me.colEmplPhone.Frozen = True
+        Me.colEmplPhone.HeaderText = "Điện thoại"
+        Me.colEmplPhone.Name = "colEmplPhone"
+        Me.colEmplPhone.ReadOnly = True
+        Me.colEmplPhone.Width = 80
+        '
+        'colEmplFolk
+        '
+        Me.colEmplFolk.DataPropertyName = "EMPLFOLK"
+        Me.colEmplFolk.Frozen = True
+        Me.colEmplFolk.HeaderText = "Dân tộc"
+        Me.colEmplFolk.Name = "colEmplFolk"
+        Me.colEmplFolk.ReadOnly = True
+        Me.colEmplFolk.Width = 70
+        '
+        'EMPLSPEC
+        '
+        Me.EMPLSPEC.DataPropertyName = "EMPLSPEC"
+        Me.EMPLSPEC.Frozen = True
+        Me.EMPLSPEC.HeaderText = "Khoa"
+        Me.EMPLSPEC.Name = "EMPLSPEC"
+        Me.EMPLSPEC.ReadOnly = True
+        Me.EMPLSPEC.Width = 57
+        '
+        'EMPLDEPT
+        '
+        Me.EMPLDEPT.DataPropertyName = "EMPLDEPT"
+        Me.EMPLDEPT.Frozen = True
+        Me.EMPLDEPT.HeaderText = "Chuyên ngành"
+        Me.EMPLDEPT.Name = "EMPLDEPT"
+        Me.EMPLDEPT.ReadOnly = True
+        Me.EMPLDEPT.Width = 101
+        '
         'cmdUpdateEmpl
         '
         Me.cmdUpdateEmpl.BackgroundImage = CType(resources.GetObject("cmdUpdateEmpl.BackgroundImage"), System.Drawing.Image)
@@ -316,8 +415,8 @@ Partial Class frmRecordsSystem
         '
         'groupBox2
         '
+        Me.groupBox2.Controls.Add(Me.cboxEmployeeSex)
         Me.groupBox2.Controls.Add(Me.txtEmployeeSpecialized)
-        Me.groupBox2.Controls.Add(Me.txtEmployeeSex)
         Me.groupBox2.Controls.Add(Me.Label3)
         Me.groupBox2.Controls.Add(Me.Label16)
         Me.groupBox2.Controls.Add(Me.txtEmployeePhone)
@@ -353,14 +452,6 @@ Partial Class frmRecordsSystem
         Me.txtEmployeeSpecialized.Name = "txtEmployeeSpecialized"
         Me.txtEmployeeSpecialized.Size = New System.Drawing.Size(132, 22)
         Me.txtEmployeeSpecialized.TabIndex = 21
-        '
-        'txtEmployeeSex
-        '
-        Me.txtEmployeeSex.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmployeeSex.Location = New System.Drawing.Point(452, 25)
-        Me.txtEmployeeSex.Name = "txtEmployeeSex"
-        Me.txtEmployeeSex.Size = New System.Drawing.Size(132, 22)
-        Me.txtEmployeeSex.TabIndex = 66
         '
         'Label3
         '
@@ -556,118 +647,28 @@ Partial Class frmRecordsSystem
         '
         Me.lblTitle.AutoSize = True
         Me.lblTitle.BackColor = System.Drawing.Color.Transparent
-        Me.lblTitle.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitle.Font = New System.Drawing.Font("Arial", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitle.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.lblTitle.Location = New System.Drawing.Point(329, 9)
+        Me.lblTitle.Location = New System.Drawing.Point(329, 12)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(274, 19)
+        Me.lblTitle.Size = New System.Drawing.Size(309, 21)
         Me.lblTitle.TabIndex = 24
         Me.lblTitle.Text = "QUẢN LÝ DANH SÁCH NHÂN VIÊN"
         '
-        'colEmplId
+        'cboxEmployeeSex
         '
-        Me.colEmplId.DataPropertyName = "EMPLID"
-        Me.colEmplId.Frozen = True
-        Me.colEmplId.HeaderText = "Mã nhân viên"
-        Me.colEmplId.Name = "colEmplId"
-        Me.colEmplId.ReadOnly = True
-        Me.colEmplId.Width = 97
-        '
-        'colEmplPosition
-        '
-        Me.colEmplPosition.DataPropertyName = "EMPLPOS"
-        Me.colEmplPosition.Frozen = True
-        Me.colEmplPosition.HeaderText = "Chức danh"
-        Me.colEmplPosition.Name = "colEmplPosition"
-        Me.colEmplPosition.ReadOnly = True
-        Me.colEmplPosition.Width = 84
-        '
-        'colEmplName
-        '
-        Me.colEmplName.DataPropertyName = "EMPLNAME"
-        Me.colEmplName.Frozen = True
-        Me.colEmplName.HeaderText = "Họ tên"
-        Me.colEmplName.Name = "colEmplName"
-        Me.colEmplName.ReadOnly = True
-        Me.colEmplName.Width = 64
-        '
-        'colEmplSex
-        '
-        Me.colEmplSex.DataPropertyName = "EMPLSEX"
-        Me.colEmplSex.Frozen = True
-        Me.colEmplSex.HeaderText = "Giới tính"
-        Me.colEmplSex.Name = "colEmplSex"
-        Me.colEmplSex.ReadOnly = True
-        Me.colEmplSex.Width = 72
-        '
-        'colEmplIdCard
-        '
-        Me.colEmplIdCard.DataPropertyName = "EMPLIDCARD"
-        Me.colEmplIdCard.Frozen = True
-        Me.colEmplIdCard.HeaderText = "Số CMND"
-        Me.colEmplIdCard.Name = "colEmplIdCard"
-        Me.colEmplIdCard.ReadOnly = True
-        Me.colEmplIdCard.Width = 80
-        '
-        'colEmplDoB
-        '
-        Me.colEmplDoB.DataPropertyName = "EMPL_DOB"
-        Me.colEmplDoB.Frozen = True
-        Me.colEmplDoB.HeaderText = "Ngày sinh"
-        Me.colEmplDoB.Name = "colEmplDoB"
-        Me.colEmplDoB.ReadOnly = True
-        Me.colEmplDoB.Width = 79
-        '
-        'colEmplAddress
-        '
-        Me.colEmplAddress.DataPropertyName = "EMPLADD"
-        Me.colEmplAddress.Frozen = True
-        Me.colEmplAddress.HeaderText = "Địa chỉ"
-        Me.colEmplAddress.Name = "colEmplAddress"
-        Me.colEmplAddress.ReadOnly = True
-        Me.colEmplAddress.Width = 65
-        '
-        'colEmplPhone
-        '
-        Me.colEmplPhone.DataPropertyName = "EMPLPHONE"
-        Me.colEmplPhone.Frozen = True
-        Me.colEmplPhone.HeaderText = "Điện thoại"
-        Me.colEmplPhone.Name = "colEmplPhone"
-        Me.colEmplPhone.ReadOnly = True
-        Me.colEmplPhone.Width = 80
-        '
-        'colEmplFolk
-        '
-        Me.colEmplFolk.DataPropertyName = "EMPLFOLK"
-        Me.colEmplFolk.Frozen = True
-        Me.colEmplFolk.HeaderText = "Dân tộc"
-        Me.colEmplFolk.Name = "colEmplFolk"
-        Me.colEmplFolk.ReadOnly = True
-        Me.colEmplFolk.Width = 70
-        '
-        'EMPLSPEC
-        '
-        Me.EMPLSPEC.DataPropertyName = "EMPLSPEC"
-        Me.EMPLSPEC.Frozen = True
-        Me.EMPLSPEC.HeaderText = "Khoa"
-        Me.EMPLSPEC.Name = "EMPLSPEC"
-        Me.EMPLSPEC.ReadOnly = True
-        Me.EMPLSPEC.Width = 57
-        '
-        'EMPLDEPT
-        '
-        Me.EMPLDEPT.DataPropertyName = "EMPLDEPT"
-        Me.EMPLDEPT.Frozen = True
-        Me.EMPLDEPT.HeaderText = "Chuyên ngành"
-        Me.EMPLDEPT.Name = "EMPLDEPT"
-        Me.EMPLDEPT.ReadOnly = True
-        Me.EMPLDEPT.Width = 101
+        Me.cboxEmployeeSex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboxEmployeeSex.FormattingEnabled = True
+        Me.cboxEmployeeSex.Items.AddRange(New Object() {"Nam", "Nữ"})
+        Me.cboxEmployeeSex.Location = New System.Drawing.Point(452, 25)
+        Me.cboxEmployeeSex.Name = "cboxEmployeeSex"
+        Me.cboxEmployeeSex.Size = New System.Drawing.Size(132, 24)
+        Me.cboxEmployeeSex.TabIndex = 66
         '
         'frmRecordsSystem
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.HospitalManagementSystem.My.Resources.Resources.frmMain
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1000, 560)
         Me.Controls.Add(Me.dgrEmplResult)
@@ -727,7 +728,6 @@ Partial Class frmRecordsSystem
     Private WithEvents label11 As Label
     Private WithEvents groupBox1 As GroupBox
     Private WithEvents lblTitle As Label
-    Private WithEvents txtEmployeeSex As TextBox
     Private WithEvents Label3 As Label
     Private WithEvents TextBox4 As TextBox
     Private WithEvents Label15 As Label
@@ -752,4 +752,5 @@ Partial Class frmRecordsSystem
     Friend WithEvents colEmplFolk As DataGridViewTextBoxColumn
     Friend WithEvents EMPLSPEC As DataGridViewTextBoxColumn
     Friend WithEvents EMPLDEPT As DataGridViewTextBoxColumn
+    Friend WithEvents cboxEmployeeSex As ComboBox
 End Class

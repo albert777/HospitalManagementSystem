@@ -16,28 +16,27 @@
         'Protected _firstYear As Integer         'Năm đầu tiên công tác
         'Protected _ratio As Double              'Bậc lương
         'Protected _position As Integer          'Chức danh, vị trí
-        'Protected _specialized As Specialized   'Chuyên ngành
 
-        'Private _specialized As Specialized
+        Private _specialized As Specialized     'Chuyên ngành
 
 #End Region
 
 #Region "Constructor"
         Public Sub New()
             MyBase.New()
-            'Specialized = New Specialized()
+            Specialized = Nothing
         End Sub
 #End Region
 
 #Region "Property"
-        'Public Property Specialized As Specialized
-        '    Get
-        '        Return _specialized
-        '    End Get
-        '    Set(value As Specialized)
-        '        _specialized = value
-        '    End Set
-        'End Property
+        Public Shadows Property Specialized As Specialized
+            Get
+                Return _specialized
+            End Get
+            Set(value As Specialized)
+                _specialized = value
+            End Set
+        End Property
 #End Region
 
     End Class

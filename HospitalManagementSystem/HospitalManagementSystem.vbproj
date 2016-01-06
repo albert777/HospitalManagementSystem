@@ -72,44 +72,44 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business Layers\clsBusiAccount.vb" />
-    <Compile Include="Business Layers\clsBusiEmployee.vb" />
-    <Compile Include="Data Access Layers\clsDataAccount.vb" />
-    <Compile Include="Data Access Layers\clsDataEmployee.vb" />
-    <Compile Include="Data Tranfers Layers\clsAccount.vb" />
-    <Compile Include="Data Access Layers\clsDataBaseAccess.vb" />
-    <Compile Include="Data Tranfers Layers\clsDepartment.vb" />
-    <Compile Include="Data Tranfers Layers\clsDoctor.vb" />
-    <Compile Include="Data Tranfers Layers\clsEmployee.vb" />
-    <Compile Include="Data Tranfers Layers\clsPatient.vb" />
-    <Compile Include="Data Tranfers Layers\clsPatientRelative.vb" />
-    <Compile Include="Data Tranfers Layers\clsPerson.vb" />
-    <Compile Include="Data Tranfers Layers\clsReceptionist.vb" />
-    <Compile Include="Data Tranfers Layers\clsRecordsSystem.vb" />
-    <Compile Include="Data Tranfers Layers\clsSpecialized.vb" />
+    <Compile Include="Business Tier\Business Layers\clsBusiAccount.vb" />
+    <Compile Include="Business Tier\Business Layers\clsBusiEmployee.vb" />
+    <Compile Include="Business Tier\Data Access Layers\clsDataAccount.vb" />
+    <Compile Include="Business Tier\Data Access Layers\clsDataEmployee.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsAccount.vb" />
+    <Compile Include="Business Tier\Data Access Layers\clsDataBaseAccess.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsDepartment.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsDoctor.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsEmployee.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsPatient.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsPatientRelative.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsPerson.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsReceptionist.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsRecordsSystem.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsSpecialized.vb" />
     <Compile Include="Global Class\clsGlobalFunction.vb" />
-    <Compile Include="Presentation Layers\frmAccountDetail.Designer.vb">
+    <Compile Include="Presentation Tier\frmAccountDetail.Designer.vb">
       <DependentUpon>frmAccountDetail.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentation Layers\frmAccountDetail.vb">
+    <Compile Include="Presentation Tier\frmAccountDetail.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation Layers\frmAddEmployee.Designer.vb">
+    <Compile Include="Presentation Tier\frmAddEmployee.Designer.vb">
       <DependentUpon>frmAddEmployee.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentation Layers\frmAddEmployee.vb">
+    <Compile Include="Presentation Tier\frmAddEmployee.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation Layers\frmLogin.Designer.vb">
+    <Compile Include="Presentation Tier\frmLogin.Designer.vb">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentation Layers\frmLogin.vb">
+    <Compile Include="Presentation Tier\frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation Layers\frmMain.vb">
+    <Compile Include="Presentation Tier\frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation Layers\frmMain.Designer.vb">
+    <Compile Include="Presentation Tier\frmMain.Designer.vb">
       <DependentUpon>frmMain.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
@@ -128,24 +128,30 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Presentation Layers\frmRecordsSystem.Designer.vb">
-      <DependentUpon>frmRecordsSystem.vb</DependentUpon>
+    <Compile Include="Presentation Tier\RecordsSystem\frmDepartmentManager.Designer.vb">
+      <DependentUpon>frmDepartmentManager.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentation Layers\frmRecordsSystem.vb">
+    <Compile Include="Presentation Tier\RecordsSystem\frmDepartmentManager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Tier\RecordsSystem\frmStaffManager.Designer.vb">
+      <DependentUpon>frmStaffManager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Tier\RecordsSystem\frmStaffManager.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Presentation Layers\frmAccountDetail.resx">
+    <EmbeddedResource Include="Presentation Tier\frmAccountDetail.resx">
       <DependentUpon>frmAccountDetail.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layers\frmAddEmployee.resx">
+    <EmbeddedResource Include="Presentation Tier\frmAddEmployee.resx">
       <DependentUpon>frmAddEmployee.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layers\frmLogin.resx">
+    <EmbeddedResource Include="Presentation Tier\frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layers\frmMain.resx">
+    <EmbeddedResource Include="Presentation Tier\frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -154,8 +160,11 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layers\frmRecordsSystem.resx">
-      <DependentUpon>frmRecordsSystem.vb</DependentUpon>
+    <EmbeddedResource Include="Presentation Tier\RecordsSystem\frmDepartmentManager.resx">
+      <DependentUpon>frmDepartmentManager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Tier\RecordsSystem\frmStaffManager.resx">
+      <DependentUpon>frmStaffManager.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

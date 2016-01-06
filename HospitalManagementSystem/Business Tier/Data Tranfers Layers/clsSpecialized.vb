@@ -17,6 +17,11 @@
             MyBase.New()
             Department = Nothing
         End Sub
+
+        Public Sub New(Name As String)
+            MyBase.New(Name)
+            Department = Nothing
+        End Sub
 #End Region
 
 #Region "Property"
