@@ -22,7 +22,14 @@ Namespace BUS
         End Sub
 
         Friend Sub DeleteDepartment(name As String)
-            _deptData.DeleteDepartment(name)
+            If MessageBox.Show("Bạn có muốn xóa Khoa: " + name, "Xóa thông tin Khoa", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                If _deptData.DeleteDepartment(name) Then
+                    MessageBox.Show("Xóa thành công!", "Xóa thông tin Khoa", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Else
+                    MessageBox.Show("Xóa thất bại!", "Xóa thông tin Khoa", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End If
+            End If
+
         End Sub
     End Class
 End Namespace

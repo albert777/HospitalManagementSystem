@@ -9,7 +9,10 @@ Namespace DAO
         End Sub
 
         Friend Function GetSpecialitiesDataTable() As DataTable
-            Dim query As String = "SELECT * FROM SPECIALITIES"
+            Dim query As String = "SELECT S.Id, S.Name, COUNT(E.Id) AS COUNT
+                                   FROM SPECIALITIES AS S LEFT OUTER JOIN
+                                        EMPLOYEES AS E ON S.Id = E.SpecId
+                                   GROUP BY S.Id, S.Name"
             Return GetDataTable(query)
         End Function
 
@@ -31,9 +34,9 @@ Namespace DAO
             Return CInt(GetScalar(query))
         End Function
 
-        Friend Sub DeleteSpeciality(specName As String)
+        Friend Function DeleteSpeciality(specName As String) As Boolean
             Dim query As String = String.Format("DELETE FROM SPECIALITIES WHERE Name = N'{0}'", specName)
-            ExecuteNoneQuery(query)
-        End Sub
+            Return ExecuteNoneQuery(query)
+        End Function
     End Class
 End Namespace

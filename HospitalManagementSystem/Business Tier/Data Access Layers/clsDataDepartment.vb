@@ -31,19 +31,21 @@ Namespace DAO
             Else
                 query = String.Format("INSERT INTO DEPARTMENTS (Name, Chief) VALUES (N'{0}', {1})", name, chiefid)
             End If
-        End Sub
 
-        Friend Sub DeleteDepartment(name As String)
-            Dim query As String = String.Format("DELETE FROM DEPARTMENTS WHERE Name = N'{0}'", name)
-            MsgBox(query)
             ExecuteNoneQuery(query)
         End Sub
+
+        Friend Function DeleteDepartment(name As String) As Boolean
+            Dim query As String = String.Format("DELETE FROM DEPARTMENTS WHERE Name = N'{0}'", name)
+
+            Return ExecuteNoneQuery(query)
+        End Function
 
         Friend Sub UpdateDepartment(oldName As String, newName As String, chiefid As Integer)
             Dim query As String = String.Empty
             If chiefid = -1 Then
                 query = String.Format("UPDATE DEPARTMENTS
-                                       SET Name = N'{0}'
+                                       SET Name = N'{0}', Chief = 'NULL'
                                        WHERE Name = N'{1}'",
                                       newName, oldName)
             Else

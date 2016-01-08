@@ -91,9 +91,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business Tier\Business Layers\clsBusiAccount.vb" />
+    <Compile Include="Business Tier\Business Layers\clsBusiBed.vb" />
+    <Compile Include="Business Tier\Business Layers\clsBusiClinic.vb" />
     <Compile Include="Business Tier\Business Layers\clsBusiDepartment.vb" />
     <Compile Include="Business Tier\Business Layers\clsBusiEmployee.vb" />
     <Compile Include="Business Tier\Data Access Layers\clsDataAccount.vb" />
+    <Compile Include="Business Tier\Data Access Layers\clsDataBed.vb" />
+    <Compile Include="Business Tier\Data Access Layers\clsDataClinic.vb" />
     <Compile Include="Business Tier\Data Access Layers\clsDataDepartment.vb" />
     <Compile Include="Business Tier\Data Access Layers\clsDataEmployee.vb" />
     <Compile Include="Business Tier\Data Access Layers\clsDataSpeciality.vb" />

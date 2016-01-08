@@ -3,7 +3,11 @@ Imports HospitalManagementSystem.DTO
 
 Namespace BUS
     Public Class BusiAccount
-        Private _accData As New DataAccount
+        Private _accData As DataAccount
+
+        Public Sub New()
+            _accData = New DataAccount
+        End Sub
 
         Public Class LoginResult
             Private _account As Account
