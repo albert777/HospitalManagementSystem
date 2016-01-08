@@ -1,10 +1,18 @@
-﻿Namespace DTO
+﻿
+Namespace DTO
     Public Class Account
 
 #Region "Attributes"
         Private _employee As Employee        'Mã số tài khoản
         Private _username As String   'Tên tài khoản
         Private _password As String   'Mật khẩu
+        Private _role As AccountRole
+
+        Public Enum AccountRole
+            Doctor
+            RecordsSystem
+            Receptiontist
+        End Enum
 #End Region
 
 #Region "Constructor"
@@ -12,6 +20,7 @@
             Employee = Nothing
             Username = ""
             Password = ""
+            Me.Role = Nothing
         End Sub
 
         ''' <summary>
@@ -23,12 +32,14 @@
             Employee = Nothing
             Me.Username = Username
             Me.Password = Password
+            Me.Role = Nothing
         End Sub
 
         Public Sub New(Account As Account)
-            Me.Employee = Account.Employee
-            Me.Username = Account.Username
-            Me.Password = Account.Password
+            Employee = Account.Employee
+            Username = Account.Username
+            Password = Account.Password
+            Me.Role = Account.Role
         End Sub
 
 
@@ -62,7 +73,17 @@
             End Set
         End Property
 
+        Public Property Role As AccountRole
+            Get
+                Return _role
+            End Get
+            Set(value As AccountRole)
+                _role = value
+            End Set
+        End Property
+
 #End Region
 
     End Class
 End Namespace
+

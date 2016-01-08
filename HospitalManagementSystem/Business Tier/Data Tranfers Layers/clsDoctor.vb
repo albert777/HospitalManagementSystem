@@ -17,7 +17,7 @@
         'Protected _ratio As Double              'Bậc lương
         'Protected _position As Integer          'Chức danh, vị trí
 
-        Private _specialized As Specialized     'Chuyên ngành
+        Private _specialized As Speciality     'Chuyên ngành
 
 #End Region
 
@@ -29,11 +29,11 @@
 #End Region
 
 #Region "Property"
-        Public Shadows Property Specialized As Specialized
+        Public Shadows Property Specialized As Speciality
             Get
                 Return _specialized
             End Get
-            Set(value As Specialized)
+            Set(value As Speciality)
                 _specialized = value
             End Set
         End Property

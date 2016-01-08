@@ -13,9 +13,13 @@
         'Protected _folk As String       'Dân tộc
 
         Protected _id As Integer                'Mã số nhân viên
-        Protected _firstYear As Integer         'Năm đầu tiên công tác
+        Protected _hireDate As Date         'Ngày thuê
         Protected _ratio As Double              'Bậc lương
+        Protected _basicSalary As Integer
+        Protected _subsidy As Integer
         Protected _position As String          'Chức danh, vị trí
+        Protected _department As Department     'Bộ phận, Khoa
+        Protected _speciality As Speciality     'Chuyên môn
 
 #End Region
 
@@ -29,12 +33,12 @@
             End Set
         End Property
 
-        Public Property FirstYear As Integer
+        Public Property HireDate As Date
             Get
-                Return _firstYear
+                Return _hireDate
             End Get
-            Set(value As Integer)
-                _firstYear = value
+            Set(value As Date)
+                _hireDate = value
             End Set
         End Property
 
@@ -47,6 +51,30 @@
             End Set
         End Property
 
+        Public Property BasicSalary As Integer
+            Get
+                Return _basicSalary
+            End Get
+            Set(value As Integer)
+                _basicSalary = value
+            End Set
+        End Property
+
+        Public Property Subsidy As Integer
+            Get
+                Return _subsidy
+            End Get
+            Set(value As Integer)
+                _subsidy = value
+            End Set
+        End Property
+
+        Public ReadOnly Property TotalSalary As Integer
+            Get
+                Return CInt(BasicSalary * Ratio + Subsidy)
+            End Get
+        End Property
+
         Public Property Position As String
             Get
                 Return _position
@@ -56,16 +84,57 @@
             End Set
         End Property
 
-        Public Property Specialized As Specialized
+        Public Property Speciality As Speciality
+            Get
+                Return _speciality
+            End Get
+            Set(value As Speciality)
+                _speciality = value
+            End Set
+        End Property
+
+        Public Property Department As Department
+            Get
+                Return _department
+            End Get
+            Set(value As Department)
+                _department = value
+            End Set
+        End Property
 
 #End Region
 
 #Region "Constructor"
         Public Sub New()
+            MyBase.New()
             Id = 0
-            FirstYear = 0
+            HireDate = Nothing
             Ratio = 0
+            BasicSalary = 0
+            Subsidy = 0
             Position = String.Empty
+            Speciality = Nothing
+            Department = Nothing
+
+        End Sub
+
+        Public Sub New(Employee As Employee)
+            Name = Employee.Name
+            Sex = Employee.Sex
+            DoB = Employee.DoB
+            IdCard = Employee.IdCard
+            Address = Employee.Address
+            Phone = Employee.Phone
+            Folk = Employee.Folk
+
+            Me.Id = Employee.Id
+            Me.HireDate = Employee.HireDate
+            Me.Ratio = Employee.Ratio
+            Me.BasicSalary = Employee.BasicSalary
+            Me.Subsidy = Employee.Subsidy
+            Me.Position = Employee.Position
+            Me.Speciality = Employee.Speciality
+            Me.Department = Employee.Department
         End Sub
 #End Region
 

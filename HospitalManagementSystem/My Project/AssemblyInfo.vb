@@ -8,11 +8,11 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("HospitalManagementSystem")>
-<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyTitle("Hospital Management System")>
+<Assembly: AssemblyDescription("Phần mềm Quản lý khám chữa bệnh ở bệnh viện")>
 <Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("HospitalManagementSystem")>
-<Assembly: AssemblyCopyright("Copyright ©  2015")>
+<Assembly: AssemblyProduct("Hospital Management System")>
+<Assembly: AssemblyCopyright("Copyright © 2015 Limited7247")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>

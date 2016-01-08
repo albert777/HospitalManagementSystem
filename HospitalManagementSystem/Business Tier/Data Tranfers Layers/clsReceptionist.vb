@@ -3,11 +3,11 @@
         Inherits Employee
 
 #Region "Property"
-        Public Shadows Property Specialized As Specialized
+        Public Shadows Property Specialized As Speciality
             Get
                 Return Nothing
             End Get
-            Set(value As Specialized)
+            Set(value As Speciality)
                 'Do nothing
             End Set
         End Property

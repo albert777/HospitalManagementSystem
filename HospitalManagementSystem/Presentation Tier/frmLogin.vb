@@ -34,6 +34,7 @@ Public Class frmLogin
             If (_accBus.CheckAccount(tboxUsername.Text, tboxPassword.Text)) Then
                 Account = New Account(tboxUsername.Text, tboxPassword.Text)
                 Account.Employee = New RecordsSystem
+                Account.Role = Account.AccountRole.RecordsSystem
 
                 _loginResult = DialogResult.OK
                 Me.Close()

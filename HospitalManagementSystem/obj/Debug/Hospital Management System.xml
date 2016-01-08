@@ -1,0 +1,131 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Hospital Management System
+</name>
+</assembly>
+<members>
+<member name="M:HospitalManagementSystem.DTO.Account.#ctor(System.String,System.String)">
+ <summary>
+     Khởi tạo Account Object
+ </summary>
+ <param name="Username">Tên tài khoản</param>
+ <param name="Password">Mật khẩu</param>
+</member>
+<member name="T:HospitalManagementSystem.dsetEmployeeInformation">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:HospitalManagementSystem.dsetEmployeeInformation.dtableEmployeeInformationDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:HospitalManagementSystem.dsetEmployeeInformation.dtableEmployeeInformationRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:HospitalManagementSystem.dsetEmployeeInformation.dtableEmployeeInformationRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:HospitalManagementSystem.dsetEmployeeInformationTableAdapters.dtableEmployeeInformationTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:HospitalManagementSystem.dsetEmployeeInformationTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:HospitalManagementSystem.dsetEmployeeInformationTableAdapters.TableAdapterManager.UpdateUpdatedRows(HospitalManagementSystem.dsetEmployeeInformation,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:HospitalManagementSystem.dsetEmployeeInformationTableAdapters.TableAdapterManager.UpdateInsertedRows(HospitalManagementSystem.dsetEmployeeInformation,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:HospitalManagementSystem.dsetEmployeeInformationTableAdapters.TableAdapterManager.UpdateDeletedRows(HospitalManagementSystem.dsetEmployeeInformation,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:HospitalManagementSystem.dsetEmployeeInformationTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:HospitalManagementSystem.dsetEmployeeInformationTableAdapters.TableAdapterManager.UpdateAll(HospitalManagementSystem.dsetEmployeeInformation)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:HospitalManagementSystem.dsetEmployeeInformationTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:HospitalManagementSystem.dsetEmployeeInformationTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="M:HospitalManagementSystem.GlobalClass.GlobalFunction.DateTimeConverter(System.String,System.String)">
+ <summary>
+ Hàm chuyển đổi chuỗi ngày tháng sang định dạng Datetime
+ </summary>
+ <param name="date">Chuỗi ngày tháng cần chuyển đổi (định dạng MM/dd/yyyy)</param>
+ <param name="dateFormat">Định dạng chuỗi date truyền vào (dmy, mdy,ymd,ydm)</param>
+ <returns>Đối tượng Datetime đã được chuyển đổi (nếu tham số format truyền vào không đúng định dạng hàm sẽ trả về ngày hiện tại)</returns>
+</member>
+<member name="T:HospitalManagementSystem.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:HospitalManagementSystem.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:HospitalManagementSystem.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:HospitalManagementSystem.My.Resources.Resources.banner">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:HospitalManagementSystem.My.Resources.Resources.Button_psd">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:HospitalManagementSystem.My.Resources.Resources.Close_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:HospitalManagementSystem.My.Resources.Resources.frmChild">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:HospitalManagementSystem.My.Resources.Resources.frmMain">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+</members>
+</doc>

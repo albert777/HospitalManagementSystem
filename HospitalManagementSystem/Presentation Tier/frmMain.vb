@@ -8,7 +8,8 @@ Public Class frmMain
     Private _accountData As Account
     Private _accountBus As BusiAccount
 
-    Private frmRecordsSystem As New frmStaffManager
+    Private frmStaffManager As New frmStaffManager
+    Private frmCategoryManager As New frmCategoryManager
 
     Public Sub New()
 
@@ -19,7 +20,7 @@ Public Class frmMain
         _accountData = Nothing
         _accountBus = New BusiAccount
 
-        'CheckSeasion()
+        tsmiRecordsSystems.Visible = False
 
     End Sub
 
@@ -34,9 +35,9 @@ Public Class frmMain
 
             Else
                 _accountData = LoginResult.Account
+                CheckPermission()
 
-                Me.frmRecordsSystem.MdiParent = Me
-                Me.frmRecordsSystem.Show()
+                HideAllMdi()
 
             End If
         Else
@@ -45,16 +46,35 @@ Public Class frmMain
         End If
     End Sub
 
+    Private Sub CheckPermission()
+
+        Select Case _accountData.Role
+            Case Account.AccountRole.RecordsSystem
+                tsmiRecordsSystems.Visible = True
+
+            Case Account.AccountRole.Doctor
+                tsmiRecordsSystems.Visible = False
+
+            Case Account.AccountRole.Receptiontist
+                tsmiRecordsSystems.Visible = False
+
+            Case Else
+                tsmiRecordsSystems.Visible = False
+
+        End Select
+
+    End Sub
+
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             dbAccess.OpenConnection()
-            lblEmployeeName.Text = "Đã kết nối Database!"
+            txtStatus.Text = "Đã kết nối Database!"
 
             CheckSeasion()
 
         Catch ex As Exception
             dbAccess.CloseConnection()
-            lblEmployeeName.Text = "Kết nối Database thất bại!"
+            txtStatus.Text = "Kết nối Database thất bại!"
 
         End Try
 
@@ -80,5 +100,78 @@ Public Class frmMain
     Private Sub mitemAccountInformation_Click(sender As Object, e As EventArgs) Handles mitemAccountInformation.Click
         Dim frmAccountDetail As New frmAccountDetail
         frmAccountDetail.ShowDialog()
+    End Sub
+
+    Private Sub DanhSáchNhânViênToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DanhSáchNhânViênToolStripMenuItem.Click
+        HideAllMdi()
+
+        Try
+            If Me.frmStaffManager Is Nothing Then
+                Me.frmStaffManager = New frmStaffManager
+            End If
+
+            Me.frmStaffManager.MdiParent = Me
+            Me.frmStaffManager.Show()
+
+        Catch ex As Exception
+            txtStatus.Text = "Lỗi: Không thể mở Danh mục nhân viên."
+            'Me.frmStaffManager = New frmStaffManager
+            'Me.frmStaffManager.MdiParent = Me
+            'Me.frmStaffManager.Show()
+        End Try
+
+    End Sub
+
+    Private Sub HideAllMdi()
+        Me.frmStaffManager.Hide()
+        Me.frmCategoryManager.Hide()
+    End Sub
+
+    Private Sub DanhSáchKhoaNgànhPhòngKhámGiườngBệnhToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DanhSáchKhoaNgànhPhòngKhámGiườngBệnhToolStripMenuItem.Click
+        'CloseAllMdi()
+        Try
+            If Me.frmCategoryManager Is Nothing Then
+                Me.frmCategoryManager = New frmCategoryManager
+            End If
+
+            Me.frmCategoryManager.MdiParent = Me
+            Me.frmCategoryManager.Show()
+        Catch ex As Exception
+            txtStatus.Text = "Lỗi: Không thể mở Danh mục Khoa, Ngành, Phòng khám, Giường bệnh."
+            'Me.frmCategoryManager.Show()
+        End Try
+
+    End Sub
+
+    Private Sub ShowNewForm(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub CascadeToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
+        Me.LayoutMdi(MdiLayout.Cascade)
+    End Sub
+
+    Private Sub TileVerticalToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
+        Me.LayoutMdi(MdiLayout.TileVertical)
+    End Sub
+
+    Private Sub TileHorizontalToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
+        Me.LayoutMdi(MdiLayout.TileHorizontal)
+    End Sub
+
+    Private Sub ArrangeIconsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
+        Me.LayoutMdi(MdiLayout.ArrangeIcons)
+    End Sub
+
+    Private Sub CloseAllToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles CloseAllToolStripMenuItem.Click
+        ' Close all child forms of the parent.
+        For Each ChildForm As Form In Me.MdiChildren
+            ChildForm.Hide()
+        Next
+    End Sub
+
+    Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
+        Dim frmAbout As New frmAbout
+        frmAbout.ShowDialog()
     End Sub
 End Class
