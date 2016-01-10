@@ -20,7 +20,7 @@ Namespace DAO
         ' used to reconcile changes made to a 
         Protected SqlComb As SqlCommandBuilder
 
-        Private ConnectionString As String = "Data Source=LTD7247-2570P\SQLSERVER;Initial Catalog=HOSPITAL_MS;Integrated Security=True"
+        Private ConnectionString As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\Database\dbHospital.mdf';Integrated Security=True"
 
         'Purpose: Class constructor.
         Public Sub New()
@@ -45,7 +45,7 @@ Namespace DAO
                     Return False
                 End If
             Catch ex As SqlException
-                MessageBox.Show("Can not connect to database, please choose a database!", "Connect Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Can Not connect To database, please choose a database!", "Connect Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
             Return True
         End Function

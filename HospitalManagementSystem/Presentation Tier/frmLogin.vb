@@ -30,10 +30,8 @@ Public Class frmLogin
         ElseIf (String.IsNullOrWhiteSpace(tboxPassword.Text))
             MessageBox.Show("Bạn chưa nhập Mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
-
-            If (_accBus.CheckAccount(tboxUsername.Text, tboxPassword.Text)) Then
-                Account = New Account(tboxUsername.Text, tboxPassword.Text)
-                Account.Employee = New RecordsSystem
+            If (_accBus.CheckAccount(tboxUsername.Text.Trim, tboxPassword.Text.Trim)) Then
+                Account = _accBus.GetAccount(tboxUsername.Text, tboxPassword.Text)
 
                 _loginResult = DialogResult.OK
                 Me.Close()

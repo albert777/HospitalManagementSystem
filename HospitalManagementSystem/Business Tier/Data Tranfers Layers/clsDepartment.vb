@@ -11,12 +11,18 @@
 #Region "Constructor"
         Public Sub New()
             Id = 0
-            Name = String.Empty
+            Name = ""
             Chief = Nothing
         End Sub
 
         Public Sub New(Name As String)
             Id = 0
+            Me.Name = Name
+            Chief = Nothing
+        End Sub
+
+        Public Sub New(Id As Integer, Name As String)
+            Me.Id = Id
             Me.Name = Name
             Chief = Nothing
         End Sub

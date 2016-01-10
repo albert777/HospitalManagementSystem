@@ -8,11 +8,26 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>HospitalManagementSystem.My.MyApplication</StartupObject>
     <RootNamespace>HospitalManagementSystem</RootNamespace>
-    <AssemblyName>HospitalManagementSystem</AssemblyName>
+    <AssemblyName>Hospital Management System</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -21,7 +36,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>HospitalManagementSystem.xml</DocumentationFile>
+    <DocumentationFile>Hospital Management System.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -31,7 +46,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>HospitalManagementSystem.xml</DocumentationFile>
+    <DocumentationFile>Hospital Management System.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -47,10 +62,13 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -73,21 +91,69 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business Tier\Business Layers\clsBusiAccount.vb" />
+    <Compile Include="Business Tier\Business Layers\clsBusiBed.vb" />
+    <Compile Include="Business Tier\Business Layers\clsBusiClinic.vb" />
+    <Compile Include="Business Tier\Business Layers\clsBusiDepartment.vb" />
     <Compile Include="Business Tier\Business Layers\clsBusiEmployee.vb" />
+    <Compile Include="Business Tier\Business Layers\clsBusPatient.vb" />
+    <Compile Include="Business Tier\Business Layers\clsBusPatientAppointment.vb" />
     <Compile Include="Business Tier\Data Access Layers\clsDataAccount.vb" />
+    <Compile Include="Business Tier\Data Access Layers\clsDataPatientAppointment.vb" />
+    <Compile Include="Business Tier\Data Access Layers\clsDataBed.vb" />
+    <Compile Include="Business Tier\Data Access Layers\clsDataClinic.vb" />
+    <Compile Include="Business Tier\Data Access Layers\clsDataDepartment.vb" />
     <Compile Include="Business Tier\Data Access Layers\clsDataEmployee.vb" />
+    <Compile Include="Business Tier\Data Access Layers\clsDataPatient.vb" />
+    <Compile Include="Business Tier\Data Access Layers\clsDataPatientAppointmentLine.vb" />
+    <Compile Include="Business Tier\Data Access Layers\clsDataSpeciality.vb" />
     <Compile Include="Business Tier\Data Tranfers Layers\clsAccount.vb" />
     <Compile Include="Business Tier\Data Access Layers\clsDataBaseAccess.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsBed.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsClinic.vb" />
     <Compile Include="Business Tier\Data Tranfers Layers\clsDepartment.vb" />
     <Compile Include="Business Tier\Data Tranfers Layers\clsDoctor.vb" />
     <Compile Include="Business Tier\Data Tranfers Layers\clsEmployee.vb" />
     <Compile Include="Business Tier\Data Tranfers Layers\clsPatient.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsPatientAdmission.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsPatientAppointment.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsPatientAppointmentLine.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsPatientPayment.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsPatientPaymentLine.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsPatientRecord.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsPatientRecordLine.vb" />
     <Compile Include="Business Tier\Data Tranfers Layers\clsPatientRelative.vb" />
     <Compile Include="Business Tier\Data Tranfers Layers\clsPerson.vb" />
     <Compile Include="Business Tier\Data Tranfers Layers\clsReceptionist.vb" />
     <Compile Include="Business Tier\Data Tranfers Layers\clsRecordsSystem.vb" />
-    <Compile Include="Business Tier\Data Tranfers Layers\clsSpecialized.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsSpeciality.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsPatientDischarge.vb" />
+    <Compile Include="Dialog1.Designer.vb">
+      <DependentUpon>Dialog1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dsetEmployeeInformation.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsetEmployeeInformation.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsetEmployeeInformation.vb">
+      <DependentUpon>dsetEmployeeInformation.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Global Class\clsGlobalFunction.vb" />
+    <Compile Include="MDIParent1.Designer.vb">
+      <DependentUpon>MDIParent1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDIParent1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Tier\frmAbout.Designer.vb">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Tier\frmAbout.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentation Tier\frmAccountDetail.Designer.vb">
       <DependentUpon>frmAccountDetail.vb</DependentUpon>
     </Compile>
@@ -128,10 +194,29 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Presentation Tier\RecordsSystem\frmDepartmentManager.Designer.vb">
-      <DependentUpon>frmDepartmentManager.vb</DependentUpon>
+    <Compile Include="Business Tier\Business Layers\clsBusiSpeciality.vb" />
+    <Compile Include="Presentation Tier\Receptiontist\frmAppointment.Designer.vb">
+      <DependentUpon>frmAppointment.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentation Tier\RecordsSystem\frmDepartmentManager.vb">
+    <Compile Include="Presentation Tier\Receptiontist\frmAppointment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Tier\Receptiontist\frmAppointmentManager.Designer.vb">
+      <DependentUpon>frmAppointmentManager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Tier\Receptiontist\frmAppointmentManager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Tier\Receptiontist\frmPatientManager.Designer.vb">
+      <DependentUpon>frmPatientManager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Tier\Receptiontist\frmPatientManager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Tier\RecordsSystem\frmCategoryManager.Designer.vb">
+      <DependentUpon>frmCategoryManager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Tier\RecordsSystem\frmCategoryManager.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentation Tier\RecordsSystem\frmStaffManager.Designer.vb">
@@ -142,6 +227,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Dialog1.resx">
+      <DependentUpon>Dialog1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent1.resx">
+      <DependentUpon>MDIParent1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Tier\frmAbout.resx">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Tier\frmAccountDetail.resx">
       <DependentUpon>frmAccountDetail.vb</DependentUpon>
     </EmbeddedResource>
@@ -160,18 +254,40 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Tier\RecordsSystem\frmDepartmentManager.resx">
-      <DependentUpon>frmDepartmentManager.vb</DependentUpon>
+    <EmbeddedResource Include="Presentation Tier\Receptiontist\frmAppointment.resx">
+      <DependentUpon>frmAppointment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Tier\Receptiontist\frmAppointmentManager.resx">
+      <DependentUpon>frmAppointmentManager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Tier\Receptiontist\frmPatientManager.resx">
+      <DependentUpon>frmPatientManager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Tier\RecordsSystem\frmCategoryManager.resx">
+      <DependentUpon>frmCategoryManager.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Tier\RecordsSystem\frmStaffManager.resx">
       <DependentUpon>frmStaffManager.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report Templates\rptEmployeeInformation.rdlc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="dsetEmployeeInformation.xsc">
+      <DependentUpon>dsetEmployeeInformation.xsd</DependentUpon>
+    </None>
+    <None Include="dsetEmployeeInformation.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsetEmployeeInformation.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="dsetEmployeeInformation.xss">
+      <DependentUpon>dsetEmployeeInformation.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Include="My Project\DataSources\HospitalManagementSystem.DTO.Employee.datasource" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
@@ -179,12 +295,37 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resoucres\Buttons\Close-icon.png" />
     <None Include="Resoucres\Buttons\Button.psd.gif" />
     <None Include="Resoucres\Backgrounds\frmChild.gif" />
     <None Include="Resoucres\Backgrounds\frmMain.gif" />
+    <Content Include="Database\dbHospital.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\dbHospital_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>dbHospital.mdf</DependentUpon>
+    </Content>
     <Content Include="Resoucres\Banners\banner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Presentation Tier\Doctor\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
