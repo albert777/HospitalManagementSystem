@@ -127,12 +127,6 @@
     <Compile Include="Business Tier\Data Tranfers Layers\clsRecordsSystem.vb" />
     <Compile Include="Business Tier\Data Tranfers Layers\clsSpeciality.vb" />
     <Compile Include="Business Tier\Data Tranfers Layers\clsPatientDischarge.vb" />
-    <Compile Include="Dialog1.Designer.vb">
-      <DependentUpon>Dialog1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Dialog1.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="dsetEmployeeInformation.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -142,12 +136,6 @@
       <DependentUpon>dsetEmployeeInformation.xsd</DependentUpon>
     </Compile>
     <Compile Include="Global Class\clsGlobalFunction.vb" />
-    <Compile Include="MDIParent1.Designer.vb">
-      <DependentUpon>MDIParent1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="MDIParent1.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Presentation Tier\frmAbout.Designer.vb">
       <DependentUpon>frmAbout.vb</DependentUpon>
     </Compile>
@@ -225,14 +213,20 @@
     <Compile Include="Presentation Tier\RecordsSystem\frmStaffManager.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Testing\Dialog1.Designer.vb">
+      <DependentUpon>Dialog1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Testing\Dialog1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testing\MDIParent1.Designer.vb">
+      <DependentUpon>MDIParent1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Testing\MDIParent1.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Dialog1.resx">
-      <DependentUpon>Dialog1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MDIParent1.resx">
-      <DependentUpon>MDIParent1.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Tier\frmAbout.resx">
       <DependentUpon>frmAbout.vb</DependentUpon>
     </EmbeddedResource>
@@ -270,6 +264,12 @@
       <DependentUpon>frmStaffManager.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report Templates\rptEmployeeInformation.rdlc" />
+    <EmbeddedResource Include="Testing\Dialog1.resx">
+      <DependentUpon>Dialog1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testing\MDIParent1.resx">
+      <DependentUpon>MDIParent1.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="dsetEmployeeInformation.xsc">
@@ -308,6 +308,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Testing\test.sql" />
     <None Include="Resoucres\Buttons\Close-icon.png" />
     <None Include="Resoucres\Buttons\Button.psd.gif" />
     <None Include="Resoucres\Backgrounds\frmChild.gif" />

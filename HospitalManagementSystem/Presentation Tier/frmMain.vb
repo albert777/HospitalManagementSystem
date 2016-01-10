@@ -204,6 +204,4 @@ Public Class frmMain
         Dim frmAbout As New frmAbout
         frmAbout.ShowDialog()
     End Sub
-
-
 End Class
