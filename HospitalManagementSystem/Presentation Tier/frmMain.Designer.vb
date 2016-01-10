@@ -39,6 +39,8 @@ Partial Class frmMain
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.txtStatus = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.tsmiReceptiontist = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DanhMụcBệnhNhânToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mitemMain.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -105,7 +107,7 @@ Partial Class frmMain
         'mitemMain
         '
         Me.mitemMain.BackColor = System.Drawing.SystemColors.Control
-        Me.mitemMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mitemMenu, Me.tsmiRecordsSystems, Me.WindowsMenu, Me.HelpMenu})
+        Me.mitemMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mitemMenu, Me.tsmiRecordsSystems, Me.tsmiReceptiontist, Me.WindowsMenu, Me.HelpMenu})
         Me.mitemMain.Location = New System.Drawing.Point(0, 0)
         Me.mitemMain.Name = "mitemMain"
         Me.mitemMain.Size = New System.Drawing.Size(1084, 24)
@@ -172,6 +174,19 @@ Partial Class frmMain
         Me.txtStatus.Size = New System.Drawing.Size(39, 17)
         Me.txtStatus.Text = "Status"
         '
+        'tsmiReceptiontist
+        '
+        Me.tsmiReceptiontist.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DanhMụcBệnhNhânToolStripMenuItem})
+        Me.tsmiReceptiontist.Name = "tsmiReceptiontist"
+        Me.tsmiReceptiontist.Size = New System.Drawing.Size(109, 20)
+        Me.tsmiReceptiontist.Text = "Khám chữa bệnh"
+        '
+        'DanhMụcBệnhNhânToolStripMenuItem
+        '
+        Me.DanhMụcBệnhNhânToolStripMenuItem.Name = "DanhMụcBệnhNhânToolStripMenuItem"
+        Me.DanhMụcBệnhNhânToolStripMenuItem.Size = New System.Drawing.Size(189, 22)
+        Me.DanhMụcBệnhNhânToolStripMenuItem.Text = "Danh mục bệnh nhân"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -212,4 +227,6 @@ Partial Class frmMain
     Friend WithEvents CloseAllToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpMenu As ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents tsmiReceptiontist As ToolStripMenuItem
+    Friend WithEvents DanhMụcBệnhNhânToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -33,3 +33,6 @@ C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\
 C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
 C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.frmPatientManager.resources
+C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.frmAppointment.resources
+C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.frmAppointmentManager.resources

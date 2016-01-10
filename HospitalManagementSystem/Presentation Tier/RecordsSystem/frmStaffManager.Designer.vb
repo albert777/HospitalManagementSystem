@@ -80,7 +80,6 @@ Partial Class frmStaffManager
         Me.lblDept = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.groupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label32 = New System.Windows.Forms.Label()
         Me.txtSearch_Empl_Phone = New System.Windows.Forms.MaskedTextBox()
         Me.txtSearch_Empl_IDCard = New System.Windows.Forms.MaskedTextBox()
         Me.Label33 = New System.Windows.Forms.Label()
@@ -100,6 +99,8 @@ Partial Class frmStaffManager
         Me.btnAddEmpl = New System.Windows.Forms.Button()
         Me.btnDeleteEmpl = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.chkbSpec = New System.Windows.Forms.CheckBox()
+        Me.chkbDept = New System.Windows.Forms.CheckBox()
         Me.txtEmployeeTotalSalary = New System.Windows.Forms.TextBox()
         Me.txtEmployeeSubsidy = New System.Windows.Forms.TextBox()
         Me.txtEmployeeBasicSalary = New System.Windows.Forms.TextBox()
@@ -108,8 +109,6 @@ Partial Class frmStaffManager
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
-        Me.chkbDept = New System.Windows.Forms.CheckBox()
-        Me.chkbSpec = New System.Windows.Forms.CheckBox()
         CType(Me.dgrEmplResult, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.groupBox2.SuspendLayout()
         Me.groupBox1.SuspendLayout()
@@ -119,6 +118,7 @@ Partial Class frmStaffManager
         'label2
         '
         Me.label2.AutoSize = True
+        Me.label2.Enabled = False
         Me.label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.label2.Location = New System.Drawing.Point(245, 28)
         Me.label2.Name = "label2"
@@ -186,6 +186,7 @@ Partial Class frmStaffManager
         '
         'txtSearch_Empl_Name
         '
+        Me.txtSearch_Empl_Name.Enabled = False
         Me.txtSearch_Empl_Name.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSearch_Empl_Name.Location = New System.Drawing.Point(319, 24)
         Me.txtSearch_Empl_Name.Name = "txtSearch_Empl_Name"
@@ -695,7 +696,6 @@ Partial Class frmStaffManager
         '
         'groupBox1
         '
-        Me.groupBox1.Controls.Add(Me.Label32)
         Me.groupBox1.Controls.Add(Me.txtSearch_Empl_Phone)
         Me.groupBox1.Controls.Add(Me.txtSearch_Empl_IDCard)
         Me.groupBox1.Controls.Add(Me.Label33)
@@ -718,19 +718,9 @@ Partial Class frmStaffManager
         Me.groupBox1.TabStop = False
         Me.groupBox1.Text = "Tiêu chí tìm kiếm"
         '
-        'Label32
-        '
-        Me.Label32.AutoSize = True
-        Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.ForeColor = System.Drawing.Color.Red
-        Me.Label32.Location = New System.Drawing.Point(61, 54)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(14, 17)
-        Me.Label32.TabIndex = 38
-        Me.Label32.Text = "*"
-        '
         'txtSearch_Empl_Phone
         '
+        Me.txtSearch_Empl_Phone.Enabled = False
         Me.txtSearch_Empl_Phone.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSearch_Empl_Phone.Location = New System.Drawing.Point(319, 50)
         Me.txtSearch_Empl_Phone.Mask = "00000000000"
@@ -740,6 +730,7 @@ Partial Class frmStaffManager
         '
         'txtSearch_Empl_IDCard
         '
+        Me.txtSearch_Empl_IDCard.Enabled = False
         Me.txtSearch_Empl_IDCard.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSearch_Empl_IDCard.Location = New System.Drawing.Point(110, 51)
         Me.txtSearch_Empl_IDCard.Mask = "000000000"
@@ -750,6 +741,7 @@ Partial Class frmStaffManager
         'Label33
         '
         Me.Label33.AutoSize = True
+        Me.Label33.Enabled = False
         Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label33.Location = New System.Drawing.Point(17, 54)
         Me.Label33.Name = "Label33"
@@ -760,6 +752,7 @@ Partial Class frmStaffManager
         'Label5
         '
         Me.Label5.AutoSize = True
+        Me.Label5.Enabled = False
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(245, 54)
         Me.Label5.Name = "Label5"
@@ -771,6 +764,7 @@ Partial Class frmStaffManager
         '
         Me.cboxSearchSpecialities.DisplayMember = "Name"
         Me.cboxSearchSpecialities.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboxSearchSpecialities.Enabled = False
         Me.cboxSearchSpecialities.FormattingEnabled = True
         Me.cboxSearchSpecialities.Location = New System.Drawing.Point(520, 78)
         Me.cboxSearchSpecialities.Name = "cboxSearchSpecialities"
@@ -782,6 +776,7 @@ Partial Class frmStaffManager
         '
         Me.cboxSearchDepartments.DisplayMember = "Name"
         Me.cboxSearchDepartments.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboxSearchDepartments.Enabled = False
         Me.cboxSearchDepartments.FormattingEnabled = True
         Me.cboxSearchDepartments.Location = New System.Drawing.Point(110, 78)
         Me.cboxSearchDepartments.Name = "cboxSearchDepartments"
@@ -792,6 +787,7 @@ Partial Class frmStaffManager
         'Label13
         '
         Me.Label13.AutoSize = True
+        Me.Label13.Enabled = False
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.Location = New System.Drawing.Point(432, 81)
         Me.Label13.Name = "Label13"
@@ -802,6 +798,7 @@ Partial Class frmStaffManager
         'Label15
         '
         Me.Label15.AutoSize = True
+        Me.Label15.Enabled = False
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.Location = New System.Drawing.Point(17, 81)
         Me.Label15.Name = "Label15"
@@ -811,6 +808,7 @@ Partial Class frmStaffManager
         '
         'TextBox3
         '
+        Me.TextBox3.Enabled = False
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox3.Location = New System.Drawing.Point(520, 50)
         Me.TextBox3.Name = "TextBox3"
@@ -820,6 +818,7 @@ Partial Class frmStaffManager
         'Label14
         '
         Me.Label14.AutoSize = True
+        Me.Label14.Enabled = False
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.Location = New System.Drawing.Point(432, 53)
         Me.Label14.Name = "Label14"
@@ -952,6 +951,24 @@ Partial Class frmStaffManager
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Thông tin công việc"
         '
+        'chkbSpec
+        '
+        Me.chkbSpec.AutoSize = True
+        Me.chkbSpec.Location = New System.Drawing.Point(14, 58)
+        Me.chkbSpec.Name = "chkbSpec"
+        Me.chkbSpec.Size = New System.Drawing.Size(15, 14)
+        Me.chkbSpec.TabIndex = 45
+        Me.chkbSpec.UseVisualStyleBackColor = True
+        '
+        'chkbDept
+        '
+        Me.chkbDept.AutoSize = True
+        Me.chkbDept.Location = New System.Drawing.Point(435, 58)
+        Me.chkbDept.Name = "chkbDept"
+        Me.chkbDept.Size = New System.Drawing.Size(15, 14)
+        Me.chkbDept.TabIndex = 44
+        Me.chkbDept.UseVisualStyleBackColor = True
+        '
         'txtEmployeeTotalSalary
         '
         Me.txtEmployeeTotalSalary.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
@@ -966,7 +983,7 @@ Partial Class frmStaffManager
         Me.txtEmployeeSubsidy.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEmployeeSubsidy.Location = New System.Drawing.Point(520, 83)
         Me.txtEmployeeSubsidy.Name = "txtEmployeeSubsidy"
-        Me.txtEmployeeSubsidy.Size = New System.Drawing.Size(103, 22)
+        Me.txtEmployeeSubsidy.Size = New System.Drawing.Size(96, 22)
         Me.txtEmployeeSubsidy.TabIndex = 42
         '
         'txtEmployeeBasicSalary
@@ -1030,24 +1047,6 @@ Partial Class frmStaffManager
         Me.Label29.Size = New System.Drawing.Size(14, 17)
         Me.Label29.TabIndex = 33
         Me.Label29.Text = "*"
-        '
-        'chkbDept
-        '
-        Me.chkbDept.AutoSize = True
-        Me.chkbDept.Location = New System.Drawing.Point(435, 58)
-        Me.chkbDept.Name = "chkbDept"
-        Me.chkbDept.Size = New System.Drawing.Size(15, 14)
-        Me.chkbDept.TabIndex = 44
-        Me.chkbDept.UseVisualStyleBackColor = True
-        '
-        'chkbSpec
-        '
-        Me.chkbSpec.AutoSize = True
-        Me.chkbSpec.Location = New System.Drawing.Point(14, 58)
-        Me.chkbSpec.Name = "chkbSpec"
-        Me.chkbSpec.Size = New System.Drawing.Size(15, 14)
-        Me.chkbSpec.TabIndex = 45
-        Me.chkbSpec.UseVisualStyleBackColor = True
         '
         'frmStaffManager
         '
@@ -1146,7 +1145,6 @@ Partial Class frmStaffManager
     Friend WithEvents Label19 As Label
     Friend WithEvents Label25 As Label
     Private WithEvents Label30 As Label
-    Friend WithEvents Label32 As Label
     Private WithEvents txtSearch_Empl_Phone As MaskedTextBox
     Private WithEvents txtSearch_Empl_IDCard As MaskedTextBox
     Private WithEvents Label33 As Label

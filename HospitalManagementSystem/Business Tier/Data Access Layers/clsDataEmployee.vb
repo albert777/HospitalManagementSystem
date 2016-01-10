@@ -2,6 +2,7 @@
 
 Namespace DAO
     Public Class DataEmployee
+        'Private _dbAccess As DataBaseAccess
         Inherits DataBaseAccess
 
 #Region "Constructor"
@@ -17,6 +18,27 @@ Namespace DAO
                                        FROM EMPLOYEES AS E LEFT OUTER JOIN
                                        SPECIALITIES AS S ON E.SpecId = S.Id LEFT OUTER JOIN
                                        DEPARTMENTS AS D ON E.DeptId = D.Id"
+
+                Return GetDataTable(query)
+
+            Catch ex As Exception
+                My.Forms.frmMain.txtStatus.Text = "Không thể lấy dữ liệu nhân viên"
+                Return Nothing
+            End Try
+
+        End Function
+
+        Friend Function GetEmployeesDataTable(id As Integer) As DataTable
+            Try
+
+                Dim query As String =
+                    String.Format("SELECT E.Id, E.Name, E.Sex, E.DoB, E.IdCard, E.Address, E.Phone, E.Folk, 
+                                   E.HireDate, E.BasicSalary, E.Subsidy, E.Ratio, 
+                                   E.Position, E.DeptId, D.Name AS DeptName, S.Name AS SpecName, E.SpecId
+                                   FROM EMPLOYEES AS E LEFT OUTER JOIN
+                                   SPECIALITIES AS S ON E.SpecId = S.Id LEFT OUTER JOIN
+                                   DEPARTMENTS AS D ON E.DeptId = D.Id
+                                   WHERE E.Id = {0}", id)
 
                 Return GetDataTable(query)
 

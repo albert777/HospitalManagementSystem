@@ -24,6 +24,12 @@ Partial Class frmCategoryManager
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCategoryManager))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.chkbDeptChief = New System.Windows.Forms.CheckBox()
@@ -43,8 +49,6 @@ Partial Class frmCategoryManager
         Me.btnDept_Delete = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.dgvSpecialities = New System.Windows.Forms.DataGridView()
-        Me.colSpecName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnSpec_Reset = New System.Windows.Forms.Button()
         Me.btnSpec_Edit = New System.Windows.Forms.Button()
         Me.btnSpec_Add = New System.Windows.Forms.Button()
@@ -62,11 +66,16 @@ Partial Class frmCategoryManager
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnClinic_Delete = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.cboxBed_DepartmentsName = New System.Windows.Forms.ComboBox()
         Me.btnBed_Reset = New System.Windows.Forms.Button()
         Me.btnBed_Edit = New System.Windows.Forms.Button()
         Me.btnBed_Add = New System.Windows.Forms.Button()
         Me.btnBed_Delete = New System.Windows.Forms.Button()
         Me.dgvBeds = New System.Windows.Forms.DataGridView()
+        Me.colBedId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colBedDeptId = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colBedRoom = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colBedDeptName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tboxBedId = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.tboxBedRoom = New System.Windows.Forms.TextBox()
@@ -74,11 +83,8 @@ Partial Class frmCategoryManager
         Me.Label5 = New System.Windows.Forms.Label()
         Me.cmdClose = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.cboxBed_DepartmentsName = New System.Windows.Forms.ComboBox()
-        Me.colBedId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colBedDeptId = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colBedRoom = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colBedDeptName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colSpecName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvDepartment, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -141,7 +147,7 @@ Partial Class frmCategoryManager
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(276, 56)
+        Me.Button1.Location = New System.Drawing.Point(269, 56)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(66, 23)
         Me.Button1.TabIndex = 51
@@ -156,7 +162,7 @@ Partial Class frmCategoryManager
         Me.cboxDepartment_ChiefName.Items.AddRange(New Object() {"Không lựa chọn"})
         Me.cboxDepartment_ChiefName.Location = New System.Drawing.Point(113, 56)
         Me.cboxDepartment_ChiefName.Name = "cboxDepartment_ChiefName"
-        Me.cboxDepartment_ChiefName.Size = New System.Drawing.Size(157, 23)
+        Me.cboxDepartment_ChiefName.Size = New System.Drawing.Size(150, 23)
         Me.cboxDepartment_ChiefName.TabIndex = 50
         Me.cboxDepartment_ChiefName.ValueMember = "Id"
         '
@@ -183,13 +189,21 @@ Partial Class frmCategoryManager
         Me.dgvDepartment.BackgroundColor = System.Drawing.SystemColors.Window
         Me.dgvDepartment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvDepartment.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colDeptName, Me.colDeptChiefId, Me.colDeptChiefName, Me.colDeptEmplCount})
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvDepartment.DefaultCellStyle = DataGridViewCellStyle1
         Me.dgvDepartment.Location = New System.Drawing.Point(9, 114)
         Me.dgvDepartment.MultiSelect = False
         Me.dgvDepartment.Name = "dgvDepartment"
         Me.dgvDepartment.ReadOnly = True
         Me.dgvDepartment.RowHeadersVisible = False
         Me.dgvDepartment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.dgvDepartment.Size = New System.Drawing.Size(333, 155)
+        Me.dgvDepartment.Size = New System.Drawing.Size(326, 155)
         Me.dgvDepartment.TabIndex = 48
         '
         'colDeptName
@@ -231,7 +245,7 @@ Partial Class frmCategoryManager
         Me.btnDept_Reset.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnDept_Reset.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDept_Reset.ForeColor = System.Drawing.Color.Black
-        Me.btnDept_Reset.Location = New System.Drawing.Point(276, 85)
+        Me.btnDept_Reset.Location = New System.Drawing.Point(269, 85)
         Me.btnDept_Reset.Name = "btnDept_Reset"
         Me.btnDept_Reset.Size = New System.Drawing.Size(66, 23)
         Me.btnDept_Reset.TabIndex = 35
@@ -245,7 +259,7 @@ Partial Class frmCategoryManager
         Me.btnDept_Edit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnDept_Edit.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDept_Edit.ForeColor = System.Drawing.Color.Black
-        Me.btnDept_Edit.Location = New System.Drawing.Point(203, 85)
+        Me.btnDept_Edit.Location = New System.Drawing.Point(196, 85)
         Me.btnDept_Edit.Name = "btnDept_Edit"
         Me.btnDept_Edit.Size = New System.Drawing.Size(67, 23)
         Me.btnDept_Edit.TabIndex = 33
@@ -257,7 +271,7 @@ Partial Class frmCategoryManager
         Me.tboxDepartment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tboxDepartment.Location = New System.Drawing.Point(113, 29)
         Me.tboxDepartment.Name = "tboxDepartment"
-        Me.tboxDepartment.Size = New System.Drawing.Size(229, 21)
+        Me.tboxDepartment.Size = New System.Drawing.Size(222, 21)
         Me.tboxDepartment.TabIndex = 1
         '
         'Label1
@@ -277,7 +291,7 @@ Partial Class frmCategoryManager
         Me.btnDept_Add.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnDept_Add.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDept_Add.ForeColor = System.Drawing.Color.Black
-        Me.btnDept_Add.Location = New System.Drawing.Point(57, 85)
+        Me.btnDept_Add.Location = New System.Drawing.Point(50, 85)
         Me.btnDept_Add.Name = "btnDept_Add"
         Me.btnDept_Add.Size = New System.Drawing.Size(67, 23)
         Me.btnDept_Add.TabIndex = 31
@@ -291,7 +305,7 @@ Partial Class frmCategoryManager
         Me.btnDept_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnDept_Delete.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDept_Delete.ForeColor = System.Drawing.Color.Black
-        Me.btnDept_Delete.Location = New System.Drawing.Point(130, 85)
+        Me.btnDept_Delete.Location = New System.Drawing.Point(123, 85)
         Me.btnDept_Delete.Name = "btnDept_Delete"
         Me.btnDept_Delete.Size = New System.Drawing.Size(67, 23)
         Me.btnDept_Delete.TabIndex = 32
@@ -328,6 +342,14 @@ Partial Class frmCategoryManager
         Me.dgvSpecialities.BackgroundColor = System.Drawing.SystemColors.Window
         Me.dgvSpecialities.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvSpecialities.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colSpecName, Me.DataGridViewTextBoxColumn4})
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvSpecialities.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvSpecialities.Location = New System.Drawing.Point(12, 85)
         Me.dgvSpecialities.MultiSelect = False
         Me.dgvSpecialities.Name = "dgvSpecialities"
@@ -336,23 +358,6 @@ Partial Class frmCategoryManager
         Me.dgvSpecialities.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.dgvSpecialities.Size = New System.Drawing.Size(285, 184)
         Me.dgvSpecialities.TabIndex = 53
-        '
-        'colSpecName
-        '
-        Me.colSpecName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.colSpecName.DataPropertyName = "Name"
-        Me.colSpecName.HeaderText = "Tên Chuyên môn"
-        Me.colSpecName.Name = "colSpecName"
-        Me.colSpecName.ReadOnly = True
-        Me.colSpecName.Width = 140
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "COUNT"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Số N.viên"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        Me.DataGridViewTextBoxColumn4.Width = 84
         '
         'btnSpec_Reset
         '
@@ -466,12 +471,36 @@ Partial Class frmCategoryManager
         Me.dgvClinics.AllowUserToResizeColumns = False
         Me.dgvClinics.AllowUserToResizeRows = False
         Me.dgvClinics.BackgroundColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvClinics.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvClinics.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvClinics.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colClinicId, Me.colClinicName})
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvClinics.DefaultCellStyle = DataGridViewCellStyle4
         Me.dgvClinics.Location = New System.Drawing.Point(10, 85)
         Me.dgvClinics.MultiSelect = False
         Me.dgvClinics.Name = "dgvClinics"
         Me.dgvClinics.ReadOnly = True
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvClinics.RowHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.dgvClinics.RowHeadersVisible = False
         Me.dgvClinics.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.dgvClinics.Size = New System.Drawing.Size(285, 184)
@@ -575,6 +604,18 @@ Partial Class frmCategoryManager
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "DANH MỤC GIƯỜNG BỆNH"
         '
+        'cboxBed_DepartmentsName
+        '
+        Me.cboxBed_DepartmentsName.DisplayMember = "Name"
+        Me.cboxBed_DepartmentsName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboxBed_DepartmentsName.FormattingEnabled = True
+        Me.cboxBed_DepartmentsName.Items.AddRange(New Object() {"Không lựa chọn"})
+        Me.cboxBed_DepartmentsName.Location = New System.Drawing.Point(111, 84)
+        Me.cboxBed_DepartmentsName.Name = "cboxBed_DepartmentsName"
+        Me.cboxBed_DepartmentsName.Size = New System.Drawing.Size(186, 23)
+        Me.cboxBed_DepartmentsName.TabIndex = 51
+        Me.cboxBed_DepartmentsName.ValueMember = "Id"
+        '
         'btnBed_Reset
         '
         Me.btnBed_Reset.BackgroundImage = CType(resources.GetObject("btnBed_Reset.BackgroundImage"), System.Drawing.Image)
@@ -639,6 +680,14 @@ Partial Class frmCategoryManager
         Me.dgvBeds.BackgroundColor = System.Drawing.SystemColors.Window
         Me.dgvBeds.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvBeds.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colBedId, Me.colBedDeptId, Me.colBedRoom, Me.colBedDeptName})
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvBeds.DefaultCellStyle = DataGridViewCellStyle6
         Me.dgvBeds.Location = New System.Drawing.Point(336, 20)
         Me.dgvBeds.MultiSelect = False
         Me.dgvBeds.Name = "dgvBeds"
@@ -648,10 +697,44 @@ Partial Class frmCategoryManager
         Me.dgvBeds.Size = New System.Drawing.Size(488, 150)
         Me.dgvBeds.TabIndex = 42
         '
+        'colBedId
+        '
+        Me.colBedId.DataPropertyName = "Id"
+        Me.colBedId.HeaderText = "Số giường bệnh"
+        Me.colBedId.Name = "colBedId"
+        Me.colBedId.ReadOnly = True
+        Me.colBedId.Width = 130
+        '
+        'colBedDeptId
+        '
+        Me.colBedDeptId.DataPropertyName = "DeptId"
+        Me.colBedDeptId.HeaderText = "DeptId"
+        Me.colBedDeptId.Name = "colBedDeptId"
+        Me.colBedDeptId.ReadOnly = True
+        Me.colBedDeptId.Visible = False
+        '
+        'colBedRoom
+        '
+        Me.colBedRoom.DataPropertyName = "Room"
+        Me.colBedRoom.HeaderText = "Số phòng bệnh"
+        Me.colBedRoom.Name = "colBedRoom"
+        Me.colBedRoom.ReadOnly = True
+        Me.colBedRoom.Width = 130
+        '
+        'colBedDeptName
+        '
+        Me.colBedDeptName.DataPropertyName = "DeptName"
+        Me.colBedDeptName.HeaderText = "Tên khoa"
+        Me.colBedDeptName.Name = "colBedDeptName"
+        Me.colBedDeptName.ReadOnly = True
+        Me.colBedDeptName.Width = 150
+        '
         'tboxBedId
         '
+        Me.tboxBedId.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.tboxBedId.Location = New System.Drawing.Point(111, 30)
         Me.tboxBedId.Name = "tboxBedId"
+        Me.tboxBedId.ReadOnly = True
         Me.tboxBedId.Size = New System.Drawing.Size(100, 21)
         Me.tboxBedId.TabIndex = 41
         '
@@ -708,49 +791,22 @@ Partial Class frmCategoryManager
         Me.cmdClose.Text = "&Đóng"
         Me.cmdClose.UseVisualStyleBackColor = True
         '
-        'cboxBed_DepartmentsName
+        'colSpecName
         '
-        Me.cboxBed_DepartmentsName.DisplayMember = "Name"
-        Me.cboxBed_DepartmentsName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboxBed_DepartmentsName.FormattingEnabled = True
-        Me.cboxBed_DepartmentsName.Items.AddRange(New Object() {"Không lựa chọn"})
-        Me.cboxBed_DepartmentsName.Location = New System.Drawing.Point(111, 84)
-        Me.cboxBed_DepartmentsName.Name = "cboxBed_DepartmentsName"
-        Me.cboxBed_DepartmentsName.Size = New System.Drawing.Size(186, 23)
-        Me.cboxBed_DepartmentsName.TabIndex = 51
-        Me.cboxBed_DepartmentsName.ValueMember = "Id"
+        Me.colSpecName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.colSpecName.DataPropertyName = "Name"
+        Me.colSpecName.HeaderText = "Tên Chuyên môn"
+        Me.colSpecName.Name = "colSpecName"
+        Me.colSpecName.ReadOnly = True
+        Me.colSpecName.Width = 140
         '
-        'colBedId
+        'DataGridViewTextBoxColumn4
         '
-        Me.colBedId.DataPropertyName = "Id"
-        Me.colBedId.HeaderText = "Số giường bệnh"
-        Me.colBedId.Name = "colBedId"
-        Me.colBedId.ReadOnly = True
-        Me.colBedId.Width = 130
-        '
-        'colBedDeptId
-        '
-        Me.colBedDeptId.DataPropertyName = "DeptId"
-        Me.colBedDeptId.HeaderText = "DeptId"
-        Me.colBedDeptId.Name = "colBedDeptId"
-        Me.colBedDeptId.ReadOnly = True
-        Me.colBedDeptId.Visible = False
-        '
-        'colBedRoom
-        '
-        Me.colBedRoom.DataPropertyName = "Room"
-        Me.colBedRoom.HeaderText = "Số phòng bệnh"
-        Me.colBedRoom.Name = "colBedRoom"
-        Me.colBedRoom.ReadOnly = True
-        Me.colBedRoom.Width = 130
-        '
-        'colBedDeptName
-        '
-        Me.colBedDeptName.DataPropertyName = "DeptName"
-        Me.colBedDeptName.HeaderText = "Tên khoa"
-        Me.colBedDeptName.Name = "colBedDeptName"
-        Me.colBedDeptName.ReadOnly = True
-        Me.colBedDeptName.Width = 150
+        Me.DataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "COUNT"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Số N.viên"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
         '
         'frmCategoryManager
         '
@@ -826,8 +882,6 @@ Partial Class frmCategoryManager
     Friend WithEvents colDeptChiefId As DataGridViewTextBoxColumn
     Friend WithEvents colDeptChiefName As DataGridViewTextBoxColumn
     Friend WithEvents colDeptEmplCount As DataGridViewTextBoxColumn
-    Friend WithEvents colSpecName As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents colClinicId As DataGridViewTextBoxColumn
     Friend WithEvents colClinicName As DataGridViewTextBoxColumn
     Private WithEvents btnClinic_Reset As Button
@@ -839,4 +893,6 @@ Partial Class frmCategoryManager
     Friend WithEvents colBedDeptId As DataGridViewTextBoxColumn
     Friend WithEvents colBedRoom As DataGridViewTextBoxColumn
     Friend WithEvents colBedDeptName As DataGridViewTextBoxColumn
+    Friend WithEvents colSpecName As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
 End Class

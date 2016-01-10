@@ -95,23 +95,38 @@
     <Compile Include="Business Tier\Business Layers\clsBusiClinic.vb" />
     <Compile Include="Business Tier\Business Layers\clsBusiDepartment.vb" />
     <Compile Include="Business Tier\Business Layers\clsBusiEmployee.vb" />
+    <Compile Include="Business Tier\Business Layers\clsBusPatient.vb" />
+    <Compile Include="Business Tier\Business Layers\clsBusPatientAppointment.vb" />
     <Compile Include="Business Tier\Data Access Layers\clsDataAccount.vb" />
+    <Compile Include="Business Tier\Data Access Layers\clsDataPatientAppointment.vb" />
     <Compile Include="Business Tier\Data Access Layers\clsDataBed.vb" />
     <Compile Include="Business Tier\Data Access Layers\clsDataClinic.vb" />
     <Compile Include="Business Tier\Data Access Layers\clsDataDepartment.vb" />
     <Compile Include="Business Tier\Data Access Layers\clsDataEmployee.vb" />
+    <Compile Include="Business Tier\Data Access Layers\clsDataPatient.vb" />
+    <Compile Include="Business Tier\Data Access Layers\clsDataPatientAppointmentLine.vb" />
     <Compile Include="Business Tier\Data Access Layers\clsDataSpeciality.vb" />
     <Compile Include="Business Tier\Data Tranfers Layers\clsAccount.vb" />
     <Compile Include="Business Tier\Data Access Layers\clsDataBaseAccess.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsBed.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsClinic.vb" />
     <Compile Include="Business Tier\Data Tranfers Layers\clsDepartment.vb" />
     <Compile Include="Business Tier\Data Tranfers Layers\clsDoctor.vb" />
     <Compile Include="Business Tier\Data Tranfers Layers\clsEmployee.vb" />
     <Compile Include="Business Tier\Data Tranfers Layers\clsPatient.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsPatientAdmission.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsPatientAppointment.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsPatientAppointmentLine.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsPatientPayment.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsPatientPaymentLine.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsPatientRecord.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsPatientRecordLine.vb" />
     <Compile Include="Business Tier\Data Tranfers Layers\clsPatientRelative.vb" />
     <Compile Include="Business Tier\Data Tranfers Layers\clsPerson.vb" />
     <Compile Include="Business Tier\Data Tranfers Layers\clsReceptionist.vb" />
     <Compile Include="Business Tier\Data Tranfers Layers\clsRecordsSystem.vb" />
     <Compile Include="Business Tier\Data Tranfers Layers\clsSpeciality.vb" />
+    <Compile Include="Business Tier\Data Tranfers Layers\clsPatientDischarge.vb" />
     <Compile Include="Dialog1.Designer.vb">
       <DependentUpon>Dialog1.vb</DependentUpon>
     </Compile>
@@ -180,6 +195,24 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Business Tier\Business Layers\clsBusiSpeciality.vb" />
+    <Compile Include="Presentation Tier\Receptiontist\frmAppointment.Designer.vb">
+      <DependentUpon>frmAppointment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Tier\Receptiontist\frmAppointment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Tier\Receptiontist\frmAppointmentManager.Designer.vb">
+      <DependentUpon>frmAppointmentManager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Tier\Receptiontist\frmAppointmentManager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Tier\Receptiontist\frmPatientManager.Designer.vb">
+      <DependentUpon>frmPatientManager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Tier\Receptiontist\frmPatientManager.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentation Tier\RecordsSystem\frmCategoryManager.Designer.vb">
       <DependentUpon>frmCategoryManager.vb</DependentUpon>
     </Compile>
@@ -220,6 +253,15 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Tier\Receptiontist\frmAppointment.resx">
+      <DependentUpon>frmAppointment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Tier\Receptiontist\frmAppointmentManager.resx">
+      <DependentUpon>frmAppointmentManager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Tier\Receptiontist\frmPatientManager.resx">
+      <DependentUpon>frmPatientManager.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Tier\RecordsSystem\frmCategoryManager.resx">
       <DependentUpon>frmCategoryManager.vb</DependentUpon>
@@ -282,7 +324,9 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Presentation Tier\Doctor\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

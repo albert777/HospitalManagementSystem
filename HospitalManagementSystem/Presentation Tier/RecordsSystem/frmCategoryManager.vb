@@ -11,6 +11,8 @@ Public Class frmCategoryManager
     Private _clinicBus As BusiClinic
     Private _bedBus As BusiBed
 
+    Private _emplBus As BusiEmployee
+
     Public Sub New()
 
         ' This call is required by the designer.
@@ -26,6 +28,8 @@ Public Class frmCategoryManager
         _specBus = New BusiSpeciality
         _clinicBus = New BusiClinic
         _bedBus = New BusiBed
+
+        _emplBus = New BusiEmployee
     End Sub
 
     Private Sub frmCategoryManager_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -49,18 +53,9 @@ Public Class frmCategoryManager
     End Sub
 
     Private Sub LoadChiefsComboBox()
-        Try
-            Dim dbAccess As New DAO.DataBaseAccess
+        cboxDepartment_ChiefName.DataSource = _emplBus.SearchEmployees
+        cboxDepartment_ChiefName.SelectedIndex = -1
 
-            Dim query As String = "SELECT * 
-                                   FROM EMPLOYEES"
-
-            Dim dtableDoc As DataTable
-            dtableDoc = dbAccess.GetDataTable(query)
-            cboxDepartment_ChiefName.DataSource = dtableDoc
-        Catch ex As Exception
-
-        End Try
     End Sub
 
     Private Sub cmdClose_Click(sender As Object, e As EventArgs) Handles cmdClose.Click
@@ -102,6 +97,12 @@ Public Class frmCategoryManager
 
             tboxDepartment.Text = _selectedRow_Department.Cells(colDeptName.Name).FormattedValue.ToString.Trim
             cboxDepartment_ChiefName.SelectedValue = _selectedRow_Department.Cells(colDeptChiefId.Name).Value
+
+            If cboxDepartment_ChiefName.SelectedIndex <> -1 Then
+                chkbDeptChief.Checked = True
+            Else
+                chkbDeptChief.Checked = False
+            End If
         Else
             _selectedRow_Department = Nothing
 
@@ -136,8 +137,8 @@ Public Class frmCategoryManager
                                           CInt(cboxDepartment_ChiefName.SelectedValue.ToString))
             Else
                 _deptBus.UpdateDepartment(_selectedRow_Department.Cells(colDeptName.Name).FormattedValue.ToString.Trim,
-                              tboxDepartment.Text.Trim,
-                              -1)
+                                          tboxDepartment.Text.Trim,
+                                          -1)
             End If
         Catch ex As Exception
 
