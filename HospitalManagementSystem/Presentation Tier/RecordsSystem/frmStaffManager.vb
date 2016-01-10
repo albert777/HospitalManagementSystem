@@ -49,6 +49,19 @@ Public Class frmStaffManager
 
     End Sub
 
+    Private Sub LoadSexComboBox()
+        Dim SexDataTable As New DataTable
+        SexDataTable.Columns.Add("Id")
+        SexDataTable.Columns.Add("Name")
+        SexDataTable.Rows.Add(True, "Nam")
+        SexDataTable.Rows.Add(False, "Nữ")
+        cboxEmployeeSex.DataSource = SexDataTable
+        cboxEmployeeSex.SelectedValue = True
+        colchkboxEmplSex.TrueValue = "Nam"
+        colchkboxEmplSex.ToolTipText = "Nam"
+
+    End Sub
+
     Private Sub LoadEmployeesList()
         Try
             dgrEmplResult.DataSource = _employeeBus.SearchEmployees()
@@ -61,16 +74,15 @@ Public Class frmStaffManager
 
     End Sub
 
-    Private Sub LoadSexComboBox()
-        Dim SexDataTable As New DataTable
-        SexDataTable.Columns.Add("Id")
-        SexDataTable.Columns.Add("Name")
-        SexDataTable.Rows.Add(True, "Nam")
-        SexDataTable.Rows.Add(False, "Nữ")
-        cboxEmployeeSex.DataSource = SexDataTable
-        cboxEmployeeSex.SelectedValue = True
-        colchkboxEmplSex.TrueValue = "Nam"
-        colchkboxEmplSex.ToolTipText = "Nam"
+    Private Sub LoadEmployeesList(id As Integer)
+        Try
+            dgrEmplResult.DataSource = _employeeBus.SearchEmployees(id)
+            _selectedRow = dgrEmplResult.RowCount - 1
+            dgrEmplResult.Rows(_selectedRow).Cells(0).Selected = True
+
+        Catch ex As Exception
+            My.Forms.frmMain.txtStatus.Text = "Lỗi: Không thể lấy danh sách nhân viên."
+        End Try
 
     End Sub
 
@@ -93,10 +105,21 @@ Public Class frmStaffManager
         cboxSearchDepartments.SelectedIndex = -1
         cboxSearchSpecialities.SelectedIndex = -1
 
+        LoadEmployeesList()
+
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-
+        If txtSearch_Empl_ID.Text.Trim = "" Then
+            MsgBox("Bạn cần nhập ít nhất một thông tin")
+        Else
+            Dim id As Integer
+            If Integer.TryParse(txtSearch_Empl_ID.Text.Trim, id) Then
+                LoadEmployeesList(id)
+            Else
+                MsgBox("Mã số không hợp lệ!")
+            End If
+        End If
     End Sub
 
     Private Sub dgrEmplResult_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgrEmplResult.CellClick
@@ -403,6 +426,16 @@ Public Class frmStaffManager
             cboxEmployeeSpeciality.Enabled = False
             cboxEmployeeSpeciality.SelectedIndex = -1
         End If
+    End Sub
+
+    Private Sub txtSearch_Empl_ID_TextChanged(sender As Object, e As EventArgs) Handles txtSearch_Empl_ID.TextChanged
+        Dim id As Integer
+        If Integer.TryParse(txtSearch_Empl_ID.Text.Trim, id) Then
+            LoadEmployeesList(id)
+        Else
+            LoadEmployeesList()
+        End If
+
     End Sub
 
 #End Region

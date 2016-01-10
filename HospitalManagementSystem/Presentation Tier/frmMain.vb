@@ -5,11 +5,13 @@ Imports HospitalManagementSystem.DTO
 Public Class frmMain
     Private dbAccess As New DataBaseAccess
 
-    Private _accountData As Account
+    Friend _account As Account
     Private _accountBus As BusiAccount
+    Private _employeeBus As BusiEmployee
 
     Private frmStaffManager As New frmStaffManager
     Private frmCategoryManager As New frmCategoryManager
+    Private frmPatientManager As frmPatientManager
 
     Public Sub New()
 
@@ -17,53 +19,16 @@ Public Class frmMain
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        _accountData = Nothing
+        frmPatientManager = New frmPatientManager
+
+        _account = Nothing
         _accountBus = New BusiAccount
+        _employeeBus = New BusiEmployee
 
         tsmiRecordsSystems.Visible = False
 
     End Sub
 
-    Private Sub CheckSeasion()
-        If (_accountData Is Nothing) Then
-            Dim LoginResult As BusiAccount.LoginResult
-            LoginResult = _accountBus.GetAccountViaLogin
-
-            If (LoginResult.Result <> DialogResult.OK) Then
-                _accountData = Nothing
-                Application.Exit()
-
-            Else
-                _accountData = LoginResult.Account
-                CheckPermission()
-
-                HideAllMdi()
-
-            End If
-        Else
-            'Do nothing
-
-        End If
-    End Sub
-
-    Private Sub CheckPermission()
-
-        Select Case _accountData.Role
-            Case Account.AccountRole.RecordsSystem
-                tsmiRecordsSystems.Visible = True
-
-            Case Account.AccountRole.Doctor
-                tsmiRecordsSystems.Visible = False
-
-            Case Account.AccountRole.Receptiontist
-                tsmiRecordsSystems.Visible = False
-
-            Case Else
-                tsmiRecordsSystems.Visible = False
-
-        End Select
-
-    End Sub
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
@@ -75,10 +40,58 @@ Public Class frmMain
         Catch ex As Exception
             dbAccess.CloseConnection()
             txtStatus.Text = "Kết nối Database thất bại!"
-
+            'Application.Exit()
         End Try
 
     End Sub
+
+    Private Sub CheckSeasion()
+        If (_account Is Nothing) Then
+            Dim LoginResult As BusiAccount.LoginResult
+            LoginResult = _accountBus.GetAccountViaLogin
+
+            If (LoginResult.Result <> DialogResult.OK) Then
+                _account = Nothing
+                Application.Exit()
+
+            End If
+
+            _account = LoginResult.Account
+            _account.Employee = _employeeBus.GetEmployeeByAccountId(_account.Employee.Id)
+            lblEmployeeName.Text = _account.Employee.Name
+
+            CheckPermission()
+
+            HideAllMdi()
+
+        Else
+            'Do nothing
+
+        End If
+    End Sub
+
+    Private Sub CheckPermission()
+
+        Select Case _account.Role
+            Case Account.AccountRole.RecordsSystem
+                tsmiRecordsSystems.Visible = True
+                tsmiReceptiontist.Visible = True
+
+            Case Account.AccountRole.Doctor
+                tsmiRecordsSystems.Visible = False
+                tsmiReceptiontist.Visible = False
+
+            Case Account.AccountRole.Receptiontist
+                tsmiRecordsSystems.Visible = False
+                tsmiReceptiontist.Visible = True
+
+            Case Else
+                tsmiRecordsSystems.Visible = False
+                tsmiReceptiontist.Visible = False
+        End Select
+
+    End Sub
+
 
     Private Sub frmMain_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         Try
@@ -89,7 +102,7 @@ Public Class frmMain
     End Sub
 
     Private Sub mitemLogout_Click(sender As Object, e As EventArgs) Handles mitemLogout.Click
-        _accountData = Nothing
+        _account = Nothing
         CheckSeasion()
     End Sub
 
@@ -128,7 +141,8 @@ Public Class frmMain
     End Sub
 
     Private Sub DanhSáchKhoaNgànhPhòngKhámGiườngBệnhToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DanhSáchKhoaNgànhPhòngKhámGiườngBệnhToolStripMenuItem.Click
-        'CloseAllMdi()
+        HideAllMdi()
+
         Try
             If Me.frmCategoryManager Is Nothing Then
                 Me.frmCategoryManager = New frmCategoryManager
@@ -141,6 +155,22 @@ Public Class frmMain
             'Me.frmCategoryManager.Show()
         End Try
 
+    End Sub
+
+    Private Sub DanhMụcBệnhNhânToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DanhMụcBệnhNhânToolStripMenuItem.Click
+        HideAllMdi()
+
+        Try
+            If Me.frmPatientManager Is Nothing Then
+                Me.frmPatientManager = New frmPatientManager
+            End If
+
+            Me.frmPatientManager.MdiParent = Me
+            Me.frmPatientManager.Show()
+        Catch ex As Exception
+            txtStatus.Text = "Lỗi: Không thể mở Danh mục Bệnh nhân."
+
+        End Try
     End Sub
 
     Private Sub ShowNewForm(sender As Object, e As EventArgs)

@@ -49,6 +49,10 @@ Namespace BUS
             Return _accData.IsCorrect(Account)
         End Function
 
+        Friend Function GetAccount(Username As String, Password As String) As Account
+            Return _accData.GetAccount(Username, Password)
+        End Function
+
         Friend Function CheckAccount(Username As String, Password As String) As Boolean
             Dim Account As Account = New Account(Username, Password)
             Return _accData.IsCorrect(Account)

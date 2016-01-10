@@ -4,13 +4,14 @@ Namespace DTO
 
 #Region "Attributes"
         Private _employee As Employee        'Mã số tài khoản
+        Private _id As Integer
         Private _username As String   'Tên tài khoản
         Private _password As String   'Mật khẩu
         Private _role As AccountRole
 
         Public Enum AccountRole
-            Doctor
             RecordsSystem
+            Doctor
             Receptiontist
         End Enum
 #End Region
@@ -18,6 +19,7 @@ Namespace DTO
 #Region "Constructor"
         Public Sub New()
             Employee = Nothing
+            Id = 0
             Username = ""
             Password = ""
             Me.Role = Nothing
@@ -30,6 +32,7 @@ Namespace DTO
         ''' <param name="Password">Mật khẩu</param>
         Public Sub New(Username As String, Password As String)
             Employee = Nothing
+            Id = 0
             Me.Username = Username
             Me.Password = Password
             Me.Role = Nothing
@@ -37,6 +40,7 @@ Namespace DTO
 
         Public Sub New(Account As Account)
             Employee = Account.Employee
+            Id = Account.Id
             Username = Account.Username
             Password = Account.Password
             Me.Role = Account.Role
@@ -55,7 +59,7 @@ Namespace DTO
             End Set
         End Property
 
-        Protected Property Username As String
+        Public Property Username As String
             Get
                 Return _username
             End Get
@@ -64,7 +68,7 @@ Namespace DTO
             End Set
         End Property
 
-        Protected Property Password As String
+        Public Property Password As String
             Get
                 Return _password
             End Get
@@ -79,6 +83,15 @@ Namespace DTO
             End Get
             Set(value As AccountRole)
                 _role = value
+            End Set
+        End Property
+
+        Public Property Id As Integer
+            Get
+                Return _id
+            End Get
+            Set(value As Integer)
+                _id = value
             End Set
         End Property
 

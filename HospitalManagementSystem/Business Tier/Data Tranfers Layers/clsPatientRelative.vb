@@ -13,7 +13,6 @@
         'Protected _folk As String       'Dân tộc
 
         Private _id As Integer              'Mã số người nhà bệnh nhân
-        Private _patient As Patient         'Bệnh nhân có quan hệ
         Private _relationship As String     'Mối quan hệ với bệnh nhân
 #End Region
 
@@ -21,7 +20,6 @@
         Public Sub New()
             MyBase.New()
             Me.Id = 0
-            Me.Patient = New Patient
             Me.Relationship = String.Empty
         End Sub
 #End Region
@@ -33,15 +31,6 @@
             End Get
             Set(value As Integer)
                 _id = value
-            End Set
-        End Property
-
-        Public Property Patient As Patient
-            Get
-                Return _patient
-            End Get
-            Set(value As Patient)
-                _patient = value
             End Set
         End Property
 

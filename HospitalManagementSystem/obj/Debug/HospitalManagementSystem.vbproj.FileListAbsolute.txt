@@ -7,7 +7,6 @@ C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\
 C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.frmAddEmployee.resources
 C:\Users\Limited\documents\visual studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.frmCategoryManager.resources
 C:\Users\Limited\documents\visual studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.frmStaffManager.resources
-C:\Users\Limited\documents\visual studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.MDIParent1.resources
 C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.frmAbout.resources
 C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\Hospital Management System.exe.config
 C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\Hospital Management System.exe
@@ -20,7 +19,6 @@ C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\
 C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\Database\dbHospital_log.ldf
 C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\RdlCompile.cache
 C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\RdlCompile.compiled
-C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.Dialog1.resources
 C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\Microsoft.SqlServer.Types.dll
 C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
@@ -33,3 +31,6 @@ C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\
 C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
 C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.frmPatientManager.resources
+C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.frmAppointment.resources
+C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.frmAppointmentManager.resources

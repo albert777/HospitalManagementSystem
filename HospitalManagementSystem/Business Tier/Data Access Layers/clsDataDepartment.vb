@@ -45,7 +45,7 @@ Namespace DAO
             Dim query As String = String.Empty
             If chiefid = -1 Then
                 query = String.Format("UPDATE DEPARTMENTS
-                                       SET Name = N'{0}', Chief = 'NULL'
+                                       SET Name = N'{0}', Chief = null
                                        WHERE Name = N'{1}'",
                                       newName, oldName)
             Else

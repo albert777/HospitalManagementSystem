@@ -118,6 +118,11 @@
 
         End Sub
 
+        Public Sub New(Id As Integer)
+            Me.New()
+            Me.Id = Id
+        End Sub
+
         Public Sub New(Employee As Employee)
             Name = Employee.Name
             Sex = Employee.Sex

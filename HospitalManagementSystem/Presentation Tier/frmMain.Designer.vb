@@ -33,12 +33,15 @@ Partial Class frmMain
         Me.tsmiRecordsSystems = New System.Windows.Forms.ToolStripMenuItem()
         Me.DanhSáchNhânViênToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DanhSáchKhoaNgànhPhòngKhámGiườngBệnhToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmiReceptiontist = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DanhMụcBệnhNhânToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WindowsMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.txtStatus = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.mitemMain.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -105,7 +108,7 @@ Partial Class frmMain
         'mitemMain
         '
         Me.mitemMain.BackColor = System.Drawing.SystemColors.Control
-        Me.mitemMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mitemMenu, Me.tsmiRecordsSystems, Me.WindowsMenu, Me.HelpMenu})
+        Me.mitemMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mitemMenu, Me.tsmiRecordsSystems, Me.tsmiReceptiontist, Me.WindowsMenu, Me.HelpMenu})
         Me.mitemMain.Location = New System.Drawing.Point(0, 0)
         Me.mitemMain.Name = "mitemMain"
         Me.mitemMain.Size = New System.Drawing.Size(1084, 24)
@@ -130,6 +133,19 @@ Partial Class frmMain
         Me.DanhSáchKhoaNgànhPhòngKhámGiườngBệnhToolStripMenuItem.Name = "DanhSáchKhoaNgànhPhòngKhámGiườngBệnhToolStripMenuItem"
         Me.DanhSáchKhoaNgànhPhòngKhámGiườngBệnhToolStripMenuItem.Size = New System.Drawing.Size(350, 22)
         Me.DanhSáchKhoaNgànhPhòngKhámGiườngBệnhToolStripMenuItem.Text = "Danh sách Khoa, Ngành, Phòng khám, Giường bệnh"
+        '
+        'tsmiReceptiontist
+        '
+        Me.tsmiReceptiontist.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DanhMụcBệnhNhânToolStripMenuItem})
+        Me.tsmiReceptiontist.Name = "tsmiReceptiontist"
+        Me.tsmiReceptiontist.Size = New System.Drawing.Size(109, 20)
+        Me.tsmiReceptiontist.Text = "Khám chữa bệnh"
+        '
+        'DanhMụcBệnhNhânToolStripMenuItem
+        '
+        Me.DanhMụcBệnhNhânToolStripMenuItem.Name = "DanhMụcBệnhNhânToolStripMenuItem"
+        Me.DanhMụcBệnhNhânToolStripMenuItem.Size = New System.Drawing.Size(189, 22)
+        Me.DanhMụcBệnhNhânToolStripMenuItem.Text = "Danh mục bệnh nhân"
         '
         'WindowsMenu
         '
@@ -159,7 +175,7 @@ Partial Class frmMain
         '
         'StatusStrip
         '
-        Me.StatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.txtStatus})
+        Me.StatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.txtStatus})
         Me.StatusStrip.Location = New System.Drawing.Point(0, 639)
         Me.StatusStrip.Name = "StatusStrip"
         Me.StatusStrip.Size = New System.Drawing.Size(1084, 22)
@@ -171,6 +187,12 @@ Partial Class frmMain
         Me.txtStatus.Name = "txtStatus"
         Me.txtStatus.Size = New System.Drawing.Size(39, 17)
         Me.txtStatus.Text = "Status"
+        '
+        'ToolStripStatusLabel1
+        '
+        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(133, 17)
+        Me.ToolStripStatusLabel1.Text = "Version 10:35 10/01/16   "
         '
         'frmMain
         '
@@ -212,4 +234,7 @@ Partial Class frmMain
     Friend WithEvents CloseAllToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpMenu As ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents tsmiReceptiontist As ToolStripMenuItem
+    Friend WithEvents DanhMụcBệnhNhânToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
 End Class
