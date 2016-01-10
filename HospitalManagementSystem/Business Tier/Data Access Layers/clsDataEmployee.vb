@@ -98,6 +98,40 @@ Namespace DAO
             End Try
         End Function
 
+        Friend Function GetEmployeeById(id As Integer) As Employee
+            Dim empl As New Employee
+
+            Try
+                Dim query As String =
+                    String.Format("SELECT * FROM EMPLOYEES WHERE Id = {0}", id)
+
+                Dim dtEmpl As DataTable = GetDataTable(query)
+
+                With dtEmpl.Rows(0)
+                    empl.Id = CInt(.Item("Id"))
+                    empl.Name = CType(.Item("Name"), String)
+                    empl.Sex = CBool(.Item("Sex"))
+                    empl.DoB = CDate(.Item("DoB"))
+                    empl.IdCard = CType(.Item("IdCard"), String)
+                    empl.Address = CType(.Item("Address"), String)
+                    empl.Phone = CType(.Item("Phone"), String)
+                    empl.Folk = CType(.Item("Folk"), String)
+                    empl.HireDate = CDate(.Item("HireDate"))
+                    empl.Ratio = CDbl(.Item("Ratio"))
+                    empl.BasicSalary = CInt(.Item("BasicSalary"))
+                    empl.Subsidy = CInt(.Item("Subsidy"))
+                    empl.Position = CType(.Item("Position"), String)
+                    empl.Department = New Department(CInt(.Item("DeptId")))
+                    empl.Speciality = New Speciality(CInt(.Item("SpecId")))
+                End With
+
+            Catch ex As Exception
+
+            End Try
+
+            Return empl
+        End Function
+
         Friend Function UpdateEmployee(Empl As Employee) As Boolean
             Try
                 Dim query As String =

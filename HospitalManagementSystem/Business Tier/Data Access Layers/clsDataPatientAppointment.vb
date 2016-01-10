@@ -40,6 +40,35 @@ Namespace DAO
 
         End Function
 
+        Friend Function GetPatientAppointmentLines(id As Integer) As List(Of PatientAppointmentLine)
+            Dim lines As New List(Of PatientAppointmentLine)
+
+            Try
+                Dim dtLines As DataTable = _appointLineData.GetPatientAppointmentLinesDataTable(id)
+
+                For Each row As DataRow In dtLines.Rows
+                    lines.Add(New PatientAppointmentLine(CInt(row.Item("LineId")), CType(row.Item("Detail"), String)))
+                Next
+            Catch ex As Exception
+
+            End Try
+
+            Return lines
+        End Function
+
+        Friend Function GetPatientAppointmentsDataTable(patientId As Integer) As DataTable
+            Dim query As String =
+                String.Format("Select A.*, P.Name As PName, E.Name As EName, C.Name As CName, D.Name As DName " _
+                            + "FROM APPOINTMENTS AS A " _
+                            + "Left OUTER JOIN PATIENTS AS P ON A.PatientId = P.Id " _
+                            + "LEFT OUTER JOIN CLINICS AS C ON A.ClinicId = C.Id " _
+                            + "LEFT OUTER JOIN EMPLOYEES AS E ON A.EmployeeId = E.Id " _
+                            + "LEFT OUTER JOIN EMPLOYEES AS D ON A.DoctorId = D.Id " _
+                            + "WHERE P.Id = {0}",
+                              patientId)
+            Return _dbAccess.GetDataTable(query)
+        End Function
+
         Private Function GetAppointmentId(patientId As Integer, employeeId As Integer, clinicId As Integer, ordernumber As Integer, createTime As Date) As Integer
             Dim query As String =
                 String.Format("SELECT Id FROM APPOINTMENTS " _
@@ -48,7 +77,7 @@ Namespace DAO
                             + "And ClinicId = {2} " _
                             + "And NumberOrder = {3} " _
                             + "And CreateTime = '{4}'",
-                              patientId, employeeId, clinicId, ordernumber, createTime)
+                patientId, employeeId, clinicId, ordernumber, createTime)
 
             Return CInt(_dbAccess.GetScalar(query))
         End Function

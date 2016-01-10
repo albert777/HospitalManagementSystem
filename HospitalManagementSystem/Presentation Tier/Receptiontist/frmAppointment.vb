@@ -26,13 +26,15 @@ Public Class frmAppointment
             txtAppointmentCreateTime.Text = Date.Now.ToShortDateString()
             txtAppointmentEmployeeName.Text = _employee.Name
 
-            txtPatientId.Text = patient.Id.ToString
-            txtPatientName.Text = patient.Name
-            txtPatientDoB.Text = patient.DoB.ToShortDateString
-            rbtnSexMale.Checked = patient.Sex
-            txtPatientInsuranceId.Text = patient.InsuranceID
-            txtPatientInsuranceIssueDate.Text = patient.InsuranceIssueDate.ToShortDateString()
-            txtPatientInsuranceExpiryDate.Text = patient.InsuranceExpiryDate.ToShortDateString
+            txtPatientId.Text = _patient.Id.ToString
+            txtPatientName.Text = _patient.Name
+            txtPatientDoB.Text = _patient.DoB.ToShortDateString
+            rbtnSexMale.Checked = _patient.Sex
+
+            txtPatientInsuranceIssueDate.Text = _patient.InsuranceIssueDate.ToShortDateString()
+            txtPatientInsuranceExpiryDate.Text = _patient.InsuranceExpiryDate.ToShortDateString
+            txtPatientInsuranceId.Text = "Nothing"
+            txtPatientInsuranceId.Text = _patient.InsuranceID
 
             txtResult.ReadOnly = True
             txtResult.BackColor = Color.FromArgb(255, 255, 192)
@@ -44,20 +46,47 @@ Public Class frmAppointment
             txtRequest4.Enabled = False
             txtRequest5.Enabled = False
 
-            'ElseIf Type = "View" Then
-            '    _employee = My.Forms.frmMain._account.Employee
-            '    _patient = patient
-            '    txtAppointmentCreateTime.Text = Date.Now.ToShortDateString()
-            '    txtAppointmentEmployeeName.Text = _employee.Name
+        ElseIf Type = "View" Then
+            SetViewMode()
 
-            '    txtPatientId.Text = patient.Id.ToString
-            '    txtPatientName.Text = patient.Name
-            '    txtPatientDoB.Text = patient.DoB.ToShortDateString
-            '    rbtnSexMale.Checked = patient.Sex
-            '    txtPatientInsuranceId.Text = patient.InsuranceID
-            '    txtPatientInsuranceIssueDate.Text = patient.InsuranceIssueDate.ToShortDateString()
-            '    txtPatientInsuranceExpiryDate.Text = patient.InsuranceExpiryDate.ToShortDateString
+            _employee = appointment.Employee
+            _patient = appointment.Patient
+            txtAppointmentCreateTime.Text = appointment.CreateTime.ToShortDateString
+            txtAppointmentEmployeeName.Text = _employee.Name
 
+            txtPatientId.Text = _patient.Id.ToString
+            txtPatientName.Text = _patient.Name
+            txtPatientDoB.Text = _patient.DoB.ToShortDateString
+            rbtnSexMale.Checked = _patient.Sex
+
+            txtPatientInsuranceId.Text = "Nothing"
+            txtPatientInsuranceIssueDate.Text = _patient.InsuranceIssueDate.ToShortDateString()
+            txtPatientInsuranceExpiryDate.Text = _patient.InsuranceExpiryDate.ToShortDateString
+            txtPatientInsuranceId.Text = _patient.InsuranceID
+
+            txtResult.ReadOnly = True
+            txtResult.BackColor = Color.FromArgb(255, 255, 192)
+            txtPrescribe.ReadOnly = True
+            txtPrescribe.BackColor = Color.FromArgb(255, 255, 192)
+
+            cboxClinics.SelectedValue = appointment.Clinic.Id
+            txtAppointmentNo.Text = appointment.Numberorder.ToString
+
+            appointment.Lines = _appoitmentBus.GetPatientAppointmentLines(appointment.Id)
+
+            txtRequest1.Text = appointment.Lines(0).Detail
+            If appointment.Lines.Count >= 2 Then
+                txtRequest2.Text = appointment.Lines(1).Detail
+            End If
+            If appointment.Lines.Count >= 3 Then
+                txtRequest3.Text = appointment.Lines(2).Detail
+            End If
+            If appointment.Lines.Count >= 4 Then
+                txtRequest4.Text = appointment.Lines(3).Detail
+            End If
+            If appointment.Lines.Count = 5 Then
+                txtRequest5.Text = appointment.Lines(4).Detail
+            End If
         End If
 
     End Sub
@@ -72,11 +101,13 @@ Public Class frmAppointment
     End Sub
 
     Private Sub txtPatientInsuranceId_TextChanged(sender As Object, e As EventArgs) Handles txtPatientInsuranceId.TextChanged
-        If String.IsNullOrWhiteSpace(txtPatientInsuranceId.Text) Then
+        If txtPatientInsuranceId.Text.Trim = "" Then
             lblInsIssDate.Enabled = False
             txtPatientInsuranceIssueDate.Enabled = False
             lblInsExpDate.Enabled = False
             txtPatientInsuranceExpiryDate.Enabled = False
+            txtPatientInsuranceIssueDate.Clear()
+            txtPatientInsuranceExpiryDate.Clear()
         Else
             lblInsIssDate.Enabled = True
             txtPatientInsuranceIssueDate.Enabled = True
@@ -89,7 +120,7 @@ Public Class frmAppointment
         txtClinicId.Text = CType(cboxClinics.SelectedValue, String)
     End Sub
 
-    Private Sub btnAppointment_Click(sender As Object, e As EventArgs) Handles btnAppointment.Click
+    Private Sub btnAppointment_Click(sender As Object, e As EventArgs) Handles btnNewAppointment.Click
         If CheckDataInput() Then
             Dim lines As New List(Of PatientAppointmentLine)
 
@@ -109,8 +140,30 @@ Public Class frmAppointment
                 lines.Add(New PatientAppointmentLine(txtRequest5.Text.Trim))
             End If
 
-            _appoitmentBus.AddPatientAppointment(_patient.Id, _employee.Id, CInt(txtClinicId.Text.Trim), CInt(txtAppointmentNo.Text.Trim), Date.Now, lines)
+            If _appoitmentBus.AddPatientAppointment(_patient.Id, _employee.Id, CInt(txtClinicId.Text.Trim), CInt(txtAppointmentNo.Text.Trim), Date.Now, lines) Then
+                SetViewMode()
+
+            Else
+                btnNewAppointment.Enabled = True
+            End If
         End If
+    End Sub
+
+    Private Sub SetViewMode()
+        btnNewAppointment.Enabled = False
+        txtRequest1.ReadOnly = True
+        txtRequest1.BackColor = Color.FromArgb(255, 255, 192)
+        txtRequest2.ReadOnly = True
+        txtRequest2.BackColor = Color.FromArgb(255, 255, 192)
+        txtRequest3.ReadOnly = True
+        txtRequest3.BackColor = Color.FromArgb(255, 255, 192)
+        txtRequest4.ReadOnly = True
+        txtRequest4.BackColor = Color.FromArgb(255, 255, 192)
+        txtRequest5.ReadOnly = True
+        txtRequest5.BackColor = Color.FromArgb(255, 255, 192)
+        cboxClinics.Enabled = False
+        txtAppointmentNo.ReadOnly = True
+        txtAppointmentNo.BackColor = Color.FromArgb(255, 255, 192)
     End Sub
 
     Private Function CheckDataInput() As Boolean
@@ -167,4 +220,7 @@ Public Class frmAppointment
         End If
     End Sub
 
+    Private Sub cmdClose_Click(sender As Object, e As EventArgs) Handles cmdClose.Click
+        Me.Close()
+    End Sub
 End Class

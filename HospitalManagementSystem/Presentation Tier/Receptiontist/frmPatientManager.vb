@@ -30,28 +30,28 @@ Public Class frmPatientManager
     Private Sub LoadPatientsList()
         dgvPatients.DataSource = _patientBus.SearchPatientsDataTable()
         dgvPatients.ClearSelection()
-        If dgvPatients.RowCount > 1 Then
-            _patientSeletedRow = dgvPatients.Rows(dgvPatients.RowCount - 1)
-            _patientSeletedRow.Cells(0).Selected = True
-        End If
+        'If dgvPatients.RowCount > 1 Then
+        '    _patientSeletedRow = dgvPatients.Rows(dgvPatients.RowCount - 1)
+        '    _patientSeletedRow.Cells(0).Selected = True
+        'End If
 
     End Sub
 
     Private Sub LoadPatientsList(id As Integer)
         dgvPatients.DataSource = _patientBus.SearchPatientsDataTable(id)
         dgvPatients.ClearSelection()
-        If dgvPatients.RowCount > 1 Then
-            _patientSeletedRow = dgvPatients.Rows(dgvPatients.RowCount - 1)
-            _patientSeletedRow.Cells(0).Selected = True
-        End If
+        'If dgvPatients.RowCount > 1 Then
+        '    _patientSeletedRow = dgvPatients.Rows(dgvPatients.RowCount - 1)
+        '    _patientSeletedRow.Cells(0).Selected = True
+        'End If
     End Sub
 
     Private Sub ReNew()
+        dgvPatients.ClearSelection()
+
         txtPatientId.Clear()
         txtPatientName.Clear()
         cboxPatientSex.SelectedIndex = -1
-
-
 
         txtPatientIdCard.Clear()
         dtpPatientDoB.Value = dtpPatientDoB.MinDate
@@ -71,11 +71,20 @@ Public Class frmPatientManager
         txtPatientAdmissionTime.Clear()
         txtPatientDischargeTime.Clear()
 
-
-
         btnAddPatient.Enabled = True
         btnUpdatePatient.Enabled = False
         btnDeletePatient.Enabled = False
+        btnPrintPatient.Enabled = False
+
+        btnNewAppointment.Enabled = False
+        btnAdmission.Enabled = False
+        btnDischarge.Enabled = False
+        btnSupplyMedication.Enabled = False
+        btnPaidPayment.Enabled = False
+
+        btnViewAppointmentsList.Enabled = False
+        btnPatientRelatives.Enabled = False
+        btnPatientRecords.Enabled = False
 
     End Sub
 
@@ -110,12 +119,19 @@ Public Class frmPatientManager
             btnAddPatient.Enabled = False
             btnUpdatePatient.Enabled = True
             btnDeletePatient.Enabled = True
+            btnPrintPatient.Enabled = True
+
+            btnNewAppointment.Enabled = True
+            btnAdmission.Enabled = True
+            btnDischarge.Enabled = True
+            btnSupplyMedication.Enabled = True
+            btnPaidPayment.Enabled = True
+
+            btnViewAppointmentsList.Enabled = True
+            btnPatientRelatives.Enabled = True
+            btnPatientRecords.Enabled = True
         Else
             _patientSeletedRow = Nothing
-
-            btnAddPatient.Enabled = True
-            btnUpdatePatient.Enabled = False
-            btnDeletePatient.Enabled = False
 
             ReNew()
         End If
@@ -351,10 +367,16 @@ Public Class frmPatientManager
         End If
     End Sub
 
-    Private Sub btnAppointment_Click(sender As Object, e As EventArgs) Handles btnAppointment.Click
+    Private Sub btnAppointment_Click(sender As Object, e As EventArgs) Handles btnNewAppointment.Click
         Dim frmAppointment As New frmAppointment("New", GetPatientFromDataGridView)
         frmAppointment.ShowDialog()
     End Sub
+
+    Private Sub btnViewAppointmentsList_Click(sender As Object, e As EventArgs) Handles btnViewAppointmentsList.Click
+        Dim frmAppointmentManager As New frmAppointmentManager(GetPatientFromDataGridView)
+        frmAppointmentManager.ShowDialog()
+    End Sub
+
 
 #End Region
 End Class

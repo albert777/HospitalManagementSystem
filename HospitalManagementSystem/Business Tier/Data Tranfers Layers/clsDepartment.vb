@@ -26,6 +26,11 @@
             Me.Name = Name
             Chief = Nothing
         End Sub
+
+        Public Sub New(Id As Integer)
+            Me.New()
+            Me.Id = Id
+        End Sub
 #End Region
 
 #Region "Property"

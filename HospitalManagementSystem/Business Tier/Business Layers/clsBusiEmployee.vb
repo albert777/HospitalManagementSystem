@@ -64,6 +64,10 @@ Namespace BUS
 
         End Sub
 
+        Friend Function GetEmployeeById(id As Integer) As Employee
+            Return _emplData.GetEmployeeById(id)
+        End Function
+
         Friend Sub UpdateEmployee(Employee As Employee)
             If MessageBox.Show("Bạn có muốn sửa nhân viên?", "Sửa nhân viên", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                 If _emplData.UpdateEmployee(Employee) Then

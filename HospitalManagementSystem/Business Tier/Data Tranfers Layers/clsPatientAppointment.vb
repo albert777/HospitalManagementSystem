@@ -1,9 +1,11 @@
 ﻿Namespace DTO
     Public Class PatientAppointment
         Private _id As Integer
+        Private _patient As Patient
         Private _employee As Employee
-        Private _doctor As Doctor 'Employee
+        Private _doctor As Employee 'Doctor
         Private _clinic As Clinic
+        Private _lines As List(Of PatientAppointmentLine)
         Private _numberorder As Integer
         Private _createTime As Date
         Private _result As String
@@ -11,9 +13,11 @@
 
         Public Sub New()
             Me.Id = 0
+            Me.Patient = Nothing
             Me.Employee = Nothing
             Me.Doctor = Nothing
             Me.Clinic = Nothing
+            Me.Lines = Nothing
             Me.Numberorder = 0
             Me.CreateTime = Date.MinValue
             Me.Result = String.Empty
@@ -38,11 +42,11 @@
             End Set
         End Property
 
-        Public Property Doctor As Doctor
+        Public Property Doctor As Employee
             Get
                 Return _doctor
             End Get
-            Set(value As Doctor)
+            Set(value As Employee)
                 _doctor = value
             End Set
         End Property
@@ -89,6 +93,24 @@
             End Get
             Set(value As String)
                 _prescribe = value
+            End Set
+        End Property
+
+        Public Property Patient As Patient
+            Get
+                Return _patient
+            End Get
+            Set(value As Patient)
+                _patient = value
+            End Set
+        End Property
+
+        Public Property Lines As List(Of PatientAppointmentLine)
+            Get
+                Return _lines
+            End Get
+            Set(value As List(Of PatientAppointmentLine))
+                _lines = value
             End Set
         End Property
     End Class

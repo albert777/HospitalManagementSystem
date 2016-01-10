@@ -88,7 +88,7 @@ Partial Class frmLogin
         Me.tboxPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.tboxPassword.Size = New System.Drawing.Size(110, 20)
         Me.tboxPassword.TabIndex = 17
-        Me.tboxPassword.Text = "pass"
+        Me.tboxPassword.Text = "admin"
         '
         'lblPassWord
         '

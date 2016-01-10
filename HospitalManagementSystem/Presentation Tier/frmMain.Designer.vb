@@ -40,8 +40,8 @@ Partial Class frmMain
         Me.HelpMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
-        Me.txtStatus = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.txtStatus = New System.Windows.Forms.ToolStripStatusLabel()
         Me.mitemMain.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -182,17 +182,17 @@ Partial Class frmMain
         Me.StatusStrip.TabIndex = 8
         Me.StatusStrip.Text = "StatusStrip"
         '
+        'ToolStripStatusLabel1
+        '
+        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(133, 17)
+        Me.ToolStripStatusLabel1.Text = "Version 01:46 11/01/16   "
+        '
         'txtStatus
         '
         Me.txtStatus.Name = "txtStatus"
         Me.txtStatus.Size = New System.Drawing.Size(39, 17)
         Me.txtStatus.Text = "Status"
-        '
-        'ToolStripStatusLabel1
-        '
-        Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(133, 17)
-        Me.ToolStripStatusLabel1.Text = "Version 10:35 10/01/16   "
         '
         'frmMain
         '

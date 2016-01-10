@@ -18,6 +18,11 @@
             Name = String.Empty
         End Sub
 
+        Public Sub New(Id As Integer)
+            Me.New()
+            Me.Id = Id
+        End Sub
+
         Public Sub New(Name As String)
             Id = 0
             Me.Name = Name

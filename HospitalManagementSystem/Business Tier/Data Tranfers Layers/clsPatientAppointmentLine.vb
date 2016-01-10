@@ -13,6 +13,11 @@
             Me.Detail = Detail
         End Sub
 
+        Public Sub New(Id As Integer, Detail As String)
+            Me.Id = Id
+            Me.Detail = Detail
+        End Sub
+
         Public Property Id As Integer
             Get
                 Return _id

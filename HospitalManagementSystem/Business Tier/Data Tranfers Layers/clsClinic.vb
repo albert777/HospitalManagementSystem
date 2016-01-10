@@ -10,6 +10,13 @@
             Department = Nothing
         End Sub
 
+        Public Sub New(Id As Integer)
+            'Me.New()
+            Me.Id = Id
+            Name = String.Empty
+            Department = Nothing
+        End Sub
+
         Public Property Id As Integer
             Get
                 Return _id

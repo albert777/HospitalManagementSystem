@@ -95,14 +95,14 @@ Partial Class frmPatientManager
         Me.colPatientBedId = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colPatientRoomId = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.groupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnViewAppointmentsList = New System.Windows.Forms.Button()
         Me.btnPatientRelatives = New System.Windows.Forms.Button()
         Me.btnPatientRecords = New System.Windows.Forms.Button()
         Me.btnSupplyMedication = New System.Windows.Forms.Button()
         Me.btnPaidPayment = New System.Windows.Forms.Button()
         Me.btnDischarge = New System.Windows.Forms.Button()
         Me.btnAdmission = New System.Windows.Forms.Button()
-        Me.btnAppointment = New System.Windows.Forms.Button()
+        Me.btnNewAppointment = New System.Windows.Forms.Button()
         Me.btnReset = New System.Windows.Forms.Button()
         Me.btnUpdatePatient = New System.Windows.Forms.Button()
         Me.cmdClose = New System.Windows.Forms.Button()
@@ -110,7 +110,7 @@ Partial Class frmPatientManager
         Me.btnDeletePatient = New System.Windows.Forms.Button()
         Me.btnReSearch = New System.Windows.Forms.Button()
         Me.btnSearch = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnPrintPatient = New System.Windows.Forms.Button()
         Me.groupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.dgvPatients, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -881,22 +881,24 @@ Partial Class frmPatientManager
         Me.groupBox2.TabStop = False
         Me.groupBox2.Text = "Thông tin cá nhân"
         '
-        'Button2
+        'btnViewAppointmentsList
         '
-        Me.Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), System.Drawing.Image)
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Button2.Location = New System.Drawing.Point(633, 293)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(119, 25)
-        Me.Button2.TabIndex = 52
-        Me.Button2.Text = "DS Phiếu Khám"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnViewAppointmentsList.BackgroundImage = CType(resources.GetObject("btnViewAppointmentsList.BackgroundImage"), System.Drawing.Image)
+        Me.btnViewAppointmentsList.Enabled = False
+        Me.btnViewAppointmentsList.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnViewAppointmentsList.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnViewAppointmentsList.ForeColor = System.Drawing.Color.DarkBlue
+        Me.btnViewAppointmentsList.Location = New System.Drawing.Point(633, 293)
+        Me.btnViewAppointmentsList.Name = "btnViewAppointmentsList"
+        Me.btnViewAppointmentsList.Size = New System.Drawing.Size(119, 25)
+        Me.btnViewAppointmentsList.TabIndex = 52
+        Me.btnViewAppointmentsList.Text = "DS Phiếu Khám"
+        Me.btnViewAppointmentsList.UseVisualStyleBackColor = True
         '
         'btnPatientRelatives
         '
         Me.btnPatientRelatives.BackgroundImage = CType(resources.GetObject("btnPatientRelatives.BackgroundImage"), System.Drawing.Image)
+        Me.btnPatientRelatives.Enabled = False
         Me.btnPatientRelatives.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnPatientRelatives.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPatientRelatives.ForeColor = System.Drawing.Color.DarkBlue
@@ -910,6 +912,7 @@ Partial Class frmPatientManager
         'btnPatientRecords
         '
         Me.btnPatientRecords.BackgroundImage = CType(resources.GetObject("btnPatientRecords.BackgroundImage"), System.Drawing.Image)
+        Me.btnPatientRecords.Enabled = False
         Me.btnPatientRecords.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnPatientRecords.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPatientRecords.ForeColor = System.Drawing.Color.DarkBlue
@@ -923,6 +926,7 @@ Partial Class frmPatientManager
         'btnSupplyMedication
         '
         Me.btnSupplyMedication.BackgroundImage = CType(resources.GetObject("btnSupplyMedication.BackgroundImage"), System.Drawing.Image)
+        Me.btnSupplyMedication.Enabled = False
         Me.btnSupplyMedication.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnSupplyMedication.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSupplyMedication.ForeColor = System.Drawing.Color.DarkBlue
@@ -936,6 +940,7 @@ Partial Class frmPatientManager
         'btnPaidPayment
         '
         Me.btnPaidPayment.BackgroundImage = CType(resources.GetObject("btnPaidPayment.BackgroundImage"), System.Drawing.Image)
+        Me.btnPaidPayment.Enabled = False
         Me.btnPaidPayment.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnPaidPayment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPaidPayment.ForeColor = System.Drawing.Color.DarkBlue
@@ -949,6 +954,7 @@ Partial Class frmPatientManager
         'btnDischarge
         '
         Me.btnDischarge.BackgroundImage = CType(resources.GetObject("btnDischarge.BackgroundImage"), System.Drawing.Image)
+        Me.btnDischarge.Enabled = False
         Me.btnDischarge.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnDischarge.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDischarge.ForeColor = System.Drawing.Color.DarkBlue
@@ -962,6 +968,7 @@ Partial Class frmPatientManager
         'btnAdmission
         '
         Me.btnAdmission.BackgroundImage = CType(resources.GetObject("btnAdmission.BackgroundImage"), System.Drawing.Image)
+        Me.btnAdmission.Enabled = False
         Me.btnAdmission.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnAdmission.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAdmission.ForeColor = System.Drawing.Color.DarkBlue
@@ -972,18 +979,19 @@ Partial Class frmPatientManager
         Me.btnAdmission.Text = "&Nhập viện"
         Me.btnAdmission.UseVisualStyleBackColor = True
         '
-        'btnAppointment
+        'btnNewAppointment
         '
-        Me.btnAppointment.BackgroundImage = CType(resources.GetObject("btnAppointment.BackgroundImage"), System.Drawing.Image)
-        Me.btnAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnAppointment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAppointment.ForeColor = System.Drawing.Color.DarkBlue
-        Me.btnAppointment.Location = New System.Drawing.Point(12, 293)
-        Me.btnAppointment.Name = "btnAppointment"
-        Me.btnAppointment.Size = New System.Drawing.Size(109, 25)
-        Me.btnAppointment.TabIndex = 44
-        Me.btnAppointment.Text = "&Đăng ký Khám"
-        Me.btnAppointment.UseVisualStyleBackColor = True
+        Me.btnNewAppointment.BackgroundImage = CType(resources.GetObject("btnNewAppointment.BackgroundImage"), System.Drawing.Image)
+        Me.btnNewAppointment.Enabled = False
+        Me.btnNewAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnNewAppointment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNewAppointment.ForeColor = System.Drawing.Color.DarkBlue
+        Me.btnNewAppointment.Location = New System.Drawing.Point(12, 293)
+        Me.btnNewAppointment.Name = "btnNewAppointment"
+        Me.btnNewAppointment.Size = New System.Drawing.Size(109, 25)
+        Me.btnNewAppointment.TabIndex = 44
+        Me.btnNewAppointment.Text = "&Đăng ký Khám"
+        Me.btnNewAppointment.UseVisualStyleBackColor = True
         '
         'btnReset
         '
@@ -1066,24 +1074,24 @@ Partial Class frmPatientManager
         Me.btnSearch.Text = "&Tìm kiếm"
         Me.btnSearch.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnPrintPatient
         '
-        Me.Button3.BackgroundImage = CType(resources.GetObject("Button3.BackgroundImage"), System.Drawing.Image)
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button3.Location = New System.Drawing.Point(862, 448)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(98, 23)
-        Me.Button3.TabIndex = 53
-        Me.Button3.Text = "&In thông tin"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnPrintPatient.BackgroundImage = CType(resources.GetObject("btnPrintPatient.BackgroundImage"), System.Drawing.Image)
+        Me.btnPrintPatient.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnPrintPatient.Location = New System.Drawing.Point(862, 448)
+        Me.btnPrintPatient.Name = "btnPrintPatient"
+        Me.btnPrintPatient.Size = New System.Drawing.Size(98, 23)
+        Me.btnPrintPatient.TabIndex = 53
+        Me.btnPrintPatient.Text = "&In thông tin"
+        Me.btnPrintPatient.UseVisualStyleBackColor = True
         '
         'frmPatientManager
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(970, 577)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnPrintPatient)
+        Me.Controls.Add(Me.btnViewAppointmentsList)
         Me.Controls.Add(Me.dgvPatients)
         Me.Controls.Add(Me.btnPatientRelatives)
         Me.Controls.Add(Me.btnPatientRecords)
@@ -1091,7 +1099,7 @@ Partial Class frmPatientManager
         Me.Controls.Add(Me.btnPaidPayment)
         Me.Controls.Add(Me.btnDischarge)
         Me.Controls.Add(Me.btnAdmission)
-        Me.Controls.Add(Me.btnAppointment)
+        Me.Controls.Add(Me.btnNewAppointment)
         Me.Controls.Add(Me.groupBox1)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.btnReset)
@@ -1166,7 +1174,7 @@ Partial Class frmPatientManager
     Friend WithEvents cboxPatientType As ComboBox
     Private WithEvents Label14 As Label
     Private WithEvents Label13 As Label
-    Private WithEvents btnAppointment As Button
+    Private WithEvents btnNewAppointment As Button
     Private WithEvents btnAdmission As Button
     Private WithEvents btnDischarge As Button
     Private WithEvents btnPaidPayment As Button
@@ -1203,6 +1211,6 @@ Partial Class frmPatientManager
     Friend WithEvents colPatientBedId As DataGridViewTextBoxColumn
     Friend WithEvents colPatientRoomId As DataGridViewTextBoxColumn
     Friend WithEvents Label19 As Label
-    Private WithEvents Button2 As Button
-    Private WithEvents Button3 As Button
+    Private WithEvents btnPrintPatient As Button
+    Private WithEvents btnViewAppointmentsList As Button
 End Class

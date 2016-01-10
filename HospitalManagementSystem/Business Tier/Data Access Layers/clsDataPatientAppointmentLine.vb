@@ -21,5 +21,15 @@ Namespace DAO
             End Try
 
         End Function
+
+        Friend Function GetPatientAppointmentLinesDataTable(id As Integer) As DataTable
+            Dim query As String =
+                    String.Format("SELECT L.Id As LineId, L.Detail " _
+                                + "FROM APPOINTMENTS AS A LEFT OUTER JOIN " _
+                                + "APPOINTMENTLINES AS L ON A.Id = L.AppointmentId " _
+                                + "LEFT OUTER JOIN PATIENTS AS P ON A.PatientId = P.Id " _
+                                + "WHERE A.Id = {0}", id)
+            Return _dbAccess.GetDataTable(query)
+        End Function
     End Class
 End Namespace

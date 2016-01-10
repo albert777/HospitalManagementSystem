@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnAppointment.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnNewAppointment.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlheAAYAIUAAAAAAP///7TRjs3gtNroyOXv2Ojx3fX58LDOh7LPirPQjLbRj7fSkbjTk7rUlrzV
         mL3Wm77WnMDYn8DYoMPZo8Tapcfcqcrersndrc3gs9TkvtfmwtjnxN/rzuLt0+bv2ezz4u/15/H26tHi
