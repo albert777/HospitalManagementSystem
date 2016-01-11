@@ -25,6 +25,10 @@ Namespace BUS
             End If
         End Sub
 
+        Friend Function GetAdmission(id As Integer) As PatientAdmission
+            Return _patientData.GetAdmission(id)
+        End Function
+
         Friend Sub DeletePatient(id As Integer)
             If _patientData.DeletePatient(id) Then
                 MsgBox("Xóa Bệnh nhân thành công")
@@ -40,5 +44,22 @@ Namespace BUS
                 MsgBox("Sửa thông tin Bệnh nhân thất bại")
             End If
         End Sub
+
+        Friend Function GetAdmissionTime(Id As Integer) As Date
+            Return _patientData.GetAdmissionTime(Id)
+        End Function
+
+        Friend Function GetDischargeTime(id As Integer) As Date
+            Return _patientData.GetDischargeTime(id)
+        End Function
+
+        Friend Function Discharge(employeeId As Integer, admissionId As Integer, treatment As String, result As String, prescribe As String) As Boolean
+            Return _patientData.Discharge(employeeId, admissionId, treatment, result, prescribe)
+        End Function
+
+        Friend Function GetBed(id As Integer) As Bed
+            Return _patientData.GetBed(id)
+
+        End Function
     End Class
 End Namespace

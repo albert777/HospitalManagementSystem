@@ -28,5 +28,9 @@ Namespace DAO
             Return ExecuteNoneQuery(query)
         End Function
 
+        'Friend Function GetClinicById(id As Integer) As Clinic
+        '    Dim query As String =
+        '        String.Format
+        'End Function
     End Class
 End Namespace

@@ -12,6 +12,17 @@
             Discharge = Nothing
         End Sub
 
+        Public Sub New(AdmissionTime As Date)
+            Me.New
+            Me.AdmissionTime = AdmissionTime
+        End Sub
+
+        Public Sub New(Id As Integer, AdmissionTime As Date)
+            Me.New
+            Me.Id = Id
+            Me.AdmissionTime = AdmissionTime
+        End Sub
+
         Public Property Id As Integer
             Get
                 Return _id

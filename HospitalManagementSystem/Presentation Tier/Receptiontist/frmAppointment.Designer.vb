@@ -74,9 +74,12 @@ Partial Class frmAppointment
         Me.Label18 = New System.Windows.Forms.Label()
         Me.txtResult = New System.Windows.Forms.TextBox()
         Me.Label23 = New System.Windows.Forms.Label()
-        Me.btnNewAppointment = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.txtDoctor = New System.Windows.Forms.TextBox()
+        Me.btnUpdateAppointment = New System.Windows.Forms.Button()
         Me.cmdClose = New System.Windows.Forms.Button()
+        Me.btnPrint = New System.Windows.Forms.Button()
+        Me.btnNewAppointment = New System.Windows.Forms.Button()
         Me.GroupBox3.SuspendLayout()
         Me.groupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -89,11 +92,11 @@ Partial Class frmAppointment
         '
         Me.lblTitle.AutoSize = True
         Me.lblTitle.BackColor = System.Drawing.Color.Transparent
-        Me.lblTitle.Font = New System.Drawing.Font("Arial", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitle.Font = New System.Drawing.Font("Arial", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitle.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.lblTitle.Location = New System.Drawing.Point(316, 9)
+        Me.lblTitle.Location = New System.Drawing.Point(294, 9)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(212, 21)
+        Me.lblTitle.Size = New System.Drawing.Size(257, 26)
         Me.lblTitle.TabIndex = 33
         Me.lblTitle.Text = "PHIẾU ĐĂNG KÝ KHÁM"
         '
@@ -114,7 +117,7 @@ Partial Class frmAppointment
         Me.txtAppointmentCreateTime.Location = New System.Drawing.Point(305, 25)
         Me.txtAppointmentCreateTime.Name = "txtAppointmentCreateTime"
         Me.txtAppointmentCreateTime.ReadOnly = True
-        Me.txtAppointmentCreateTime.Size = New System.Drawing.Size(88, 22)
+        Me.txtAppointmentCreateTime.Size = New System.Drawing.Size(176, 22)
         Me.txtAppointmentCreateTime.TabIndex = 35
         '
         'txtAppoimentId
@@ -146,7 +149,7 @@ Partial Class frmAppointment
         Me.GroupBox3.Controls.Add(Me.Label13)
         Me.GroupBox3.Controls.Add(Me.lblInsExpDate)
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 219)
+        Me.GroupBox3.Location = New System.Drawing.Point(12, 224)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(602, 54)
         Me.GroupBox3.TabIndex = 45
@@ -225,7 +228,7 @@ Partial Class frmAppointment
         Me.groupBox2.Controls.Add(Me.label8)
         Me.groupBox2.Controls.Add(Me.label9)
         Me.groupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.groupBox2.Location = New System.Drawing.Point(12, 125)
+        Me.groupBox2.Location = New System.Drawing.Point(12, 130)
         Me.groupBox2.Name = "groupBox2"
         Me.groupBox2.Size = New System.Drawing.Size(602, 88)
         Me.groupBox2.TabIndex = 44
@@ -244,15 +247,13 @@ Partial Class frmAppointment
         '
         'rbtnSexFemale
         '
+        Me.rbtnSexFemale.AutoCheck = False
         Me.rbtnSexFemale.AutoSize = True
-        Me.rbtnSexFemale.Checked = True
-        Me.rbtnSexFemale.Enabled = False
         Me.rbtnSexFemale.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rbtnSexFemale.Location = New System.Drawing.Point(533, 26)
         Me.rbtnSexFemale.Name = "rbtnSexFemale"
         Me.rbtnSexFemale.Size = New System.Drawing.Size(43, 20)
         Me.rbtnSexFemale.TabIndex = 62
-        Me.rbtnSexFemale.TabStop = True
         Me.rbtnSexFemale.Text = "Nữ"
         Me.rbtnSexFemale.UseVisualStyleBackColor = True
         '
@@ -268,8 +269,8 @@ Partial Class frmAppointment
         '
         'rbtnSexMale
         '
+        Me.rbtnSexMale.AutoCheck = False
         Me.rbtnSexMale.AutoSize = True
-        Me.rbtnSexMale.Enabled = False
         Me.rbtnSexMale.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.rbtnSexMale.Location = New System.Drawing.Point(472, 26)
         Me.rbtnSexMale.Name = "rbtnSexMale"
@@ -337,7 +338,7 @@ Partial Class frmAppointment
         Me.GroupBox1.Controls.Add(Me.txtAppointmentCreateTime)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 33)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 38)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(602, 86)
         Me.GroupBox1.TabIndex = 46
@@ -378,7 +379,7 @@ Partial Class frmAppointment
         Me.GroupBox4.Controls.Add(Me.txtRequest1)
         Me.GroupBox4.Controls.Add(Me.Label14)
         Me.GroupBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox4.Location = New System.Drawing.Point(12, 279)
+        Me.GroupBox4.Location = New System.Drawing.Point(12, 284)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(408, 168)
         Me.GroupBox4.TabIndex = 47
@@ -502,7 +503,7 @@ Partial Class frmAppointment
         Me.GroupBox5.Controls.Add(Me.txtClinicId)
         Me.GroupBox5.Controls.Add(Me.Label6)
         Me.GroupBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox5.Location = New System.Drawing.Point(620, 125)
+        Me.GroupBox5.Location = New System.Drawing.Point(620, 130)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Size = New System.Drawing.Size(215, 148)
         Me.GroupBox5.TabIndex = 48
@@ -593,12 +594,14 @@ Partial Class frmAppointment
         '
         'GroupBox6
         '
+        Me.GroupBox6.Controls.Add(Me.txtDoctor)
         Me.GroupBox6.Controls.Add(Me.txtPrescribe)
+        Me.GroupBox6.Controls.Add(Me.Label22)
         Me.GroupBox6.Controls.Add(Me.Label18)
         Me.GroupBox6.Controls.Add(Me.txtResult)
         Me.GroupBox6.Controls.Add(Me.Label23)
         Me.GroupBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox6.Location = New System.Drawing.Point(426, 279)
+        Me.GroupBox6.Location = New System.Drawing.Point(426, 284)
         Me.GroupBox6.Name = "GroupBox6"
         Me.GroupBox6.Size = New System.Drawing.Size(409, 168)
         Me.GroupBox6.TabIndex = 56
@@ -609,17 +612,17 @@ Partial Class frmAppointment
         '
         Me.txtPrescribe.BackColor = System.Drawing.SystemColors.Window
         Me.txtPrescribe.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPrescribe.Location = New System.Drawing.Point(110, 77)
+        Me.txtPrescribe.Location = New System.Drawing.Point(110, 105)
         Me.txtPrescribe.Multiline = True
         Me.txtPrescribe.Name = "txtPrescribe"
-        Me.txtPrescribe.Size = New System.Drawing.Size(286, 78)
+        Me.txtPrescribe.Size = New System.Drawing.Size(286, 50)
         Me.txtPrescribe.TabIndex = 49
         '
         'Label18
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(17, 80)
+        Me.Label18.Location = New System.Drawing.Point(17, 108)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(90, 16)
         Me.Label18.TabIndex = 48
@@ -629,7 +632,7 @@ Partial Class frmAppointment
         '
         Me.txtResult.BackColor = System.Drawing.SystemColors.Window
         Me.txtResult.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtResult.Location = New System.Drawing.Point(110, 21)
+        Me.txtResult.Location = New System.Drawing.Point(110, 49)
         Me.txtResult.Multiline = True
         Me.txtResult.Name = "txtResult"
         Me.txtResult.Size = New System.Drawing.Size(286, 50)
@@ -639,37 +642,45 @@ Partial Class frmAppointment
         '
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(17, 24)
+        Me.Label23.Location = New System.Drawing.Point(17, 52)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(80, 16)
         Me.Label23.TabIndex = 37
         Me.Label23.Text = "Chuẩn đoán"
         '
-        'btnNewAppointment
+        'Label22
         '
-        Me.btnNewAppointment.BackgroundImage = CType(resources.GetObject("btnNewAppointment.BackgroundImage"), System.Drawing.Image)
-        Me.btnNewAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnNewAppointment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNewAppointment.ForeColor = System.Drawing.Color.DarkBlue
-        Me.btnNewAppointment.Location = New System.Drawing.Point(12, 453)
-        Me.btnNewAppointment.Name = "btnNewAppointment"
-        Me.btnNewAppointment.Size = New System.Drawing.Size(109, 25)
-        Me.btnNewAppointment.TabIndex = 57
-        Me.btnNewAppointment.Text = "&Đăng ký Khám"
-        Me.btnNewAppointment.UseVisualStyleBackColor = True
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(17, 24)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(47, 16)
+        Me.Label22.TabIndex = 56
+        Me.Label22.Text = "Bác sĩ"
         '
-        'Button2
+        'txtDoctor
         '
-        Me.Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), System.Drawing.Image)
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Button2.Location = New System.Drawing.Point(127, 453)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(109, 25)
-        Me.Button2.TabIndex = 59
-        Me.Button2.Text = "&In phiếu"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.txtDoctor.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtDoctor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDoctor.Location = New System.Drawing.Point(110, 21)
+        Me.txtDoctor.Name = "txtDoctor"
+        Me.txtDoctor.ReadOnly = True
+        Me.txtDoctor.Size = New System.Drawing.Size(286, 22)
+        Me.txtDoctor.TabIndex = 63
+        '
+        'btnUpdateAppointment
+        '
+        Me.btnUpdateAppointment.BackgroundImage = CType(resources.GetObject("btnUpdateAppointment.BackgroundImage"), System.Drawing.Image)
+        Me.btnUpdateAppointment.Enabled = False
+        Me.btnUpdateAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnUpdateAppointment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUpdateAppointment.ForeColor = System.Drawing.Color.DarkBlue
+        Me.btnUpdateAppointment.Location = New System.Drawing.Point(145, 458)
+        Me.btnUpdateAppointment.Name = "btnUpdateAppointment"
+        Me.btnUpdateAppointment.Size = New System.Drawing.Size(127, 25)
+        Me.btnUpdateAppointment.TabIndex = 61
+        Me.btnUpdateAppointment.Text = "&Cập nhập phiếu"
+        Me.btnUpdateAppointment.UseVisualStyleBackColor = True
         '
         'cmdClose
         '
@@ -678,7 +689,7 @@ Partial Class frmAppointment
         Me.cmdClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdClose.ForeColor = System.Drawing.Color.DarkRed
         Me.cmdClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.cmdClose.Location = New System.Drawing.Point(737, 454)
+        Me.cmdClose.Location = New System.Drawing.Point(737, 459)
         Me.cmdClose.Name = "cmdClose"
         Me.cmdClose.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.cmdClose.Size = New System.Drawing.Size(98, 25)
@@ -686,13 +697,41 @@ Partial Class frmAppointment
         Me.cmdClose.Text = "&Đóng"
         Me.cmdClose.UseVisualStyleBackColor = True
         '
+        'btnPrint
+        '
+        Me.btnPrint.BackgroundImage = CType(resources.GetObject("btnPrint.BackgroundImage"), System.Drawing.Image)
+        Me.btnPrint.Enabled = False
+        Me.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnPrint.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrint.ForeColor = System.Drawing.Color.DarkBlue
+        Me.btnPrint.Location = New System.Drawing.Point(278, 458)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.Size = New System.Drawing.Size(109, 25)
+        Me.btnPrint.TabIndex = 59
+        Me.btnPrint.Text = "&In phiếu"
+        Me.btnPrint.UseVisualStyleBackColor = True
+        '
+        'btnNewAppointment
+        '
+        Me.btnNewAppointment.BackgroundImage = CType(resources.GetObject("btnNewAppointment.BackgroundImage"), System.Drawing.Image)
+        Me.btnNewAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnNewAppointment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNewAppointment.ForeColor = System.Drawing.Color.DarkBlue
+        Me.btnNewAppointment.Location = New System.Drawing.Point(12, 458)
+        Me.btnNewAppointment.Name = "btnNewAppointment"
+        Me.btnNewAppointment.Size = New System.Drawing.Size(127, 25)
+        Me.btnNewAppointment.TabIndex = 57
+        Me.btnNewAppointment.Text = "&Đăng ký Khám"
+        Me.btnNewAppointment.UseVisualStyleBackColor = True
+        '
         'frmAppointment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(845, 491)
+        Me.ClientSize = New System.Drawing.Size(845, 495)
+        Me.Controls.Add(Me.btnUpdateAppointment)
         Me.Controls.Add(Me.cmdClose)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.btnNewAppointment)
         Me.Controls.Add(Me.GroupBox6)
         Me.Controls.Add(Me.GroupBox5)
@@ -767,7 +806,7 @@ Partial Class frmAppointment
     Private WithEvents txtResult As TextBox
     Private WithEvents Label23 As Label
     Private WithEvents btnNewAppointment As Button
-    Private WithEvents Button2 As Button
+    Private WithEvents btnPrint As Button
     Private WithEvents cmdClose As Button
     Friend WithEvents rbtnSexFemale As RadioButton
     Friend WithEvents rbtnSexMale As RadioButton
@@ -775,4 +814,7 @@ Partial Class frmAppointment
     Friend WithEvents txtPatientDoB As TextBox
     Friend WithEvents Label15 As Label
     Friend WithEvents Label12 As Label
+    Private WithEvents Label22 As Label
+    Private WithEvents btnUpdateAppointment As Button
+    Private WithEvents txtDoctor As TextBox
 End Class

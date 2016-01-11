@@ -37,6 +37,12 @@ Namespace DAO
 
             Return account
         End Function
+
+        Friend Function ChangePassword(username As String, password As String) As Boolean
+            Dim query As String =
+                String.Format("UPDATE ACCOUNTS SET Password = '{0}' WHERE Username = '{1}'", password, username)
+            Return _dbAccess.ExecuteNoneQuery(query)
+        End Function
 #End Region
 
     End Class

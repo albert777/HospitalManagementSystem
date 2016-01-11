@@ -32,6 +32,7 @@ Public Class frmAppointmentManager
         txtPatientName.Text = _patient.Name
         txtPatientDoB.Text = _patient.DoB.ToShortDateString
         rbtnSexMale.Checked = _patient.Sex
+        rbtnSexFemale.Checked = Not (_patient.Sex)
 
         txtPatientInsuranceIssueDate.Text = _patient.InsuranceIssueDate.ToShortDateString
         txtPatientInsuranceExpiryDate.Text = _patient.InsuranceExpiryDate.ToShortDateString

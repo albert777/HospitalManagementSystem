@@ -98,6 +98,31 @@ Namespace DAO
             End Try
         End Function
 
+        Friend Function InpatientAdmission(employeeId As Integer, patientId As Integer, BedId As Integer, patientType As String) As Boolean
+            Dim query As String =
+                String.Format("INSERT INTO ADMISSIONS(EmployeeId, PatientId, AdmissionTime, BedId)
+                               VALUES({0}, {1}, '{2}', {3})",
+                              employeeId, patientId, Date.Now, BedId)
+            Dim query2 As String =
+                String.Format("UPDATE PATIENTS
+                               SET Type = N'{0}'
+                               WHERE Id = {1}", patientType, patientId)
+
+            Return ExecuteNoneQuery(query) AndAlso ExecuteNoneQuery(query2)
+        End Function
+
+        Friend Function OutpatientAdmission(EmployeeId As Integer, PatientId As Integer) As Boolean
+            Dim query As String =
+                String.Format("INSERT INTO ADMISSIONS(EmployeeId, PatientId, AdmissionTime)
+                               VALUES({0}, {1}, '{2}')",
+                              EmployeeId, PatientId, Date.Now)
+            Dim query2 As String =
+                String.Format("UPDATE PATIENTS
+                               SET Type = N'Ngoại trú'
+                               WHERE Id = {0}", PatientId)
+            Return ExecuteNoneQuery(query) AndAlso ExecuteNoneQuery(query2)
+        End Function
+
         Friend Function GetEmployeeById(id As Integer) As Employee
             Dim empl As New Employee
 
@@ -114,15 +139,41 @@ Namespace DAO
                     empl.DoB = CDate(.Item("DoB"))
                     empl.IdCard = CType(.Item("IdCard"), String)
                     empl.Address = CType(.Item("Address"), String)
-                    empl.Phone = CType(.Item("Phone"), String)
-                    empl.Folk = CType(.Item("Folk"), String)
+                    If .Item("Phone").Equals(DBNull.Value) Then
+                        empl.Phone = ""
+                    Else
+                        empl.Phone = CType(.Item("Phone"), String)
+                    End If
+                    If .Item("Folk").Equals(DBNull.Value) Then
+                        empl.Folk = ""
+                    Else
+                        empl.Folk = CType(.Item("Folk"), String)
+                    End If
                     empl.HireDate = CDate(.Item("HireDate"))
-                    empl.Ratio = CDbl(.Item("Ratio"))
+                    If .Item("Ratio").Equals(DBNull.Value) Then
+                        empl.Ratio = 0
+                    Else
+                        empl.Ratio = CDbl(.Item("Ratio"))
+                    End If
                     empl.BasicSalary = CInt(.Item("BasicSalary"))
                     empl.Subsidy = CInt(.Item("Subsidy"))
-                    empl.Position = CType(.Item("Position"), String)
-                    empl.Department = New Department(CInt(.Item("DeptId")))
-                    empl.Speciality = New Speciality(CInt(.Item("SpecId")))
+                    If .Item("Position").Equals(DBNull.Value) Then
+                        empl.Position = ""
+                    Else
+                        empl.Position = CType(.Item("Position"), String)
+                    End If
+
+                    If .Item("DeptId").Equals(DBNull.Value) Then
+                        empl.Department = New Department()
+                    Else
+                        empl.Department = New Department(CInt(.Item("DeptId")))
+                    End If
+                    If .Item("SpecId").Equals(DBNull.Value) Then
+                        empl.Speciality = New Speciality
+                    Else
+                        empl.Speciality = New Speciality(CInt(.Item("SpecId")))
+                    End If
+
                 End With
 
             Catch ex As Exception

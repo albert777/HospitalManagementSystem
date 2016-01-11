@@ -23,8 +23,16 @@ Namespace BUS
             Return _appointmentData.GetPatientAppointmentsDataTable(patientId)
         End Function
 
+        Friend Function GetPatientAppointmentById(id As Integer) As PatientAppointment
+            Return _appointmentData.GetAppointmentById(id)
+        End Function
+
         Friend Function GetPatientAppointmentLines(id As Integer) As List(Of PatientAppointmentLine)
             Return _appointmentData.GetPatientAppointmentLines(id)
+        End Function
+
+        Friend Function GetPatientLastAppointmentId(id As Integer) As String
+            Return _appointmentData.GetPatientLastAppointmentId(id)
         End Function
     End Class
 End Namespace

@@ -3,8 +3,6 @@ c:\users\limited\documents\visual studio 2015\Projects\HospitalManagementSystem\
 c:\users\limited\documents\visual studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.frmMain.resources
 c:\users\limited\documents\visual studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.Resources.resources
 c:\users\limited\documents\visual studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.vbproj.GenerateResource.Cache
-C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.frmAccountDetail.resources
-C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.frmAddEmployee.resources
 C:\Users\Limited\documents\visual studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.frmCategoryManager.resources
 C:\Users\Limited\documents\visual studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.frmStaffManager.resources
 C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.frmAbout.resources
@@ -34,3 +32,8 @@ C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\
 C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.frmPatientManager.resources
 C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.frmAppointment.resources
 C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.frmAppointmentManager.resources
+C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.frmAdmission.resources
+C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.frmDischarge.resources
+C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.frmUpdateAppointment_EnterId.resources
+C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.frmAccountInformation.resources
+C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Debug\HospitalManagementSystem.frmAccountChangePassword.resources

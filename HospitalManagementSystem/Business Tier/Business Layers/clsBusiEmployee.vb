@@ -37,17 +37,53 @@ Namespace BUS
             Dim dbEmpl As DataTable = _emplData.GetEmployeesDataTable(id)
 
             If dbEmpl.Rows.Count > 0 Then
-                empl.Id = CInt(dbEmpl.Rows(0).Item("Id"))
-                empl.Name = CType(dbEmpl.Rows(0).Item("Name"), String)
-                'empl.Sex = CBool(dbEmpl.Rows(0).Item("Sex"))
-                'empl.DoB = CDate(dbEmpl.Rows(0).Item("DoB"))
-                'empl.IdCard = CType(dbEmpl.Rows(0).Item("IdCard"), String)
-                'empl.Address = CType(dbEmpl.Rows(0).Item("Address"), String)
-                'empl.Folk = dbEmpl.Rows
+                With dbEmpl.Rows(0)
+                    empl.Id = CInt(.Item("Id"))
+                    empl.Name = CType(.Item("Name"), String)
+                    empl.Sex = CBool(.Item("Sex"))
+                    empl.DoB = CDate(.Item("DoB"))
+                    empl.IdCard = CType(.Item("IdCard"), String)
+                    empl.Address = CType(.Item("Address"), String)
 
-                'E.Id, E.Name, E.Sex, E.DoB, E.IdCard, E.Address, E.Phone, E.Folk, 
-                'E.HireDate, E.BasicSalary, E.Subsidy, E.Ratio,
-                'E.Position, E.DeptId, D.Name As DeptName, S.Name As SpecName, E.SpecId
+                    If .Item("Phone").Equals(DBNull.Value) Then
+                        empl.Phone = ""
+                    Else
+                        empl.Phone = CType(.Item("Phone"), String)
+                    End If
+                    If .Item("Folk").Equals(DBNull.Value) Then
+                        empl.Folk = ""
+                    Else
+                        empl.Folk = CType(.Item("Folk"), String)
+                    End If
+
+                    empl.HireDate = CDate(.Item("HireDate"))
+
+                    If .Item("Ratio").Equals(DBNull.Value) Then
+                        empl.Ratio = 0
+                    Else
+                        empl.Ratio = CDbl(.Item("Ratio"))
+                    End If
+
+                    empl.BasicSalary = CInt(.Item("BasicSalary"))
+                    empl.Subsidy = CInt(.Item("Subsidy"))
+
+                    If .Item("Position").Equals(DBNull.Value) Then
+                        empl.Position = ""
+                    Else
+                        empl.Position = CType(.Item("Position"), String)
+                    End If
+                    If .Item("DeptId").Equals(DBNull.Value) Then
+                        empl.Department = New Department
+                    Else
+                        empl.Department = New Department(CInt(.Item("DeptId")))
+                    End If
+                    If .Item("SpecId").Equals(DBNull.Value) Then
+                        empl.Speciality = New Speciality
+                    Else
+                        empl.Speciality = New Speciality(CInt(.Item("SpecId")))
+                    End If
+
+                End With
             End If
 
             Return empl
@@ -77,5 +113,25 @@ Namespace BUS
                 End If
             End If
         End Sub
+
+        Friend Function InpatientAdmission(EmployeeId As Integer, PatientId As Integer, BedId As Integer, patientType As String) As Boolean
+            If _emplData.InpatientAdmission(EmployeeId, PatientId, BedId, patientType) Then
+                MsgBox("Ghi thông tin nhập viện thành công")
+                Return True
+            Else
+                MsgBox("Ghi thông tin nhập viện thành công")
+                Return False
+            End If
+        End Function
+
+        Friend Function OutpatientAdmission(EmployeeId As Integer, PatientId As Integer) As Boolean
+            If _emplData.OutpatientAdmission(EmployeeId, PatientId) Then
+                MsgBox("Ghi thông tin nhập viện thành công")
+                Return True
+            Else
+                MsgBox("Ghi thông tin nhập viện thành công")
+                Return False
+            End If
+        End Function
     End Class
 End Namespace

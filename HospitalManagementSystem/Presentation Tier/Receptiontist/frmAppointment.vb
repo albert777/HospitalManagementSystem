@@ -5,11 +5,12 @@ Imports HospitalManagementSystem.DTO
 Public Class frmAppointment
     Private _employee As Employee
     Private _patient As Patient
+    Private _doctor As Employee
 
     Private _clinicBus As BusiClinic
     Private _appoitmentBus As BusPatientAppointment
 
-    Public Sub New(ByVal Type As String, Optional ByVal patient As Patient = Nothing, Optional ByVal appointment As PatientAppointment = Nothing)
+    Public Sub New(ByVal Type As String, Optional ByVal patient As Patient = Nothing, Optional ByVal appointment As PatientAppointment = Nothing, Optional ByVal doctor As Employee = Nothing)
 
         ' This call is required by the designer.
         InitializeComponent()
@@ -23,18 +24,7 @@ Public Class frmAppointment
         If Type = "New" Then
             _employee = My.Forms.frmMain._account.Employee
             _patient = patient
-            txtAppointmentCreateTime.Text = Date.Now.ToShortDateString()
-            txtAppointmentEmployeeName.Text = _employee.Name
-
-            txtPatientId.Text = _patient.Id.ToString
-            txtPatientName.Text = _patient.Name
-            txtPatientDoB.Text = _patient.DoB.ToShortDateString
-            rbtnSexMale.Checked = _patient.Sex
-
-            txtPatientInsuranceIssueDate.Text = _patient.InsuranceIssueDate.ToShortDateString()
-            txtPatientInsuranceExpiryDate.Text = _patient.InsuranceExpiryDate.ToShortDateString
-            txtPatientInsuranceId.Text = "Nothing"
-            txtPatientInsuranceId.Text = _patient.InsuranceID
+            txtAppointmentCreateTime.Text = Date.Now.ToShortDateString() + " " + Date.Now.ToLongTimeString
 
             txtResult.ReadOnly = True
             txtResult.BackColor = Color.FromArgb(255, 255, 192)
@@ -51,18 +41,8 @@ Public Class frmAppointment
 
             _employee = appointment.Employee
             _patient = appointment.Patient
+            txtAppoimentId.Text = appointment.Id.ToString
             txtAppointmentCreateTime.Text = appointment.CreateTime.ToShortDateString
-            txtAppointmentEmployeeName.Text = _employee.Name
-
-            txtPatientId.Text = _patient.Id.ToString
-            txtPatientName.Text = _patient.Name
-            txtPatientDoB.Text = _patient.DoB.ToShortDateString
-            rbtnSexMale.Checked = _patient.Sex
-
-            txtPatientInsuranceId.Text = "Nothing"
-            txtPatientInsuranceIssueDate.Text = _patient.InsuranceIssueDate.ToShortDateString()
-            txtPatientInsuranceExpiryDate.Text = _patient.InsuranceExpiryDate.ToShortDateString
-            txtPatientInsuranceId.Text = _patient.InsuranceID
 
             txtResult.ReadOnly = True
             txtResult.BackColor = Color.FromArgb(255, 255, 192)
@@ -87,7 +67,53 @@ Public Class frmAppointment
             If appointment.Lines.Count = 5 Then
                 txtRequest5.Text = appointment.Lines(4).Detail
             End If
+
+        ElseIf Type = "Update" Then
+            SetViewMode()
+            btnUpdateAppointment.Enabled = True
+
+            _employee = appointment.Employee
+            _patient = appointment.Patient
+            _doctor = doctor
+
+            txtAppoimentId.Text = appointment.Id.ToString
+            txtAppointmentCreateTime.Text = appointment.CreateTime.ToShortDateString
+
+            cboxClinics.SelectedValue = appointment.Clinic.Id
+            txtAppointmentNo.Text = appointment.Numberorder.ToString
+
+            appointment.Lines = _appoitmentBus.GetPatientAppointmentLines(appointment.Id)
+
+            txtRequest1.Text = appointment.Lines(0).Detail
+            If appointment.Lines.Count >= 2 Then
+                txtRequest2.Text = appointment.Lines(1).Detail
+            End If
+            If appointment.Lines.Count >= 3 Then
+                txtRequest3.Text = appointment.Lines(2).Detail
+            End If
+            If appointment.Lines.Count >= 4 Then
+                txtRequest4.Text = appointment.Lines(3).Detail
+            End If
+            If appointment.Lines.Count = 5 Then
+                txtRequest5.Text = appointment.Lines(4).Detail
+            End If
+
+            txtDoctor.Text = _doctor.Name
         End If
+
+        txtAppointmentEmployeeName.Text = _employee.Name
+
+        txtPatientId.Text = _patient.Id.ToString
+        txtPatientName.Text = _patient.Name
+        txtPatientDoB.Text = _patient.DoB.ToShortDateString
+
+        txtPatientInsuranceIssueDate.Text = _patient.InsuranceIssueDate.ToShortDateString()
+        txtPatientInsuranceExpiryDate.Text = _patient.InsuranceExpiryDate.ToShortDateString
+        txtPatientInsuranceId.Text = "Nothing"
+        txtPatientInsuranceId.Text = _patient.InsuranceID
+
+        rbtnSexMale.Checked = _patient.Sex
+        rbtnSexFemale.Checked = Not (_patient.Sex)
 
     End Sub
 
@@ -142,7 +168,7 @@ Public Class frmAppointment
 
             If _appoitmentBus.AddPatientAppointment(_patient.Id, _employee.Id, CInt(txtClinicId.Text.Trim), CInt(txtAppointmentNo.Text.Trim), Date.Now, lines) Then
                 SetViewMode()
-
+                txtAppoimentId.Text = _appoitmentBus.GetPatientLastAppointmentId(_patient.Id)
             Else
                 btnNewAppointment.Enabled = True
             End If

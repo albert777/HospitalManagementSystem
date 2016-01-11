@@ -40,6 +40,63 @@ Namespace DAO
 
         End Function
 
+        Friend Function GetAppointmentById(id As Integer) As PatientAppointment
+            Dim appoint As PatientAppointment = Nothing
+
+            Try
+                Dim query As String =
+                            String.Format("Select A.*, P.Name As PName, E.Name As EName, C.Name As CName, D.Name As DName 
+                                        FROM APPOINTMENTS AS A 
+                                        Left OUTER JOIN PATIENTS AS P ON A.PatientId = P.Id 
+                                        LEFT OUTER JOIN CLINICS AS C ON A.ClinicId = C.Id 
+                                        LEFT OUTER JOIN EMPLOYEES AS E ON A.EmployeeId = E.Id 
+                                        LEFT OUTER JOIN EMPLOYEES AS D ON A.DoctorId = D.Id 
+                                        WHERE A.Id = {0}", id)
+
+                Dim dtAppoint As DataTable = _dbAccess.GetDataTable(query)
+
+                If dtAppoint.Rows.Count > 0 Then
+                    Dim _patientData As New DataPatient
+                    Dim _employeeData As New DataEmployee
+                    Dim _clinicData As New DataClinic
+
+                    With dtAppoint.Rows(0)
+                        appoint = New PatientAppointment
+                        appoint.Id = CInt(.Item("Id"))
+                        appoint.Patient = _patientData.GetPatientById(CInt(.Item("PatientId")))
+                        appoint.Employee = _employeeData.GetEmployeeById(CInt(.Item("EmployeeId")))
+                        appoint.Clinic = New Clinic(CInt(.Item("ClinicId")), CType(.Item("CName"), String))
+                        appoint.Doctor = Nothing
+                        appoint.Numberorder = CInt(.Item("NumberOrder"))
+                        appoint.CreateTime = CDate(.Item("CreateTime"))
+                        If .Item("Result").Equals(DBNull.Value) Then
+                            appoint.Result = ""
+                        Else
+                            appoint.Result = CType(.Item("Result"), String)
+                        End If
+                        If .Item("Prescribe").Equals(DBNull.Value) Then
+                            appoint.Prescribe = ""
+                        Else
+                            appoint.Prescribe = CType(.Item("Prescribe"), String)
+                        End If
+
+                    End With
+
+                End If
+
+            Catch ex As Exception
+
+            End Try
+
+            Return appoint
+        End Function
+
+        Friend Function GetPatientLastAppointmentId(id As Integer) As String
+            Dim query As String =
+                String.Format("SELECT TOP(1) Id FROM APPOINTMENTS WHERE PatientId = {0} ORDER BY Id DESC", id)
+            Return CType(_dbAccess.GetScalar(query), String)
+        End Function
+
         Friend Function GetPatientAppointmentLines(id As Integer) As List(Of PatientAppointmentLine)
             Dim lines As New List(Of PatientAppointmentLine)
 

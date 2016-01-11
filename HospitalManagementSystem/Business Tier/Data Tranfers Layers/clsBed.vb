@@ -20,6 +20,12 @@
             Me.Room = 0
             Me.Department = Nothing
         End Sub
+
+        Public Sub New(Bed As Bed)
+            Me.Id = Bed.Id
+            Me.Room = Bed.Room
+            Me.Department = Bed.Department
+        End Sub
 #End Region
 
 #Region "Property"

@@ -22,6 +22,7 @@
         Private _relatives As List(Of PatientRelative)
         Private _records As List(Of PatientRecord)
         Private _appointments As List(Of PatientAppointment)
+        Private _admission As PatientAdmission
 #End Region
 
 #Region "Constructor"
@@ -128,6 +129,15 @@
             End Get
             Set(value As String)
                 _status = value
+            End Set
+        End Property
+
+        Public Property Admission As PatientAdmission
+            Get
+                Return _admission
+            End Get
+            Set(value As PatientAdmission)
+                _admission = value
             End Set
         End Property
 #End Region

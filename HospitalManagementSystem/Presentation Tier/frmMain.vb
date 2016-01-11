@@ -12,6 +12,7 @@ Public Class frmMain
     Private frmStaffManager As New frmStaffManager
     Private frmCategoryManager As New frmCategoryManager
     Private frmPatientManager As frmPatientManager
+    Private frmUpdateAppointment_EnterID As New frmUpdateAppointment_EnterId
 
     Public Sub New()
 
@@ -111,7 +112,7 @@ Public Class frmMain
     End Sub
 
     Private Sub mitemAccountInformation_Click(sender As Object, e As EventArgs) Handles mitemAccountInformation.Click
-        Dim frmAccountDetail As New frmAccountDetail
+        Dim frmAccountDetail As New frmAccountInformation(_account)
         frmAccountDetail.ShowDialog()
     End Sub
 
@@ -138,6 +139,8 @@ Public Class frmMain
     Private Sub HideAllMdi()
         Me.frmStaffManager.Hide()
         Me.frmCategoryManager.Hide()
+        Me.frmPatientManager.Hide()
+        Me.frmUpdateAppointment_EnterID.Hide()
     End Sub
 
     Private Sub DanhSáchKhoaNgànhPhòngKhámGiườngBệnhToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DanhSáchKhoaNgànhPhòngKhámGiườngBệnhToolStripMenuItem.Click
@@ -157,7 +160,7 @@ Public Class frmMain
 
     End Sub
 
-    Private Sub DanhMụcBệnhNhânToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DanhMụcBệnhNhânToolStripMenuItem.Click
+    Private Sub DanhMụcBệnhNhânToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles tsmiPatientManager.Click
         HideAllMdi()
 
         Try
@@ -173,26 +176,6 @@ Public Class frmMain
         End Try
     End Sub
 
-    Private Sub ShowNewForm(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub CascadeToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
-        Me.LayoutMdi(MdiLayout.Cascade)
-    End Sub
-
-    Private Sub TileVerticalToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
-        Me.LayoutMdi(MdiLayout.TileVertical)
-    End Sub
-
-    Private Sub TileHorizontalToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
-        Me.LayoutMdi(MdiLayout.TileHorizontal)
-    End Sub
-
-    Private Sub ArrangeIconsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs)
-        Me.LayoutMdi(MdiLayout.ArrangeIcons)
-    End Sub
-
     Private Sub CloseAllToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles CloseAllToolStripMenuItem.Click
         ' Close all child forms of the parent.
         For Each ChildForm As Form In Me.MdiChildren
@@ -203,5 +186,21 @@ Public Class frmMain
     Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
         Dim frmAbout As New frmAbout
         frmAbout.ShowDialog()
+    End Sub
+
+    Private Sub CậpNhậtKếtQuảKhámToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles tsmiUpdatePatientAppointment.Click
+        HideAllMdi()
+
+        Try
+            If Me.frmUpdateAppointment_EnterID Is Nothing Then
+                Me.frmUpdateAppointment_EnterID = New frmUpdateAppointment_EnterId
+            End If
+
+            Me.frmUpdateAppointment_EnterID.MdiParent = Me
+            Me.frmUpdateAppointment_EnterID.Show()
+        Catch ex As Exception
+            txtStatus.Text = "Lỗi: Không thể mở Cập nhật kết quả phiếu khám."
+
+        End Try
     End Sub
 End Class

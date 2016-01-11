@@ -136,22 +136,28 @@
       <DependentUpon>dsetEmployeeInformation.xsd</DependentUpon>
     </Compile>
     <Compile Include="Global Class\clsGlobalFunction.vb" />
+    <Compile Include="Presentation Tier\frmAccountChangePassword.Designer.vb">
+      <DependentUpon>frmAccountChangePassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Tier\frmAccountChangePassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Tier\Doctor\frmUpdateAppointment_EnterId.Designer.vb">
+      <DependentUpon>frmUpdateAppointment_EnterId.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Tier\Doctor\frmUpdateAppointment_EnterId.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentation Tier\frmAbout.Designer.vb">
       <DependentUpon>frmAbout.vb</DependentUpon>
     </Compile>
     <Compile Include="Presentation Tier\frmAbout.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation Tier\frmAccountDetail.Designer.vb">
-      <DependentUpon>frmAccountDetail.vb</DependentUpon>
+    <Compile Include="Presentation Tier\frmAccountInformation.Designer.vb">
+      <DependentUpon>frmAccountInformation.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentation Tier\frmAccountDetail.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation Tier\frmAddEmployee.Designer.vb">
-      <DependentUpon>frmAddEmployee.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Presentation Tier\frmAddEmployee.vb">
+    <Compile Include="Presentation Tier\frmAccountInformation.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentation Tier\frmLogin.Designer.vb">
@@ -183,6 +189,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Business Tier\Business Layers\clsBusiSpeciality.vb" />
+    <Compile Include="Presentation Tier\Receptiontist\frmAdmission.Designer.vb">
+      <DependentUpon>frmAdmission.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Tier\Receptiontist\frmAdmission.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentation Tier\Receptiontist\frmAppointment.Designer.vb">
       <DependentUpon>frmAppointment.vb</DependentUpon>
     </Compile>
@@ -193,6 +205,12 @@
       <DependentUpon>frmAppointmentManager.vb</DependentUpon>
     </Compile>
     <Compile Include="Presentation Tier\Receptiontist\frmAppointmentManager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Tier\Receptiontist\frmDischarge.Designer.vb">
+      <DependentUpon>frmDischarge.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Tier\Receptiontist\frmDischarge.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentation Tier\Receptiontist\frmPatientManager.Designer.vb">
@@ -215,14 +233,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Presentation Tier\Doctor\frmUpdateAppointment_EnterId.resx">
+      <DependentUpon>frmUpdateAppointment_EnterId.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Tier\frmAbout.resx">
       <DependentUpon>frmAbout.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Tier\frmAccountDetail.resx">
-      <DependentUpon>frmAccountDetail.vb</DependentUpon>
+    <EmbeddedResource Include="Presentation Tier\frmAccountChangePassword.resx">
+      <DependentUpon>frmAccountChangePassword.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Tier\frmAddEmployee.resx">
-      <DependentUpon>frmAddEmployee.vb</DependentUpon>
+    <EmbeddedResource Include="Presentation Tier\frmAccountInformation.resx">
+      <DependentUpon>frmAccountInformation.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Tier\frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
@@ -236,11 +257,17 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Tier\Receptiontist\frmAdmission.resx">
+      <DependentUpon>frmAdmission.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Tier\Receptiontist\frmAppointment.resx">
       <DependentUpon>frmAppointment.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Tier\Receptiontist\frmAppointmentManager.resx">
       <DependentUpon>frmAppointmentManager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Tier\Receptiontist\frmDischarge.resx">
+      <DependentUpon>frmDischarge.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Tier\Receptiontist\frmPatientManager.resx">
       <DependentUpon>frmPatientManager.vb</DependentUpon>
@@ -307,9 +334,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Presentation Tier\Doctor\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

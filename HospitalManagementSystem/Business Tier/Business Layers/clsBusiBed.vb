@@ -31,5 +31,17 @@ Namespace BUS
         Friend Sub UpdateBed(id As Integer, roomId As Integer, deptId As Integer)
             _bedData.UpdateBed(id, roomId, deptId)
         End Sub
+
+        Friend Function GetBedsDepartmentsDataTable() As DataTable
+            Return _bedData.GetBedsDepartmentDataTable()
+        End Function
+
+        Friend Function GetBedsRoomsDataTable(deptId As Integer) As DataTable
+            Return _bedData.GetBedsRoomsDataTable(deptId)
+        End Function
+
+        Friend Function GetBedsDataTable(deptId As Integer, room As Integer) As Object
+            Return _bedData.GetBedsDataTable(deptId, room)
+        End Function
     End Class
 End Namespace

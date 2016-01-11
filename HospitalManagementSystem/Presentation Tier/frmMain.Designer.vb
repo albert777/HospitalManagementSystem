@@ -34,7 +34,8 @@ Partial Class frmMain
         Me.DanhSáchNhânViênToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DanhSáchKhoaNgànhPhòngKhámGiườngBệnhToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiReceptiontist = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DanhMụcBệnhNhânToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmiPatientManager = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmiUpdatePatientAppointment = New System.Windows.Forms.ToolStripMenuItem()
         Me.WindowsMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpMenu = New System.Windows.Forms.ToolStripMenuItem()
@@ -119,8 +120,8 @@ Partial Class frmMain
         '
         Me.tsmiRecordsSystems.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DanhSáchNhânViênToolStripMenuItem, Me.DanhSáchKhoaNgànhPhòngKhámGiườngBệnhToolStripMenuItem})
         Me.tsmiRecordsSystems.Name = "tsmiRecordsSystems"
-        Me.tsmiRecordsSystems.Size = New System.Drawing.Size(118, 20)
-        Me.tsmiRecordsSystems.Text = "Quản lý Danh mục"
+        Me.tsmiRecordsSystems.Size = New System.Drawing.Size(113, 20)
+        Me.tsmiRecordsSystems.Text = "Quản lý Hệ thống"
         '
         'DanhSáchNhânViênToolStripMenuItem
         '
@@ -136,16 +137,22 @@ Partial Class frmMain
         '
         'tsmiReceptiontist
         '
-        Me.tsmiReceptiontist.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DanhMụcBệnhNhânToolStripMenuItem})
+        Me.tsmiReceptiontist.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiPatientManager, Me.tsmiUpdatePatientAppointment})
         Me.tsmiReceptiontist.Name = "tsmiReceptiontist"
         Me.tsmiReceptiontist.Size = New System.Drawing.Size(109, 20)
         Me.tsmiReceptiontist.Text = "Khám chữa bệnh"
         '
-        'DanhMụcBệnhNhânToolStripMenuItem
+        'tsmiPatientManager
         '
-        Me.DanhMụcBệnhNhânToolStripMenuItem.Name = "DanhMụcBệnhNhânToolStripMenuItem"
-        Me.DanhMụcBệnhNhânToolStripMenuItem.Size = New System.Drawing.Size(189, 22)
-        Me.DanhMụcBệnhNhânToolStripMenuItem.Text = "Danh mục bệnh nhân"
+        Me.tsmiPatientManager.Name = "tsmiPatientManager"
+        Me.tsmiPatientManager.Size = New System.Drawing.Size(197, 22)
+        Me.tsmiPatientManager.Text = "Danh mục bệnh nhân"
+        '
+        'tsmiUpdatePatientAppointment
+        '
+        Me.tsmiUpdatePatientAppointment.Name = "tsmiUpdatePatientAppointment"
+        Me.tsmiUpdatePatientAppointment.Size = New System.Drawing.Size(197, 22)
+        Me.tsmiUpdatePatientAppointment.Text = "Cập nhật kết quả khám"
         '
         'WindowsMenu
         '
@@ -157,7 +164,7 @@ Partial Class frmMain
         'CloseAllToolStripMenuItem
         '
         Me.CloseAllToolStripMenuItem.Name = "CloseAllToolStripMenuItem"
-        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.CloseAllToolStripMenuItem.Text = "&Hide All"
         '
         'HelpMenu
@@ -170,7 +177,7 @@ Partial Class frmMain
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AboutToolStripMenuItem.Text = "Thông tin ..."
         '
         'StatusStrip
@@ -186,7 +193,7 @@ Partial Class frmMain
         '
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
         Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(133, 17)
-        Me.ToolStripStatusLabel1.Text = "Version 01:46 11/01/16   "
+        Me.ToolStripStatusLabel1.Text = "Version 18:14 11/01/16   "
         '
         'txtStatus
         '
@@ -235,6 +242,7 @@ Partial Class frmMain
     Friend WithEvents HelpMenu As ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents tsmiReceptiontist As ToolStripMenuItem
-    Friend WithEvents DanhMụcBệnhNhânToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents tsmiPatientManager As ToolStripMenuItem
     Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
+    Friend WithEvents tsmiUpdatePatientAppointment As ToolStripMenuItem
 End Class

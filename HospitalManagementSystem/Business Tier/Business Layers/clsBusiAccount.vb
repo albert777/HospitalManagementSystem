@@ -38,6 +38,16 @@ Namespace BUS
 
         End Class
 
+        Friend Function ChangePassword(username As String, password As String) As Boolean
+            If _accData.ChangePassword(username, password) Then
+                MsgBox("Đổi mật khẩu thành công")
+                Return True
+            Else
+                MsgBox("Đổi mật khẩu thất bại")
+                Return False
+            End If
+        End Function
+
         Public Function GetAccountViaLogin() As LoginResult
             Dim frmLogin As New frmLogin
             frmLogin.ShowDialog()

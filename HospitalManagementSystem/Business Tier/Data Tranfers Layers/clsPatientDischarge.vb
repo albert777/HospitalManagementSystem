@@ -16,6 +16,11 @@
             Prescribe = String.Empty
         End Sub
 
+        Public Sub New(DischargeTime As Date)
+            Me.New
+            Me.DischargeTime = DischargeTime
+        End Sub
+
         Public Property Id As Integer
             Get
                 Return _id

@@ -30,20 +30,13 @@ Public Class frmPatientManager
     Private Sub LoadPatientsList()
         dgvPatients.DataSource = _patientBus.SearchPatientsDataTable()
         dgvPatients.ClearSelection()
-        'If dgvPatients.RowCount > 1 Then
-        '    _patientSeletedRow = dgvPatients.Rows(dgvPatients.RowCount - 1)
-        '    _patientSeletedRow.Cells(0).Selected = True
-        'End If
 
     End Sub
 
     Private Sub LoadPatientsList(id As Integer)
         dgvPatients.DataSource = _patientBus.SearchPatientsDataTable(id)
         dgvPatients.ClearSelection()
-        'If dgvPatients.RowCount > 1 Then
-        '    _patientSeletedRow = dgvPatients.Rows(dgvPatients.RowCount - 1)
-        '    _patientSeletedRow.Cells(0).Selected = True
-        'End If
+
     End Sub
 
     Private Sub ReNew()
@@ -110,7 +103,7 @@ Public Class frmPatientManager
 
     End Sub
 
-    Private Sub dgvPatients_CurrentCellChanged(sender As Object, e As EventArgs) Handles dgvPatients.CurrentCellChanged
+    Private Sub dgvPatients_CurrentCellChanged(sender As Object, e As EventArgs) Handles dgvPatients.CurrentCellChanged, dgvPatients.CellClick
         If dgvPatients.SelectedCells.Count > 0 Then
             _patientSeletedRow = dgvPatients.Rows(dgvPatients.SelectedCells(0).RowIndex)
             _patient = GetPatientFromDataGridView()
@@ -122,8 +115,8 @@ Public Class frmPatientManager
             btnPrintPatient.Enabled = True
 
             btnNewAppointment.Enabled = True
-            btnAdmission.Enabled = True
-            btnDischarge.Enabled = True
+            'btnAdmission.Enabled = True
+            'btnDischarge.Enabled = True
             btnSupplyMedication.Enabled = True
             btnPaidPayment.Enabled = True
 
@@ -194,9 +187,6 @@ Public Class frmPatientManager
         If txtPatientAddress.Text.Trim() = "" Then
             strErr = strErr & vbLf & "- Địa chỉ."
         End If
-        If cboxPatientType.Text.Trim = "" Then
-            strErr = strErr & vbLf & "- Phân loại."
-        End If
 
         If strErr <> String.Empty Then
             MessageBox.Show("Bạn phải hoàn tất các thông tin sau :" & vbLf & strErr, "Cảnh báo !", MessageBoxButtons.OK, MessageBoxIcon.[Error])
@@ -223,15 +213,41 @@ Public Class frmPatientManager
         txtPatientStatus.Text = patient.Status
 
         txtPatientInsuranceId.Text = patient.InsuranceID
-        dtpPatientInsuranceIssueDate.Value = patient.InsuranceIssueDate
-        dtpPatientInsuranceExpiryDate.Value = patient.InsuranceExpiryDate
-        If patient.Bed.Id <= 0 Then
-            txtPatientBedId.Clear()
-            txtPatientRoom.Clear()
+        If patient.InsuranceIssueDate = Date.MinValue Then
+            dtpPatientInsuranceIssueDate.Value = dtpPatientInsuranceIssueDate.MinDate
         Else
+            dtpPatientInsuranceIssueDate.Value = patient.InsuranceIssueDate
+        End If
+        If patient.InsuranceExpiryDate = Date.MinValue Then
+            dtpPatientInsuranceExpiryDate.Value = dtpPatientInsuranceExpiryDate.MinDate
+        Else
+            dtpPatientInsuranceExpiryDate.Value = patient.InsuranceExpiryDate
+        End If
+
+        If _patientBus.GetBed(_patient.Id) IsNot Nothing Then
+            patient.Bed = New Bed(_patientBus.GetBed(_patient.Id))
             txtPatientBedId.Text = patient.Bed.Id.ToString
             txtPatientRoom.Text = patient.Bed.Room.ToString
+        Else
+            txtPatientBedId.Clear()
+            txtPatientRoom.Clear()
         End If
+
+        txtPatientAdmissionTime.Text = "Nothing"
+        txtPatientDischargeTime.Text = "Nothing"
+        patient.Admission = New PatientAdmission(_patientBus.GetAdmissionTime(patient.Id))
+        patient.Admission.Discharge = New PatientDischarge(_patientBus.GetDischargeTime(patient.Id))
+        If patient.Admission.AdmissionTime = Date.MinValue Then
+            txtPatientAdmissionTime.Clear()
+        Else
+            txtPatientAdmissionTime.Text = patient.Admission.AdmissionTime.ToShortDateString + " " + patient.Admission.AdmissionTime.ToLongTimeString
+        End If
+        If patient.Admission.Discharge.DischargeTime = Date.MinValue Then
+            txtPatientDischargeTime.Clear()
+        Else
+            txtPatientDischargeTime.Text = patient.Admission.Discharge.DischargeTime.ToShortDateString + " " + patient.Admission.Discharge.DischargeTime.ToLongTimeString
+        End If
+
     End Sub
 
     Private Function GetPatientFromGroupBox() As Patient
@@ -286,15 +302,15 @@ Public Class frmPatientManager
             patient.Status = _patientSeletedRow.Cells(colPatientStatus.Name).Value.ToString.Trim
 
             patient.InsuranceID = _patientSeletedRow.Cells(colPatientInsuranceId.Name).Value.ToString.Trim
-            patient.InsuranceIssueDate = CDate(_patientSeletedRow.Cells(colPatientInsuranceIssueDate.Name).FormattedValue)
-            patient.InsuranceExpiryDate = CDate(_patientSeletedRow.Cells(colPatientInsuranceExpiryDate.Name).FormattedValue)
-
-            patient.Bed = New Bed
-            If Not (Integer.TryParse(_patientSeletedRow.Cells(colPatientBedId.Name).Value.ToString.Trim, patient.Bed.Id)) Then
-                patient.Bed.Id = -1
-                patient.Bed.Room = -1
+            If _patientSeletedRow.Cells(colPatientInsuranceIssueDate.Name).Value.Equals(DBNull.Value) Then
+                patient.InsuranceIssueDate = dtpPatientInsuranceIssueDate.MinDate
             Else
-                patient.Bed.Room = CInt(_patientSeletedRow.Cells(colPatientRoomId.Name).Value)
+                patient.InsuranceIssueDate = CDate(_patientSeletedRow.Cells(colPatientInsuranceIssueDate.Name).FormattedValue)
+            End If
+            If _patientSeletedRow.Cells(colPatientInsuranceExpiryDate.Name).Value.Equals(DBNull.Value) Then
+                patient.InsuranceExpiryDate = dtpPatientInsuranceExpiryDate.MinDate
+            Else
+                patient.InsuranceExpiryDate = CDate(_patientSeletedRow.Cells(colPatientInsuranceExpiryDate.Name).FormattedValue)
             End If
 
         Catch ex As Exception
@@ -322,12 +338,8 @@ Public Class frmPatientManager
         If cboxPatientType.SelectedIndex <= 0 Then
             lblBedId.Enabled = False
             lblRoom.Enabled = False
-            lblAddmissionTime.Enabled = False
-            lblDischargeTime.Enabled = False
             txtPatientBedId.Enabled = False
             txtPatientRoom.Enabled = False
-            txtPatientAdmissionTime.Enabled = False
-            txtPatientDischargeTime.Enabled = False
             txtPatientBedId.Clear()
             txtPatientRoom.Clear()
             txtPatientAdmissionTime.Clear()
@@ -335,12 +347,8 @@ Public Class frmPatientManager
         Else
             lblBedId.Enabled = True
             lblRoom.Enabled = True
-            lblAddmissionTime.Enabled = True
-            lblDischargeTime.Enabled = True
             txtPatientBedId.Enabled = True
             txtPatientRoom.Enabled = True
-            txtPatientAdmissionTime.Enabled = True
-            txtPatientDischargeTime.Enabled = True
         End If
     End Sub
 
@@ -377,6 +385,32 @@ Public Class frmPatientManager
         frmAppointmentManager.ShowDialog()
     End Sub
 
+    Private Sub btnAdmission_Click(sender As Object, e As EventArgs) Handles btnAdmission.Click
+        Dim frmAdmission As New frmAdmission(My.Forms.frmMain._account.Employee, _patient)
+        frmAdmission.ShowDialog()
+        LoadPatientsList()
+        LoadPatientInformation(_patient)
+    End Sub
+
+    Private Sub txtPatientAdmissionTime_TextChanged(sender As Object, e As EventArgs) Handles txtPatientAdmissionTime.TextChanged, txtPatientDischargeTime.TextChanged
+        If txtPatientAdmissionTime.Text.Trim = "" AndAlso txtPatientDischargeTime.Text.Trim = "" Then
+            btnAdmission.Enabled = True
+            btnDischarge.Enabled = False
+        ElseIf txtPatientAdmissionTime.Text <> "" AndAlso txtPatientDischargeTime.Text.Trim = "" Then
+            btnAdmission.Enabled = False
+            btnDischarge.Enabled = True
+        Else
+            btnAdmission.Enabled = True
+            btnDischarge.Enabled = False
+        End If
+    End Sub
+
+    Private Sub btnDischarge_Click(sender As Object, e As EventArgs) Handles btnDischarge.Click
+        Dim frmDischarge As New frmDischarge(My.Forms.frmMain._account.Employee, _patient)
+        frmDischarge.ShowDialog()
+        LoadPatientsList()
+        LoadPatientInformation(_patient)
+    End Sub
 
 #End Region
 End Class

@@ -90,14 +90,7 @@ Partial Class frmStaffManager
         Me.Label15 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.btnReSearch = New System.Windows.Forms.Button()
-        Me.btnSearch = New System.Windows.Forms.Button()
         Me.lblTitle = New System.Windows.Forms.Label()
-        Me.btnReset = New System.Windows.Forms.Button()
-        Me.btnUpdateEmpl = New System.Windows.Forms.Button()
-        Me.cmdClose = New System.Windows.Forms.Button()
-        Me.btnAddEmpl = New System.Windows.Forms.Button()
-        Me.btnDeleteEmpl = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.chkbSpec = New System.Windows.Forms.CheckBox()
         Me.chkbDept = New System.Windows.Forms.CheckBox()
@@ -109,6 +102,13 @@ Partial Class frmStaffManager
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
+        Me.btnReset = New System.Windows.Forms.Button()
+        Me.btnUpdateEmpl = New System.Windows.Forms.Button()
+        Me.cmdClose = New System.Windows.Forms.Button()
+        Me.btnAddEmpl = New System.Windows.Forms.Button()
+        Me.btnDeleteEmpl = New System.Windows.Forms.Button()
+        Me.btnReSearch = New System.Windows.Forms.Button()
+        Me.btnSearch = New System.Windows.Forms.Button()
         CType(Me.dgrEmplResult, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.groupBox2.SuspendLayout()
         Me.groupBox1.SuspendLayout()
@@ -826,98 +826,17 @@ Partial Class frmStaffManager
         Me.Label14.TabIndex = 8
         Me.Label14.Text = "Vị trí"
         '
-        'btnReSearch
-        '
-        Me.btnReSearch.BackgroundImage = CType(resources.GetObject("btnReSearch.BackgroundImage"), System.Drawing.Image)
-        Me.btnReSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnReSearch.Location = New System.Drawing.Point(862, 91)
-        Me.btnReSearch.Name = "btnReSearch"
-        Me.btnReSearch.Size = New System.Drawing.Size(98, 23)
-        Me.btnReSearch.TabIndex = 14
-        Me.btnReSearch.Text = "&Làm lại"
-        Me.btnReSearch.UseVisualStyleBackColor = True
-        '
-        'btnSearch
-        '
-        Me.btnSearch.BackgroundImage = CType(resources.GetObject("btnSearch.BackgroundImage"), System.Drawing.Image)
-        Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnSearch.Location = New System.Drawing.Point(862, 118)
-        Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(98, 23)
-        Me.btnSearch.TabIndex = 15
-        Me.btnSearch.Text = "&Tìm kiếm"
-        Me.btnSearch.UseVisualStyleBackColor = True
-        '
         'lblTitle
         '
         Me.lblTitle.AutoSize = True
         Me.lblTitle.BackColor = System.Drawing.Color.Transparent
-        Me.lblTitle.Font = New System.Drawing.Font("Arial", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitle.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitle.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.lblTitle.Location = New System.Drawing.Point(349, 12)
+        Me.lblTitle.Location = New System.Drawing.Point(285, 12)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(309, 21)
+        Me.lblTitle.Size = New System.Drawing.Size(406, 29)
         Me.lblTitle.TabIndex = 0
         Me.lblTitle.Text = "QUẢN LÝ DANH SÁCH NHÂN VIÊN"
-        '
-        'btnReset
-        '
-        Me.btnReset.BackgroundImage = CType(resources.GetObject("btnReset.BackgroundImage"), System.Drawing.Image)
-        Me.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnReset.Location = New System.Drawing.Point(862, 427)
-        Me.btnReset.Name = "btnReset"
-        Me.btnReset.Size = New System.Drawing.Size(98, 23)
-        Me.btnReset.TabIndex = 7
-        Me.btnReset.Text = "Làm &mới"
-        Me.btnReset.UseVisualStyleBackColor = True
-        '
-        'btnUpdateEmpl
-        '
-        Me.btnUpdateEmpl.BackgroundImage = CType(resources.GetObject("btnUpdateEmpl.BackgroundImage"), System.Drawing.Image)
-        Me.btnUpdateEmpl.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnUpdateEmpl.Location = New System.Drawing.Point(862, 398)
-        Me.btnUpdateEmpl.Name = "btnUpdateEmpl"
-        Me.btnUpdateEmpl.Size = New System.Drawing.Size(98, 23)
-        Me.btnUpdateEmpl.TabIndex = 6
-        Me.btnUpdateEmpl.Text = "&Sửa"
-        Me.btnUpdateEmpl.UseVisualStyleBackColor = True
-        '
-        'cmdClose
-        '
-        Me.cmdClose.BackgroundImage = CType(resources.GetObject("cmdClose.BackgroundImage"), System.Drawing.Image)
-        Me.cmdClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.cmdClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdClose.ForeColor = System.Drawing.Color.DarkRed
-        Me.cmdClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.cmdClose.Location = New System.Drawing.Point(862, 534)
-        Me.cmdClose.Name = "cmdClose"
-        Me.cmdClose.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.cmdClose.Size = New System.Drawing.Size(98, 23)
-        Me.cmdClose.TabIndex = 8
-        Me.cmdClose.Text = "&Đóng"
-        Me.cmdClose.UseVisualStyleBackColor = True
-        '
-        'btnAddEmpl
-        '
-        Me.btnAddEmpl.BackgroundImage = CType(resources.GetObject("btnAddEmpl.BackgroundImage"), System.Drawing.Image)
-        Me.btnAddEmpl.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnAddEmpl.Location = New System.Drawing.Point(862, 340)
-        Me.btnAddEmpl.Name = "btnAddEmpl"
-        Me.btnAddEmpl.Size = New System.Drawing.Size(98, 23)
-        Me.btnAddEmpl.TabIndex = 4
-        Me.btnAddEmpl.Text = "&Thêm nhân viên"
-        Me.btnAddEmpl.UseVisualStyleBackColor = True
-        '
-        'btnDeleteEmpl
-        '
-        Me.btnDeleteEmpl.BackgroundImage = CType(resources.GetObject("btnDeleteEmpl.BackgroundImage"), System.Drawing.Image)
-        Me.btnDeleteEmpl.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnDeleteEmpl.Location = New System.Drawing.Point(862, 369)
-        Me.btnDeleteEmpl.Name = "btnDeleteEmpl"
-        Me.btnDeleteEmpl.Size = New System.Drawing.Size(98, 23)
-        Me.btnDeleteEmpl.TabIndex = 5
-        Me.btnDeleteEmpl.Text = "&Xóa"
-        Me.btnDeleteEmpl.UseVisualStyleBackColor = True
         '
         'GroupBox3
         '
@@ -1047,6 +966,87 @@ Partial Class frmStaffManager
         Me.Label29.Size = New System.Drawing.Size(14, 17)
         Me.Label29.TabIndex = 33
         Me.Label29.Text = "*"
+        '
+        'btnReset
+        '
+        Me.btnReset.BackgroundImage = CType(resources.GetObject("btnReset.BackgroundImage"), System.Drawing.Image)
+        Me.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnReset.Location = New System.Drawing.Point(862, 422)
+        Me.btnReset.Name = "btnReset"
+        Me.btnReset.Size = New System.Drawing.Size(98, 23)
+        Me.btnReset.TabIndex = 7
+        Me.btnReset.Text = "Làm &mới"
+        Me.btnReset.UseVisualStyleBackColor = True
+        '
+        'btnUpdateEmpl
+        '
+        Me.btnUpdateEmpl.BackgroundImage = CType(resources.GetObject("btnUpdateEmpl.BackgroundImage"), System.Drawing.Image)
+        Me.btnUpdateEmpl.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnUpdateEmpl.Location = New System.Drawing.Point(862, 393)
+        Me.btnUpdateEmpl.Name = "btnUpdateEmpl"
+        Me.btnUpdateEmpl.Size = New System.Drawing.Size(98, 23)
+        Me.btnUpdateEmpl.TabIndex = 6
+        Me.btnUpdateEmpl.Text = "&Sửa"
+        Me.btnUpdateEmpl.UseVisualStyleBackColor = True
+        '
+        'cmdClose
+        '
+        Me.cmdClose.BackgroundImage = CType(resources.GetObject("cmdClose.BackgroundImage"), System.Drawing.Image)
+        Me.cmdClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.cmdClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmdClose.ForeColor = System.Drawing.Color.DarkRed
+        Me.cmdClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.cmdClose.Location = New System.Drawing.Point(862, 545)
+        Me.cmdClose.Name = "cmdClose"
+        Me.cmdClose.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.cmdClose.Size = New System.Drawing.Size(98, 23)
+        Me.cmdClose.TabIndex = 8
+        Me.cmdClose.Text = "&Đóng"
+        Me.cmdClose.UseVisualStyleBackColor = True
+        '
+        'btnAddEmpl
+        '
+        Me.btnAddEmpl.BackgroundImage = CType(resources.GetObject("btnAddEmpl.BackgroundImage"), System.Drawing.Image)
+        Me.btnAddEmpl.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnAddEmpl.Location = New System.Drawing.Point(862, 335)
+        Me.btnAddEmpl.Name = "btnAddEmpl"
+        Me.btnAddEmpl.Size = New System.Drawing.Size(98, 23)
+        Me.btnAddEmpl.TabIndex = 4
+        Me.btnAddEmpl.Text = "&Thêm nhân viên"
+        Me.btnAddEmpl.UseVisualStyleBackColor = True
+        '
+        'btnDeleteEmpl
+        '
+        Me.btnDeleteEmpl.BackgroundImage = CType(resources.GetObject("btnDeleteEmpl.BackgroundImage"), System.Drawing.Image)
+        Me.btnDeleteEmpl.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnDeleteEmpl.Location = New System.Drawing.Point(862, 364)
+        Me.btnDeleteEmpl.Name = "btnDeleteEmpl"
+        Me.btnDeleteEmpl.Size = New System.Drawing.Size(98, 23)
+        Me.btnDeleteEmpl.TabIndex = 5
+        Me.btnDeleteEmpl.Text = "&Xóa"
+        Me.btnDeleteEmpl.UseVisualStyleBackColor = True
+        '
+        'btnReSearch
+        '
+        Me.btnReSearch.BackgroundImage = CType(resources.GetObject("btnReSearch.BackgroundImage"), System.Drawing.Image)
+        Me.btnReSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnReSearch.Location = New System.Drawing.Point(862, 91)
+        Me.btnReSearch.Name = "btnReSearch"
+        Me.btnReSearch.Size = New System.Drawing.Size(98, 23)
+        Me.btnReSearch.TabIndex = 14
+        Me.btnReSearch.Text = "&Làm lại"
+        Me.btnReSearch.UseVisualStyleBackColor = True
+        '
+        'btnSearch
+        '
+        Me.btnSearch.BackgroundImage = CType(resources.GetObject("btnSearch.BackgroundImage"), System.Drawing.Image)
+        Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnSearch.Location = New System.Drawing.Point(862, 118)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(98, 23)
+        Me.btnSearch.TabIndex = 15
+        Me.btnSearch.Text = "&Tìm kiếm"
+        Me.btnSearch.UseVisualStyleBackColor = True
         '
         'frmStaffManager
         '

@@ -17,6 +17,12 @@
             Department = Nothing
         End Sub
 
+        Public Sub New(Id As Integer, Name As String)
+            Me.New
+            Me.Id = Id
+            Me.Name = Name
+        End Sub
+
         Public Property Id As Integer
             Get
                 Return _id

@@ -44,7 +44,7 @@ Public Class frmCategoryManager
         LoadBedsList()
 
         LoadChiefsComboBox()
-        LoadDepartmentsComboBox()
+
     End Sub
 
     Private Sub LoadDepartmentsComboBox()
@@ -64,6 +64,8 @@ Public Class frmCategoryManager
 
 #Region "Department"
     Private Sub LoadDepartmentsList()
+        LoadDepartmentsComboBox()
+
         tboxDepartment.Clear()
         btnDept_Add.Enabled = True
         btnDept_Delete.Enabled = False
