@@ -23,11 +23,11 @@ Public Class frmLogin
 
 #Region "Windows Events"
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        If ((String.IsNullOrWhiteSpace(tboxUsername.Text)) AndAlso (String.IsNullOrWhiteSpace(tboxPassword.Text))) Then
+        If (tboxUsername.Text.Trim = "") AndAlso (tboxPassword.Text.Trim = "") Then
             MessageBox.Show("Bạn chưa nhập cả Tên đăng nhập và Mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        ElseIf (String.IsNullOrWhiteSpace(tboxUsername.Text))
+        ElseIf (tboxUsername.Text.Trim = "") Then
             MessageBox.Show("Bạn chưa nhập Tên đăng nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        ElseIf (String.IsNullOrWhiteSpace(tboxPassword.Text))
+        ElseIf (tboxPassword.Text.Trim = "") Then
             MessageBox.Show("Bạn chưa nhập Mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
             If (_accBus.CheckAccount(tboxUsername.Text.Trim, tboxPassword.Text.Trim)) Then
@@ -75,6 +75,7 @@ Public Class frmLogin
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         _loginResult = DialogResult.No
     End Sub
+
 
 #End Region
 

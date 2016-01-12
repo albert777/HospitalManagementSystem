@@ -321,7 +321,7 @@ Public Class frmPatientManager
     End Function
 
     Private Sub txtPatientInsuranceId_TextChanged(sender As Object, e As EventArgs) Handles txtPatientInsuranceId.TextChanged
-        If String.IsNullOrWhiteSpace(txtPatientInsuranceId.Text) Then
+        If txtPatientInsuranceId.Text.Trim = "" Then
             lblInsIssDate.Enabled = False
             dtpPatientInsuranceIssueDate.Enabled = False
             lblInsExpDate.Enabled = False

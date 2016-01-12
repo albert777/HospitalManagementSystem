@@ -91,6 +91,12 @@ Namespace DAO
             Return appoint
         End Function
 
+        Friend Function UpdateAppointment(appId As Integer, docId As Integer, result As String, prescribe As String) As Boolean
+            Dim query As String =
+                String.Format("UPDATE APPOINTMENTS SET Result = N'{0}', Prescribe = N'{1}', DoctorId = {2} WHERE Id = {3}", result, prescribe, docId, appId)
+            Return _dbAccess.ExecuteNoneQuery(query)
+        End Function
+
         Friend Function GetPatientLastAppointmentId(id As Integer) As String
             Dim query As String =
                 String.Format("SELECT TOP(1) Id FROM APPOINTMENTS WHERE PatientId = {0} ORDER BY Id DESC", id)

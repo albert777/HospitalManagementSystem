@@ -13,67 +13,67 @@ Hospital Management System
  <param name="Username">Tên tài khoản</param>
  <param name="Password">Mật khẩu</param>
 </member>
-<member name="T:HospitalManagementSystem.dsetEmployeeInformation">
+<member name="T:HospitalManagementSystem.dbHospitalDataSet">
 <summary>
 Represents a strongly typed in-memory cache of data.
 </summary>
 </member>
-<member name="T:HospitalManagementSystem.dsetEmployeeInformation.dtableEmployeeInformationDataTable">
+<member name="T:HospitalManagementSystem.dbHospitalDataSet.ACCOUNTSDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:HospitalManagementSystem.dsetEmployeeInformation.dtableEmployeeInformationRow">
+<member name="T:HospitalManagementSystem.dbHospitalDataSet.ACCOUNTSRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:HospitalManagementSystem.dsetEmployeeInformation.dtableEmployeeInformationRowChangeEvent">
+<member name="T:HospitalManagementSystem.dbHospitalDataSet.ACCOUNTSRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
 </member>
-<member name="T:HospitalManagementSystem.dsetEmployeeInformationTableAdapters.dtableEmployeeInformationTableAdapter">
+<member name="T:HospitalManagementSystem.dbHospitalDataSetTableAdapters.ACCOUNTSTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
-<member name="T:HospitalManagementSystem.dsetEmployeeInformationTableAdapters.TableAdapterManager">
+<member name="T:HospitalManagementSystem.dbHospitalDataSetTableAdapters.TableAdapterManager">
 <summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
 </member>
-<member name="M:HospitalManagementSystem.dsetEmployeeInformationTableAdapters.TableAdapterManager.UpdateUpdatedRows(HospitalManagementSystem.dsetEmployeeInformation,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<member name="M:HospitalManagementSystem.dbHospitalDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(HospitalManagementSystem.dbHospitalDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
 <summary>
 Update rows in top-down order.
 </summary>
 </member>
-<member name="M:HospitalManagementSystem.dsetEmployeeInformationTableAdapters.TableAdapterManager.UpdateInsertedRows(HospitalManagementSystem.dsetEmployeeInformation,System.Collections.Generic.List{System.Data.DataRow})">
+<member name="M:HospitalManagementSystem.dbHospitalDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(HospitalManagementSystem.dbHospitalDataSet,System.Collections.Generic.List{System.Data.DataRow})">
 <summary>
 Insert rows in top-down order.
 </summary>
 </member>
-<member name="M:HospitalManagementSystem.dsetEmployeeInformationTableAdapters.TableAdapterManager.UpdateDeletedRows(HospitalManagementSystem.dsetEmployeeInformation,System.Collections.Generic.List{System.Data.DataRow})">
+<member name="M:HospitalManagementSystem.dbHospitalDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(HospitalManagementSystem.dbHospitalDataSet,System.Collections.Generic.List{System.Data.DataRow})">
 <summary>
 Delete rows in bottom-up order.
 </summary>
 </member>
-<member name="M:HospitalManagementSystem.dsetEmployeeInformationTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<member name="M:HospitalManagementSystem.dbHospitalDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
 <summary>
 Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
 </summary>
 </member>
-<member name="M:HospitalManagementSystem.dsetEmployeeInformationTableAdapters.TableAdapterManager.UpdateAll(HospitalManagementSystem.dsetEmployeeInformation)">
+<member name="M:HospitalManagementSystem.dbHospitalDataSetTableAdapters.TableAdapterManager.UpdateAll(HospitalManagementSystem.dbHospitalDataSet)">
 <summary>
 Update all changes to the dataset.
 </summary>
 </member>
-<member name="T:HospitalManagementSystem.dsetEmployeeInformationTableAdapters.TableAdapterManager.UpdateOrderOption">
+<member name="T:HospitalManagementSystem.dbHospitalDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
 <summary>
 Update Order Option
 </summary>
 </member>
-<member name="T:HospitalManagementSystem.dsetEmployeeInformationTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<member name="T:HospitalManagementSystem.dbHospitalDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
 <summary>
 Used to sort self-referenced table's rows
 </summary>
@@ -102,6 +102,11 @@ Used to sort self-referenced table's rows
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:HospitalManagementSystem.My.Resources.Resources.Aha_Soft_Large_Home_Drugstore">
+<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
+</member>
 <member name="P:HospitalManagementSystem.My.Resources.Resources.banner">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -115,6 +120,11 @@ Used to sort self-referenced table's rows
 <member name="P:HospitalManagementSystem.My.Resources.Resources.Close_icon">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:HospitalManagementSystem.My.Resources.Resources.Custom_Icon_Design_Pretty_Office_3_Add_to_favorites">
+<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
 </summary>
 </member>
 <member name="P:HospitalManagementSystem.My.Resources.Resources.frmChild">

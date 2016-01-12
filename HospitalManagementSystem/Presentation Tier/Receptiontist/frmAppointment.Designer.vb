@@ -70,12 +70,12 @@ Partial Class frmAppointment
         Me.txtClinicId = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.txtDoctor = New System.Windows.Forms.TextBox()
         Me.txtPrescribe = New System.Windows.Forms.TextBox()
+        Me.Label22 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.txtResult = New System.Windows.Forms.TextBox()
         Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.txtDoctor = New System.Windows.Forms.TextBox()
         Me.btnUpdateAppointment = New System.Windows.Forms.Button()
         Me.cmdClose = New System.Windows.Forms.Button()
         Me.btnPrint = New System.Windows.Forms.Button()
@@ -608,6 +608,16 @@ Partial Class frmAppointment
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Kết luận của bác sĩ"
         '
+        'txtDoctor
+        '
+        Me.txtDoctor.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtDoctor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDoctor.Location = New System.Drawing.Point(110, 21)
+        Me.txtDoctor.Name = "txtDoctor"
+        Me.txtDoctor.ReadOnly = True
+        Me.txtDoctor.Size = New System.Drawing.Size(286, 22)
+        Me.txtDoctor.TabIndex = 63
+        '
         'txtPrescribe
         '
         Me.txtPrescribe.BackColor = System.Drawing.SystemColors.Window
@@ -617,6 +627,16 @@ Partial Class frmAppointment
         Me.txtPrescribe.Name = "txtPrescribe"
         Me.txtPrescribe.Size = New System.Drawing.Size(286, 50)
         Me.txtPrescribe.TabIndex = 49
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(17, 24)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(47, 16)
+        Me.Label22.TabIndex = 56
+        Me.Label22.Text = "Bác sĩ"
         '
         'Label18
         '
@@ -647,26 +667,6 @@ Partial Class frmAppointment
         Me.Label23.Size = New System.Drawing.Size(80, 16)
         Me.Label23.TabIndex = 37
         Me.Label23.Text = "Chuẩn đoán"
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(17, 24)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(47, 16)
-        Me.Label22.TabIndex = 56
-        Me.Label22.Text = "Bác sĩ"
-        '
-        'txtDoctor
-        '
-        Me.txtDoctor.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtDoctor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDoctor.Location = New System.Drawing.Point(110, 21)
-        Me.txtDoctor.Name = "txtDoctor"
-        Me.txtDoctor.ReadOnly = True
-        Me.txtDoctor.Size = New System.Drawing.Size(286, 22)
-        Me.txtDoctor.TabIndex = 63
         '
         'btnUpdateAppointment
         '

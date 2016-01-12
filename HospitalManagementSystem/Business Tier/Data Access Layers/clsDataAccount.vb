@@ -14,7 +14,7 @@ Namespace DAO
 #Region "Methods"
         Friend Function IsCorrect(Account As Account) As Boolean
             Dim query As String =
-                String.Format("SELECT COUNT(*) FROM ACCOUNTS WHERE Username = '{0}' AND Password = '{1}'",
+                String.Format("SELECT COUNT(*) FROM dbo.ACCOUNTS WHERE Username = '{0}' AND Password = '{1}'",
                               Account.Username, Account.Password)
             Return CBool(_dbAccess.GetScalar(query))
         End Function
@@ -23,7 +23,7 @@ Namespace DAO
             Dim account As New Account
 
             Dim query As String =
-                String.Format("SELECT * FROM ACCOUNTS WHERE Username = '{0}' AND Password = '{1}'",
+                String.Format("SELECT * FROM dbo.ACCOUNTS WHERE Username = '{0}' AND Password = '{1}'",
                               username, password)
             Dim dtAccount As DataTable = _dbAccess.GetDataTable(query)
             If dtAccount.Rows.Count > 0 Then
@@ -40,7 +40,7 @@ Namespace DAO
 
         Friend Function ChangePassword(username As String, password As String) As Boolean
             Dim query As String =
-                String.Format("UPDATE ACCOUNTS SET Password = '{0}' WHERE Username = '{1}'", password, username)
+                String.Format("UPDATE dbo.ACCOUNTS SET Password = '{0}' WHERE Username = '{1}'", password, username)
             Return _dbAccess.ExecuteNoneQuery(query)
         End Function
 #End Region

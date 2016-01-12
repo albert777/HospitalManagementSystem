@@ -11,8 +11,10 @@
     <AssemblyName>Hospital Management System</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,10 +25,10 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>14</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -38,6 +40,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>Hospital Management System.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -48,6 +51,7 @@
     <OutputPath>bin\Release\</OutputPath>
     <DocumentationFile>Hospital Management System.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -60,6 +64,24 @@
   </PropertyGroup>
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2499952A0A2430DC5ECC4F56275B57212E3010E5</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>HospitalManagementSystem_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resoucres\Custom-Icon-Design-Pretty-Office-3-Add-to-favorites.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
@@ -127,13 +149,10 @@
     <Compile Include="Business Tier\Data Tranfers Layers\clsRecordsSystem.vb" />
     <Compile Include="Business Tier\Data Tranfers Layers\clsSpeciality.vb" />
     <Compile Include="Business Tier\Data Tranfers Layers\clsPatientDischarge.vb" />
-    <Compile Include="dsetEmployeeInformation.Designer.vb">
+    <Compile Include="dbHospitalDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>dsetEmployeeInformation.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="dsetEmployeeInformation.vb">
-      <DependentUpon>dsetEmployeeInformation.xsd</DependentUpon>
+      <DependentUpon>dbHospitalDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Global Class\clsGlobalFunction.vb" />
     <Compile Include="Presentation Tier\frmAccountChangePassword.Designer.vb">
@@ -231,6 +250,18 @@
     <Compile Include="Presentation Tier\RecordsSystem\frmStaffManager.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Testing\Dialog1.Designer.vb">
+      <DependentUpon>Dialog1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Testing\Dialog1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testing\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Testing\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Presentation Tier\Doctor\frmUpdateAppointment_EnterId.resx">
@@ -279,19 +310,26 @@
       <DependentUpon>frmStaffManager.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report Templates\rptEmployeeInformation.rdlc" />
+    <EmbeddedResource Include="Testing\Dialog1.resx">
+      <DependentUpon>Dialog1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testing\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="dsetEmployeeInformation.xsc">
-      <DependentUpon>dsetEmployeeInformation.xsd</DependentUpon>
+    <None Include="dbHospitalDataSet.xsc">
+      <DependentUpon>dbHospitalDataSet.xsd</DependentUpon>
     </None>
-    <None Include="dsetEmployeeInformation.xsd">
-      <SubType>Designer</SubType>
+    <None Include="dbHospitalDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsetEmployeeInformation.Designer.vb</LastGenOutput>
+      <LastGenOutput>dbHospitalDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
-    <None Include="dsetEmployeeInformation.xss">
-      <DependentUpon>dsetEmployeeInformation.xsd</DependentUpon>
+    <None Include="dbHospitalDataSet.xss">
+      <DependentUpon>dbHospitalDataSet.xsd</DependentUpon>
     </None>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -305,9 +343,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -315,26 +353,83 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.Express.11.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2012 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SqlLocalDB.11.1">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2012 Express LocalDB</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Testing\test.sql" />
-    <None Include="Resoucres\Buttons\Close-icon.png" />
-    <None Include="Resoucres\Buttons\Button.psd.gif" />
-    <None Include="Resoucres\Backgrounds\frmChild.gif" />
-    <None Include="Resoucres\Backgrounds\frmMain.gif" />
     <Content Include="Database\dbHospital.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Database\dbHospital_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>dbHospital.mdf</DependentUpon>
     </Content>
+    <None Include="Resoucres\Aha-Soft-Large-Home-Drugstore.ico" />
+    <None Include="Resoucres\Custom-Icon-Design-Pretty-Office-3-Add-to-favorites.ico" />
+    <Content Include="Testing\test.sql" />
+    <None Include="Resoucres\Buttons\Close-icon.png" />
+    <None Include="Resoucres\Buttons\Button.psd.gif" />
+    <None Include="Resoucres\Backgrounds\frmChild.gif" />
+    <None Include="Resoucres\Backgrounds\frmMain.gif" />
     <Content Include="Resoucres\Banners\banner.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <PublishFile Include="Microsoft.ReportViewer.Common">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.DataVisualization">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Testing\test.sql">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

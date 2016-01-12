@@ -88,7 +88,6 @@ Partial Class frmLogin
         Me.tboxPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.tboxPassword.Size = New System.Drawing.Size(110, 20)
         Me.tboxPassword.TabIndex = 17
-        Me.tboxPassword.Text = "admin"
         '
         'lblPassWord
         '
@@ -126,7 +125,6 @@ Partial Class frmLogin
         Me.tboxUsername.Name = "tboxUsername"
         Me.tboxUsername.Size = New System.Drawing.Size(110, 20)
         Me.tboxUsername.TabIndex = 16
-        Me.tboxUsername.Text = "admin"
         '
         'lblHospitalName
         '
@@ -191,6 +189,7 @@ Partial Class frmLogin
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "frmLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

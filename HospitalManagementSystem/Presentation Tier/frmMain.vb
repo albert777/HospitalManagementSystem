@@ -57,13 +57,18 @@ Public Class frmMain
 
             End If
 
-            _account = LoginResult.Account
-            _account.Employee = _employeeBus.GetEmployeeByAccountId(_account.Employee.Id)
-            lblEmployeeName.Text = _account.Employee.Name
+            Try
+                _account = LoginResult.Account
+                _account.Employee = _employeeBus.GetEmployeeByAccountId(_account.Employee.Id)
+                lblEmployeeName.Text = _account.Employee.Name
 
-            CheckPermission()
+                CheckPermission()
 
-            HideAllMdi()
+                HideAllMdi()
+
+            Catch ex As Exception
+                Application.Exit()
+            End Try
 
         Else
             'Do nothing
@@ -77,14 +82,20 @@ Public Class frmMain
             Case Account.AccountRole.RecordsSystem
                 tsmiRecordsSystems.Visible = True
                 tsmiReceptiontist.Visible = True
+                tsmiPatientManager.Visible = True
+                tsmiUpdatePatientAppointment.Visible = True
 
             Case Account.AccountRole.Doctor
                 tsmiRecordsSystems.Visible = False
-                tsmiReceptiontist.Visible = False
+                tsmiReceptiontist.Visible = True
+                tsmiPatientManager.Visible = False
+                tsmiUpdatePatientAppointment.Visible = True
 
             Case Account.AccountRole.Receptiontist
                 tsmiRecordsSystems.Visible = False
                 tsmiReceptiontist.Visible = True
+                tsmiPatientManager.Visible = True
+                tsmiUpdatePatientAppointment.Visible = False
 
             Case Else
                 tsmiRecordsSystems.Visible = False

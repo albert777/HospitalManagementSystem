@@ -72,10 +72,10 @@ Public Class frmAppointmentManager
                 appointment.Employee = _employeeBus.GetEmployeeById(CInt(_selectedAppointmentRow.Cells(colEmployeeId.Name).Value))
 
                 Dim result As Integer
-                If Integer.TryParse(_selectedAppointmentRow.Cells(colEmployeeId.Name).Value.ToString, result) Then
+                If Integer.TryParse(_selectedAppointmentRow.Cells(colDoctorId.Name).Value.ToString, result) Then
                     appointment.Doctor = _employeeBus.GetEmployeeById(result)
                 Else
-                    appointment.Doctor = Nothing
+                    appointment.Doctor = New Doctor
                 End If
 
                 appointment.Clinic = New Clinic(CInt(_selectedAppointmentRow.Cells(colClinicId.Name).Value))

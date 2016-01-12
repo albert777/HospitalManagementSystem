@@ -34,5 +34,15 @@ Namespace BUS
         Friend Function GetPatientLastAppointmentId(id As Integer) As String
             Return _appointmentData.GetPatientLastAppointmentId(id)
         End Function
+
+        Friend Function UpdateAppointment(appId As Integer, doctorId As Integer, result As String, prescibe As String) As Boolean
+            If _appointmentData.UpdateAppointment(appId, doctorId, result, prescibe) Then
+                MsgBox("Cập nhật thành công")
+                Return True
+            Else
+                MsgBox("Cập nhật thất bại")
+                Return False
+            End If
+        End Function
     End Class
 End Namespace

@@ -61,6 +61,16 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        '''</summary>
+        Friend ReadOnly Property Aha_Soft_Large_Home_Drugstore() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Aha_Soft_Large_Home_Drugstore", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property banner() As System.Drawing.Bitmap
@@ -87,6 +97,16 @@ Namespace My.Resources
             Get
                 Dim obj As Object = ResourceManager.GetObject("Close_icon", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        '''</summary>
+        Friend ReadOnly Property Custom_Icon_Design_Pretty_Office_3_Add_to_favorites() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Custom_Icon_Design_Pretty_Office_3_Add_to_favorites", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
         

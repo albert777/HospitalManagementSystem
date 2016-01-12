@@ -43,7 +43,10 @@ Public Class frmAppointment
             _patient = appointment.Patient
             txtAppoimentId.Text = appointment.Id.ToString
             txtAppointmentCreateTime.Text = appointment.CreateTime.ToShortDateString
+            txtDoctor.Text = appointment.Doctor.Name.ToString
 
+            txtResult.Text = appointment.Result
+            txtPrescribe.Text = appointment.Prescribe
             txtResult.ReadOnly = True
             txtResult.BackColor = Color.FromArgb(255, 255, 192)
             txtPrescribe.ReadOnly = True
@@ -249,4 +252,26 @@ Public Class frmAppointment
     Private Sub cmdClose_Click(sender As Object, e As EventArgs) Handles cmdClose.Click
         Me.Close()
     End Sub
+
+    Private Sub btnUpdateAppointment_Click(sender As Object, e As EventArgs) Handles btnUpdateAppointment.Click
+        If CheckDataUpdate() Then
+            If _appoitmentBus.UpdateAppointment(CInt(txtAppoimentId.Text.Trim), _doctor.Id, txtResult.Text.Trim, txtPrescribe.Text.Trim) Then
+                btnUpdateAppointment.Enabled = False
+                txtResult.ReadOnly = True
+                txtPrescribe.ReadOnly = True
+            Else
+                btnUpdateAppointment.Enabled = True
+            End If
+        Else
+            MsgBox("Bạn cần nhập đủ thông tin!")
+        End If
+    End Sub
+
+    Private Function CheckDataUpdate() As Boolean
+        If txtPrescribe.Text.Trim = "" Or txtResult.Text.Trim = "" Then
+            Return False
+        Else
+            Return True
+        End If
+    End Function
 End Class
