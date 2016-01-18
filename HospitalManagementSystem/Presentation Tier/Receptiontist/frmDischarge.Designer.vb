@@ -84,7 +84,7 @@ Partial Class frmDischarge
         Me.groupBox2.Location = New System.Drawing.Point(14, 126)
         Me.groupBox2.Name = "groupBox2"
         Me.groupBox2.Size = New System.Drawing.Size(602, 88)
-        Me.groupBox2.TabIndex = 61
+        Me.groupBox2.TabIndex = 4
         Me.groupBox2.TabStop = False
         Me.groupBox2.Text = "Thông tin bệnh nhân"
         '
@@ -96,7 +96,7 @@ Partial Class frmDischarge
         Me.txtPatientDoB.Name = "txtPatientDoB"
         Me.txtPatientDoB.ReadOnly = True
         Me.txtPatientDoB.Size = New System.Drawing.Size(88, 22)
-        Me.txtPatientDoB.TabIndex = 39
+        Me.txtPatientDoB.TabIndex = 3
         '
         'rbtnSexFemale
         '
@@ -107,7 +107,7 @@ Partial Class frmDischarge
         Me.rbtnSexFemale.Location = New System.Drawing.Point(533, 26)
         Me.rbtnSexFemale.Name = "rbtnSexFemale"
         Me.rbtnSexFemale.Size = New System.Drawing.Size(43, 20)
-        Me.rbtnSexFemale.TabIndex = 62
+        Me.rbtnSexFemale.TabIndex = 6
         Me.rbtnSexFemale.Text = "Nữ"
         Me.rbtnSexFemale.UseVisualStyleBackColor = True
         '
@@ -118,7 +118,7 @@ Partial Class frmDischarge
         Me.Label4.Location = New System.Drawing.Point(411, 28)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(55, 16)
-        Me.Label4.TabIndex = 2
+        Me.Label4.TabIndex = 4
         Me.Label4.Text = "Giới tính"
         '
         'rbtnSexMale
@@ -130,7 +130,7 @@ Partial Class frmDischarge
         Me.rbtnSexMale.Location = New System.Drawing.Point(472, 26)
         Me.rbtnSexMale.Name = "rbtnSexMale"
         Me.rbtnSexMale.Size = New System.Drawing.Size(55, 20)
-        Me.rbtnSexMale.TabIndex = 61
+        Me.rbtnSexMale.TabIndex = 5
         Me.rbtnSexMale.Text = "Nam"
         Me.rbtnSexMale.UseVisualStyleBackColor = True
         '
@@ -141,7 +141,7 @@ Partial Class frmDischarge
         Me.label11.Location = New System.Drawing.Point(231, 28)
         Me.label11.Name = "label11"
         Me.label11.Size = New System.Drawing.Size(68, 16)
-        Me.label11.TabIndex = 10
+        Me.label11.TabIndex = 2
         Me.label11.Text = "Ngày sinh"
         '
         'txtPatientName
@@ -152,7 +152,7 @@ Partial Class frmDischarge
         Me.txtPatientName.Name = "txtPatientName"
         Me.txtPatientName.ReadOnly = True
         Me.txtPatientName.Size = New System.Drawing.Size(481, 22)
-        Me.txtPatientName.TabIndex = 7
+        Me.txtPatientName.TabIndex = 8
         '
         'txtPatientId
         '
@@ -171,7 +171,7 @@ Partial Class frmDischarge
         Me.label8.Location = New System.Drawing.Point(17, 56)
         Me.label8.Name = "label8"
         Me.label8.Size = New System.Drawing.Size(50, 16)
-        Me.label8.TabIndex = 6
+        Me.label8.TabIndex = 7
         Me.label8.Text = "Họ tên "
         '
         'label9
@@ -192,7 +192,7 @@ Partial Class frmDischarge
         Me.txtPatientInsuranceExpiryDate.Name = "txtPatientInsuranceExpiryDate"
         Me.txtPatientInsuranceExpiryDate.ReadOnly = True
         Me.txtPatientInsuranceExpiryDate.Size = New System.Drawing.Size(87, 22)
-        Me.txtPatientInsuranceExpiryDate.TabIndex = 36
+        Me.txtPatientInsuranceExpiryDate.TabIndex = 5
         '
         'txtPatientInsuranceIssueDate
         '
@@ -202,7 +202,7 @@ Partial Class frmDischarge
         Me.txtPatientInsuranceIssueDate.Name = "txtPatientInsuranceIssueDate"
         Me.txtPatientInsuranceIssueDate.ReadOnly = True
         Me.txtPatientInsuranceIssueDate.Size = New System.Drawing.Size(88, 22)
-        Me.txtPatientInsuranceIssueDate.TabIndex = 58
+        Me.txtPatientInsuranceIssueDate.TabIndex = 3
         '
         'txtPatientInsuranceId
         '
@@ -212,7 +212,7 @@ Partial Class frmDischarge
         Me.txtPatientInsuranceId.Name = "txtPatientInsuranceId"
         Me.txtPatientInsuranceId.ReadOnly = True
         Me.txtPatientInsuranceId.Size = New System.Drawing.Size(103, 22)
-        Me.txtPatientInsuranceId.TabIndex = 57
+        Me.txtPatientInsuranceId.TabIndex = 1
         '
         'lblInsIssDate
         '
@@ -221,7 +221,7 @@ Partial Class frmDischarge
         Me.lblInsIssDate.Location = New System.Drawing.Point(231, 23)
         Me.lblInsIssDate.Name = "lblInsIssDate"
         Me.lblInsIssDate.Size = New System.Drawing.Size(67, 16)
-        Me.lblInsIssDate.TabIndex = 51
+        Me.lblInsIssDate.TabIndex = 2
         Me.lblInsIssDate.Text = "Ngày cấp"
         '
         'lblTitle
@@ -233,7 +233,7 @@ Partial Class frmDischarge
         Me.lblTitle.Location = New System.Drawing.Point(214, 9)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(203, 26)
-        Me.lblTitle.TabIndex = 65
+        Me.lblTitle.TabIndex = 0
         Me.lblTitle.Text = "PHIẾU XUẤT VIỆN"
         '
         'Label13
@@ -243,7 +243,7 @@ Partial Class frmDischarge
         Me.Label13.Location = New System.Drawing.Point(17, 24)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(85, 16)
-        Me.Label13.TabIndex = 39
+        Me.Label13.TabIndex = 0
         Me.Label13.Text = "Số Bảo hiểm"
         '
         'lblInsExpDate
@@ -253,7 +253,7 @@ Partial Class frmDischarge
         Me.lblInsExpDate.Location = New System.Drawing.Point(411, 23)
         Me.lblInsExpDate.Name = "lblInsExpDate"
         Me.lblInsExpDate.Size = New System.Drawing.Size(87, 16)
-        Me.lblInsExpDate.TabIndex = 16
+        Me.lblInsExpDate.TabIndex = 4
         Me.lblInsExpDate.Text = "Ngày hết hạn"
         '
         'GroupBox1
@@ -266,7 +266,7 @@ Partial Class frmDischarge
         Me.GroupBox1.Location = New System.Drawing.Point(14, 34)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(602, 86)
-        Me.GroupBox1.TabIndex = 63
+        Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Thông tin phiếu"
         '
@@ -278,7 +278,7 @@ Partial Class frmDischarge
         Me.txtEmployeeName.Name = "txtEmployeeName"
         Me.txtEmployeeName.ReadOnly = True
         Me.txtEmployeeName.Size = New System.Drawing.Size(481, 22)
-        Me.txtEmployeeName.TabIndex = 38
+        Me.txtEmployeeName.TabIndex = 3
         '
         'txtAdmissionId
         '
@@ -288,7 +288,7 @@ Partial Class frmDischarge
         Me.txtAdmissionId.Name = "txtAdmissionId"
         Me.txtAdmissionId.ReadOnly = True
         Me.txtAdmissionId.Size = New System.Drawing.Size(100, 22)
-        Me.txtAdmissionId.TabIndex = 37
+        Me.txtAdmissionId.TabIndex = 1
         '
         'Label7
         '
@@ -297,7 +297,7 @@ Partial Class frmDischarge
         Me.Label7.Location = New System.Drawing.Point(17, 56)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(66, 16)
-        Me.Label7.TabIndex = 37
+        Me.Label7.TabIndex = 2
         Me.Label7.Text = "Người lập"
         '
         'Label2
@@ -307,7 +307,7 @@ Partial Class frmDischarge
         Me.Label2.Location = New System.Drawing.Point(17, 28)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(61, 16)
-        Me.Label2.TabIndex = 36
+        Me.Label2.TabIndex = 0
         Me.Label2.Text = "Số phiếu"
         '
         'GroupBox3
@@ -322,7 +322,7 @@ Partial Class frmDischarge
         Me.GroupBox3.Location = New System.Drawing.Point(14, 220)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(602, 54)
-        Me.GroupBox3.TabIndex = 62
+        Me.GroupBox3.TabIndex = 5
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Thông tin khám chữa bệnh"
         '
@@ -345,7 +345,7 @@ Partial Class frmDischarge
         Me.GroupBox4.Location = New System.Drawing.Point(12, 280)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(602, 182)
-        Me.GroupBox4.TabIndex = 63
+        Me.GroupBox4.TabIndex = 7
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Thông tin xuất viện"
         '
@@ -357,7 +357,7 @@ Partial Class frmDischarge
         Me.Label15.Location = New System.Drawing.Point(89, 149)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(14, 17)
-        Me.Label15.TabIndex = 72
+        Me.Label15.TabIndex = 0
         Me.Label15.Text = "*"
         '
         'Label14
@@ -368,7 +368,7 @@ Partial Class frmDischarge
         Me.Label14.Location = New System.Drawing.Point(89, 108)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(14, 17)
-        Me.Label14.TabIndex = 71
+        Me.Label14.TabIndex = 10
         Me.Label14.Text = "*"
         '
         'Label19
@@ -379,7 +379,7 @@ Partial Class frmDischarge
         Me.Label19.Location = New System.Drawing.Point(89, 67)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(14, 17)
-        Me.Label19.TabIndex = 70
+        Me.Label19.TabIndex = 7
         Me.Label19.Text = "*"
         '
         'txtPrescribe
@@ -390,7 +390,7 @@ Partial Class frmDischarge
         Me.txtPrescribe.Multiline = True
         Me.txtPrescribe.Name = "txtPrescribe"
         Me.txtPrescribe.Size = New System.Drawing.Size(481, 35)
-        Me.txtPrescribe.TabIndex = 68
+        Me.txtPrescribe.TabIndex = 1
         '
         'Label12
         '
@@ -399,7 +399,7 @@ Partial Class frmDischarge
         Me.Label12.Location = New System.Drawing.Point(17, 134)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(71, 32)
-        Me.Label12.TabIndex = 67
+        Me.Label12.TabIndex = 12
         Me.Label12.Text = "Lời dặn" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "của bác sĩ"
         '
         'txtResult
@@ -410,7 +410,7 @@ Partial Class frmDischarge
         Me.txtResult.Multiline = True
         Me.txtResult.Name = "txtResult"
         Me.txtResult.Size = New System.Drawing.Size(481, 35)
-        Me.txtResult.TabIndex = 66
+        Me.txtResult.TabIndex = 11
         '
         'Label10
         '
@@ -419,7 +419,7 @@ Partial Class frmDischarge
         Me.Label10.Location = New System.Drawing.Point(17, 93)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(56, 32)
-        Me.Label10.TabIndex = 65
+        Me.Label10.TabIndex = 9
         Me.Label10.Text = "Kết quả " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "điều trị"
         '
         'txtTreatment
@@ -430,7 +430,7 @@ Partial Class frmDischarge
         Me.txtTreatment.Multiline = True
         Me.txtTreatment.Name = "txtTreatment"
         Me.txtTreatment.Size = New System.Drawing.Size(481, 35)
-        Me.txtTreatment.TabIndex = 64
+        Me.txtTreatment.TabIndex = 8
         '
         'Label6
         '
@@ -439,7 +439,7 @@ Partial Class frmDischarge
         Me.Label6.Location = New System.Drawing.Point(17, 52)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(88, 32)
-        Me.Label6.TabIndex = 63
+        Me.Label6.TabIndex = 5
         Me.Label6.Text = "Phương pháp" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "điều trị"
         '
         'txtDischargeTime
@@ -450,7 +450,7 @@ Partial Class frmDischarge
         Me.txtDischargeTime.Name = "txtDischargeTime"
         Me.txtDischargeTime.ReadOnly = True
         Me.txtDischargeTime.Size = New System.Drawing.Size(192, 22)
-        Me.txtDischargeTime.TabIndex = 58
+        Me.txtDischargeTime.TabIndex = 4
         '
         'txtAdmissionTime
         '
@@ -460,7 +460,7 @@ Partial Class frmDischarge
         Me.txtAdmissionTime.Name = "txtAdmissionTime"
         Me.txtAdmissionTime.ReadOnly = True
         Me.txtAdmissionTime.Size = New System.Drawing.Size(192, 22)
-        Me.txtAdmissionTime.TabIndex = 57
+        Me.txtAdmissionTime.TabIndex = 1
         '
         'Label3
         '
@@ -469,7 +469,7 @@ Partial Class frmDischarge
         Me.Label3.Location = New System.Drawing.Point(325, 24)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(62, 16)
-        Me.Label3.TabIndex = 51
+        Me.Label3.TabIndex = 3
         Me.Label3.Text = "Xuất viện"
         '
         'Label5
@@ -479,7 +479,7 @@ Partial Class frmDischarge
         Me.Label5.Location = New System.Drawing.Point(17, 24)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(69, 16)
-        Me.Label5.TabIndex = 39
+        Me.Label5.TabIndex = 0
         Me.Label5.Text = "Nhập viện"
         '
         'btnPrintAdmission
@@ -491,7 +491,7 @@ Partial Class frmDischarge
         Me.btnPrintAdmission.Location = New System.Drawing.Point(104, 468)
         Me.btnPrintAdmission.Name = "btnPrintAdmission"
         Me.btnPrintAdmission.Size = New System.Drawing.Size(86, 25)
-        Me.btnPrintAdmission.TabIndex = 69
+        Me.btnPrintAdmission.TabIndex = 1
         Me.btnPrintAdmission.Text = "&In phiếu"
         Me.btnPrintAdmission.UseVisualStyleBackColor = True
         '
@@ -504,7 +504,7 @@ Partial Class frmDischarge
         Me.btnDischarge.Location = New System.Drawing.Point(12, 468)
         Me.btnDischarge.Name = "btnDischarge"
         Me.btnDischarge.Size = New System.Drawing.Size(86, 25)
-        Me.btnDischarge.TabIndex = 67
+        Me.btnDischarge.TabIndex = 0
         Me.btnDischarge.Text = "&Xuất viện"
         Me.btnDischarge.UseVisualStyleBackColor = True
         '
@@ -519,7 +519,7 @@ Partial Class frmDischarge
         Me.cmdClose.Name = "cmdClose"
         Me.cmdClose.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.cmdClose.Size = New System.Drawing.Size(86, 25)
-        Me.cmdClose.TabIndex = 66
+        Me.cmdClose.TabIndex = 2
         Me.cmdClose.Text = "&Đóng"
         Me.cmdClose.UseVisualStyleBackColor = True
         '
@@ -536,6 +536,8 @@ Partial Class frmDischarge
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox3)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmDischarge"
         Me.Text = "Phiếu xuất viện"
         Me.groupBox2.ResumeLayout(False)

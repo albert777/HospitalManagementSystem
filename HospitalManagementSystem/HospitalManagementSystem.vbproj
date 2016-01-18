@@ -84,6 +84,23 @@
     <ApplicationIcon>Resoucres\Custom-Icon-Design-Pretty-Office-3-Add-to-favorites.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=12.0.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Win.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Core.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.NavBar.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Ribbon.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Themes.Office2010Black.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Themes.Office2010Blue.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -149,10 +166,21 @@
     <Compile Include="Business Tier\Data Tranfers Layers\clsRecordsSystem.vb" />
     <Compile Include="Business Tier\Data Tranfers Layers\clsSpeciality.vb" />
     <Compile Include="Business Tier\Data Tranfers Layers\clsPatientDischarge.vb" />
-    <Compile Include="dbHospitalDataSet.Designer.vb">
+    <Compile Include="Presentation Tier\RecordsSystem\RfrmStaffManager.Designer.vb">
+      <DependentUpon>RfrmStaffManager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Tier\RecordsSystem\RfrmStaffManager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testing\dbHospitalDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dbHospitalDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Testing\dbHospitalDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbHospitalDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Global Class\clsGlobalFunction.vb" />
     <Compile Include="Presentation Tier\frmAccountChangePassword.Designer.vb">
@@ -256,14 +284,33 @@
     <Compile Include="Testing\Dialog1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Presentation Tier\RfrmMain.Designer.vb">
+      <DependentUpon>RfrmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Tier\RfrmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testing\rptEmployeesByDepartment.Designer.vb">
+      <DependentUpon>rptEmployeesByDepartment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Testing\rptEmployeesByDepartment.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Testing\Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
     <Compile Include="Testing\Form1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Testing\frmEmployeesByDepartment.Designer.vb">
+      <DependentUpon>frmEmployeesByDepartment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Testing\frmEmployeesByDepartment.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="Presentation Tier\Doctor\frmUpdateAppointment_EnterId.resx">
       <DependentUpon>frmUpdateAppointment_EnterId.vb</DependentUpon>
     </EmbeddedResource>
@@ -309,25 +356,49 @@
     <EmbeddedResource Include="Presentation Tier\RecordsSystem\frmStaffManager.resx">
       <DependentUpon>frmStaffManager.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Tier\RecordsSystem\RfrmStaffManager.resx">
+      <DependentUpon>RfrmStaffManager.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report Templates\rptEmployeeInformation.rdlc" />
     <EmbeddedResource Include="Testing\Dialog1.resx">
       <DependentUpon>Dialog1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Tier\RfrmMain.resx">
+      <DependentUpon>RfrmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testing\rptEmployeesByDepartment.resx">
+      <DependentUpon>rptEmployeesByDepartment.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Testing\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Testing\frmEmployeesByDepartment.resx">
+      <DependentUpon>frmEmployeesByDepartment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testing\Report1.rdlc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="dbHospitalDataSet.xsc">
+    <None Include="Testing\dbHospitalDataSet.xsc">
       <DependentUpon>dbHospitalDataSet.xsd</DependentUpon>
     </None>
-    <None Include="dbHospitalDataSet.xsd">
+    <None Include="Testing\dbHospitalDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dbHospitalDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="dbHospitalDataSet.xss">
+    <None Include="Testing\dbHospitalDataSet.xss">
       <DependentUpon>dbHospitalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Testing\dbHospitalDataSet1.xsc">
+      <DependentUpon>dbHospitalDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Testing\dbHospitalDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbHospitalDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Testing\dbHospitalDataSet1.xss">
+      <DependentUpon>dbHospitalDataSet1.xsd</DependentUpon>
     </None>
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
@@ -378,6 +449,16 @@
     </Content>
     <None Include="Resoucres\Aha-Soft-Large-Home-Drugstore.ico" />
     <None Include="Resoucres\Custom-Icon-Design-Pretty-Office-3-Add-to-favorites.ico" />
+    <Content Include="dbHospital.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dbHospital_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>dbHospital.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\Administrator-icon.png" />
+    <None Include="Resources\User-Group-icon.png" />
+    <None Include="Resources\Patients-icon.png" />
     <Content Include="Testing\test.sql" />
     <None Include="Resoucres\Buttons\Close-icon.png" />
     <None Include="Resoucres\Buttons\Button.psd.gif" />
@@ -429,6 +510,26 @@
       <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="InteropExtensionLib">
+      <Guid>{C3D19104-7A67-4EB0-B459-D5B2E734D430}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="LCC11">
+      <Guid>{EDCD5812-6A06-43C3-AFAC-46EF5D14E22C}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

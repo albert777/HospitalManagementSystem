@@ -49,6 +49,26 @@ Namespace DAO
 
         End Function
 
+        Friend Function GetEmployeesByDeptId(DeptId As Integer) As DataTable
+            Try
+
+                Dim query As String =
+                    String.Format("SELECT E.Id, E.Name, E.Sex, E.DoB, E.IdCard, E.Address, E.Phone, E.Folk, 
+                                   E.HireDate, E.BasicSalary, E.Subsidy, E.Ratio, 
+                                   E.Position, E.DeptId, D.Name AS DeptName, S.Name AS SpecName, E.SpecId
+                                   FROM EMPLOYEES AS E LEFT OUTER JOIN
+                                   SPECIALITIES AS S ON E.SpecId = S.Id LEFT OUTER JOIN
+                                   DEPARTMENTS AS D ON E.DeptId = D.Id
+                                   WHERE D.Id = {0}", DeptId)
+
+                Return GetDataTable(query)
+
+            Catch ex As Exception
+                My.Forms.frmMain.txtStatus.Text = "Không thể lấy dữ liệu nhân viên"
+                Return Nothing
+            End Try
+        End Function
+
         Friend Function DeleteEmployee(employeeId As Integer) As Boolean
             Try
                 Dim query As String =

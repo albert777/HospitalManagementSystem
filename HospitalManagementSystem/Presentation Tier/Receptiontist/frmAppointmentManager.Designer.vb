@@ -73,7 +73,7 @@ Partial Class frmAppointmentManager
         Me.GroupBox3.Location = New System.Drawing.Point(12, 132)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(602, 54)
-        Me.GroupBox3.TabIndex = 63
+        Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Thông tin khám chữa bệnh"
         '
@@ -85,7 +85,7 @@ Partial Class frmAppointmentManager
         Me.txtPatientInsuranceExpiryDate.Name = "txtPatientInsuranceExpiryDate"
         Me.txtPatientInsuranceExpiryDate.ReadOnly = True
         Me.txtPatientInsuranceExpiryDate.Size = New System.Drawing.Size(87, 22)
-        Me.txtPatientInsuranceExpiryDate.TabIndex = 36
+        Me.txtPatientInsuranceExpiryDate.TabIndex = 5
         '
         'txtPatientInsuranceIssueDate
         '
@@ -95,7 +95,7 @@ Partial Class frmAppointmentManager
         Me.txtPatientInsuranceIssueDate.Name = "txtPatientInsuranceIssueDate"
         Me.txtPatientInsuranceIssueDate.ReadOnly = True
         Me.txtPatientInsuranceIssueDate.Size = New System.Drawing.Size(88, 22)
-        Me.txtPatientInsuranceIssueDate.TabIndex = 58
+        Me.txtPatientInsuranceIssueDate.TabIndex = 3
         '
         'txtPatientInsuranceId
         '
@@ -105,7 +105,7 @@ Partial Class frmAppointmentManager
         Me.txtPatientInsuranceId.Name = "txtPatientInsuranceId"
         Me.txtPatientInsuranceId.ReadOnly = True
         Me.txtPatientInsuranceId.Size = New System.Drawing.Size(103, 22)
-        Me.txtPatientInsuranceId.TabIndex = 57
+        Me.txtPatientInsuranceId.TabIndex = 1
         '
         'lblInsIssDate
         '
@@ -114,7 +114,7 @@ Partial Class frmAppointmentManager
         Me.lblInsIssDate.Location = New System.Drawing.Point(231, 23)
         Me.lblInsIssDate.Name = "lblInsIssDate"
         Me.lblInsIssDate.Size = New System.Drawing.Size(67, 16)
-        Me.lblInsIssDate.TabIndex = 51
+        Me.lblInsIssDate.TabIndex = 2
         Me.lblInsIssDate.Text = "Ngày cấp"
         '
         'Label13
@@ -124,7 +124,7 @@ Partial Class frmAppointmentManager
         Me.Label13.Location = New System.Drawing.Point(17, 24)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(85, 16)
-        Me.Label13.TabIndex = 39
+        Me.Label13.TabIndex = 0
         Me.Label13.Text = "Số Bảo hiểm"
         '
         'lblInsExpDate
@@ -134,7 +134,7 @@ Partial Class frmAppointmentManager
         Me.lblInsExpDate.Location = New System.Drawing.Point(411, 23)
         Me.lblInsExpDate.Name = "lblInsExpDate"
         Me.lblInsExpDate.Size = New System.Drawing.Size(87, 16)
-        Me.lblInsExpDate.TabIndex = 16
+        Me.lblInsExpDate.TabIndex = 4
         Me.lblInsExpDate.Text = "Ngày hết hạn"
         '
         'groupBox2
@@ -152,7 +152,7 @@ Partial Class frmAppointmentManager
         Me.groupBox2.Location = New System.Drawing.Point(12, 38)
         Me.groupBox2.Name = "groupBox2"
         Me.groupBox2.Size = New System.Drawing.Size(602, 88)
-        Me.groupBox2.TabIndex = 62
+        Me.groupBox2.TabIndex = 1
         Me.groupBox2.TabStop = False
         Me.groupBox2.Text = "Thông tin bệnh nhân"
         '
@@ -164,7 +164,7 @@ Partial Class frmAppointmentManager
         Me.txtPatientDoB.Name = "txtPatientDoB"
         Me.txtPatientDoB.ReadOnly = True
         Me.txtPatientDoB.Size = New System.Drawing.Size(88, 22)
-        Me.txtPatientDoB.TabIndex = 39
+        Me.txtPatientDoB.TabIndex = 3
         '
         'rbtnSexFemale
         '
@@ -174,7 +174,7 @@ Partial Class frmAppointmentManager
         Me.rbtnSexFemale.Location = New System.Drawing.Point(533, 26)
         Me.rbtnSexFemale.Name = "rbtnSexFemale"
         Me.rbtnSexFemale.Size = New System.Drawing.Size(43, 20)
-        Me.rbtnSexFemale.TabIndex = 62
+        Me.rbtnSexFemale.TabIndex = 6
         Me.rbtnSexFemale.Text = "Nữ"
         Me.rbtnSexFemale.UseVisualStyleBackColor = True
         '
@@ -185,7 +185,7 @@ Partial Class frmAppointmentManager
         Me.Label4.Location = New System.Drawing.Point(411, 28)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(55, 16)
-        Me.Label4.TabIndex = 2
+        Me.Label4.TabIndex = 4
         Me.Label4.Text = "Giới tính"
         '
         'rbtnSexMale
@@ -196,7 +196,7 @@ Partial Class frmAppointmentManager
         Me.rbtnSexMale.Location = New System.Drawing.Point(472, 26)
         Me.rbtnSexMale.Name = "rbtnSexMale"
         Me.rbtnSexMale.Size = New System.Drawing.Size(55, 20)
-        Me.rbtnSexMale.TabIndex = 61
+        Me.rbtnSexMale.TabIndex = 5
         Me.rbtnSexMale.Text = "Nam"
         Me.rbtnSexMale.UseVisualStyleBackColor = True
         '
@@ -207,7 +207,7 @@ Partial Class frmAppointmentManager
         Me.label11.Location = New System.Drawing.Point(231, 28)
         Me.label11.Name = "label11"
         Me.label11.Size = New System.Drawing.Size(68, 16)
-        Me.label11.TabIndex = 10
+        Me.label11.TabIndex = 2
         Me.label11.Text = "Ngày sinh"
         '
         'txtPatientName
@@ -218,7 +218,7 @@ Partial Class frmAppointmentManager
         Me.txtPatientName.Name = "txtPatientName"
         Me.txtPatientName.ReadOnly = True
         Me.txtPatientName.Size = New System.Drawing.Size(481, 22)
-        Me.txtPatientName.TabIndex = 7
+        Me.txtPatientName.TabIndex = 8
         '
         'txtPatientId
         '
@@ -237,7 +237,7 @@ Partial Class frmAppointmentManager
         Me.label8.Location = New System.Drawing.Point(17, 56)
         Me.label8.Name = "label8"
         Me.label8.Size = New System.Drawing.Size(50, 16)
-        Me.label8.TabIndex = 6
+        Me.label8.TabIndex = 7
         Me.label8.Text = "Họ tên "
         '
         'label9
@@ -259,7 +259,7 @@ Partial Class frmAppointmentManager
         Me.lblTitle.Location = New System.Drawing.Point(116, 9)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(395, 26)
-        Me.lblTitle.TabIndex = 61
+        Me.lblTitle.TabIndex = 0
         Me.lblTitle.Text = "DANH SÁCH PHIẾU ĐĂNG KÝ KHÁM"
         '
         'dgvAppointments
@@ -279,7 +279,7 @@ Partial Class frmAppointmentManager
         Me.dgvAppointments.RowHeadersVisible = False
         Me.dgvAppointments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.dgvAppointments.Size = New System.Drawing.Size(602, 166)
-        Me.dgvAppointments.TabIndex = 66
+        Me.dgvAppointments.TabIndex = 3
         '
         'colAppointId
         '
@@ -395,7 +395,7 @@ Partial Class frmAppointmentManager
         Me.btnViewAppointment.Location = New System.Drawing.Point(12, 364)
         Me.btnViewAppointment.Name = "btnViewAppointment"
         Me.btnViewAppointment.Size = New System.Drawing.Size(109, 25)
-        Me.btnViewAppointment.TabIndex = 67
+        Me.btnViewAppointment.TabIndex = 4
         Me.btnViewAppointment.Text = "&Xem phiếu"
         Me.btnViewAppointment.UseVisualStyleBackColor = True
         '
@@ -410,7 +410,7 @@ Partial Class frmAppointmentManager
         Me.cmdClose.Name = "cmdClose"
         Me.cmdClose.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.cmdClose.Size = New System.Drawing.Size(98, 25)
-        Me.cmdClose.TabIndex = 65
+        Me.cmdClose.TabIndex = 6
         Me.cmdClose.Text = "&Đóng"
         Me.cmdClose.UseVisualStyleBackColor = True
         '
@@ -423,7 +423,7 @@ Partial Class frmAppointmentManager
         Me.btnNewAppointment.Location = New System.Drawing.Point(127, 364)
         Me.btnNewAppointment.Name = "btnNewAppointment"
         Me.btnNewAppointment.Size = New System.Drawing.Size(109, 25)
-        Me.btnNewAppointment.TabIndex = 64
+        Me.btnNewAppointment.TabIndex = 5
         Me.btnNewAppointment.Text = "&Đăng ký Khám"
         Me.btnNewAppointment.UseVisualStyleBackColor = True
         '
@@ -439,6 +439,8 @@ Partial Class frmAppointmentManager
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.groupBox2)
         Me.Controls.Add(Me.lblTitle)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmAppointmentManager"
         Me.Text = "Danh sách phiếu đăng ký khám"
         Me.GroupBox3.ResumeLayout(False)

@@ -90,7 +90,6 @@ Partial Class frmStaffManager
         Me.Label15 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.lblTitle = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.chkbSpec = New System.Windows.Forms.CheckBox()
         Me.chkbDept = New System.Windows.Forms.CheckBox()
@@ -231,7 +230,7 @@ Partial Class frmStaffManager
         Me.dgrEmplResult.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders
         Me.dgrEmplResult.BackgroundColor = System.Drawing.SystemColors.Window
         Me.dgrEmplResult.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colEmplId, Me.colEmplBasicSalary, Me.colEmplSubsidy, Me.colEmplDeptId, Me.colEmplSpecId, Me.colEmplName, Me.colEmplPosition, Me.colchkboxEmplSex, Me.colEmplIdCard, Me.colEmplDoB, Me.colEmplAddress, Me.colEmplPhone, Me.colEmplFolk, Me.colEmplDeptName, Me.colEmplSpecName, Me.colEmplHireDate, Me.colEmplRatio})
-        Me.dgrEmplResult.Location = New System.Drawing.Point(12, 156)
+        Me.dgrEmplResult.Location = New System.Drawing.Point(12, 128)
         Me.dgrEmplResult.MultiSelect = False
         Me.dgrEmplResult.Name = "dgrEmplResult"
         Me.dgrEmplResult.ReadOnly = True
@@ -434,7 +433,7 @@ Partial Class frmStaffManager
         Me.groupBox2.Controls.Add(Me.label12)
         Me.groupBox2.Controls.Add(Me.label9)
         Me.groupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.groupBox2.Location = New System.Drawing.Point(12, 328)
+        Me.groupBox2.Location = New System.Drawing.Point(12, 300)
         Me.groupBox2.Name = "groupBox2"
         Me.groupBox2.Size = New System.Drawing.Size(844, 118)
         Me.groupBox2.TabIndex = 3
@@ -711,7 +710,7 @@ Partial Class frmStaffManager
         Me.groupBox1.Controls.Add(Me.Label14)
         Me.groupBox1.Controls.Add(Me.label1)
         Me.groupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.groupBox1.Location = New System.Drawing.Point(12, 40)
+        Me.groupBox1.Location = New System.Drawing.Point(12, 12)
         Me.groupBox1.Name = "groupBox1"
         Me.groupBox1.Size = New System.Drawing.Size(844, 110)
         Me.groupBox1.TabIndex = 1
@@ -826,18 +825,6 @@ Partial Class frmStaffManager
         Me.Label14.TabIndex = 8
         Me.Label14.Text = "Vị trí"
         '
-        'lblTitle
-        '
-        Me.lblTitle.AutoSize = True
-        Me.lblTitle.BackColor = System.Drawing.Color.Transparent
-        Me.lblTitle.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitle.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.lblTitle.Location = New System.Drawing.Point(285, 12)
-        Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(406, 29)
-        Me.lblTitle.TabIndex = 0
-        Me.lblTitle.Text = "QUẢN LÝ DANH SÁCH NHÂN VIÊN"
-        '
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.chkbSpec)
@@ -863,7 +850,7 @@ Partial Class frmStaffManager
         Me.GroupBox3.Controls.Add(Me.Label21)
         Me.GroupBox3.Controls.Add(Me.Label20)
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 452)
+        Me.GroupBox3.Location = New System.Drawing.Point(12, 424)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(844, 116)
         Me.GroupBox3.TabIndex = 31
@@ -971,7 +958,7 @@ Partial Class frmStaffManager
         '
         Me.btnReset.BackgroundImage = CType(resources.GetObject("btnReset.BackgroundImage"), System.Drawing.Image)
         Me.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnReset.Location = New System.Drawing.Point(862, 422)
+        Me.btnReset.Location = New System.Drawing.Point(862, 394)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(98, 23)
         Me.btnReset.TabIndex = 7
@@ -982,7 +969,7 @@ Partial Class frmStaffManager
         '
         Me.btnUpdateEmpl.BackgroundImage = CType(resources.GetObject("btnUpdateEmpl.BackgroundImage"), System.Drawing.Image)
         Me.btnUpdateEmpl.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnUpdateEmpl.Location = New System.Drawing.Point(862, 393)
+        Me.btnUpdateEmpl.Location = New System.Drawing.Point(862, 365)
         Me.btnUpdateEmpl.Name = "btnUpdateEmpl"
         Me.btnUpdateEmpl.Size = New System.Drawing.Size(98, 23)
         Me.btnUpdateEmpl.TabIndex = 6
@@ -996,7 +983,7 @@ Partial Class frmStaffManager
         Me.cmdClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdClose.ForeColor = System.Drawing.Color.DarkRed
         Me.cmdClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.cmdClose.Location = New System.Drawing.Point(862, 545)
+        Me.cmdClose.Location = New System.Drawing.Point(862, 517)
         Me.cmdClose.Name = "cmdClose"
         Me.cmdClose.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.cmdClose.Size = New System.Drawing.Size(98, 23)
@@ -1008,7 +995,7 @@ Partial Class frmStaffManager
         '
         Me.btnAddEmpl.BackgroundImage = CType(resources.GetObject("btnAddEmpl.BackgroundImage"), System.Drawing.Image)
         Me.btnAddEmpl.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnAddEmpl.Location = New System.Drawing.Point(862, 335)
+        Me.btnAddEmpl.Location = New System.Drawing.Point(862, 307)
         Me.btnAddEmpl.Name = "btnAddEmpl"
         Me.btnAddEmpl.Size = New System.Drawing.Size(98, 23)
         Me.btnAddEmpl.TabIndex = 4
@@ -1019,7 +1006,7 @@ Partial Class frmStaffManager
         '
         Me.btnDeleteEmpl.BackgroundImage = CType(resources.GetObject("btnDeleteEmpl.BackgroundImage"), System.Drawing.Image)
         Me.btnDeleteEmpl.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnDeleteEmpl.Location = New System.Drawing.Point(862, 364)
+        Me.btnDeleteEmpl.Location = New System.Drawing.Point(862, 336)
         Me.btnDeleteEmpl.Name = "btnDeleteEmpl"
         Me.btnDeleteEmpl.Size = New System.Drawing.Size(98, 23)
         Me.btnDeleteEmpl.TabIndex = 5
@@ -1030,7 +1017,7 @@ Partial Class frmStaffManager
         '
         Me.btnReSearch.BackgroundImage = CType(resources.GetObject("btnReSearch.BackgroundImage"), System.Drawing.Image)
         Me.btnReSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnReSearch.Location = New System.Drawing.Point(862, 91)
+        Me.btnReSearch.Location = New System.Drawing.Point(862, 63)
         Me.btnReSearch.Name = "btnReSearch"
         Me.btnReSearch.Size = New System.Drawing.Size(98, 23)
         Me.btnReSearch.TabIndex = 14
@@ -1041,7 +1028,7 @@ Partial Class frmStaffManager
         '
         Me.btnSearch.BackgroundImage = CType(resources.GetObject("btnSearch.BackgroundImage"), System.Drawing.Image)
         Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnSearch.Location = New System.Drawing.Point(862, 118)
+        Me.btnSearch.Location = New System.Drawing.Point(862, 90)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(98, 23)
         Me.btnSearch.TabIndex = 15
@@ -1053,7 +1040,7 @@ Partial Class frmStaffManager
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(977, 585)
+        Me.ClientSize = New System.Drawing.Size(977, 559)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.dgrEmplResult)
@@ -1065,14 +1052,14 @@ Partial Class frmStaffManager
         Me.Controls.Add(Me.groupBox1)
         Me.Controls.Add(Me.btnReSearch)
         Me.Controls.Add(Me.btnSearch)
-        Me.Controls.Add(Me.lblTitle)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmStaffManager"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
-        Me.Text = "frmRecordsSystem"
+        Me.Text = "Danh sách nhân viên"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.dgrEmplResult, System.ComponentModel.ISupportInitialize).EndInit()
         Me.groupBox2.ResumeLayout(False)
         Me.groupBox2.PerformLayout()
@@ -1081,7 +1068,6 @@ Partial Class frmStaffManager
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -1112,7 +1098,6 @@ Partial Class frmStaffManager
     Private WithEvents label12 As Label
     Private WithEvents label11 As Label
     Private WithEvents groupBox1 As GroupBox
-    Private WithEvents lblTitle As Label
     Private WithEvents Label3 As Label
     Private WithEvents TextBox3 As TextBox
     Private WithEvents Label14 As Label

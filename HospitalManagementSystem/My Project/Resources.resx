@@ -118,25 +118,34 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="banner" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resoucres\Banners\banner.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Aha_Soft_Large_Home_Drugstore" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resoucres\Aha-Soft-Large-Home-Drugstore.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Button_psd" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resoucres\Buttons\Button.psd.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="frmChild" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resoucres\Backgrounds\frmChild.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Close_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resoucres\Buttons\Close-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Administrator-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Administrator-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="User-Group-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\User-Group-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="frmMain" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resoucres\Backgrounds\frmMain.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Close_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resoucres\Buttons\Close-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Aha_Soft_Large_Home_Drugstore" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resoucres\Aha-Soft-Large-Home-Drugstore.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="banner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resoucres\Banners\banner.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Custom_Icon_Design_Pretty_Office_3_Add_to_favorites" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resoucres\Custom-Icon-Design-Pretty-Office-3-Add-to-favorites.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="frmChild" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resoucres\Backgrounds\frmChild.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Patients-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Patients-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -32,6 +32,10 @@ Namespace BUS
             End If
         End Sub
 
+        Friend Function SearchEmployeesByDeptId(DeptId As Integer) As DataTable
+            Return _emplData.GetEmployeesByDeptId(DeptId)
+        End Function
+
         Friend Function GetEmployeeByAccountId(id As Integer) As Employee
             Dim empl As New Employee
             Dim dbEmpl As DataTable = _emplData.GetEmployeesDataTable(id)

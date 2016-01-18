@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class frmAccountInformation
-    Inherits System.Windows.Forms.Form
+    Inherits Form
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -24,6 +24,9 @@ Partial Class frmAccountInformation
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAccountInformation))
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.txtEmployeeHireDate = New System.Windows.Forms.TextBox()
+        Me.txtEmployeeDepartment = New System.Windows.Forms.TextBox()
+        Me.txtEmployeeSpectity = New System.Windows.Forms.TextBox()
         Me.txtEmployeeTotalSalary = New System.Windows.Forms.TextBox()
         Me.txtEmployeeSubsidy = New System.Windows.Forms.TextBox()
         Me.txtEmployeeBasicSalary = New System.Windows.Forms.TextBox()
@@ -38,6 +41,7 @@ Partial Class frmAccountInformation
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.groupBox2 = New System.Windows.Forms.GroupBox()
+        Me.txtEmployeeDoB = New System.Windows.Forms.TextBox()
         Me.rbtnSexFemale = New System.Windows.Forms.RadioButton()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.rbtnSexMale = New System.Windows.Forms.RadioButton()
@@ -56,16 +60,12 @@ Partial Class frmAccountInformation
         Me.label9 = New System.Windows.Forms.Label()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtAccountRoleName = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.txtAccountPassword = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.txtAccountUsername = New System.Windows.Forms.TextBox()
         Me.Label35 = New System.Windows.Forms.Label()
-        Me.txtEmployeeSpectity = New System.Windows.Forms.TextBox()
-        Me.txtEmployeeDepartment = New System.Windows.Forms.TextBox()
-        Me.txtEmployeeHireDate = New System.Windows.Forms.TextBox()
-        Me.txtEmployeeDoB = New System.Windows.Forms.TextBox()
-        Me.txtAccountRoleName = New System.Windows.Forms.TextBox()
         Me.btnChangePassword = New System.Windows.Forms.Button()
         Me.GroupBox3.SuspendLayout()
         Me.groupBox2.SuspendLayout()
@@ -94,9 +94,39 @@ Partial Class frmAccountInformation
         Me.GroupBox3.Location = New System.Drawing.Point(12, 286)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(844, 116)
-        Me.GroupBox3.TabIndex = 33
+        Me.GroupBox3.TabIndex = 0
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Thông tin công việc"
+        '
+        'txtEmployeeHireDate
+        '
+        Me.txtEmployeeHireDate.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtEmployeeHireDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmployeeHireDate.Location = New System.Drawing.Point(110, 25)
+        Me.txtEmployeeHireDate.Name = "txtEmployeeHireDate"
+        Me.txtEmployeeHireDate.ReadOnly = True
+        Me.txtEmployeeHireDate.Size = New System.Drawing.Size(103, 22)
+        Me.txtEmployeeHireDate.TabIndex = 1
+        '
+        'txtEmployeeDepartment
+        '
+        Me.txtEmployeeDepartment.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtEmployeeDepartment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmployeeDepartment.Location = New System.Drawing.Point(520, 53)
+        Me.txtEmployeeDepartment.Name = "txtEmployeeDepartment"
+        Me.txtEmployeeDepartment.ReadOnly = True
+        Me.txtEmployeeDepartment.Size = New System.Drawing.Size(307, 22)
+        Me.txtEmployeeDepartment.TabIndex = 7
+        '
+        'txtEmployeeSpectity
+        '
+        Me.txtEmployeeSpectity.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtEmployeeSpectity.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmployeeSpectity.Location = New System.Drawing.Point(110, 53)
+        Me.txtEmployeeSpectity.Name = "txtEmployeeSpectity"
+        Me.txtEmployeeSpectity.ReadOnly = True
+        Me.txtEmployeeSpectity.Size = New System.Drawing.Size(297, 22)
+        Me.txtEmployeeSpectity.TabIndex = 5
         '
         'txtEmployeeTotalSalary
         '
@@ -106,7 +136,7 @@ Partial Class frmAccountInformation
         Me.txtEmployeeTotalSalary.Name = "txtEmployeeTotalSalary"
         Me.txtEmployeeTotalSalary.ReadOnly = True
         Me.txtEmployeeTotalSalary.Size = New System.Drawing.Size(100, 22)
-        Me.txtEmployeeTotalSalary.TabIndex = 43
+        Me.txtEmployeeTotalSalary.TabIndex = 15
         '
         'txtEmployeeSubsidy
         '
@@ -116,7 +146,7 @@ Partial Class frmAccountInformation
         Me.txtEmployeeSubsidy.Name = "txtEmployeeSubsidy"
         Me.txtEmployeeSubsidy.ReadOnly = True
         Me.txtEmployeeSubsidy.Size = New System.Drawing.Size(96, 22)
-        Me.txtEmployeeSubsidy.TabIndex = 42
+        Me.txtEmployeeSubsidy.TabIndex = 13
         '
         'txtEmployeeBasicSalary
         '
@@ -126,7 +156,7 @@ Partial Class frmAccountInformation
         Me.txtEmployeeBasicSalary.Name = "txtEmployeeBasicSalary"
         Me.txtEmployeeBasicSalary.ReadOnly = True
         Me.txtEmployeeBasicSalary.Size = New System.Drawing.Size(103, 22)
-        Me.txtEmployeeBasicSalary.TabIndex = 32
+        Me.txtEmployeeBasicSalary.TabIndex = 9
         '
         'Label30
         '
@@ -135,7 +165,7 @@ Partial Class frmAccountInformation
         Me.Label30.Location = New System.Drawing.Point(641, 86)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(80, 16)
-        Me.Label30.TabIndex = 34
+        Me.Label30.TabIndex = 14
         Me.Label30.Text = "Tổng Lương"
         '
         'Label22
@@ -145,7 +175,7 @@ Partial Class frmAccountInformation
         Me.Label22.Location = New System.Drawing.Point(11, 28)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(70, 16)
-        Me.Label22.TabIndex = 16
+        Me.Label22.TabIndex = 0
         Me.Label22.Text = "Ngày vào "
         '
         'Label18
@@ -155,7 +185,7 @@ Partial Class frmAccountInformation
         Me.Label18.Location = New System.Drawing.Point(245, 28)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(33, 16)
-        Me.Label18.TabIndex = 24
+        Me.Label18.TabIndex = 2
         Me.Label18.Text = "Vị trí"
         '
         'lblSpec
@@ -165,7 +195,7 @@ Partial Class frmAccountInformation
         Me.lblSpec.Location = New System.Drawing.Point(11, 56)
         Me.lblSpec.Name = "lblSpec"
         Me.lblSpec.Size = New System.Drawing.Size(82, 16)
-        Me.lblSpec.TabIndex = 28
+        Me.lblSpec.TabIndex = 4
         Me.lblSpec.Text = "Chuyên môn"
         '
         'lblDept
@@ -175,7 +205,7 @@ Partial Class frmAccountInformation
         Me.lblDept.Location = New System.Drawing.Point(432, 56)
         Me.lblDept.Name = "lblDept"
         Me.lblDept.Size = New System.Drawing.Size(39, 16)
-        Me.lblDept.TabIndex = 26
+        Me.lblDept.TabIndex = 6
         Me.lblDept.Text = "Khoa"
         '
         'txtEmployeeRatio
@@ -186,7 +216,7 @@ Partial Class frmAccountInformation
         Me.txtEmployeeRatio.Name = "txtEmployeeRatio"
         Me.txtEmployeeRatio.ReadOnly = True
         Me.txtEmployeeRatio.Size = New System.Drawing.Size(88, 22)
-        Me.txtEmployeeRatio.TabIndex = 23
+        Me.txtEmployeeRatio.TabIndex = 11
         '
         'txtEmployeePosition
         '
@@ -196,7 +226,7 @@ Partial Class frmAccountInformation
         Me.txtEmployeePosition.Name = "txtEmployeePosition"
         Me.txtEmployeePosition.ReadOnly = True
         Me.txtEmployeePosition.Size = New System.Drawing.Size(297, 22)
-        Me.txtEmployeePosition.TabIndex = 25
+        Me.txtEmployeePosition.TabIndex = 3
         '
         'txtEmployee
         '
@@ -205,7 +235,7 @@ Partial Class frmAccountInformation
         Me.txtEmployee.Location = New System.Drawing.Point(245, 86)
         Me.txtEmployee.Name = "txtEmployee"
         Me.txtEmployee.Size = New System.Drawing.Size(44, 16)
-        Me.txtEmployee.TabIndex = 22
+        Me.txtEmployee.TabIndex = 10
         Me.txtEmployee.Text = "Hệ số"
         '
         'Label21
@@ -215,7 +245,7 @@ Partial Class frmAccountInformation
         Me.Label21.Location = New System.Drawing.Point(11, 86)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(66, 16)
-        Me.Label21.TabIndex = 18
+        Me.Label21.TabIndex = 8
         Me.Label21.Text = "Lương CB"
         '
         'Label20
@@ -225,7 +255,7 @@ Partial Class frmAccountInformation
         Me.Label20.Location = New System.Drawing.Point(432, 86)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(57, 16)
-        Me.Label20.TabIndex = 20
+        Me.Label20.TabIndex = 12
         Me.Label20.Text = "Phụ cấp"
         '
         'groupBox2
@@ -251,9 +281,19 @@ Partial Class frmAccountInformation
         Me.groupBox2.Location = New System.Drawing.Point(12, 162)
         Me.groupBox2.Name = "groupBox2"
         Me.groupBox2.Size = New System.Drawing.Size(844, 118)
-        Me.groupBox2.TabIndex = 32
+        Me.groupBox2.TabIndex = 4
         Me.groupBox2.TabStop = False
         Me.groupBox2.Text = "Thông tin cá nhân"
+        '
+        'txtEmployeeDoB
+        '
+        Me.txtEmployeeDoB.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtEmployeeDoB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmployeeDoB.Location = New System.Drawing.Point(110, 53)
+        Me.txtEmployeeDoB.Name = "txtEmployeeDoB"
+        Me.txtEmployeeDoB.ReadOnly = True
+        Me.txtEmployeeDoB.Size = New System.Drawing.Size(103, 22)
+        Me.txtEmployeeDoB.TabIndex = 8
         '
         'rbtnSexFemale
         '
@@ -263,7 +303,7 @@ Partial Class frmAccountInformation
         Me.rbtnSexFemale.Location = New System.Drawing.Point(784, 26)
         Me.rbtnSexFemale.Name = "rbtnSexFemale"
         Me.rbtnSexFemale.Size = New System.Drawing.Size(43, 20)
-        Me.rbtnSexFemale.TabIndex = 65
+        Me.rbtnSexFemale.TabIndex = 6
         Me.rbtnSexFemale.Text = "Nữ"
         Me.rbtnSexFemale.UseVisualStyleBackColor = True
         '
@@ -274,7 +314,7 @@ Partial Class frmAccountInformation
         Me.Label4.Location = New System.Drawing.Point(641, 28)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(55, 16)
-        Me.Label4.TabIndex = 63
+        Me.Label4.TabIndex = 4
         Me.Label4.Text = "Giới tính"
         '
         'rbtnSexMale
@@ -285,7 +325,7 @@ Partial Class frmAccountInformation
         Me.rbtnSexMale.Location = New System.Drawing.Point(727, 26)
         Me.rbtnSexMale.Name = "rbtnSexMale"
         Me.rbtnSexMale.Size = New System.Drawing.Size(55, 20)
-        Me.rbtnSexMale.TabIndex = 64
+        Me.rbtnSexMale.TabIndex = 5
         Me.rbtnSexMale.Text = "Nam"
         Me.rbtnSexMale.UseVisualStyleBackColor = True
         '
@@ -298,7 +338,7 @@ Partial Class frmAccountInformation
         Me.txtEmployeePhone.Name = "txtEmployeePhone"
         Me.txtEmployeePhone.ReadOnly = True
         Me.txtEmployeePhone.Size = New System.Drawing.Size(96, 22)
-        Me.txtEmployeePhone.TabIndex = 15
+        Me.txtEmployeePhone.TabIndex = 12
         '
         'txtEmployeeIdCard
         '
@@ -309,7 +349,7 @@ Partial Class frmAccountInformation
         Me.txtEmployeeIdCard.Name = "txtEmployeeIdCard"
         Me.txtEmployeeIdCard.ReadOnly = True
         Me.txtEmployeeIdCard.Size = New System.Drawing.Size(88, 22)
-        Me.txtEmployeeIdCard.TabIndex = 9
+        Me.txtEmployeeIdCard.TabIndex = 10
         '
         'txtEmployeeAddress
         '
@@ -319,7 +359,7 @@ Partial Class frmAccountInformation
         Me.txtEmployeeAddress.Name = "txtEmployeeAddress"
         Me.txtEmployeeAddress.ReadOnly = True
         Me.txtEmployeeAddress.Size = New System.Drawing.Size(717, 22)
-        Me.txtEmployeeAddress.TabIndex = 13
+        Me.txtEmployeeAddress.TabIndex = 16
         '
         'label11
         '
@@ -328,7 +368,7 @@ Partial Class frmAccountInformation
         Me.label11.Location = New System.Drawing.Point(17, 58)
         Me.label11.Name = "label11"
         Me.label11.Size = New System.Drawing.Size(68, 16)
-        Me.label11.TabIndex = 10
+        Me.label11.TabIndex = 7
         Me.label11.Text = "Ngày sinh"
         '
         'label10
@@ -338,7 +378,7 @@ Partial Class frmAccountInformation
         Me.label10.Location = New System.Drawing.Point(17, 86)
         Me.label10.Name = "label10"
         Me.label10.Size = New System.Drawing.Size(48, 16)
-        Me.label10.TabIndex = 12
+        Me.label10.TabIndex = 15
         Me.label10.Text = "Địa chỉ"
         '
         'txtEmployeeName
@@ -349,7 +389,7 @@ Partial Class frmAccountInformation
         Me.txtEmployeeName.Name = "txtEmployeeName"
         Me.txtEmployeeName.ReadOnly = True
         Me.txtEmployeeName.Size = New System.Drawing.Size(297, 22)
-        Me.txtEmployeeName.TabIndex = 7
+        Me.txtEmployeeName.TabIndex = 3
         '
         'txtEmployeeId
         '
@@ -368,7 +408,7 @@ Partial Class frmAccountInformation
         Me.label6.Location = New System.Drawing.Point(432, 58)
         Me.label6.Name = "label6"
         Me.label6.Size = New System.Drawing.Size(67, 16)
-        Me.label6.TabIndex = 14
+        Me.label6.TabIndex = 11
         Me.label6.Text = "Điện thoại"
         '
         'label7
@@ -378,7 +418,7 @@ Partial Class frmAccountInformation
         Me.label7.Location = New System.Drawing.Point(245, 58)
         Me.label7.Name = "label7"
         Me.label7.Size = New System.Drawing.Size(48, 16)
-        Me.label7.TabIndex = 8
+        Me.label7.TabIndex = 9
         Me.label7.Text = "CMND"
         '
         'txtEmployeeFolk
@@ -389,7 +429,7 @@ Partial Class frmAccountInformation
         Me.txtEmployeeFolk.Name = "txtEmployeeFolk"
         Me.txtEmployeeFolk.ReadOnly = True
         Me.txtEmployeeFolk.Size = New System.Drawing.Size(100, 22)
-        Me.txtEmployeeFolk.TabIndex = 5
+        Me.txtEmployeeFolk.TabIndex = 14
         '
         'label8
         '
@@ -398,7 +438,7 @@ Partial Class frmAccountInformation
         Me.label8.Location = New System.Drawing.Point(245, 28)
         Me.label8.Name = "label8"
         Me.label8.Size = New System.Drawing.Size(50, 16)
-        Me.label8.TabIndex = 6
+        Me.label8.TabIndex = 2
         Me.label8.Text = "Họ tên "
         '
         'label12
@@ -408,7 +448,7 @@ Partial Class frmAccountInformation
         Me.label12.Location = New System.Drawing.Point(641, 56)
         Me.label12.Name = "label12"
         Me.label12.Size = New System.Drawing.Size(54, 16)
-        Me.label12.TabIndex = 4
+        Me.label12.TabIndex = 13
         Me.label12.Text = "Dân tộc"
         '
         'label9
@@ -430,7 +470,7 @@ Partial Class frmAccountInformation
         Me.lblTitle.Location = New System.Drawing.Point(305, 9)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(263, 26)
-        Me.lblTitle.TabIndex = 34
+        Me.lblTitle.TabIndex = 0
         Me.lblTitle.Text = "THÔNG TIN TÀI KHOẢN"
         '
         'GroupBox1
@@ -445,9 +485,19 @@ Partial Class frmAccountInformation
         Me.GroupBox1.Location = New System.Drawing.Point(12, 38)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(302, 118)
-        Me.GroupBox1.TabIndex = 36
+        Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Thông tin tài khoản"
+        '
+        'txtAccountRoleName
+        '
+        Me.txtAccountRoleName.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtAccountRoleName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAccountRoleName.Location = New System.Drawing.Point(110, 81)
+        Me.txtAccountRoleName.Name = "txtAccountRoleName"
+        Me.txtAccountRoleName.ReadOnly = True
+        Me.txtAccountRoleName.Size = New System.Drawing.Size(179, 22)
+        Me.txtAccountRoleName.TabIndex = 5
         '
         'Label14
         '
@@ -456,7 +506,7 @@ Partial Class frmAccountInformation
         Me.Label14.Location = New System.Drawing.Point(17, 84)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(72, 16)
-        Me.Label14.TabIndex = 2
+        Me.Label14.TabIndex = 4
         Me.Label14.Text = "Quyền hạn"
         '
         'txtAccountPassword
@@ -468,7 +518,7 @@ Partial Class frmAccountInformation
         Me.txtAccountPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtAccountPassword.ReadOnly = True
         Me.txtAccountPassword.Size = New System.Drawing.Size(179, 22)
-        Me.txtAccountPassword.TabIndex = 13
+        Me.txtAccountPassword.TabIndex = 3
         '
         'Label16
         '
@@ -477,7 +527,7 @@ Partial Class frmAccountInformation
         Me.Label16.Location = New System.Drawing.Point(17, 56)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(62, 16)
-        Me.Label16.TabIndex = 12
+        Me.Label16.TabIndex = 2
         Me.Label16.Text = "Mật khẩu"
         '
         'txtAccountUsername
@@ -500,56 +550,6 @@ Partial Class frmAccountInformation
         Me.Label35.TabIndex = 0
         Me.Label35.Text = "Tài khoản"
         '
-        'txtEmployeeSpectity
-        '
-        Me.txtEmployeeSpectity.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtEmployeeSpectity.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmployeeSpectity.Location = New System.Drawing.Point(110, 53)
-        Me.txtEmployeeSpectity.Name = "txtEmployeeSpectity"
-        Me.txtEmployeeSpectity.ReadOnly = True
-        Me.txtEmployeeSpectity.Size = New System.Drawing.Size(297, 22)
-        Me.txtEmployeeSpectity.TabIndex = 44
-        '
-        'txtEmployeeDepartment
-        '
-        Me.txtEmployeeDepartment.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtEmployeeDepartment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmployeeDepartment.Location = New System.Drawing.Point(520, 53)
-        Me.txtEmployeeDepartment.Name = "txtEmployeeDepartment"
-        Me.txtEmployeeDepartment.ReadOnly = True
-        Me.txtEmployeeDepartment.Size = New System.Drawing.Size(307, 22)
-        Me.txtEmployeeDepartment.TabIndex = 45
-        '
-        'txtEmployeeHireDate
-        '
-        Me.txtEmployeeHireDate.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtEmployeeHireDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmployeeHireDate.Location = New System.Drawing.Point(110, 25)
-        Me.txtEmployeeHireDate.Name = "txtEmployeeHireDate"
-        Me.txtEmployeeHireDate.ReadOnly = True
-        Me.txtEmployeeHireDate.Size = New System.Drawing.Size(103, 22)
-        Me.txtEmployeeHireDate.TabIndex = 46
-        '
-        'txtEmployeeDoB
-        '
-        Me.txtEmployeeDoB.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtEmployeeDoB.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmployeeDoB.Location = New System.Drawing.Point(110, 53)
-        Me.txtEmployeeDoB.Name = "txtEmployeeDoB"
-        Me.txtEmployeeDoB.ReadOnly = True
-        Me.txtEmployeeDoB.Size = New System.Drawing.Size(103, 22)
-        Me.txtEmployeeDoB.TabIndex = 66
-        '
-        'txtAccountRoleName
-        '
-        Me.txtAccountRoleName.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtAccountRoleName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAccountRoleName.Location = New System.Drawing.Point(110, 81)
-        Me.txtAccountRoleName.Name = "txtAccountRoleName"
-        Me.txtAccountRoleName.ReadOnly = True
-        Me.txtAccountRoleName.Size = New System.Drawing.Size(179, 22)
-        Me.txtAccountRoleName.TabIndex = 14
-        '
         'btnChangePassword
         '
         Me.btnChangePassword.BackgroundImage = CType(resources.GetObject("btnChangePassword.BackgroundImage"), System.Drawing.Image)
@@ -559,7 +559,7 @@ Partial Class frmAccountInformation
         Me.btnChangePassword.Location = New System.Drawing.Point(320, 131)
         Me.btnChangePassword.Name = "btnChangePassword"
         Me.btnChangePassword.Size = New System.Drawing.Size(109, 25)
-        Me.btnChangePassword.TabIndex = 45
+        Me.btnChangePassword.TabIndex = 2
         Me.btnChangePassword.Text = "&Đổi mật khẩu"
         Me.btnChangePassword.UseVisualStyleBackColor = True
         '
@@ -573,6 +573,8 @@ Partial Class frmAccountInformation
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.groupBox2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmAccountInformation"
         Me.Text = "Thông tin Tài khoản"
         Me.GroupBox3.ResumeLayout(False)

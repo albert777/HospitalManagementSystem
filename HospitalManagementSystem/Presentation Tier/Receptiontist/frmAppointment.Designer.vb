@@ -97,7 +97,7 @@ Partial Class frmAppointment
         Me.lblTitle.Location = New System.Drawing.Point(294, 9)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(257, 26)
-        Me.lblTitle.TabIndex = 33
+        Me.lblTitle.TabIndex = 0
         Me.lblTitle.Text = "PHIẾU ĐĂNG KÝ KHÁM"
         '
         'Label1
@@ -107,7 +107,7 @@ Partial Class frmAppointment
         Me.Label1.Location = New System.Drawing.Point(231, 28)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 16)
-        Me.Label1.TabIndex = 34
+        Me.Label1.TabIndex = 2
         Me.Label1.Text = "Ngày lập"
         '
         'txtAppointmentCreateTime
@@ -118,7 +118,7 @@ Partial Class frmAppointment
         Me.txtAppointmentCreateTime.Name = "txtAppointmentCreateTime"
         Me.txtAppointmentCreateTime.ReadOnly = True
         Me.txtAppointmentCreateTime.Size = New System.Drawing.Size(176, 22)
-        Me.txtAppointmentCreateTime.TabIndex = 35
+        Me.txtAppointmentCreateTime.TabIndex = 3
         '
         'txtAppoimentId
         '
@@ -128,7 +128,7 @@ Partial Class frmAppointment
         Me.txtAppoimentId.Name = "txtAppoimentId"
         Me.txtAppoimentId.ReadOnly = True
         Me.txtAppoimentId.Size = New System.Drawing.Size(100, 22)
-        Me.txtAppoimentId.TabIndex = 37
+        Me.txtAppoimentId.TabIndex = 1
         '
         'Label2
         '
@@ -137,7 +137,7 @@ Partial Class frmAppointment
         Me.Label2.Location = New System.Drawing.Point(17, 28)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(61, 16)
-        Me.Label2.TabIndex = 36
+        Me.Label2.TabIndex = 0
         Me.Label2.Text = "Số phiếu"
         '
         'GroupBox3
@@ -152,7 +152,7 @@ Partial Class frmAppointment
         Me.GroupBox3.Location = New System.Drawing.Point(12, 224)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(602, 54)
-        Me.GroupBox3.TabIndex = 45
+        Me.GroupBox3.TabIndex = 3
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Thông tin khám chữa bệnh"
         '
@@ -164,7 +164,7 @@ Partial Class frmAppointment
         Me.txtPatientInsuranceExpiryDate.Name = "txtPatientInsuranceExpiryDate"
         Me.txtPatientInsuranceExpiryDate.ReadOnly = True
         Me.txtPatientInsuranceExpiryDate.Size = New System.Drawing.Size(87, 22)
-        Me.txtPatientInsuranceExpiryDate.TabIndex = 36
+        Me.txtPatientInsuranceExpiryDate.TabIndex = 5
         '
         'txtPatientInsuranceIssueDate
         '
@@ -174,7 +174,7 @@ Partial Class frmAppointment
         Me.txtPatientInsuranceIssueDate.Name = "txtPatientInsuranceIssueDate"
         Me.txtPatientInsuranceIssueDate.ReadOnly = True
         Me.txtPatientInsuranceIssueDate.Size = New System.Drawing.Size(88, 22)
-        Me.txtPatientInsuranceIssueDate.TabIndex = 58
+        Me.txtPatientInsuranceIssueDate.TabIndex = 3
         '
         'txtPatientInsuranceId
         '
@@ -184,7 +184,7 @@ Partial Class frmAppointment
         Me.txtPatientInsuranceId.Name = "txtPatientInsuranceId"
         Me.txtPatientInsuranceId.ReadOnly = True
         Me.txtPatientInsuranceId.Size = New System.Drawing.Size(103, 22)
-        Me.txtPatientInsuranceId.TabIndex = 57
+        Me.txtPatientInsuranceId.TabIndex = 1
         '
         'lblInsIssDate
         '
@@ -193,7 +193,7 @@ Partial Class frmAppointment
         Me.lblInsIssDate.Location = New System.Drawing.Point(231, 23)
         Me.lblInsIssDate.Name = "lblInsIssDate"
         Me.lblInsIssDate.Size = New System.Drawing.Size(67, 16)
-        Me.lblInsIssDate.TabIndex = 51
+        Me.lblInsIssDate.TabIndex = 2
         Me.lblInsIssDate.Text = "Ngày cấp"
         '
         'Label13
@@ -203,7 +203,7 @@ Partial Class frmAppointment
         Me.Label13.Location = New System.Drawing.Point(17, 24)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(85, 16)
-        Me.Label13.TabIndex = 39
+        Me.Label13.TabIndex = 0
         Me.Label13.Text = "Số Bảo hiểm"
         '
         'lblInsExpDate
@@ -213,7 +213,7 @@ Partial Class frmAppointment
         Me.lblInsExpDate.Location = New System.Drawing.Point(411, 23)
         Me.lblInsExpDate.Name = "lblInsExpDate"
         Me.lblInsExpDate.Size = New System.Drawing.Size(87, 16)
-        Me.lblInsExpDate.TabIndex = 16
+        Me.lblInsExpDate.TabIndex = 4
         Me.lblInsExpDate.Text = "Ngày hết hạn"
         '
         'groupBox2
@@ -231,7 +231,7 @@ Partial Class frmAppointment
         Me.groupBox2.Location = New System.Drawing.Point(12, 130)
         Me.groupBox2.Name = "groupBox2"
         Me.groupBox2.Size = New System.Drawing.Size(602, 88)
-        Me.groupBox2.TabIndex = 44
+        Me.groupBox2.TabIndex = 2
         Me.groupBox2.TabStop = False
         Me.groupBox2.Text = "Thông tin bệnh nhân"
         '
@@ -243,7 +243,7 @@ Partial Class frmAppointment
         Me.txtPatientDoB.Name = "txtPatientDoB"
         Me.txtPatientDoB.ReadOnly = True
         Me.txtPatientDoB.Size = New System.Drawing.Size(88, 22)
-        Me.txtPatientDoB.TabIndex = 39
+        Me.txtPatientDoB.TabIndex = 3
         '
         'rbtnSexFemale
         '
@@ -253,7 +253,7 @@ Partial Class frmAppointment
         Me.rbtnSexFemale.Location = New System.Drawing.Point(533, 26)
         Me.rbtnSexFemale.Name = "rbtnSexFemale"
         Me.rbtnSexFemale.Size = New System.Drawing.Size(43, 20)
-        Me.rbtnSexFemale.TabIndex = 62
+        Me.rbtnSexFemale.TabIndex = 6
         Me.rbtnSexFemale.Text = "Nữ"
         Me.rbtnSexFemale.UseVisualStyleBackColor = True
         '
@@ -264,7 +264,7 @@ Partial Class frmAppointment
         Me.Label4.Location = New System.Drawing.Point(411, 28)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(55, 16)
-        Me.Label4.TabIndex = 2
+        Me.Label4.TabIndex = 4
         Me.Label4.Text = "Giới tính"
         '
         'rbtnSexMale
@@ -275,7 +275,7 @@ Partial Class frmAppointment
         Me.rbtnSexMale.Location = New System.Drawing.Point(472, 26)
         Me.rbtnSexMale.Name = "rbtnSexMale"
         Me.rbtnSexMale.Size = New System.Drawing.Size(55, 20)
-        Me.rbtnSexMale.TabIndex = 61
+        Me.rbtnSexMale.TabIndex = 5
         Me.rbtnSexMale.Text = "Nam"
         Me.rbtnSexMale.UseVisualStyleBackColor = True
         '
@@ -286,7 +286,7 @@ Partial Class frmAppointment
         Me.label11.Location = New System.Drawing.Point(231, 28)
         Me.label11.Name = "label11"
         Me.label11.Size = New System.Drawing.Size(68, 16)
-        Me.label11.TabIndex = 10
+        Me.label11.TabIndex = 2
         Me.label11.Text = "Ngày sinh"
         '
         'txtPatientName
@@ -297,7 +297,7 @@ Partial Class frmAppointment
         Me.txtPatientName.Name = "txtPatientName"
         Me.txtPatientName.ReadOnly = True
         Me.txtPatientName.Size = New System.Drawing.Size(481, 22)
-        Me.txtPatientName.TabIndex = 7
+        Me.txtPatientName.TabIndex = 8
         '
         'txtPatientId
         '
@@ -316,7 +316,7 @@ Partial Class frmAppointment
         Me.label8.Location = New System.Drawing.Point(17, 56)
         Me.label8.Name = "label8"
         Me.label8.Size = New System.Drawing.Size(50, 16)
-        Me.label8.TabIndex = 6
+        Me.label8.TabIndex = 7
         Me.label8.Text = "Họ tên "
         '
         'label9
@@ -341,7 +341,7 @@ Partial Class frmAppointment
         Me.GroupBox1.Location = New System.Drawing.Point(12, 38)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(602, 86)
-        Me.GroupBox1.TabIndex = 46
+        Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Thông tin phiếu"
         '
@@ -353,7 +353,7 @@ Partial Class frmAppointment
         Me.txtAppointmentEmployeeName.Name = "txtAppointmentEmployeeName"
         Me.txtAppointmentEmployeeName.ReadOnly = True
         Me.txtAppointmentEmployeeName.Size = New System.Drawing.Size(481, 22)
-        Me.txtAppointmentEmployeeName.TabIndex = 38
+        Me.txtAppointmentEmployeeName.TabIndex = 5
         '
         'Label7
         '
@@ -362,7 +362,7 @@ Partial Class frmAppointment
         Me.Label7.Location = New System.Drawing.Point(17, 56)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(66, 16)
-        Me.Label7.TabIndex = 37
+        Me.Label7.TabIndex = 4
         Me.Label7.Text = "Người lập"
         '
         'GroupBox4
@@ -393,7 +393,7 @@ Partial Class frmAppointment
         Me.txtRequest5.Location = New System.Drawing.Point(110, 133)
         Me.txtRequest5.Name = "txtRequest5"
         Me.txtRequest5.Size = New System.Drawing.Size(283, 22)
-        Me.txtRequest5.TabIndex = 55
+        Me.txtRequest5.TabIndex = 10
         '
         'Label21
         '
@@ -402,7 +402,7 @@ Partial Class frmAppointment
         Me.Label21.Location = New System.Drawing.Point(17, 136)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(67, 16)
-        Me.Label21.TabIndex = 54
+        Me.Label21.TabIndex = 9
         Me.Label21.Text = "Yêu cầu 5"
         '
         'txtRequest4
@@ -412,7 +412,7 @@ Partial Class frmAppointment
         Me.txtRequest4.Location = New System.Drawing.Point(110, 105)
         Me.txtRequest4.Name = "txtRequest4"
         Me.txtRequest4.Size = New System.Drawing.Size(283, 22)
-        Me.txtRequest4.TabIndex = 52
+        Me.txtRequest4.TabIndex = 8
         '
         'Label19
         '
@@ -421,7 +421,7 @@ Partial Class frmAppointment
         Me.Label19.Location = New System.Drawing.Point(17, 108)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(67, 16)
-        Me.Label19.TabIndex = 51
+        Me.Label19.TabIndex = 7
         Me.Label19.Text = "Yêu cầu 4"
         '
         'txtRequest2
@@ -431,7 +431,7 @@ Partial Class frmAppointment
         Me.txtRequest2.Location = New System.Drawing.Point(110, 49)
         Me.txtRequest2.Name = "txtRequest2"
         Me.txtRequest2.Size = New System.Drawing.Size(283, 22)
-        Me.txtRequest2.TabIndex = 41
+        Me.txtRequest2.TabIndex = 4
         '
         'txtRequest3
         '
@@ -440,7 +440,7 @@ Partial Class frmAppointment
         Me.txtRequest3.Location = New System.Drawing.Point(110, 77)
         Me.txtRequest3.Name = "txtRequest3"
         Me.txtRequest3.Size = New System.Drawing.Size(283, 22)
-        Me.txtRequest3.TabIndex = 49
+        Me.txtRequest3.TabIndex = 6
         '
         'Label17
         '
@@ -449,7 +449,7 @@ Partial Class frmAppointment
         Me.Label17.Location = New System.Drawing.Point(17, 80)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(67, 16)
-        Me.Label17.TabIndex = 48
+        Me.Label17.TabIndex = 5
         Me.Label17.Text = "Yêu cầu 3"
         '
         'Label16
@@ -459,7 +459,7 @@ Partial Class frmAppointment
         Me.Label16.Location = New System.Drawing.Point(17, 52)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(67, 16)
-        Me.Label16.TabIndex = 40
+        Me.Label16.TabIndex = 3
         Me.Label16.Text = "Yêu cầu 2"
         '
         'Label5
@@ -470,7 +470,7 @@ Partial Class frmAppointment
         Me.Label5.Location = New System.Drawing.Point(85, 24)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(14, 17)
-        Me.Label5.TabIndex = 39
+        Me.Label5.TabIndex = 1
         Me.Label5.Text = "*"
         '
         'txtRequest1
@@ -480,7 +480,7 @@ Partial Class frmAppointment
         Me.txtRequest1.Location = New System.Drawing.Point(110, 21)
         Me.txtRequest1.Name = "txtRequest1"
         Me.txtRequest1.Size = New System.Drawing.Size(283, 22)
-        Me.txtRequest1.TabIndex = 38
+        Me.txtRequest1.TabIndex = 2
         '
         'Label14
         '
@@ -489,7 +489,7 @@ Partial Class frmAppointment
         Me.Label14.Location = New System.Drawing.Point(17, 24)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(67, 16)
-        Me.Label14.TabIndex = 37
+        Me.Label14.TabIndex = 0
         Me.Label14.Text = "Yêu cầu 1"
         '
         'GroupBox5
@@ -506,7 +506,7 @@ Partial Class frmAppointment
         Me.GroupBox5.Location = New System.Drawing.Point(620, 130)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Size = New System.Drawing.Size(215, 148)
-        Me.GroupBox5.TabIndex = 48
+        Me.GroupBox5.TabIndex = 4
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Phân phòng khám"
         '
@@ -518,7 +518,7 @@ Partial Class frmAppointment
         Me.Label15.Location = New System.Drawing.Point(70, 118)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(14, 17)
-        Me.Label15.TabIndex = 57
+        Me.Label15.TabIndex = 6
         Me.Label15.Text = "*"
         '
         'Label12
@@ -529,7 +529,7 @@ Partial Class frmAppointment
         Me.Label12.Location = New System.Drawing.Point(121, 56)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(14, 17)
-        Me.Label12.TabIndex = 56
+        Me.Label12.TabIndex = 3
         Me.Label12.Text = "*"
         '
         'txtAppointmentNo
@@ -539,7 +539,7 @@ Partial Class frmAppointment
         Me.txtAppointmentNo.Location = New System.Drawing.Point(114, 114)
         Me.txtAppointmentNo.Name = "txtAppointmentNo"
         Me.txtAppointmentNo.Size = New System.Drawing.Size(88, 22)
-        Me.txtAppointmentNo.TabIndex = 51
+        Me.txtAppointmentNo.TabIndex = 7
         '
         'Label10
         '
@@ -548,7 +548,7 @@ Partial Class frmAppointment
         Me.Label10.Location = New System.Drawing.Point(6, 117)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(58, 16)
-        Me.Label10.TabIndex = 50
+        Me.Label10.TabIndex = 5
         Me.Label10.Text = "Số thứ tự"
         '
         'cboxClinics
@@ -559,7 +559,7 @@ Partial Class frmAppointment
         Me.cboxClinics.Location = New System.Drawing.Point(9, 75)
         Me.cboxClinics.Name = "cboxClinics"
         Me.cboxClinics.Size = New System.Drawing.Size(193, 24)
-        Me.cboxClinics.TabIndex = 49
+        Me.cboxClinics.TabIndex = 4
         Me.cboxClinics.ValueMember = "Id"
         '
         'Label3
@@ -569,7 +569,7 @@ Partial Class frmAppointment
         Me.Label3.Location = New System.Drawing.Point(6, 56)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(109, 16)
-        Me.Label3.TabIndex = 39
+        Me.Label3.TabIndex = 2
         Me.Label3.Text = "Tên phòng khám"
         '
         'txtClinicId
@@ -580,7 +580,7 @@ Partial Class frmAppointment
         Me.txtClinicId.Name = "txtClinicId"
         Me.txtClinicId.ReadOnly = True
         Me.txtClinicId.Size = New System.Drawing.Size(88, 22)
-        Me.txtClinicId.TabIndex = 38
+        Me.txtClinicId.TabIndex = 1
         '
         'Label6
         '
@@ -589,7 +589,7 @@ Partial Class frmAppointment
         Me.Label6.Location = New System.Drawing.Point(6, 28)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(102, 16)
-        Me.Label6.TabIndex = 37
+        Me.Label6.TabIndex = 0
         Me.Label6.Text = "Số phòng khám"
         '
         'GroupBox6
@@ -604,7 +604,7 @@ Partial Class frmAppointment
         Me.GroupBox6.Location = New System.Drawing.Point(426, 284)
         Me.GroupBox6.Name = "GroupBox6"
         Me.GroupBox6.Size = New System.Drawing.Size(409, 168)
-        Me.GroupBox6.TabIndex = 56
+        Me.GroupBox6.TabIndex = 5
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Kết luận của bác sĩ"
         '
@@ -616,7 +616,7 @@ Partial Class frmAppointment
         Me.txtDoctor.Name = "txtDoctor"
         Me.txtDoctor.ReadOnly = True
         Me.txtDoctor.Size = New System.Drawing.Size(286, 22)
-        Me.txtDoctor.TabIndex = 63
+        Me.txtDoctor.TabIndex = 1
         '
         'txtPrescribe
         '
@@ -626,7 +626,7 @@ Partial Class frmAppointment
         Me.txtPrescribe.Multiline = True
         Me.txtPrescribe.Name = "txtPrescribe"
         Me.txtPrescribe.Size = New System.Drawing.Size(286, 50)
-        Me.txtPrescribe.TabIndex = 49
+        Me.txtPrescribe.TabIndex = 5
         '
         'Label22
         '
@@ -635,7 +635,7 @@ Partial Class frmAppointment
         Me.Label22.Location = New System.Drawing.Point(17, 24)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(47, 16)
-        Me.Label22.TabIndex = 56
+        Me.Label22.TabIndex = 0
         Me.Label22.Text = "Bác sĩ"
         '
         'Label18
@@ -645,7 +645,7 @@ Partial Class frmAppointment
         Me.Label18.Location = New System.Drawing.Point(17, 108)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(90, 16)
-        Me.Label18.TabIndex = 48
+        Me.Label18.TabIndex = 4
         Me.Label18.Text = "Hướng điều trị"
         '
         'txtResult
@@ -656,7 +656,7 @@ Partial Class frmAppointment
         Me.txtResult.Multiline = True
         Me.txtResult.Name = "txtResult"
         Me.txtResult.Size = New System.Drawing.Size(286, 50)
-        Me.txtResult.TabIndex = 38
+        Me.txtResult.TabIndex = 3
         '
         'Label23
         '
@@ -665,7 +665,7 @@ Partial Class frmAppointment
         Me.Label23.Location = New System.Drawing.Point(17, 52)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(80, 16)
-        Me.Label23.TabIndex = 37
+        Me.Label23.TabIndex = 2
         Me.Label23.Text = "Chuẩn đoán"
         '
         'btnUpdateAppointment
@@ -678,7 +678,7 @@ Partial Class frmAppointment
         Me.btnUpdateAppointment.Location = New System.Drawing.Point(145, 458)
         Me.btnUpdateAppointment.Name = "btnUpdateAppointment"
         Me.btnUpdateAppointment.Size = New System.Drawing.Size(127, 25)
-        Me.btnUpdateAppointment.TabIndex = 61
+        Me.btnUpdateAppointment.TabIndex = 7
         Me.btnUpdateAppointment.Text = "&Cập nhập phiếu"
         Me.btnUpdateAppointment.UseVisualStyleBackColor = True
         '
@@ -693,7 +693,7 @@ Partial Class frmAppointment
         Me.cmdClose.Name = "cmdClose"
         Me.cmdClose.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.cmdClose.Size = New System.Drawing.Size(98, 25)
-        Me.cmdClose.TabIndex = 60
+        Me.cmdClose.TabIndex = 9
         Me.cmdClose.Text = "&Đóng"
         Me.cmdClose.UseVisualStyleBackColor = True
         '
@@ -707,7 +707,7 @@ Partial Class frmAppointment
         Me.btnPrint.Location = New System.Drawing.Point(278, 458)
         Me.btnPrint.Name = "btnPrint"
         Me.btnPrint.Size = New System.Drawing.Size(109, 25)
-        Me.btnPrint.TabIndex = 59
+        Me.btnPrint.TabIndex = 8
         Me.btnPrint.Text = "&In phiếu"
         Me.btnPrint.UseVisualStyleBackColor = True
         '
@@ -720,7 +720,7 @@ Partial Class frmAppointment
         Me.btnNewAppointment.Location = New System.Drawing.Point(12, 458)
         Me.btnNewAppointment.Name = "btnNewAppointment"
         Me.btnNewAppointment.Size = New System.Drawing.Size(127, 25)
-        Me.btnNewAppointment.TabIndex = 57
+        Me.btnNewAppointment.TabIndex = 6
         Me.btnNewAppointment.Text = "&Đăng ký Khám"
         Me.btnNewAppointment.UseVisualStyleBackColor = True
         '
@@ -741,6 +741,7 @@ Partial Class frmAppointment
         Me.Controls.Add(Me.groupBox2)
         Me.Controls.Add(Me.lblTitle)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmAppointment"
         Me.Text = "Phiếu Đăng ký Khám"
         Me.GroupBox3.ResumeLayout(False)

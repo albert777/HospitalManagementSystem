@@ -122,7 +122,7 @@ Partial Class frmPatientManager
         Me.Label28.Location = New System.Drawing.Point(85, 86)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(14, 17)
-        Me.Label28.TabIndex = 33
+        Me.Label28.TabIndex = 19
         Me.Label28.Text = "*"
         '
         'Label27
@@ -133,7 +133,7 @@ Partial Class frmPatientManager
         Me.Label27.Location = New System.Drawing.Point(85, 58)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(14, 17)
-        Me.Label27.TabIndex = 35
+        Me.Label27.TabIndex = 9
         Me.Label27.Text = "*"
         '
         'Label26
@@ -144,7 +144,7 @@ Partial Class frmPatientManager
         Me.Label26.Location = New System.Drawing.Point(692, 28)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(14, 17)
-        Me.Label26.TabIndex = 33
+        Me.Label26.TabIndex = 6
         Me.Label26.Text = "*"
         '
         'Label24
@@ -155,7 +155,7 @@ Partial Class frmPatientManager
         Me.Label24.Location = New System.Drawing.Point(289, 58)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(14, 17)
-        Me.Label24.TabIndex = 34
+        Me.Label24.TabIndex = 12
         Me.Label24.Text = "*"
         '
         'Label23
@@ -166,7 +166,7 @@ Partial Class frmPatientManager
         Me.Label23.Location = New System.Drawing.Point(289, 28)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(14, 17)
-        Me.Label23.TabIndex = 33
+        Me.Label23.TabIndex = 3
         Me.Label23.Text = "*"
         '
         'cboxPatientSex
@@ -177,7 +177,7 @@ Partial Class frmPatientManager
         Me.cboxPatientSex.Location = New System.Drawing.Point(727, 23)
         Me.cboxPatientSex.Name = "cboxPatientSex"
         Me.cboxPatientSex.Size = New System.Drawing.Size(100, 24)
-        Me.cboxPatientSex.TabIndex = 3
+        Me.cboxPatientSex.TabIndex = 7
         Me.cboxPatientSex.ValueMember = "Id"
         '
         'Label3
@@ -187,7 +187,7 @@ Partial Class frmPatientManager
         Me.Label3.Location = New System.Drawing.Point(641, 28)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(55, 16)
-        Me.Label3.TabIndex = 2
+        Me.Label3.TabIndex = 5
         Me.Label3.Text = "Giới tính"
         '
         'txtPatientPhone
@@ -205,7 +205,7 @@ Partial Class frmPatientManager
         Me.txtPatientAddress.Location = New System.Drawing.Point(110, 83)
         Me.txtPatientAddress.Name = "txtPatientAddress"
         Me.txtPatientAddress.Size = New System.Drawing.Size(717, 22)
-        Me.txtPatientAddress.TabIndex = 13
+        Me.txtPatientAddress.TabIndex = 20
         '
         'label11
         '
@@ -214,7 +214,7 @@ Partial Class frmPatientManager
         Me.label11.Location = New System.Drawing.Point(17, 58)
         Me.label11.Name = "label11"
         Me.label11.Size = New System.Drawing.Size(68, 16)
-        Me.label11.TabIndex = 10
+        Me.label11.TabIndex = 8
         Me.label11.Text = "Ngày sinh"
         '
         'txtPatientFolk
@@ -223,7 +223,7 @@ Partial Class frmPatientManager
         Me.txtPatientFolk.Location = New System.Drawing.Point(727, 53)
         Me.txtPatientFolk.Name = "txtPatientFolk"
         Me.txtPatientFolk.Size = New System.Drawing.Size(100, 22)
-        Me.txtPatientFolk.TabIndex = 5
+        Me.txtPatientFolk.TabIndex = 17
         '
         'txtSearch_IdCard
         '
@@ -233,7 +233,7 @@ Partial Class frmPatientManager
         Me.txtSearch_IdCard.Mask = "000000000"
         Me.txtSearch_IdCard.Name = "txtSearch_IdCard"
         Me.txtSearch_IdCard.Size = New System.Drawing.Size(103, 22)
-        Me.txtSearch_IdCard.TabIndex = 37
+        Me.txtSearch_IdCard.TabIndex = 5
         '
         'Label33
         '
@@ -243,7 +243,7 @@ Partial Class frmPatientManager
         Me.Label33.Location = New System.Drawing.Point(17, 54)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(48, 16)
-        Me.Label33.TabIndex = 36
+        Me.Label33.TabIndex = 4
         Me.Label33.Text = "CMND"
         '
         'Label5
@@ -254,7 +254,7 @@ Partial Class frmPatientManager
         Me.Label5.Location = New System.Drawing.Point(245, 54)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(67, 16)
-        Me.Label5.TabIndex = 36
+        Me.Label5.TabIndex = 6
         Me.Label5.Text = "Điện thoại"
         '
         'groupBox1
@@ -273,7 +273,7 @@ Partial Class frmPatientManager
         Me.groupBox1.Location = New System.Drawing.Point(12, 41)
         Me.groupBox1.Name = "groupBox1"
         Me.groupBox1.Size = New System.Drawing.Size(628, 82)
-        Me.groupBox1.TabIndex = 33
+        Me.groupBox1.TabIndex = 1
         Me.groupBox1.TabStop = False
         Me.groupBox1.Text = "Tiêu chí tìm kiếm"
         '
@@ -284,7 +284,7 @@ Partial Class frmPatientManager
         Me.txtSearchInsuranceId.Location = New System.Drawing.Point(520, 50)
         Me.txtSearchInsuranceId.Name = "txtSearchInsuranceId"
         Me.txtSearchInsuranceId.Size = New System.Drawing.Size(96, 22)
-        Me.txtSearchInsuranceId.TabIndex = 58
+        Me.txtSearchInsuranceId.TabIndex = 9
         '
         'txtSearch_Phone
         '
@@ -294,7 +294,7 @@ Partial Class frmPatientManager
         Me.txtSearch_Phone.Mask = "00000000000"
         Me.txtSearch_Phone.Name = "txtSearch_Phone"
         Me.txtSearch_Phone.Size = New System.Drawing.Size(88, 22)
-        Me.txtSearch_Phone.TabIndex = 37
+        Me.txtSearch_Phone.TabIndex = 7
         '
         'Label4
         '
@@ -304,7 +304,7 @@ Partial Class frmPatientManager
         Me.Label4.Location = New System.Drawing.Point(432, 53)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(85, 16)
-        Me.Label4.TabIndex = 36
+        Me.Label4.TabIndex = 8
         Me.Label4.Text = "Số Bảo hiểm"
         '
         'txtSearch_Name
@@ -314,7 +314,7 @@ Partial Class frmPatientManager
         Me.txtSearch_Name.Location = New System.Drawing.Point(319, 24)
         Me.txtSearch_Name.Name = "txtSearch_Name"
         Me.txtSearch_Name.Size = New System.Drawing.Size(297, 22)
-        Me.txtSearch_Name.TabIndex = 5
+        Me.txtSearch_Name.TabIndex = 3
         '
         'txtSearch_Id
         '
@@ -332,7 +332,7 @@ Partial Class frmPatientManager
         Me.label2.Location = New System.Drawing.Point(245, 28)
         Me.label2.Name = "label2"
         Me.label2.Size = New System.Drawing.Size(50, 16)
-        Me.label2.TabIndex = 4
+        Me.label2.TabIndex = 2
         Me.label2.Text = "Họ tên "
         '
         'label1
@@ -352,7 +352,7 @@ Partial Class frmPatientManager
         Me.txtPatientIdCard.Mask = "000000000"
         Me.txtPatientIdCard.Name = "txtPatientIdCard"
         Me.txtPatientIdCard.Size = New System.Drawing.Size(88, 22)
-        Me.txtPatientIdCard.TabIndex = 9
+        Me.txtPatientIdCard.TabIndex = 13
         '
         'dtpPatientDoB
         '
@@ -362,7 +362,7 @@ Partial Class frmPatientManager
         Me.dtpPatientDoB.MinDate = New Date(1950, 1, 1, 0, 0, 0, 0)
         Me.dtpPatientDoB.Name = "dtpPatientDoB"
         Me.dtpPatientDoB.Size = New System.Drawing.Size(103, 22)
-        Me.dtpPatientDoB.TabIndex = 11
+        Me.dtpPatientDoB.TabIndex = 10
         '
         'label10
         '
@@ -371,7 +371,7 @@ Partial Class frmPatientManager
         Me.label10.Location = New System.Drawing.Point(17, 86)
         Me.label10.Name = "label10"
         Me.label10.Size = New System.Drawing.Size(48, 16)
-        Me.label10.TabIndex = 12
+        Me.label10.TabIndex = 18
         Me.label10.Text = "Địa chỉ"
         '
         'txtPatientName
@@ -380,7 +380,7 @@ Partial Class frmPatientManager
         Me.txtPatientName.Location = New System.Drawing.Point(319, 25)
         Me.txtPatientName.Name = "txtPatientName"
         Me.txtPatientName.Size = New System.Drawing.Size(297, 22)
-        Me.txtPatientName.TabIndex = 7
+        Me.txtPatientName.TabIndex = 4
         '
         'txtPatientId
         '
@@ -409,7 +409,7 @@ Partial Class frmPatientManager
         Me.label8.Location = New System.Drawing.Point(245, 28)
         Me.label8.Name = "label8"
         Me.label8.Size = New System.Drawing.Size(50, 16)
-        Me.label8.TabIndex = 6
+        Me.label8.TabIndex = 2
         Me.label8.Text = "Họ tên "
         '
         'label7
@@ -419,7 +419,7 @@ Partial Class frmPatientManager
         Me.label7.Location = New System.Drawing.Point(245, 58)
         Me.label7.Name = "label7"
         Me.label7.Size = New System.Drawing.Size(48, 16)
-        Me.label7.TabIndex = 8
+        Me.label7.TabIndex = 11
         Me.label7.Text = "CMND"
         '
         'GroupBox3
@@ -446,7 +446,7 @@ Partial Class frmPatientManager
         Me.GroupBox3.Location = New System.Drawing.Point(12, 456)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(844, 114)
-        Me.GroupBox3.TabIndex = 43
+        Me.GroupBox3.TabIndex = 15
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Thông tin khám chữa bệnh"
         '
@@ -457,7 +457,7 @@ Partial Class frmPatientManager
         Me.dtpPatientInsuranceExpiryDate.Location = New System.Drawing.Point(520, 18)
         Me.dtpPatientInsuranceExpiryDate.Name = "dtpPatientInsuranceExpiryDate"
         Me.dtpPatientInsuranceExpiryDate.Size = New System.Drawing.Size(96, 22)
-        Me.dtpPatientInsuranceExpiryDate.TabIndex = 59
+        Me.dtpPatientInsuranceExpiryDate.TabIndex = 5
         '
         'dtpPatientInsuranceIssueDate
         '
@@ -466,7 +466,7 @@ Partial Class frmPatientManager
         Me.dtpPatientInsuranceIssueDate.Location = New System.Drawing.Point(319, 19)
         Me.dtpPatientInsuranceIssueDate.Name = "dtpPatientInsuranceIssueDate"
         Me.dtpPatientInsuranceIssueDate.Size = New System.Drawing.Size(88, 22)
-        Me.dtpPatientInsuranceIssueDate.TabIndex = 58
+        Me.dtpPatientInsuranceIssueDate.TabIndex = 3
         '
         'txtPatientInsuranceId
         '
@@ -474,7 +474,7 @@ Partial Class frmPatientManager
         Me.txtPatientInsuranceId.Location = New System.Drawing.Point(110, 21)
         Me.txtPatientInsuranceId.Name = "txtPatientInsuranceId"
         Me.txtPatientInsuranceId.Size = New System.Drawing.Size(103, 22)
-        Me.txtPatientInsuranceId.TabIndex = 57
+        Me.txtPatientInsuranceId.TabIndex = 1
         '
         'txtPatientDischargeTime
         '
@@ -484,7 +484,7 @@ Partial Class frmPatientManager
         Me.txtPatientDischargeTime.Name = "txtPatientDischargeTime"
         Me.txtPatientDischargeTime.ReadOnly = True
         Me.txtPatientDischargeTime.Size = New System.Drawing.Size(186, 22)
-        Me.txtPatientDischargeTime.TabIndex = 56
+        Me.txtPatientDischargeTime.TabIndex = 17
         '
         'txtPatientAdmissionTime
         '
@@ -494,7 +494,7 @@ Partial Class frmPatientManager
         Me.txtPatientAdmissionTime.Name = "txtPatientAdmissionTime"
         Me.txtPatientAdmissionTime.ReadOnly = True
         Me.txtPatientAdmissionTime.Size = New System.Drawing.Size(186, 22)
-        Me.txtPatientAdmissionTime.TabIndex = 55
+        Me.txtPatientAdmissionTime.TabIndex = 11
         '
         'lblAddmissionTime
         '
@@ -503,7 +503,7 @@ Partial Class frmPatientManager
         Me.lblAddmissionTime.Location = New System.Drawing.Point(432, 54)
         Me.lblAddmissionTime.Name = "lblAddmissionTime"
         Me.lblAddmissionTime.Size = New System.Drawing.Size(69, 16)
-        Me.lblAddmissionTime.TabIndex = 53
+        Me.lblAddmissionTime.TabIndex = 10
         Me.lblAddmissionTime.Text = "Nhập viện"
         '
         'lblInsIssDate
@@ -513,7 +513,7 @@ Partial Class frmPatientManager
         Me.lblInsIssDate.Location = New System.Drawing.Point(245, 23)
         Me.lblInsIssDate.Name = "lblInsIssDate"
         Me.lblInsIssDate.Size = New System.Drawing.Size(67, 16)
-        Me.lblInsIssDate.TabIndex = 51
+        Me.lblInsIssDate.TabIndex = 2
         Me.lblInsIssDate.Text = "Ngày cấp"
         '
         'txtPatientRoom
@@ -524,7 +524,7 @@ Partial Class frmPatientManager
         Me.txtPatientRoom.Name = "txtPatientRoom"
         Me.txtPatientRoom.ReadOnly = True
         Me.txtPatientRoom.Size = New System.Drawing.Size(76, 22)
-        Me.txtPatientRoom.TabIndex = 50
+        Me.txtPatientRoom.TabIndex = 15
         '
         'lblRoom
         '
@@ -533,7 +533,7 @@ Partial Class frmPatientManager
         Me.lblRoom.Location = New System.Drawing.Point(245, 84)
         Me.lblRoom.Name = "lblRoom"
         Me.lblRoom.Size = New System.Drawing.Size(80, 16)
-        Me.lblRoom.TabIndex = 49
+        Me.lblRoom.TabIndex = 14
         Me.lblRoom.Text = "Phòng bệnh"
         '
         'lblDischargeTime
@@ -543,7 +543,7 @@ Partial Class frmPatientManager
         Me.lblDischargeTime.Location = New System.Drawing.Point(432, 84)
         Me.lblDischargeTime.Name = "lblDischargeTime"
         Me.lblDischargeTime.Size = New System.Drawing.Size(62, 16)
-        Me.lblDischargeTime.TabIndex = 47
+        Me.lblDischargeTime.TabIndex = 16
         Me.lblDischargeTime.Text = "Xuất viện"
         '
         'txtPatientBedId
@@ -554,7 +554,7 @@ Partial Class frmPatientManager
         Me.txtPatientBedId.Name = "txtPatientBedId"
         Me.txtPatientBedId.ReadOnly = True
         Me.txtPatientBedId.Size = New System.Drawing.Size(103, 22)
-        Me.txtPatientBedId.TabIndex = 37
+        Me.txtPatientBedId.TabIndex = 13
         '
         'lblBedId
         '
@@ -563,7 +563,7 @@ Partial Class frmPatientManager
         Me.lblBedId.Location = New System.Drawing.Point(17, 84)
         Me.lblBedId.Name = "lblBedId"
         Me.lblBedId.Size = New System.Drawing.Size(84, 16)
-        Me.lblBedId.TabIndex = 36
+        Me.lblBedId.TabIndex = 12
         Me.lblBedId.Text = "Giường bệnh"
         '
         'cboxPatientType
@@ -575,7 +575,7 @@ Partial Class frmPatientManager
         Me.cboxPatientType.Location = New System.Drawing.Point(110, 51)
         Me.cboxPatientType.Name = "cboxPatientType"
         Me.cboxPatientType.Size = New System.Drawing.Size(103, 24)
-        Me.cboxPatientType.TabIndex = 46
+        Me.cboxPatientType.TabIndex = 7
         Me.cboxPatientType.ValueMember = "Id"
         '
         'Label14
@@ -585,7 +585,7 @@ Partial Class frmPatientManager
         Me.Label14.Location = New System.Drawing.Point(17, 54)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(64, 16)
-        Me.Label14.TabIndex = 45
+        Me.Label14.TabIndex = 6
         Me.Label14.Text = "Phân loại"
         '
         'Label13
@@ -595,7 +595,7 @@ Partial Class frmPatientManager
         Me.Label13.Location = New System.Drawing.Point(17, 24)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(85, 16)
-        Me.Label13.TabIndex = 39
+        Me.Label13.TabIndex = 0
         Me.Label13.Text = "Số Bảo hiểm"
         '
         'lblInsExpDate
@@ -605,7 +605,7 @@ Partial Class frmPatientManager
         Me.lblInsExpDate.Location = New System.Drawing.Point(432, 23)
         Me.lblInsExpDate.Name = "lblInsExpDate"
         Me.lblInsExpDate.Size = New System.Drawing.Size(87, 16)
-        Me.lblInsExpDate.TabIndex = 16
+        Me.lblInsExpDate.TabIndex = 4
         Me.lblInsExpDate.Text = "Ngày hết hạn"
         '
         'txtPatientStatus
@@ -614,7 +614,7 @@ Partial Class frmPatientManager
         Me.txtPatientStatus.Location = New System.Drawing.Point(319, 51)
         Me.txtPatientStatus.Name = "txtPatientStatus"
         Me.txtPatientStatus.Size = New System.Drawing.Size(88, 22)
-        Me.txtPatientStatus.TabIndex = 23
+        Me.txtPatientStatus.TabIndex = 9
         '
         'txtEmployee
         '
@@ -623,7 +623,7 @@ Partial Class frmPatientManager
         Me.txtEmployee.Location = New System.Drawing.Point(245, 54)
         Me.txtEmployee.Name = "txtEmployee"
         Me.txtEmployee.Size = New System.Drawing.Size(67, 16)
-        Me.txtEmployee.TabIndex = 22
+        Me.txtEmployee.TabIndex = 8
         Me.txtEmployee.Text = "Tình trạng"
         '
         'lblTitle
@@ -635,7 +635,7 @@ Partial Class frmPatientManager
         Me.lblTitle.Location = New System.Drawing.Point(339, 9)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(292, 29)
-        Me.lblTitle.TabIndex = 32
+        Me.lblTitle.TabIndex = 0
         Me.lblTitle.Text = "DANH MỤC BỆNH NHÂN"
         '
         'label12
@@ -645,7 +645,7 @@ Partial Class frmPatientManager
         Me.label12.Location = New System.Drawing.Point(641, 56)
         Me.label12.Name = "label12"
         Me.label12.Size = New System.Drawing.Size(54, 16)
-        Me.label12.TabIndex = 4
+        Me.label12.TabIndex = 16
         Me.label12.Text = "Dân tộc"
         '
         'label9
@@ -675,7 +675,7 @@ Partial Class frmPatientManager
         Me.dgvPatients.RowHeadersVisible = False
         Me.dgvPatients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.dgvPatients.Size = New System.Drawing.Size(948, 166)
-        Me.dgvPatients.TabIndex = 34
+        Me.dgvPatients.TabIndex = 4
         '
         'colPatientId
         '
@@ -833,7 +833,7 @@ Partial Class frmPatientManager
         Me.groupBox2.Location = New System.Drawing.Point(12, 332)
         Me.groupBox2.Name = "groupBox2"
         Me.groupBox2.Size = New System.Drawing.Size(844, 118)
-        Me.groupBox2.TabIndex = 35
+        Me.groupBox2.TabIndex = 14
         Me.groupBox2.TabStop = False
         Me.groupBox2.Text = "Thông tin cá nhân"
         '
@@ -844,7 +844,7 @@ Partial Class frmPatientManager
         Me.btnPrintPatient.Location = New System.Drawing.Point(862, 456)
         Me.btnPrintPatient.Name = "btnPrintPatient"
         Me.btnPrintPatient.Size = New System.Drawing.Size(98, 23)
-        Me.btnPrintPatient.TabIndex = 53
+        Me.btnPrintPatient.TabIndex = 20
         Me.btnPrintPatient.Text = "&In thông tin"
         Me.btnPrintPatient.UseVisualStyleBackColor = True
         '
@@ -858,7 +858,7 @@ Partial Class frmPatientManager
         Me.btnViewAppointmentsList.Location = New System.Drawing.Point(737, 301)
         Me.btnViewAppointmentsList.Name = "btnViewAppointmentsList"
         Me.btnViewAppointmentsList.Size = New System.Drawing.Size(119, 25)
-        Me.btnViewAppointmentsList.TabIndex = 52
+        Me.btnViewAppointmentsList.TabIndex = 12
         Me.btnViewAppointmentsList.Text = "DS Phiếu Khám"
         Me.btnViewAppointmentsList.UseVisualStyleBackColor = True
         '
@@ -872,7 +872,7 @@ Partial Class frmPatientManager
         Me.btnPatientRelatives.Location = New System.Drawing.Point(529, 301)
         Me.btnPatientRelatives.Name = "btnPatientRelatives"
         Me.btnPatientRelatives.Size = New System.Drawing.Size(98, 25)
-        Me.btnPatientRelatives.TabIndex = 50
+        Me.btnPatientRelatives.TabIndex = 10
         Me.btnPatientRelatives.Text = "&Người nhà"
         Me.btnPatientRelatives.UseVisualStyleBackColor = True
         Me.btnPatientRelatives.Visible = False
@@ -887,7 +887,7 @@ Partial Class frmPatientManager
         Me.btnPatientRecords.Location = New System.Drawing.Point(633, 301)
         Me.btnPatientRecords.Name = "btnPatientRecords"
         Me.btnPatientRecords.Size = New System.Drawing.Size(98, 25)
-        Me.btnPatientRecords.TabIndex = 49
+        Me.btnPatientRecords.TabIndex = 11
         Me.btnPatientRecords.Text = "&Sổ theo dõi"
         Me.btnPatientRecords.UseVisualStyleBackColor = True
         Me.btnPatientRecords.Visible = False
@@ -902,7 +902,7 @@ Partial Class frmPatientManager
         Me.btnSupplyMedication.Location = New System.Drawing.Point(311, 301)
         Me.btnSupplyMedication.Name = "btnSupplyMedication"
         Me.btnSupplyMedication.Size = New System.Drawing.Size(98, 25)
-        Me.btnSupplyMedication.TabIndex = 48
+        Me.btnSupplyMedication.TabIndex = 8
         Me.btnSupplyMedication.Text = "&Cấp thuốc"
         Me.btnSupplyMedication.UseVisualStyleBackColor = True
         Me.btnSupplyMedication.Visible = False
@@ -917,7 +917,7 @@ Partial Class frmPatientManager
         Me.btnPaidPayment.Location = New System.Drawing.Point(415, 301)
         Me.btnPaidPayment.Name = "btnPaidPayment"
         Me.btnPaidPayment.Size = New System.Drawing.Size(98, 25)
-        Me.btnPaidPayment.TabIndex = 47
+        Me.btnPaidPayment.TabIndex = 9
         Me.btnPaidPayment.Text = "&Thanh toán"
         Me.btnPaidPayment.UseVisualStyleBackColor = True
         Me.btnPaidPayment.Visible = False
@@ -932,7 +932,7 @@ Partial Class frmPatientManager
         Me.btnDischarge.Location = New System.Drawing.Point(219, 301)
         Me.btnDischarge.Name = "btnDischarge"
         Me.btnDischarge.Size = New System.Drawing.Size(86, 25)
-        Me.btnDischarge.TabIndex = 46
+        Me.btnDischarge.TabIndex = 7
         Me.btnDischarge.Text = "&Xuất viện"
         Me.btnDischarge.UseVisualStyleBackColor = True
         '
@@ -946,7 +946,7 @@ Partial Class frmPatientManager
         Me.btnAdmission.Location = New System.Drawing.Point(127, 301)
         Me.btnAdmission.Name = "btnAdmission"
         Me.btnAdmission.Size = New System.Drawing.Size(86, 25)
-        Me.btnAdmission.TabIndex = 45
+        Me.btnAdmission.TabIndex = 6
         Me.btnAdmission.Text = "&Nhập viện"
         Me.btnAdmission.UseVisualStyleBackColor = True
         '
@@ -960,7 +960,7 @@ Partial Class frmPatientManager
         Me.btnNewAppointment.Location = New System.Drawing.Point(12, 301)
         Me.btnNewAppointment.Name = "btnNewAppointment"
         Me.btnNewAppointment.Size = New System.Drawing.Size(109, 25)
-        Me.btnNewAppointment.TabIndex = 44
+        Me.btnNewAppointment.TabIndex = 5
         Me.btnNewAppointment.Text = "&Đăng ký Khám"
         Me.btnNewAppointment.UseVisualStyleBackColor = True
         '
@@ -971,7 +971,7 @@ Partial Class frmPatientManager
         Me.btnReset.Location = New System.Drawing.Point(862, 427)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(98, 23)
-        Me.btnReset.TabIndex = 39
+        Me.btnReset.TabIndex = 19
         Me.btnReset.Text = "Làm &mới"
         Me.btnReset.UseVisualStyleBackColor = True
         '
@@ -982,7 +982,7 @@ Partial Class frmPatientManager
         Me.btnUpdatePatient.Location = New System.Drawing.Point(862, 398)
         Me.btnUpdatePatient.Name = "btnUpdatePatient"
         Me.btnUpdatePatient.Size = New System.Drawing.Size(98, 23)
-        Me.btnUpdatePatient.TabIndex = 38
+        Me.btnUpdatePatient.TabIndex = 18
         Me.btnUpdatePatient.Text = "&Sửa"
         Me.btnUpdatePatient.UseVisualStyleBackColor = True
         '
@@ -997,7 +997,7 @@ Partial Class frmPatientManager
         Me.cmdClose.Name = "cmdClose"
         Me.cmdClose.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.cmdClose.Size = New System.Drawing.Size(98, 23)
-        Me.cmdClose.TabIndex = 40
+        Me.cmdClose.TabIndex = 0
         Me.cmdClose.Text = "&Đóng"
         Me.cmdClose.UseVisualStyleBackColor = True
         '
@@ -1008,7 +1008,7 @@ Partial Class frmPatientManager
         Me.btnAddPatient.Location = New System.Drawing.Point(862, 340)
         Me.btnAddPatient.Name = "btnAddPatient"
         Me.btnAddPatient.Size = New System.Drawing.Size(98, 23)
-        Me.btnAddPatient.TabIndex = 36
+        Me.btnAddPatient.TabIndex = 16
         Me.btnAddPatient.Text = "&Thêm bệnh nhân"
         Me.btnAddPatient.UseVisualStyleBackColor = True
         '
@@ -1019,7 +1019,7 @@ Partial Class frmPatientManager
         Me.btnDeletePatient.Location = New System.Drawing.Point(862, 369)
         Me.btnDeletePatient.Name = "btnDeletePatient"
         Me.btnDeletePatient.Size = New System.Drawing.Size(98, 23)
-        Me.btnDeletePatient.TabIndex = 37
+        Me.btnDeletePatient.TabIndex = 17
         Me.btnDeletePatient.Text = "&Xóa"
         Me.btnDeletePatient.UseVisualStyleBackColor = True
         '
@@ -1030,7 +1030,7 @@ Partial Class frmPatientManager
         Me.btnReSearch.Location = New System.Drawing.Point(654, 65)
         Me.btnReSearch.Name = "btnReSearch"
         Me.btnReSearch.Size = New System.Drawing.Size(98, 23)
-        Me.btnReSearch.TabIndex = 41
+        Me.btnReSearch.TabIndex = 2
         Me.btnReSearch.Text = "&Làm lại"
         Me.btnReSearch.UseVisualStyleBackColor = True
         '
@@ -1041,7 +1041,7 @@ Partial Class frmPatientManager
         Me.btnSearch.Location = New System.Drawing.Point(654, 92)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(98, 23)
-        Me.btnSearch.TabIndex = 42
+        Me.btnSearch.TabIndex = 3
         Me.btnSearch.Text = "&Tìm kiếm"
         Me.btnSearch.UseVisualStyleBackColor = True
         '

@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class frmLogin
-    Inherits System.Windows.Forms.Form
+    Inherits DevExpress.XtraSplashForm.SplashFormBase
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -192,7 +192,6 @@ Partial Class frmLogin
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "frmLogin"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Đăng nhập Hệ thống"
         Me.ResumeLayout(False)
         Me.PerformLayout()

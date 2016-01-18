@@ -23,12 +23,12 @@ Partial Class frmCategoryManager
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCategoryManager))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCategoryManager))
-        Me.lblTitle = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.chkbDeptChief = New System.Windows.Forms.CheckBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.cboxDepartment_ChiefName = New System.Windows.Forms.ComboBox()
         Me.lblDeptChief = New System.Windows.Forms.Label()
         Me.dgvDepartment = New System.Windows.Forms.DataGridView()
@@ -36,22 +36,38 @@ Partial Class frmCategoryManager
         Me.colDeptChiefId = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colDeptChiefName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colDeptEmplCount = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnDept_Reset = New System.Windows.Forms.Button()
+        Me.btnDept_Edit = New System.Windows.Forms.Button()
         Me.tboxDepartment = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnDept_Add = New System.Windows.Forms.Button()
+        Me.btnDept_Delete = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.dgvSpecialities = New System.Windows.Forms.DataGridView()
         Me.colSpecName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnSpec_Reset = New System.Windows.Forms.Button()
+        Me.btnSpec_Edit = New System.Windows.Forms.Button()
+        Me.btnSpec_Add = New System.Windows.Forms.Button()
+        Me.btnSpec_Delete = New System.Windows.Forms.Button()
         Me.tboxSpecialized = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.btnClinic_Reset = New System.Windows.Forms.Button()
         Me.dgvClinics = New System.Windows.Forms.DataGridView()
         Me.colClinicId = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colClinicName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnClinic_Edit = New System.Windows.Forms.Button()
         Me.tboxClinic = New System.Windows.Forms.TextBox()
+        Me.btnClinic_Add = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnClinic_Delete = New System.Windows.Forms.Button()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.cboxBed_DepartmentsName = New System.Windows.Forms.ComboBox()
+        Me.btnBed_Reset = New System.Windows.Forms.Button()
+        Me.btnBed_Edit = New System.Windows.Forms.Button()
+        Me.btnBed_Add = New System.Windows.Forms.Button()
+        Me.btnBed_Delete = New System.Windows.Forms.Button()
         Me.dgvBeds = New System.Windows.Forms.DataGridView()
         Me.colBedId = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colBedDeptId = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -64,23 +80,6 @@ Partial Class frmCategoryManager
         Me.Label5 = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.cmdClose = New System.Windows.Forms.Button()
-        Me.btnBed_Reset = New System.Windows.Forms.Button()
-        Me.btnBed_Edit = New System.Windows.Forms.Button()
-        Me.btnBed_Add = New System.Windows.Forms.Button()
-        Me.btnBed_Delete = New System.Windows.Forms.Button()
-        Me.btnClinic_Reset = New System.Windows.Forms.Button()
-        Me.btnClinic_Edit = New System.Windows.Forms.Button()
-        Me.btnClinic_Add = New System.Windows.Forms.Button()
-        Me.btnClinic_Delete = New System.Windows.Forms.Button()
-        Me.btnSpec_Reset = New System.Windows.Forms.Button()
-        Me.btnSpec_Edit = New System.Windows.Forms.Button()
-        Me.btnSpec_Add = New System.Windows.Forms.Button()
-        Me.btnSpec_Delete = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.btnDept_Reset = New System.Windows.Forms.Button()
-        Me.btnDept_Edit = New System.Windows.Forms.Button()
-        Me.btnDept_Add = New System.Windows.Forms.Button()
-        Me.btnDept_Delete = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvDepartment, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -90,18 +89,6 @@ Partial Class frmCategoryManager
         Me.GroupBox4.SuspendLayout()
         CType(Me.dgvBeds, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'lblTitle
-        '
-        Me.lblTitle.AutoSize = True
-        Me.lblTitle.BackColor = System.Drawing.Color.Transparent
-        Me.lblTitle.Font = New System.Drawing.Font("Arial", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitle.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.lblTitle.Location = New System.Drawing.Point(143, 9)
-        Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(748, 26)
-        Me.lblTitle.TabIndex = 25
-        Me.lblTitle.Text = "QUẢN LÝ DANH SÁCH KHOA, NGÀNH, PHÒNG KHÁM, GIƯỜNG BỆNH"
         '
         'GroupBox1
         '
@@ -118,10 +105,10 @@ Partial Class frmCategoryManager
         Me.GroupBox1.Controls.Add(Me.btnDept_Delete)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.DarkBlue
-        Me.GroupBox1.Location = New System.Drawing.Point(341, 52)
+        Me.GroupBox1.Location = New System.Drawing.Point(341, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(348, 288)
-        Me.GroupBox1.TabIndex = 26
+        Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "DANH MỤC KHOA"
         '
@@ -133,9 +120,22 @@ Partial Class frmCategoryManager
         Me.chkbDeptChief.Location = New System.Drawing.Point(9, 61)
         Me.chkbDeptChief.Name = "chkbDeptChief"
         Me.chkbDeptChief.Size = New System.Drawing.Size(15, 14)
-        Me.chkbDeptChief.TabIndex = 52
+        Me.chkbDeptChief.TabIndex = 2
         Me.ToolTip1.SetToolTip(Me.chkbDeptChief, """Bỏ tích để không chọn trường này""")
         Me.chkbDeptChief.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.Location = New System.Drawing.Point(269, 56)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(66, 23)
+        Me.Button1.TabIndex = 5
+        Me.Button1.Text = "Thông tin"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'cboxDepartment_ChiefName
         '
@@ -146,7 +146,7 @@ Partial Class frmCategoryManager
         Me.cboxDepartment_ChiefName.Location = New System.Drawing.Point(113, 56)
         Me.cboxDepartment_ChiefName.Name = "cboxDepartment_ChiefName"
         Me.cboxDepartment_ChiefName.Size = New System.Drawing.Size(150, 23)
-        Me.cboxDepartment_ChiefName.TabIndex = 50
+        Me.cboxDepartment_ChiefName.TabIndex = 4
         Me.cboxDepartment_ChiefName.ValueMember = "Id"
         '
         'lblDeptChief
@@ -157,7 +157,7 @@ Partial Class frmCategoryManager
         Me.lblDeptChief.Location = New System.Drawing.Point(27, 61)
         Me.lblDeptChief.Name = "lblDeptChief"
         Me.lblDeptChief.Size = New System.Drawing.Size(80, 13)
-        Me.lblDeptChief.TabIndex = 49
+        Me.lblDeptChief.TabIndex = 3
         Me.lblDeptChief.Text = "Trưởng Khoa"
         '
         'dgvDepartment
@@ -179,7 +179,7 @@ Partial Class frmCategoryManager
         Me.dgvDepartment.RowHeadersVisible = False
         Me.dgvDepartment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.dgvDepartment.Size = New System.Drawing.Size(326, 155)
-        Me.dgvDepartment.TabIndex = 48
+        Me.dgvDepartment.TabIndex = 10
         '
         'colDeptName
         '
@@ -214,6 +214,33 @@ Partial Class frmCategoryManager
         Me.colDeptEmplCount.ReadOnly = True
         Me.colDeptEmplCount.Width = 91
         '
+        'btnDept_Reset
+        '
+        Me.btnDept_Reset.BackgroundImage = CType(resources.GetObject("btnDept_Reset.BackgroundImage"), System.Drawing.Image)
+        Me.btnDept_Reset.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnDept_Reset.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDept_Reset.ForeColor = System.Drawing.Color.Black
+        Me.btnDept_Reset.Location = New System.Drawing.Point(269, 85)
+        Me.btnDept_Reset.Name = "btnDept_Reset"
+        Me.btnDept_Reset.Size = New System.Drawing.Size(66, 23)
+        Me.btnDept_Reset.TabIndex = 9
+        Me.btnDept_Reset.Text = "&Làm mới"
+        Me.btnDept_Reset.UseVisualStyleBackColor = True
+        '
+        'btnDept_Edit
+        '
+        Me.btnDept_Edit.BackgroundImage = CType(resources.GetObject("btnDept_Edit.BackgroundImage"), System.Drawing.Image)
+        Me.btnDept_Edit.Enabled = False
+        Me.btnDept_Edit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnDept_Edit.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDept_Edit.ForeColor = System.Drawing.Color.Black
+        Me.btnDept_Edit.Location = New System.Drawing.Point(196, 85)
+        Me.btnDept_Edit.Name = "btnDept_Edit"
+        Me.btnDept_Edit.Size = New System.Drawing.Size(67, 23)
+        Me.btnDept_Edit.TabIndex = 8
+        Me.btnDept_Edit.Text = "&Sửa"
+        Me.btnDept_Edit.UseVisualStyleBackColor = True
+        '
         'tboxDepartment
         '
         Me.tboxDepartment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -233,6 +260,33 @@ Partial Class frmCategoryManager
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Tên Khoa"
         '
+        'btnDept_Add
+        '
+        Me.btnDept_Add.BackgroundImage = CType(resources.GetObject("btnDept_Add.BackgroundImage"), System.Drawing.Image)
+        Me.btnDept_Add.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnDept_Add.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDept_Add.ForeColor = System.Drawing.Color.Black
+        Me.btnDept_Add.Location = New System.Drawing.Point(50, 85)
+        Me.btnDept_Add.Name = "btnDept_Add"
+        Me.btnDept_Add.Size = New System.Drawing.Size(67, 23)
+        Me.btnDept_Add.TabIndex = 6
+        Me.btnDept_Add.Text = "&Thêm"
+        Me.btnDept_Add.UseVisualStyleBackColor = True
+        '
+        'btnDept_Delete
+        '
+        Me.btnDept_Delete.BackgroundImage = CType(resources.GetObject("btnDept_Delete.BackgroundImage"), System.Drawing.Image)
+        Me.btnDept_Delete.Enabled = False
+        Me.btnDept_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnDept_Delete.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDept_Delete.ForeColor = System.Drawing.Color.Black
+        Me.btnDept_Delete.Location = New System.Drawing.Point(123, 85)
+        Me.btnDept_Delete.Name = "btnDept_Delete"
+        Me.btnDept_Delete.Size = New System.Drawing.Size(67, 23)
+        Me.btnDept_Delete.TabIndex = 7
+        Me.btnDept_Delete.Text = "&Xóa"
+        Me.btnDept_Delete.UseVisualStyleBackColor = True
+        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.dgvSpecialities)
@@ -244,10 +298,10 @@ Partial Class frmCategoryManager
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.Color.DarkBlue
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 52)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(308, 288)
-        Me.GroupBox2.TabIndex = 27
+        Me.GroupBox2.TabIndex = 0
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "DANH MỤC CHUYÊN MÔN"
         '
@@ -270,7 +324,7 @@ Partial Class frmCategoryManager
         Me.dgvSpecialities.RowHeadersVisible = False
         Me.dgvSpecialities.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.dgvSpecialities.Size = New System.Drawing.Size(285, 184)
-        Me.dgvSpecialities.TabIndex = 53
+        Me.dgvSpecialities.TabIndex = 6
         '
         'colSpecName
         '
@@ -289,13 +343,67 @@ Partial Class frmCategoryManager
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         Me.DataGridViewTextBoxColumn4.ReadOnly = True
         '
+        'btnSpec_Reset
+        '
+        Me.btnSpec_Reset.BackgroundImage = CType(resources.GetObject("btnSpec_Reset.BackgroundImage"), System.Drawing.Image)
+        Me.btnSpec_Reset.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnSpec_Reset.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSpec_Reset.ForeColor = System.Drawing.Color.Black
+        Me.btnSpec_Reset.Location = New System.Drawing.Point(228, 56)
+        Me.btnSpec_Reset.Name = "btnSpec_Reset"
+        Me.btnSpec_Reset.Size = New System.Drawing.Size(66, 23)
+        Me.btnSpec_Reset.TabIndex = 5
+        Me.btnSpec_Reset.Text = "&Làm mới"
+        Me.btnSpec_Reset.UseVisualStyleBackColor = True
+        '
+        'btnSpec_Edit
+        '
+        Me.btnSpec_Edit.BackgroundImage = CType(resources.GetObject("btnSpec_Edit.BackgroundImage"), System.Drawing.Image)
+        Me.btnSpec_Edit.Enabled = False
+        Me.btnSpec_Edit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnSpec_Edit.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSpec_Edit.ForeColor = System.Drawing.Color.Black
+        Me.btnSpec_Edit.Location = New System.Drawing.Point(155, 56)
+        Me.btnSpec_Edit.Name = "btnSpec_Edit"
+        Me.btnSpec_Edit.Size = New System.Drawing.Size(67, 23)
+        Me.btnSpec_Edit.TabIndex = 4
+        Me.btnSpec_Edit.Text = "&Sửa"
+        Me.btnSpec_Edit.UseVisualStyleBackColor = True
+        '
+        'btnSpec_Add
+        '
+        Me.btnSpec_Add.BackgroundImage = CType(resources.GetObject("btnSpec_Add.BackgroundImage"), System.Drawing.Image)
+        Me.btnSpec_Add.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnSpec_Add.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSpec_Add.ForeColor = System.Drawing.Color.Black
+        Me.btnSpec_Add.Location = New System.Drawing.Point(9, 56)
+        Me.btnSpec_Add.Name = "btnSpec_Add"
+        Me.btnSpec_Add.Size = New System.Drawing.Size(67, 23)
+        Me.btnSpec_Add.TabIndex = 2
+        Me.btnSpec_Add.Text = "&Thêm"
+        Me.btnSpec_Add.UseVisualStyleBackColor = True
+        '
+        'btnSpec_Delete
+        '
+        Me.btnSpec_Delete.BackgroundImage = CType(resources.GetObject("btnSpec_Delete.BackgroundImage"), System.Drawing.Image)
+        Me.btnSpec_Delete.Enabled = False
+        Me.btnSpec_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnSpec_Delete.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSpec_Delete.ForeColor = System.Drawing.Color.Black
+        Me.btnSpec_Delete.Location = New System.Drawing.Point(82, 56)
+        Me.btnSpec_Delete.Name = "btnSpec_Delete"
+        Me.btnSpec_Delete.Size = New System.Drawing.Size(67, 23)
+        Me.btnSpec_Delete.TabIndex = 3
+        Me.btnSpec_Delete.Text = "&Xóa"
+        Me.btnSpec_Delete.UseVisualStyleBackColor = True
+        '
         'tboxSpecialized
         '
         Me.tboxSpecialized.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tboxSpecialized.Location = New System.Drawing.Point(114, 29)
         Me.tboxSpecialized.Name = "tboxSpecialized"
         Me.tboxSpecialized.Size = New System.Drawing.Size(180, 21)
-        Me.tboxSpecialized.TabIndex = 2
+        Me.tboxSpecialized.TabIndex = 1
         '
         'Label2
         '
@@ -305,7 +413,7 @@ Partial Class frmCategoryManager
         Me.Label2.Location = New System.Drawing.Point(6, 34)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(102, 13)
-        Me.Label2.TabIndex = 1
+        Me.Label2.TabIndex = 0
         Me.Label2.Text = "Tên Chuyên môn"
         '
         'GroupBox3
@@ -319,12 +427,25 @@ Partial Class frmCategoryManager
         Me.GroupBox3.Controls.Add(Me.btnClinic_Delete)
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.ForeColor = System.Drawing.Color.DarkBlue
-        Me.GroupBox3.Location = New System.Drawing.Point(710, 52)
+        Me.GroupBox3.Location = New System.Drawing.Point(710, 12)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(308, 288)
-        Me.GroupBox3.TabIndex = 28
+        Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "DANH MỤC PHÒNG KHÁM"
+        '
+        'btnClinic_Reset
+        '
+        Me.btnClinic_Reset.BackgroundImage = CType(resources.GetObject("btnClinic_Reset.BackgroundImage"), System.Drawing.Image)
+        Me.btnClinic_Reset.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnClinic_Reset.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClinic_Reset.ForeColor = System.Drawing.Color.Black
+        Me.btnClinic_Reset.Location = New System.Drawing.Point(229, 56)
+        Me.btnClinic_Reset.Name = "btnClinic_Reset"
+        Me.btnClinic_Reset.Size = New System.Drawing.Size(66, 23)
+        Me.btnClinic_Reset.TabIndex = 5
+        Me.btnClinic_Reset.Text = "&Làm mới"
+        Me.btnClinic_Reset.UseVisualStyleBackColor = True
         '
         'dgvClinics
         '
@@ -359,7 +480,7 @@ Partial Class frmCategoryManager
         Me.dgvClinics.RowHeadersVisible = False
         Me.dgvClinics.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.dgvClinics.Size = New System.Drawing.Size(285, 184)
-        Me.dgvClinics.TabIndex = 47
+        Me.dgvClinics.TabIndex = 6
         '
         'colClinicId
         '
@@ -377,13 +498,40 @@ Partial Class frmCategoryManager
         Me.colClinicName.ReadOnly = True
         Me.colClinicName.Width = 140
         '
+        'btnClinic_Edit
+        '
+        Me.btnClinic_Edit.BackgroundImage = CType(resources.GetObject("btnClinic_Edit.BackgroundImage"), System.Drawing.Image)
+        Me.btnClinic_Edit.Enabled = False
+        Me.btnClinic_Edit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnClinic_Edit.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClinic_Edit.ForeColor = System.Drawing.Color.Black
+        Me.btnClinic_Edit.Location = New System.Drawing.Point(156, 56)
+        Me.btnClinic_Edit.Name = "btnClinic_Edit"
+        Me.btnClinic_Edit.Size = New System.Drawing.Size(67, 23)
+        Me.btnClinic_Edit.TabIndex = 4
+        Me.btnClinic_Edit.Text = "&Sửa"
+        Me.btnClinic_Edit.UseVisualStyleBackColor = True
+        '
         'tboxClinic
         '
         Me.tboxClinic.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tboxClinic.Location = New System.Drawing.Point(115, 29)
         Me.tboxClinic.Name = "tboxClinic"
         Me.tboxClinic.Size = New System.Drawing.Size(180, 21)
-        Me.tboxClinic.TabIndex = 4
+        Me.tboxClinic.TabIndex = 1
+        '
+        'btnClinic_Add
+        '
+        Me.btnClinic_Add.BackgroundImage = CType(resources.GetObject("btnClinic_Add.BackgroundImage"), System.Drawing.Image)
+        Me.btnClinic_Add.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnClinic_Add.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClinic_Add.ForeColor = System.Drawing.Color.Black
+        Me.btnClinic_Add.Location = New System.Drawing.Point(10, 56)
+        Me.btnClinic_Add.Name = "btnClinic_Add"
+        Me.btnClinic_Add.Size = New System.Drawing.Size(67, 23)
+        Me.btnClinic_Add.TabIndex = 2
+        Me.btnClinic_Add.Text = "&Thêm"
+        Me.btnClinic_Add.UseVisualStyleBackColor = True
         '
         'Label3
         '
@@ -393,8 +541,22 @@ Partial Class frmCategoryManager
         Me.Label3.Location = New System.Drawing.Point(6, 32)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(103, 13)
-        Me.Label3.TabIndex = 2
+        Me.Label3.TabIndex = 0
         Me.Label3.Text = "Tên Phòng khám"
+        '
+        'btnClinic_Delete
+        '
+        Me.btnClinic_Delete.BackgroundImage = CType(resources.GetObject("btnClinic_Delete.BackgroundImage"), System.Drawing.Image)
+        Me.btnClinic_Delete.Enabled = False
+        Me.btnClinic_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnClinic_Delete.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClinic_Delete.ForeColor = System.Drawing.Color.Black
+        Me.btnClinic_Delete.Location = New System.Drawing.Point(83, 56)
+        Me.btnClinic_Delete.Name = "btnClinic_Delete"
+        Me.btnClinic_Delete.Size = New System.Drawing.Size(67, 23)
+        Me.btnClinic_Delete.TabIndex = 3
+        Me.btnClinic_Delete.Text = "&Xóa"
+        Me.btnClinic_Delete.UseVisualStyleBackColor = True
         '
         'GroupBox4
         '
@@ -411,10 +573,10 @@ Partial Class frmCategoryManager
         Me.GroupBox4.Controls.Add(Me.Label5)
         Me.GroupBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox4.ForeColor = System.Drawing.Color.DarkBlue
-        Me.GroupBox4.Location = New System.Drawing.Point(12, 357)
+        Me.GroupBox4.Location = New System.Drawing.Point(12, 317)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(847, 186)
-        Me.GroupBox4.TabIndex = 29
+        Me.GroupBox4.TabIndex = 3
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "DANH MỤC GIƯỜNG BỆNH"
         '
@@ -427,8 +589,62 @@ Partial Class frmCategoryManager
         Me.cboxBed_DepartmentsName.Location = New System.Drawing.Point(111, 84)
         Me.cboxBed_DepartmentsName.Name = "cboxBed_DepartmentsName"
         Me.cboxBed_DepartmentsName.Size = New System.Drawing.Size(186, 23)
-        Me.cboxBed_DepartmentsName.TabIndex = 51
+        Me.cboxBed_DepartmentsName.TabIndex = 5
         Me.cboxBed_DepartmentsName.ValueMember = "Id"
+        '
+        'btnBed_Reset
+        '
+        Me.btnBed_Reset.BackgroundImage = CType(resources.GetObject("btnBed_Reset.BackgroundImage"), System.Drawing.Image)
+        Me.btnBed_Reset.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnBed_Reset.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBed_Reset.ForeColor = System.Drawing.Color.Black
+        Me.btnBed_Reset.Location = New System.Drawing.Point(231, 147)
+        Me.btnBed_Reset.Name = "btnBed_Reset"
+        Me.btnBed_Reset.Size = New System.Drawing.Size(66, 23)
+        Me.btnBed_Reset.TabIndex = 9
+        Me.btnBed_Reset.Text = "&Làm mới"
+        Me.btnBed_Reset.UseVisualStyleBackColor = True
+        '
+        'btnBed_Edit
+        '
+        Me.btnBed_Edit.BackgroundImage = CType(resources.GetObject("btnBed_Edit.BackgroundImage"), System.Drawing.Image)
+        Me.btnBed_Edit.Enabled = False
+        Me.btnBed_Edit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnBed_Edit.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBed_Edit.ForeColor = System.Drawing.Color.Black
+        Me.btnBed_Edit.Location = New System.Drawing.Point(158, 147)
+        Me.btnBed_Edit.Name = "btnBed_Edit"
+        Me.btnBed_Edit.Size = New System.Drawing.Size(67, 23)
+        Me.btnBed_Edit.TabIndex = 8
+        Me.btnBed_Edit.Text = "&Sửa"
+        Me.btnBed_Edit.UseVisualStyleBackColor = True
+        '
+        'btnBed_Add
+        '
+        Me.btnBed_Add.BackgroundImage = CType(resources.GetObject("btnBed_Add.BackgroundImage"), System.Drawing.Image)
+        Me.btnBed_Add.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnBed_Add.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBed_Add.ForeColor = System.Drawing.Color.Black
+        Me.btnBed_Add.Location = New System.Drawing.Point(12, 147)
+        Me.btnBed_Add.Name = "btnBed_Add"
+        Me.btnBed_Add.Size = New System.Drawing.Size(67, 23)
+        Me.btnBed_Add.TabIndex = 6
+        Me.btnBed_Add.Text = "&Thêm"
+        Me.btnBed_Add.UseVisualStyleBackColor = True
+        '
+        'btnBed_Delete
+        '
+        Me.btnBed_Delete.BackgroundImage = CType(resources.GetObject("btnBed_Delete.BackgroundImage"), System.Drawing.Image)
+        Me.btnBed_Delete.Enabled = False
+        Me.btnBed_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnBed_Delete.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBed_Delete.ForeColor = System.Drawing.Color.Black
+        Me.btnBed_Delete.Location = New System.Drawing.Point(85, 147)
+        Me.btnBed_Delete.Name = "btnBed_Delete"
+        Me.btnBed_Delete.Size = New System.Drawing.Size(67, 23)
+        Me.btnBed_Delete.TabIndex = 7
+        Me.btnBed_Delete.Text = "&Xóa"
+        Me.btnBed_Delete.UseVisualStyleBackColor = True
         '
         'dgvBeds
         '
@@ -447,7 +663,7 @@ Partial Class frmCategoryManager
         Me.dgvBeds.RowHeadersVisible = False
         Me.dgvBeds.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.dgvBeds.Size = New System.Drawing.Size(488, 150)
-        Me.dgvBeds.TabIndex = 42
+        Me.dgvBeds.TabIndex = 10
         '
         'colBedId
         '
@@ -488,7 +704,7 @@ Partial Class frmCategoryManager
         Me.tboxBedId.Name = "tboxBedId"
         Me.tboxBedId.ReadOnly = True
         Me.tboxBedId.Size = New System.Drawing.Size(100, 21)
-        Me.tboxBedId.TabIndex = 41
+        Me.tboxBedId.TabIndex = 1
         '
         'Label7
         '
@@ -498,7 +714,7 @@ Partial Class frmCategoryManager
         Me.Label7.Location = New System.Drawing.Point(9, 35)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(96, 13)
-        Me.Label7.TabIndex = 40
+        Me.Label7.TabIndex = 0
         Me.Label7.Text = "Số giường bệnh"
         '
         'tboxBedRoom
@@ -506,7 +722,7 @@ Partial Class frmCategoryManager
         Me.tboxBedRoom.Location = New System.Drawing.Point(111, 57)
         Me.tboxBedRoom.Name = "tboxBedRoom"
         Me.tboxBedRoom.Size = New System.Drawing.Size(100, 21)
-        Me.tboxBedRoom.TabIndex = 39
+        Me.tboxBedRoom.TabIndex = 3
         '
         'Label6
         '
@@ -516,7 +732,7 @@ Partial Class frmCategoryManager
         Me.Label6.Location = New System.Drawing.Point(9, 62)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(93, 13)
-        Me.Label6.TabIndex = 38
+        Me.Label6.TabIndex = 2
         Me.Label6.Text = "Số phòng bệnh"
         '
         'Label5
@@ -527,7 +743,7 @@ Partial Class frmCategoryManager
         Me.Label5.Location = New System.Drawing.Point(9, 89)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(62, 13)
-        Me.Label5.TabIndex = 35
+        Me.Label5.TabIndex = 4
         Me.Label5.Text = "Tên Khoa"
         '
         'cmdClose
@@ -536,257 +752,28 @@ Partial Class frmCategoryManager
         Me.cmdClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.cmdClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmdClose.ForeColor = System.Drawing.Color.DarkRed
-        Me.cmdClose.Location = New System.Drawing.Point(930, 520)
+        Me.cmdClose.Location = New System.Drawing.Point(930, 480)
         Me.cmdClose.Name = "cmdClose"
         Me.cmdClose.Size = New System.Drawing.Size(88, 23)
-        Me.cmdClose.TabIndex = 34
+        Me.cmdClose.TabIndex = 4
         Me.cmdClose.Text = "&Đóng"
         Me.cmdClose.UseVisualStyleBackColor = True
-        '
-        'btnBed_Reset
-        '
-        Me.btnBed_Reset.BackgroundImage = CType(resources.GetObject("btnBed_Reset.BackgroundImage"), System.Drawing.Image)
-        Me.btnBed_Reset.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnBed_Reset.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBed_Reset.ForeColor = System.Drawing.Color.Black
-        Me.btnBed_Reset.Location = New System.Drawing.Point(231, 147)
-        Me.btnBed_Reset.Name = "btnBed_Reset"
-        Me.btnBed_Reset.Size = New System.Drawing.Size(66, 23)
-        Me.btnBed_Reset.TabIndex = 46
-        Me.btnBed_Reset.Text = "&Làm mới"
-        Me.btnBed_Reset.UseVisualStyleBackColor = True
-        '
-        'btnBed_Edit
-        '
-        Me.btnBed_Edit.BackgroundImage = CType(resources.GetObject("btnBed_Edit.BackgroundImage"), System.Drawing.Image)
-        Me.btnBed_Edit.Enabled = False
-        Me.btnBed_Edit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnBed_Edit.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBed_Edit.ForeColor = System.Drawing.Color.Black
-        Me.btnBed_Edit.Location = New System.Drawing.Point(158, 147)
-        Me.btnBed_Edit.Name = "btnBed_Edit"
-        Me.btnBed_Edit.Size = New System.Drawing.Size(67, 23)
-        Me.btnBed_Edit.TabIndex = 45
-        Me.btnBed_Edit.Text = "&Sửa"
-        Me.btnBed_Edit.UseVisualStyleBackColor = True
-        '
-        'btnBed_Add
-        '
-        Me.btnBed_Add.BackgroundImage = CType(resources.GetObject("btnBed_Add.BackgroundImage"), System.Drawing.Image)
-        Me.btnBed_Add.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnBed_Add.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBed_Add.ForeColor = System.Drawing.Color.Black
-        Me.btnBed_Add.Location = New System.Drawing.Point(12, 147)
-        Me.btnBed_Add.Name = "btnBed_Add"
-        Me.btnBed_Add.Size = New System.Drawing.Size(67, 23)
-        Me.btnBed_Add.TabIndex = 43
-        Me.btnBed_Add.Text = "&Thêm"
-        Me.btnBed_Add.UseVisualStyleBackColor = True
-        '
-        'btnBed_Delete
-        '
-        Me.btnBed_Delete.BackgroundImage = CType(resources.GetObject("btnBed_Delete.BackgroundImage"), System.Drawing.Image)
-        Me.btnBed_Delete.Enabled = False
-        Me.btnBed_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnBed_Delete.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBed_Delete.ForeColor = System.Drawing.Color.Black
-        Me.btnBed_Delete.Location = New System.Drawing.Point(85, 147)
-        Me.btnBed_Delete.Name = "btnBed_Delete"
-        Me.btnBed_Delete.Size = New System.Drawing.Size(67, 23)
-        Me.btnBed_Delete.TabIndex = 44
-        Me.btnBed_Delete.Text = "&Xóa"
-        Me.btnBed_Delete.UseVisualStyleBackColor = True
-        '
-        'btnClinic_Reset
-        '
-        Me.btnClinic_Reset.BackgroundImage = CType(resources.GetObject("btnClinic_Reset.BackgroundImage"), System.Drawing.Image)
-        Me.btnClinic_Reset.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnClinic_Reset.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClinic_Reset.ForeColor = System.Drawing.Color.Black
-        Me.btnClinic_Reset.Location = New System.Drawing.Point(229, 56)
-        Me.btnClinic_Reset.Name = "btnClinic_Reset"
-        Me.btnClinic_Reset.Size = New System.Drawing.Size(66, 23)
-        Me.btnClinic_Reset.TabIndex = 56
-        Me.btnClinic_Reset.Text = "&Làm mới"
-        Me.btnClinic_Reset.UseVisualStyleBackColor = True
-        '
-        'btnClinic_Edit
-        '
-        Me.btnClinic_Edit.BackgroundImage = CType(resources.GetObject("btnClinic_Edit.BackgroundImage"), System.Drawing.Image)
-        Me.btnClinic_Edit.Enabled = False
-        Me.btnClinic_Edit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnClinic_Edit.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClinic_Edit.ForeColor = System.Drawing.Color.Black
-        Me.btnClinic_Edit.Location = New System.Drawing.Point(156, 56)
-        Me.btnClinic_Edit.Name = "btnClinic_Edit"
-        Me.btnClinic_Edit.Size = New System.Drawing.Size(67, 23)
-        Me.btnClinic_Edit.TabIndex = 55
-        Me.btnClinic_Edit.Text = "&Sửa"
-        Me.btnClinic_Edit.UseVisualStyleBackColor = True
-        '
-        'btnClinic_Add
-        '
-        Me.btnClinic_Add.BackgroundImage = CType(resources.GetObject("btnClinic_Add.BackgroundImage"), System.Drawing.Image)
-        Me.btnClinic_Add.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnClinic_Add.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClinic_Add.ForeColor = System.Drawing.Color.Black
-        Me.btnClinic_Add.Location = New System.Drawing.Point(10, 56)
-        Me.btnClinic_Add.Name = "btnClinic_Add"
-        Me.btnClinic_Add.Size = New System.Drawing.Size(67, 23)
-        Me.btnClinic_Add.TabIndex = 53
-        Me.btnClinic_Add.Text = "&Thêm"
-        Me.btnClinic_Add.UseVisualStyleBackColor = True
-        '
-        'btnClinic_Delete
-        '
-        Me.btnClinic_Delete.BackgroundImage = CType(resources.GetObject("btnClinic_Delete.BackgroundImage"), System.Drawing.Image)
-        Me.btnClinic_Delete.Enabled = False
-        Me.btnClinic_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnClinic_Delete.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClinic_Delete.ForeColor = System.Drawing.Color.Black
-        Me.btnClinic_Delete.Location = New System.Drawing.Point(83, 56)
-        Me.btnClinic_Delete.Name = "btnClinic_Delete"
-        Me.btnClinic_Delete.Size = New System.Drawing.Size(67, 23)
-        Me.btnClinic_Delete.TabIndex = 54
-        Me.btnClinic_Delete.Text = "&Xóa"
-        Me.btnClinic_Delete.UseVisualStyleBackColor = True
-        '
-        'btnSpec_Reset
-        '
-        Me.btnSpec_Reset.BackgroundImage = CType(resources.GetObject("btnSpec_Reset.BackgroundImage"), System.Drawing.Image)
-        Me.btnSpec_Reset.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnSpec_Reset.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSpec_Reset.ForeColor = System.Drawing.Color.Black
-        Me.btnSpec_Reset.Location = New System.Drawing.Point(228, 56)
-        Me.btnSpec_Reset.Name = "btnSpec_Reset"
-        Me.btnSpec_Reset.Size = New System.Drawing.Size(66, 23)
-        Me.btnSpec_Reset.TabIndex = 39
-        Me.btnSpec_Reset.Text = "&Làm mới"
-        Me.btnSpec_Reset.UseVisualStyleBackColor = True
-        '
-        'btnSpec_Edit
-        '
-        Me.btnSpec_Edit.BackgroundImage = CType(resources.GetObject("btnSpec_Edit.BackgroundImage"), System.Drawing.Image)
-        Me.btnSpec_Edit.Enabled = False
-        Me.btnSpec_Edit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnSpec_Edit.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSpec_Edit.ForeColor = System.Drawing.Color.Black
-        Me.btnSpec_Edit.Location = New System.Drawing.Point(155, 56)
-        Me.btnSpec_Edit.Name = "btnSpec_Edit"
-        Me.btnSpec_Edit.Size = New System.Drawing.Size(67, 23)
-        Me.btnSpec_Edit.TabIndex = 38
-        Me.btnSpec_Edit.Text = "&Sửa"
-        Me.btnSpec_Edit.UseVisualStyleBackColor = True
-        '
-        'btnSpec_Add
-        '
-        Me.btnSpec_Add.BackgroundImage = CType(resources.GetObject("btnSpec_Add.BackgroundImage"), System.Drawing.Image)
-        Me.btnSpec_Add.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnSpec_Add.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSpec_Add.ForeColor = System.Drawing.Color.Black
-        Me.btnSpec_Add.Location = New System.Drawing.Point(9, 56)
-        Me.btnSpec_Add.Name = "btnSpec_Add"
-        Me.btnSpec_Add.Size = New System.Drawing.Size(67, 23)
-        Me.btnSpec_Add.TabIndex = 36
-        Me.btnSpec_Add.Text = "&Thêm"
-        Me.btnSpec_Add.UseVisualStyleBackColor = True
-        '
-        'btnSpec_Delete
-        '
-        Me.btnSpec_Delete.BackgroundImage = CType(resources.GetObject("btnSpec_Delete.BackgroundImage"), System.Drawing.Image)
-        Me.btnSpec_Delete.Enabled = False
-        Me.btnSpec_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnSpec_Delete.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSpec_Delete.ForeColor = System.Drawing.Color.Black
-        Me.btnSpec_Delete.Location = New System.Drawing.Point(82, 56)
-        Me.btnSpec_Delete.Name = "btnSpec_Delete"
-        Me.btnSpec_Delete.Size = New System.Drawing.Size(67, 23)
-        Me.btnSpec_Delete.TabIndex = 37
-        Me.btnSpec_Delete.Text = "&Xóa"
-        Me.btnSpec_Delete.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(269, 56)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(66, 23)
-        Me.Button1.TabIndex = 51
-        Me.Button1.Text = "Thông tin"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'btnDept_Reset
-        '
-        Me.btnDept_Reset.BackgroundImage = CType(resources.GetObject("btnDept_Reset.BackgroundImage"), System.Drawing.Image)
-        Me.btnDept_Reset.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnDept_Reset.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDept_Reset.ForeColor = System.Drawing.Color.Black
-        Me.btnDept_Reset.Location = New System.Drawing.Point(269, 85)
-        Me.btnDept_Reset.Name = "btnDept_Reset"
-        Me.btnDept_Reset.Size = New System.Drawing.Size(66, 23)
-        Me.btnDept_Reset.TabIndex = 35
-        Me.btnDept_Reset.Text = "&Làm mới"
-        Me.btnDept_Reset.UseVisualStyleBackColor = True
-        '
-        'btnDept_Edit
-        '
-        Me.btnDept_Edit.BackgroundImage = CType(resources.GetObject("btnDept_Edit.BackgroundImage"), System.Drawing.Image)
-        Me.btnDept_Edit.Enabled = False
-        Me.btnDept_Edit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnDept_Edit.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDept_Edit.ForeColor = System.Drawing.Color.Black
-        Me.btnDept_Edit.Location = New System.Drawing.Point(196, 85)
-        Me.btnDept_Edit.Name = "btnDept_Edit"
-        Me.btnDept_Edit.Size = New System.Drawing.Size(67, 23)
-        Me.btnDept_Edit.TabIndex = 33
-        Me.btnDept_Edit.Text = "&Sửa"
-        Me.btnDept_Edit.UseVisualStyleBackColor = True
-        '
-        'btnDept_Add
-        '
-        Me.btnDept_Add.BackgroundImage = CType(resources.GetObject("btnDept_Add.BackgroundImage"), System.Drawing.Image)
-        Me.btnDept_Add.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnDept_Add.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDept_Add.ForeColor = System.Drawing.Color.Black
-        Me.btnDept_Add.Location = New System.Drawing.Point(50, 85)
-        Me.btnDept_Add.Name = "btnDept_Add"
-        Me.btnDept_Add.Size = New System.Drawing.Size(67, 23)
-        Me.btnDept_Add.TabIndex = 31
-        Me.btnDept_Add.Text = "&Thêm"
-        Me.btnDept_Add.UseVisualStyleBackColor = True
-        '
-        'btnDept_Delete
-        '
-        Me.btnDept_Delete.BackgroundImage = CType(resources.GetObject("btnDept_Delete.BackgroundImage"), System.Drawing.Image)
-        Me.btnDept_Delete.Enabled = False
-        Me.btnDept_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnDept_Delete.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDept_Delete.ForeColor = System.Drawing.Color.Black
-        Me.btnDept_Delete.Location = New System.Drawing.Point(123, 85)
-        Me.btnDept_Delete.Name = "btnDept_Delete"
-        Me.btnDept_Delete.Size = New System.Drawing.Size(67, 23)
-        Me.btnDept_Delete.TabIndex = 32
-        Me.btnDept_Delete.Text = "&Xóa"
-        Me.btnDept_Delete.UseVisualStyleBackColor = True
         '
         'frmCategoryManager
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1034, 560)
+        Me.ClientSize = New System.Drawing.Size(1034, 518)
         Me.Controls.Add(Me.cmdClose)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.lblTitle)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmCategoryManager"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Quản lý Phòng ban"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.dgvDepartment, System.ComponentModel.ISupportInitialize).EndInit()
@@ -800,11 +787,8 @@ Partial Class frmCategoryManager
         Me.GroupBox4.PerformLayout()
         CType(Me.dgvBeds, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-
-    Private WithEvents lblTitle As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents GroupBox3 As GroupBox

@@ -22,6 +22,7 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.lblEmployeeName = New System.Windows.Forms.Label()
         Me.lblEmployee = New System.Windows.Forms.Label()
         Me.mitemExit = New System.Windows.Forms.ToolStripMenuItem()
@@ -164,7 +165,7 @@ Partial Class frmMain
         'CloseAllToolStripMenuItem
         '
         Me.CloseAllToolStripMenuItem.Name = "CloseAllToolStripMenuItem"
-        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CloseAllToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.CloseAllToolStripMenuItem.Text = "&Hide All"
         '
         'HelpMenu
@@ -177,7 +178,7 @@ Partial Class frmMain
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
         Me.AboutToolStripMenuItem.Text = "Thông tin ..."
         '
         'StatusStrip
@@ -211,6 +212,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.lblEmployee)
         Me.Controls.Add(Me.mitemMain)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

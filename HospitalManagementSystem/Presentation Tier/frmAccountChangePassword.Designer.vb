@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class frmAccountChangePassword
-    Inherits System.Windows.Forms.Form
+    Inherits Form
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -23,6 +23,7 @@ Partial Class frmAccountChangePassword
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAccountChangePassword))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.OK_Button = New System.Windows.Forms.Button()
         Me.Cancel_Button = New System.Windows.Forms.Button()
@@ -87,7 +88,7 @@ Partial Class frmAccountChangePassword
         Me.GroupBox1.Location = New System.Drawing.Point(13, 47)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(320, 118)
-        Me.GroupBox1.TabIndex = 47
+        Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Thông tin tài khoản"
         '
@@ -99,7 +100,7 @@ Partial Class frmAccountChangePassword
         Me.txtRepeatPassword.Name = "txtRepeatPassword"
         Me.txtRepeatPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtRepeatPassword.Size = New System.Drawing.Size(179, 22)
-        Me.txtRepeatPassword.TabIndex = 14
+        Me.txtRepeatPassword.TabIndex = 5
         '
         'Label14
         '
@@ -108,7 +109,7 @@ Partial Class frmAccountChangePassword
         Me.Label14.Location = New System.Drawing.Point(17, 84)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(58, 16)
-        Me.Label14.TabIndex = 2
+        Me.Label14.TabIndex = 4
         Me.Label14.Text = "Nhập lại"
         '
         'txtAccountPassword
@@ -119,7 +120,7 @@ Partial Class frmAccountChangePassword
         Me.txtAccountPassword.Name = "txtAccountPassword"
         Me.txtAccountPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtAccountPassword.Size = New System.Drawing.Size(179, 22)
-        Me.txtAccountPassword.TabIndex = 13
+        Me.txtAccountPassword.TabIndex = 3
         '
         'Label16
         '
@@ -128,7 +129,7 @@ Partial Class frmAccountChangePassword
         Me.Label16.Location = New System.Drawing.Point(17, 56)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(87, 16)
-        Me.Label16.TabIndex = 12
+        Me.Label16.TabIndex = 2
         Me.Label16.Text = "Mật khẩu mới"
         '
         'txtAccountPasswordOld
@@ -160,7 +161,7 @@ Partial Class frmAccountChangePassword
         Me.lblTitle.Location = New System.Drawing.Point(97, 9)
         Me.lblTitle.Name = "lblTitle"
         Me.lblTitle.Size = New System.Drawing.Size(150, 22)
-        Me.lblTitle.TabIndex = 46
+        Me.lblTitle.TabIndex = 0
         Me.lblTitle.Text = "ĐỔI MẬT KHẨU"
         '
         'ErrorProvider1
@@ -178,6 +179,7 @@ Partial Class frmAccountChangePassword
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmAccountChangePassword"

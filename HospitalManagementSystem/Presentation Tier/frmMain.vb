@@ -140,9 +140,7 @@ Public Class frmMain
 
         Catch ex As Exception
             txtStatus.Text = "Lỗi: Không thể mở Danh mục nhân viên."
-            'Me.frmStaffManager = New frmStaffManager
-            'Me.frmStaffManager.MdiParent = Me
-            'Me.frmStaffManager.Show()
+
         End Try
 
     End Sub
