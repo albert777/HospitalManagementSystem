@@ -2,7 +2,7 @@
 Imports HospitalManagementSystem.DAO
 Imports HospitalManagementSystem.DTO
 
-Imports Microsoft.Office.Interop
+'Imports Microsoft.Office.Interop
 
 
 

@@ -22,8 +22,9 @@ Public Class frmAppointment
         LoadClinicsComboBox()
 
         If Type = "New" Then
-            _employee = My.Forms.frmMain._account.Employee
+            _employee = My.Forms.RfrmMain._account.Employee
             _patient = patient
+
             txtAppointmentCreateTime.Text = Date.Now.ToShortDateString() + " " + Date.Now.ToLongTimeString
 
             txtResult.ReadOnly = True
@@ -41,6 +42,7 @@ Public Class frmAppointment
 
             _employee = appointment.Employee
             _patient = appointment.Patient
+
             txtAppoimentId.Text = appointment.Id.ToString
             txtAppointmentCreateTime.Text = appointment.CreateTime.ToShortDateString
             txtDoctor.Text = appointment.Doctor.Name.ToString
@@ -102,6 +104,8 @@ Public Class frmAppointment
             End If
 
             txtDoctor.Text = _doctor.Name
+            txtResult.Text = appointment.Result
+            txtPrescribe.Text = appointment.Prescribe
         End If
 
         txtAppointmentEmployeeName.Text = _employee.Name

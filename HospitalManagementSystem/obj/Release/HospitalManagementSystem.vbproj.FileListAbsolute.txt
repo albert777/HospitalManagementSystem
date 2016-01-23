@@ -44,8 +44,6 @@ C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\
 C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Release\HospitalManagementSystem.Dialog1.resources
 C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Release\HospitalManagementSystem.Form1.resources
 C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Release\HospitalManagementSystem.frmEmployeesByDepartment.resources
-C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\bin\Release\dbHospital.mdf
-C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\bin\Release\dbHospital_log.ldf
 C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Release\HospitalManagementSystem.rptEmployeesByDepartment.resources
 C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Release\Interop.InteropExtensionLib.dll
 C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Release\Interop.LCC11.dll
@@ -259,3 +257,6 @@ C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\
 C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\bin\Release\ja\DevExpress.XtraCharts.v15.1.Wizard.resources.dll
 C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\bin\Release\ru\DevExpress.XtraCharts.v15.1.Wizard.resources.dll
 C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Release\HospitalManagementSystem.RfrmStaffManager.resources
+C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Release\HospitalManagementSystem.RfrmAccountsManager.resources
+C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Release\HospitalManagementSystem.XfrmAddAccount.resources
+C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\obj\Release\HospitalManagementSystem.XfrmDeleteAccount.resources

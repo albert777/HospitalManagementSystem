@@ -108,7 +108,7 @@ Public Class frmAppointmentManager
     End Sub
 
     Private Sub btnViewAppointment_Click(sender As Object, e As EventArgs) Handles btnViewAppointment.Click
-        Dim frmViewAppointment As New frmAppointment("View", , GetAppointmentFromDataGridView)
+        Dim frmViewAppointment As New frmAppointment("View", , GetAppointmentFromDataGridView, )
         frmViewAppointment.ShowDialog()
     End Sub
 

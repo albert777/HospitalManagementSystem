@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class frmStaffManager
-    Inherits System.Windows.Forms.Form
+    Inherits DevExpress.XtraBars.Ribbon.RibbonForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -23,14 +23,12 @@ Partial Class frmStaffManager
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmStaffManager))
-        Me.label2 = New System.Windows.Forms.Label()
         Me.label10 = New System.Windows.Forms.Label()
         Me.txtEmployeeName = New System.Windows.Forms.TextBox()
         Me.txtEmployeeId = New System.Windows.Forms.TextBox()
         Me.label6 = New System.Windows.Forms.Label()
         Me.label8 = New System.Windows.Forms.Label()
         Me.label9 = New System.Windows.Forms.Label()
-        Me.txtSearch_Empl_Name = New System.Windows.Forms.TextBox()
         Me.txtSearch_Empl_ID = New System.Windows.Forms.TextBox()
         Me.label7 = New System.Windows.Forms.Label()
         Me.label1 = New System.Windows.Forms.Label()
@@ -80,16 +78,8 @@ Partial Class frmStaffManager
         Me.lblDept = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.groupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txtSearch_Empl_Phone = New System.Windows.Forms.MaskedTextBox()
-        Me.txtSearch_Empl_IDCard = New System.Windows.Forms.MaskedTextBox()
-        Me.Label33 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.cboxSearchSpecialities = New System.Windows.Forms.ComboBox()
-        Me.cboxSearchDepartments = New System.Windows.Forms.ComboBox()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
+        Me.btnReSearch = New System.Windows.Forms.Button()
+        Me.btnSearch = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.chkbSpec = New System.Windows.Forms.CheckBox()
         Me.chkbDept = New System.Windows.Forms.CheckBox()
@@ -101,29 +91,20 @@ Partial Class frmStaffManager
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
-        Me.btnReset = New System.Windows.Forms.Button()
         Me.btnUpdateEmpl = New System.Windows.Forms.Button()
-        Me.cmdClose = New System.Windows.Forms.Button()
         Me.btnAddEmpl = New System.Windows.Forms.Button()
         Me.btnDeleteEmpl = New System.Windows.Forms.Button()
-        Me.btnReSearch = New System.Windows.Forms.Button()
-        Me.btnSearch = New System.Windows.Forms.Button()
+        Me.RibbonControl1 = New DevExpress.XtraBars.Ribbon.RibbonControl()
+        Me.bbiClose = New DevExpress.XtraBars.BarButtonItem()
+        Me.bbiReLoad = New DevExpress.XtraBars.BarButtonItem()
+        Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
+        Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         CType(Me.dgrEmplResult, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.groupBox2.SuspendLayout()
         Me.groupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'label2
-        '
-        Me.label2.AutoSize = True
-        Me.label2.Enabled = False
-        Me.label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label2.Location = New System.Drawing.Point(245, 28)
-        Me.label2.Name = "label2"
-        Me.label2.Size = New System.Drawing.Size(50, 16)
-        Me.label2.TabIndex = 4
-        Me.label2.Text = "Họ tên "
         '
         'label10
         '
@@ -183,15 +164,6 @@ Partial Class frmStaffManager
         Me.label9.TabIndex = 0
         Me.label9.Text = "Mã nhân viên"
         '
-        'txtSearch_Empl_Name
-        '
-        Me.txtSearch_Empl_Name.Enabled = False
-        Me.txtSearch_Empl_Name.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearch_Empl_Name.Location = New System.Drawing.Point(319, 24)
-        Me.txtSearch_Empl_Name.Name = "txtSearch_Empl_Name"
-        Me.txtSearch_Empl_Name.Size = New System.Drawing.Size(297, 22)
-        Me.txtSearch_Empl_Name.TabIndex = 5
-        '
         'txtSearch_Empl_ID
         '
         Me.txtSearch_Empl_ID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -230,7 +202,7 @@ Partial Class frmStaffManager
         Me.dgrEmplResult.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders
         Me.dgrEmplResult.BackgroundColor = System.Drawing.SystemColors.Window
         Me.dgrEmplResult.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colEmplId, Me.colEmplBasicSalary, Me.colEmplSubsidy, Me.colEmplDeptId, Me.colEmplSpecId, Me.colEmplName, Me.colEmplPosition, Me.colchkboxEmplSex, Me.colEmplIdCard, Me.colEmplDoB, Me.colEmplAddress, Me.colEmplPhone, Me.colEmplFolk, Me.colEmplDeptName, Me.colEmplSpecName, Me.colEmplHireDate, Me.colEmplRatio})
-        Me.dgrEmplResult.Location = New System.Drawing.Point(12, 128)
+        Me.dgrEmplResult.Location = New System.Drawing.Point(12, 74)
         Me.dgrEmplResult.MultiSelect = False
         Me.dgrEmplResult.Name = "dgrEmplResult"
         Me.dgrEmplResult.ReadOnly = True
@@ -246,7 +218,7 @@ Partial Class frmStaffManager
         Me.colEmplId.HeaderText = "Mã nhân viên"
         Me.colEmplId.Name = "colEmplId"
         Me.colEmplId.ReadOnly = True
-        Me.colEmplId.Width = 97
+        Me.colEmplId.Width = 96
         '
         'colEmplBasicSalary
         '
@@ -304,7 +276,7 @@ Partial Class frmStaffManager
         Me.colEmplPosition.HeaderText = "Vị trí"
         Me.colEmplPosition.Name = "colEmplPosition"
         Me.colEmplPosition.ReadOnly = True
-        Me.colEmplPosition.Width = 54
+        Me.colEmplPosition.Width = 53
         '
         'colchkboxEmplSex
         '
@@ -315,7 +287,7 @@ Partial Class frmStaffManager
         Me.colchkboxEmplSex.Name = "colchkboxEmplSex"
         Me.colchkboxEmplSex.ReadOnly = True
         Me.colchkboxEmplSex.TrueValue = "Nữ"
-        Me.colchkboxEmplSex.Width = 53
+        Me.colchkboxEmplSex.Width = 51
         '
         'colEmplIdCard
         '
@@ -324,7 +296,7 @@ Partial Class frmStaffManager
         Me.colEmplIdCard.HeaderText = "Số CMND"
         Me.colEmplIdCard.Name = "colEmplIdCard"
         Me.colEmplIdCard.ReadOnly = True
-        Me.colEmplIdCard.Width = 80
+        Me.colEmplIdCard.Width = 76
         '
         'colEmplDoB
         '
@@ -352,7 +324,7 @@ Partial Class frmStaffManager
         Me.colEmplPhone.HeaderText = "Điện thoại"
         Me.colEmplPhone.Name = "colEmplPhone"
         Me.colEmplPhone.ReadOnly = True
-        Me.colEmplPhone.Width = 80
+        Me.colEmplPhone.Width = 81
         '
         'colEmplFolk
         '
@@ -371,7 +343,7 @@ Partial Class frmStaffManager
         Me.colEmplDeptName.HeaderText = "Khoa"
         Me.colEmplDeptName.Name = "colEmplDeptName"
         Me.colEmplDeptName.ReadOnly = True
-        Me.colEmplDeptName.Width = 57
+        Me.colEmplDeptName.Width = 56
         '
         'colEmplSpecName
         '
@@ -380,7 +352,7 @@ Partial Class frmStaffManager
         Me.colEmplSpecName.HeaderText = "Chuyên môn"
         Me.colEmplSpecName.Name = "colEmplSpecName"
         Me.colEmplSpecName.ReadOnly = True
-        Me.colEmplSpecName.Width = 91
+        Me.colEmplSpecName.Width = 92
         '
         'colEmplHireDate
         '
@@ -433,7 +405,7 @@ Partial Class frmStaffManager
         Me.groupBox2.Controls.Add(Me.label12)
         Me.groupBox2.Controls.Add(Me.label9)
         Me.groupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.groupBox2.Location = New System.Drawing.Point(12, 300)
+        Me.groupBox2.Location = New System.Drawing.Point(12, 246)
         Me.groupBox2.Name = "groupBox2"
         Me.groupBox2.Size = New System.Drawing.Size(844, 118)
         Me.groupBox2.TabIndex = 3
@@ -695,135 +667,39 @@ Partial Class frmStaffManager
         '
         'groupBox1
         '
-        Me.groupBox1.Controls.Add(Me.txtSearch_Empl_Phone)
-        Me.groupBox1.Controls.Add(Me.txtSearch_Empl_IDCard)
-        Me.groupBox1.Controls.Add(Me.Label33)
-        Me.groupBox1.Controls.Add(Me.Label5)
-        Me.groupBox1.Controls.Add(Me.cboxSearchSpecialities)
-        Me.groupBox1.Controls.Add(Me.cboxSearchDepartments)
-        Me.groupBox1.Controls.Add(Me.Label13)
-        Me.groupBox1.Controls.Add(Me.Label15)
-        Me.groupBox1.Controls.Add(Me.txtSearch_Empl_Name)
         Me.groupBox1.Controls.Add(Me.txtSearch_Empl_ID)
-        Me.groupBox1.Controls.Add(Me.TextBox3)
-        Me.groupBox1.Controls.Add(Me.label2)
-        Me.groupBox1.Controls.Add(Me.Label14)
         Me.groupBox1.Controls.Add(Me.label1)
+        Me.groupBox1.Controls.Add(Me.btnReSearch)
+        Me.groupBox1.Controls.Add(Me.btnSearch)
         Me.groupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.groupBox1.Location = New System.Drawing.Point(12, 12)
         Me.groupBox1.Name = "groupBox1"
-        Me.groupBox1.Size = New System.Drawing.Size(844, 110)
+        Me.groupBox1.Size = New System.Drawing.Size(440, 56)
         Me.groupBox1.TabIndex = 1
         Me.groupBox1.TabStop = False
         Me.groupBox1.Text = "Tiêu chí tìm kiếm"
         '
-        'txtSearch_Empl_Phone
+        'btnReSearch
         '
-        Me.txtSearch_Empl_Phone.Enabled = False
-        Me.txtSearch_Empl_Phone.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearch_Empl_Phone.Location = New System.Drawing.Point(319, 50)
-        Me.txtSearch_Empl_Phone.Mask = "00000000000"
-        Me.txtSearch_Empl_Phone.Name = "txtSearch_Empl_Phone"
-        Me.txtSearch_Empl_Phone.Size = New System.Drawing.Size(88, 22)
-        Me.txtSearch_Empl_Phone.TabIndex = 37
+        Me.btnReSearch.BackgroundImage = CType(resources.GetObject("btnReSearch.BackgroundImage"), System.Drawing.Image)
+        Me.btnReSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnReSearch.Location = New System.Drawing.Point(219, 25)
+        Me.btnReSearch.Name = "btnReSearch"
+        Me.btnReSearch.Size = New System.Drawing.Size(98, 23)
+        Me.btnReSearch.TabIndex = 14
+        Me.btnReSearch.Text = "&Làm lại"
+        Me.btnReSearch.UseVisualStyleBackColor = True
         '
-        'txtSearch_Empl_IDCard
+        'btnSearch
         '
-        Me.txtSearch_Empl_IDCard.Enabled = False
-        Me.txtSearch_Empl_IDCard.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearch_Empl_IDCard.Location = New System.Drawing.Point(110, 51)
-        Me.txtSearch_Empl_IDCard.Mask = "000000000"
-        Me.txtSearch_Empl_IDCard.Name = "txtSearch_Empl_IDCard"
-        Me.txtSearch_Empl_IDCard.Size = New System.Drawing.Size(103, 22)
-        Me.txtSearch_Empl_IDCard.TabIndex = 37
-        '
-        'Label33
-        '
-        Me.Label33.AutoSize = True
-        Me.Label33.Enabled = False
-        Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label33.Location = New System.Drawing.Point(17, 54)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(48, 16)
-        Me.Label33.TabIndex = 36
-        Me.Label33.Text = "CMND"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Enabled = False
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(245, 54)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(67, 16)
-        Me.Label5.TabIndex = 36
-        Me.Label5.Text = "Điện thoại"
-        '
-        'cboxSearchSpecialities
-        '
-        Me.cboxSearchSpecialities.DisplayMember = "Name"
-        Me.cboxSearchSpecialities.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboxSearchSpecialities.Enabled = False
-        Me.cboxSearchSpecialities.FormattingEnabled = True
-        Me.cboxSearchSpecialities.Location = New System.Drawing.Point(520, 78)
-        Me.cboxSearchSpecialities.Name = "cboxSearchSpecialities"
-        Me.cboxSearchSpecialities.Size = New System.Drawing.Size(307, 24)
-        Me.cboxSearchSpecialities.TabIndex = 34
-        Me.cboxSearchSpecialities.ValueMember = "Id"
-        '
-        'cboxSearchDepartments
-        '
-        Me.cboxSearchDepartments.DisplayMember = "Name"
-        Me.cboxSearchDepartments.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboxSearchDepartments.Enabled = False
-        Me.cboxSearchDepartments.FormattingEnabled = True
-        Me.cboxSearchDepartments.Location = New System.Drawing.Point(110, 78)
-        Me.cboxSearchDepartments.Name = "cboxSearchDepartments"
-        Me.cboxSearchDepartments.Size = New System.Drawing.Size(297, 24)
-        Me.cboxSearchDepartments.TabIndex = 33
-        Me.cboxSearchDepartments.ValueMember = "Id"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Enabled = False
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(432, 81)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(82, 16)
-        Me.Label13.TabIndex = 32
-        Me.Label13.Text = "Chuyên môn"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Enabled = False
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(17, 81)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(39, 16)
-        Me.Label15.TabIndex = 31
-        Me.Label15.Text = "Khoa"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Enabled = False
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(520, 50)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(307, 22)
-        Me.TextBox3.TabIndex = 9
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Enabled = False
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(432, 53)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(33, 16)
-        Me.Label14.TabIndex = 8
-        Me.Label14.Text = "Vị trí"
+        Me.btnSearch.BackgroundImage = CType(resources.GetObject("btnSearch.BackgroundImage"), System.Drawing.Image)
+        Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnSearch.Location = New System.Drawing.Point(323, 24)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(98, 23)
+        Me.btnSearch.TabIndex = 15
+        Me.btnSearch.Text = "&Tìm kiếm"
+        Me.btnSearch.UseVisualStyleBackColor = True
         '
         'GroupBox3
         '
@@ -850,7 +726,7 @@ Partial Class frmStaffManager
         Me.GroupBox3.Controls.Add(Me.Label21)
         Me.GroupBox3.Controls.Add(Me.Label20)
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 424)
+        Me.GroupBox3.Location = New System.Drawing.Point(12, 370)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(844, 116)
         Me.GroupBox3.TabIndex = 31
@@ -954,48 +830,22 @@ Partial Class frmStaffManager
         Me.Label29.TabIndex = 33
         Me.Label29.Text = "*"
         '
-        'btnReset
-        '
-        Me.btnReset.BackgroundImage = CType(resources.GetObject("btnReset.BackgroundImage"), System.Drawing.Image)
-        Me.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnReset.Location = New System.Drawing.Point(862, 394)
-        Me.btnReset.Name = "btnReset"
-        Me.btnReset.Size = New System.Drawing.Size(98, 23)
-        Me.btnReset.TabIndex = 7
-        Me.btnReset.Text = "Làm &mới"
-        Me.btnReset.UseVisualStyleBackColor = True
-        '
         'btnUpdateEmpl
         '
         Me.btnUpdateEmpl.BackgroundImage = CType(resources.GetObject("btnUpdateEmpl.BackgroundImage"), System.Drawing.Image)
         Me.btnUpdateEmpl.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnUpdateEmpl.Location = New System.Drawing.Point(862, 365)
+        Me.btnUpdateEmpl.Location = New System.Drawing.Point(862, 327)
         Me.btnUpdateEmpl.Name = "btnUpdateEmpl"
         Me.btnUpdateEmpl.Size = New System.Drawing.Size(98, 23)
         Me.btnUpdateEmpl.TabIndex = 6
         Me.btnUpdateEmpl.Text = "&Sửa"
         Me.btnUpdateEmpl.UseVisualStyleBackColor = True
         '
-        'cmdClose
-        '
-        Me.cmdClose.BackgroundImage = CType(resources.GetObject("cmdClose.BackgroundImage"), System.Drawing.Image)
-        Me.cmdClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.cmdClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdClose.ForeColor = System.Drawing.Color.DarkRed
-        Me.cmdClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.cmdClose.Location = New System.Drawing.Point(862, 517)
-        Me.cmdClose.Name = "cmdClose"
-        Me.cmdClose.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.cmdClose.Size = New System.Drawing.Size(98, 23)
-        Me.cmdClose.TabIndex = 8
-        Me.cmdClose.Text = "&Đóng"
-        Me.cmdClose.UseVisualStyleBackColor = True
-        '
         'btnAddEmpl
         '
         Me.btnAddEmpl.BackgroundImage = CType(resources.GetObject("btnAddEmpl.BackgroundImage"), System.Drawing.Image)
         Me.btnAddEmpl.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnAddEmpl.Location = New System.Drawing.Point(862, 307)
+        Me.btnAddEmpl.Location = New System.Drawing.Point(862, 269)
         Me.btnAddEmpl.Name = "btnAddEmpl"
         Me.btnAddEmpl.Size = New System.Drawing.Size(98, 23)
         Me.btnAddEmpl.TabIndex = 4
@@ -1006,57 +856,70 @@ Partial Class frmStaffManager
         '
         Me.btnDeleteEmpl.BackgroundImage = CType(resources.GetObject("btnDeleteEmpl.BackgroundImage"), System.Drawing.Image)
         Me.btnDeleteEmpl.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnDeleteEmpl.Location = New System.Drawing.Point(862, 336)
+        Me.btnDeleteEmpl.Location = New System.Drawing.Point(862, 298)
         Me.btnDeleteEmpl.Name = "btnDeleteEmpl"
         Me.btnDeleteEmpl.Size = New System.Drawing.Size(98, 23)
         Me.btnDeleteEmpl.TabIndex = 5
         Me.btnDeleteEmpl.Text = "&Xóa"
         Me.btnDeleteEmpl.UseVisualStyleBackColor = True
         '
-        'btnReSearch
+        'RibbonControl1
         '
-        Me.btnReSearch.BackgroundImage = CType(resources.GetObject("btnReSearch.BackgroundImage"), System.Drawing.Image)
-        Me.btnReSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnReSearch.Location = New System.Drawing.Point(862, 63)
-        Me.btnReSearch.Name = "btnReSearch"
-        Me.btnReSearch.Size = New System.Drawing.Size(98, 23)
-        Me.btnReSearch.TabIndex = 14
-        Me.btnReSearch.Text = "&Làm lại"
-        Me.btnReSearch.UseVisualStyleBackColor = True
+        Me.RibbonControl1.ExpandCollapseItem.Id = 0
+        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.bbiClose, Me.bbiReLoad})
+        Me.RibbonControl1.Location = New System.Drawing.Point(0, 0)
+        Me.RibbonControl1.MaxItemId = 3
+        Me.RibbonControl1.Name = "RibbonControl1"
+        Me.RibbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
+        Me.RibbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013
+        Me.RibbonControl1.Size = New System.Drawing.Size(977, 143)
         '
-        'btnSearch
+        'bbiClose
         '
-        Me.btnSearch.BackgroundImage = CType(resources.GetObject("btnSearch.BackgroundImage"), System.Drawing.Image)
-        Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnSearch.Location = New System.Drawing.Point(862, 90)
-        Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(98, 23)
-        Me.btnSearch.TabIndex = 15
-        Me.btnSearch.Text = "&Tìm kiếm"
-        Me.btnSearch.UseVisualStyleBackColor = True
+        Me.bbiClose.Caption = "Đóng"
+        Me.bbiClose.Id = 1
+        Me.bbiClose.ImageUri.Uri = "Close"
+        Me.bbiClose.Name = "bbiClose"
+        '
+        'bbiReLoad
+        '
+        Me.bbiReLoad.Caption = "Làm mới"
+        Me.bbiReLoad.Id = 2
+        Me.bbiReLoad.ImageUri.Uri = "Refresh"
+        Me.bbiReLoad.Name = "bbiReLoad"
+        '
+        'RibbonPage1
+        '
+        Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1})
+        Me.RibbonPage1.Name = "RibbonPage1"
+        Me.RibbonPage1.Text = "Hệ thống"
+        '
+        'RibbonPageGroup1
+        '
+        Me.RibbonPageGroup1.AllowTextClipping = False
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.bbiReLoad)
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.bbiClose)
+        Me.RibbonPageGroup1.Name = "RibbonPageGroup1"
+        Me.RibbonPageGroup1.Text = "Danh mục nhân viên"
         '
         'frmStaffManager
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(977, 559)
+        Me.ClientSize = New System.Drawing.Size(977, 501)
         Me.Controls.Add(Me.GroupBox3)
-        Me.Controls.Add(Me.btnReset)
-        Me.Controls.Add(Me.dgrEmplResult)
         Me.Controls.Add(Me.btnUpdateEmpl)
-        Me.Controls.Add(Me.cmdClose)
         Me.Controls.Add(Me.btnAddEmpl)
         Me.Controls.Add(Me.btnDeleteEmpl)
         Me.Controls.Add(Me.groupBox2)
+        Me.Controls.Add(Me.dgrEmplResult)
         Me.Controls.Add(Me.groupBox1)
-        Me.Controls.Add(Me.btnReSearch)
-        Me.Controls.Add(Me.btnSearch)
-        Me.DoubleBuffered = True
+        Me.Controls.Add(Me.RibbonControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmStaffManager"
+        Me.Ribbon = Me.RibbonControl1
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Danh sách nhân viên"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
@@ -1067,12 +930,13 @@ Partial Class frmStaffManager
         Me.groupBox1.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
     Private WithEvents btnSearch As Button
-    Private WithEvents label2 As Label
     Private WithEvents label10 As Label
     Private WithEvents txtEmployeeName As TextBox
     Private WithEvents txtEmployeeId As TextBox
@@ -1080,13 +944,11 @@ Partial Class frmStaffManager
     Private WithEvents label6 As Label
     Private WithEvents label8 As Label
     Private WithEvents label9 As Label
-    Private WithEvents txtSearch_Empl_Name As TextBox
     Private WithEvents txtSearch_Empl_ID As TextBox
     Private WithEvents label7 As Label
     Private WithEvents label1 As Label
     Private WithEvents dgrEmplResult As DataGridView
     Private WithEvents btnUpdateEmpl As Button
-    Private WithEvents cmdClose As Button
     Private WithEvents btnAddEmpl As Button
     Private WithEvents btnDeleteEmpl As Button
     Private WithEvents txtEmployeeIdCard As MaskedTextBox
@@ -1099,14 +961,11 @@ Partial Class frmStaffManager
     Private WithEvents label11 As Label
     Private WithEvents groupBox1 As GroupBox
     Private WithEvents Label3 As Label
-    Private WithEvents TextBox3 As TextBox
-    Private WithEvents Label14 As Label
     Private WithEvents lblSpec As Label
     Private WithEvents txtEmployeePosition As TextBox
     Private WithEvents lblDept As Label
     Private WithEvents Label18 As Label
     Friend WithEvents cboxEmployeeSex As ComboBox
-    Private WithEvents btnReset As Button
     Private WithEvents dtpEmployeeHireDate As DateTimePicker
     Private WithEvents Label22 As Label
     Private WithEvents txtEmployeeRatio As TextBox
@@ -1115,10 +974,6 @@ Partial Class frmStaffManager
     Private WithEvents Label21 As Label
     Friend WithEvents cboxEmployeeSpeciality As ComboBox
     Friend WithEvents cboxEmployeeDepartment As ComboBox
-    Friend WithEvents cboxSearchSpecialities As ComboBox
-    Friend WithEvents cboxSearchDepartments As ComboBox
-    Private WithEvents Label13 As Label
-    Private WithEvents Label15 As Label
     Friend WithEvents Label27 As Label
     Friend WithEvents Label26 As Label
     Friend WithEvents Label24 As Label
@@ -1130,10 +985,6 @@ Partial Class frmStaffManager
     Friend WithEvents Label19 As Label
     Friend WithEvents Label25 As Label
     Private WithEvents Label30 As Label
-    Private WithEvents txtSearch_Empl_Phone As MaskedTextBox
-    Private WithEvents txtSearch_Empl_IDCard As MaskedTextBox
-    Private WithEvents Label33 As Label
-    Private WithEvents Label5 As Label
     Private WithEvents txtEmployeeSubsidy As TextBox
     Private WithEvents txtEmployeeBasicSalary As TextBox
     Private WithEvents txtEmployeeTotalSalary As TextBox
@@ -1156,4 +1007,9 @@ Partial Class frmStaffManager
     Friend WithEvents colEmplRatio As DataGridViewTextBoxColumn
     Friend WithEvents chkbSpec As CheckBox
     Friend WithEvents chkbDept As CheckBox
+    Friend WithEvents RibbonControl1 As DevExpress.XtraBars.Ribbon.RibbonControl
+    Friend WithEvents RibbonPage1 As DevExpress.XtraBars.Ribbon.RibbonPage
+    Friend WithEvents RibbonPageGroup1 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
+    Friend WithEvents bbiClose As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents bbiReLoad As DevExpress.XtraBars.BarButtonItem
 End Class

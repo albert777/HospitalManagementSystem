@@ -84,36 +84,25 @@
     <ApplicationIcon>Resoucres\Custom-Icon-Design-Pretty-Office-3-Add-to-favorites.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevComponents.DotNetBar2, Version=12.0.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.ExpressApp.Win.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v15.1.Core, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Xpf.Core.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Xpf.NavBar.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Xpf.Ribbon.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Xpf.Themes.Office2010Black.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Xpf.Themes.Office2010Blue.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraNavBar.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraVerticalGrid.v15.1, Version=15.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="microsoft.office.interop.word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>F:\Downloads\microsoft.office.interop.word.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -170,6 +159,24 @@
       <DependentUpon>RfrmStaffManager.vb</DependentUpon>
     </Compile>
     <Compile Include="Presentation Tier\RecordsSystem\RfrmStaffManager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Tier\RecordsSystem\RfrmAccountsManager.Designer.vb">
+      <DependentUpon>RfrmAccountsManager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Tier\RecordsSystem\RfrmAccountsManager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Tier\RecordsSystem\XfrmAddAccount.Designer.vb">
+      <DependentUpon>XfrmAddAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Tier\RecordsSystem\XfrmAddAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Tier\RecordsSystem\XfrmDeleteAccount.Designer.vb">
+      <DependentUpon>XfrmDeleteAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Tier\RecordsSystem\XfrmDeleteAccount.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Testing\dbHospitalDataSet.Designer.vb">
@@ -359,6 +366,15 @@
     <EmbeddedResource Include="Presentation Tier\RecordsSystem\RfrmStaffManager.resx">
       <DependentUpon>RfrmStaffManager.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Tier\RecordsSystem\RfrmAccountsManager.resx">
+      <DependentUpon>RfrmAccountsManager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Tier\RecordsSystem\XfrmAddAccount.resx">
+      <DependentUpon>XfrmAddAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Tier\RecordsSystem\XfrmDeleteAccount.resx">
+      <DependentUpon>XfrmDeleteAccount.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report Templates\rptEmployeeInformation.rdlc" />
     <EmbeddedResource Include="Testing\Dialog1.resx">
       <DependentUpon>Dialog1.vb</DependentUpon>
@@ -424,21 +440,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.SqlServer.Express.11.0">
-      <Visible>False</Visible>
-      <ProductName>SQL Server 2012 Express</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.SqlServer.SqlLocalDB.11.1">
-      <Visible>False</Visible>
-      <ProductName>SQL Server 2012 Express LocalDB</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
-      <Visible>False</Visible>
-      <ProductName>Windows Installer 4.5</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database\dbHospital.mdf">
@@ -449,13 +450,6 @@
     </Content>
     <None Include="Resoucres\Aha-Soft-Large-Home-Drugstore.ico" />
     <None Include="Resoucres\Custom-Icon-Design-Pretty-Office-3-Add-to-favorites.ico" />
-    <Content Include="dbHospital.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="dbHospital_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>dbHospital.mdf</DependentUpon>
-    </Content>
     <None Include="Resources\Administrator-icon.png" />
     <None Include="Resources\User-Group-icon.png" />
     <None Include="Resources\Patients-icon.png" />

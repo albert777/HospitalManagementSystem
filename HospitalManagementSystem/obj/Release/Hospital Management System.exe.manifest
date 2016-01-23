@@ -4,7 +4,7 @@
   <description asmv2:iconFile="Resoucres\Custom-Icon-Design-Pretty-Office-3-Add-to-favorites.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Hospital Management System" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="Hospital Management System" version="1.0.0.15" language="neutral" processorArchitecture="msil" />
     <commandLine file="Hospital Management System.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -2083,14 +2083,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Hospital Management System.exe" size="2149856">
-      <assemblyIdentity name="Hospital Management System" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Hospital Management System.exe" size="2412000">
+      <assemblyIdentity name="Hospital Management System" version="1.0.0.15" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>H92/fX58eSxkbJFdTJYdehLmi7vAekVoB6ZGomMdVhY=</dsig:DigestValue>
+        <dsig:DigestValue>74G0ykE1K6+eHOeRfBytKGiIkgMlXYV6Vo7amYElIe8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -2290,24 +2290,6 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>Z+TGx88ig+OJfeddCG+m5YIxse6gJsoMsWMGI6zK4v8=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="dbHospital.mdf" size="4194304" writeableType="applicationData">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>bPtWrHk7hT5fbO1BVk1hod0Q0fWGwTMa/m8m7KvVsQM=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="dbHospital_log.ldf" size="1048576" writeableType="applicationData">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>0cXOllaJza0md7sc2hPpFI0ijFkkDfxQ/eu+Qtx7CbM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Hospital Management System.exe.config" size="539">

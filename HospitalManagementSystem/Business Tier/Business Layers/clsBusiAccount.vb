@@ -38,12 +38,44 @@ Namespace BUS
 
         End Class
 
+        Friend Function DeleteAccount(user As String) As Boolean
+            If _accData.DeleteAccount(user) Then
+                MsgBox("Xóa tài khoản thành công!")
+                Return True
+            Else
+                MsgBox("Xóa tài khoản thất bại!")
+                Return False
+            End If
+        End Function
+
+        Friend Function EmployeeHaveAccount(Eid As Integer) As Boolean
+            Return _accData.EmployeeHaveAccount(Eid)
+        End Function
+
+        Friend Function ExistUsername(user As String) As Boolean
+            Return _accData.ExistUsername(user)
+        End Function
+
+        Friend Function GetAccountsInfos() As DataTable
+            Return _accData.GetAccountsInfos()
+        End Function
+
         Friend Function ChangePassword(username As String, password As String) As Boolean
             If _accData.ChangePassword(username, password) Then
                 MsgBox("Đổi mật khẩu thành công")
                 Return True
             Else
                 MsgBox("Đổi mật khẩu thất bại")
+                Return False
+            End If
+        End Function
+
+        Friend Function CreateAccount(user As String, pass As String, eid As Integer, role As Integer) As Boolean
+            If _accData.CreateAccount(user, pass, eid, role) Then
+                MsgBox("Tạo tài khoản thành công!")
+                Return True
+            Else
+                MsgBox("Tạo tài khoản thất bại!")
                 Return False
             End If
         End Function

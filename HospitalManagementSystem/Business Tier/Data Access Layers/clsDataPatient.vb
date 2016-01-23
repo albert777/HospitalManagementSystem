@@ -43,23 +43,17 @@ Namespace DAO
         End Function
 
         Friend Function AddPatient(patient As Patient) As Boolean
-            Dim strBedId As String = "null"
-
-            If patient.Bed.Id <> -1 Then
-                strBedId = patient.Bed.Id.ToString
-            End If
-
             Dim query As String =
                 String.Format("INSERT INTO 
                                PATIENTS(Name, Sex, DoB, IdCard, Address, Phone, 
                                         Folk, InsuranceId, InsuranceIssueDate, InsuranceExpiryDate,
-                                        Status, BedId)
+                                        Status)
                                VALUES  (N'{0}', '{1}', '{2}', '{3}', N'{4}', '{5}',
                                         N'{6}', '{7}', '{8}', '{9}',
-                                        N'{10}', {11})",
+                                        N'{10}')",
                                         patient.Name, patient.Sex.ToString, patient.DoB.ToString, patient.IdCard, patient.Address, patient.Phone,
                                         patient.Folk, patient.InsuranceID, patient.InsuranceIssueDate.ToString, patient.InsuranceExpiryDate.ToString,
-                                        patient.Status, strBedId)
+                                        patient.Status)
 
             Return _dbAccess.ExecuteNoneQuery(query)
         End Function
@@ -171,21 +165,15 @@ Namespace DAO
 
         Friend Function UpdatePatient(patient As Patient) As Boolean
             Try
-                Dim strBedId As String = "null"
-
-                If patient.Bed.Id <> -1 Then
-                    strBedId = patient.Bed.Id.ToString
-                End If
-
                 Dim query As String =
                     String.Format("UPDATE PATIENTS
                                    SET Name = N'{0}', Sex = '{1}', DoB = '{2}', IdCard = '{3}', Address = N'{4}', Phone = '{5}',
                                        Folk = N'{6}', InsuranceId = '{7}', InsuranceIssueDate = '{8}', InsuranceExpiryDate = '{9}',
-                                       Status = N'{10}', BedId = {11}
-                                   WHERE Id = {12}",
+                                       Status = N'{10}'
+                                   WHERE Id = {11}",
                                   patient.Name, patient.Sex.ToString, patient.DoB.ToString, patient.IdCard, patient.Address, patient.Phone,
                                   patient.Folk, patient.InsuranceID, patient.InsuranceIssueDate, patient.InsuranceExpiryDate,
-                                  patient.Status, strBedId, patient.Id)
+                                  patient.Status, patient.Id)
 
                 Return _dbAccess.ExecuteNoneQuery(query)
             Catch ex As Exception

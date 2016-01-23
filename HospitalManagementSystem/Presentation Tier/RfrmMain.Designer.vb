@@ -56,13 +56,20 @@ Partial Class RfrmMain
         Me.RibbonControl = New DevExpress.XtraBars.Ribbon.RibbonControl()
         Me.ApplicationMenu1 = New DevExpress.XtraBars.Ribbon.ApplicationMenu(Me.components)
         Me.bbiAccountTop = New DevExpress.XtraBars.BarButtonItem()
+        Me.bbiAboutTop = New DevExpress.XtraBars.BarButtonItem()
         Me.bbiLogout = New DevExpress.XtraBars.BarButtonItem()
         Me.bbiExitTop = New DevExpress.XtraBars.BarButtonItem()
         Me.bbiAccountInformation = New DevExpress.XtraBars.BarButtonItem()
         Me.bbiExit = New DevExpress.XtraBars.BarSubItem()
         Me.bbiAddAccount = New DevExpress.XtraBars.BarButtonItem()
+        Me.bbtnLogout = New DevExpress.XtraBars.BarButtonItem()
+        Me.bbtnExit = New DevExpress.XtraBars.BarButtonItem()
+        Me.bbiAbout = New DevExpress.XtraBars.BarButtonItem()
         Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
+        Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.RibbonPage2 = New DevExpress.XtraBars.Ribbon.RibbonPage()
+        Me.RibbonPageGroup3 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonStatusBar = New DevExpress.XtraBars.Ribbon.RibbonStatusBar()
         Me.AccordionControl1 = New DevExpress.XtraBars.Navigation.AccordionControl()
         Me.aceMain = New DevExpress.XtraBars.Navigation.AccordionControlElement()
@@ -76,8 +83,10 @@ Partial Class RfrmMain
         Me.aceEmployeeName = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.aceEmployeeRole = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.aceSystemTime = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.aceVersion = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.StyleController1 = New DevExpress.XtraEditors.StyleController(Me.components)
         Me.RibbonMiniToolbar1 = New DevExpress.XtraBars.Ribbon.RibbonMiniToolbar(Me.components)
+        Me.aceAccounts = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         CType(Me.RibbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ApplicationMenu1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AccordionControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -89,11 +98,12 @@ Partial Class RfrmMain
         Me.RibbonControl.ApplicationButtonDropDownControl = Me.ApplicationMenu1
         Me.RibbonControl.AutoSizeItems = True
         Me.RibbonControl.ExpandCollapseItem.Id = 0
-        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.bbiAccountInformation, Me.bbiExit, Me.bbiAccountTop, Me.bbiLogout, Me.bbiExitTop, Me.bbiAddAccount})
+        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.bbiAccountInformation, Me.bbiExit, Me.bbiAccountTop, Me.bbiLogout, Me.bbiExitTop, Me.bbiAddAccount, Me.bbtnLogout, Me.bbtnExit, Me.bbiAbout, Me.bbiAboutTop})
         Me.RibbonControl.Location = New System.Drawing.Point(0, 0)
-        Me.RibbonControl.MaxItemId = 10
+        Me.RibbonControl.MaxItemId = 14
+        Me.RibbonControl.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.OnlyWhenMaximized
         Me.RibbonControl.Name = "RibbonControl"
-        Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
+        Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1, Me.RibbonPage2})
         Me.RibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013
         Me.RibbonControl.Size = New System.Drawing.Size(1090, 143)
         Me.RibbonControl.StatusBar = Me.RibbonStatusBar
@@ -101,6 +111,7 @@ Partial Class RfrmMain
         'ApplicationMenu1
         '
         Me.ApplicationMenu1.ItemLinks.Add(Me.bbiAccountTop)
+        Me.ApplicationMenu1.ItemLinks.Add(Me.bbiAboutTop)
         Me.ApplicationMenu1.ItemLinks.Add(Me.bbiLogout)
         Me.ApplicationMenu1.ItemLinks.Add(Me.bbiExitTop)
         Me.ApplicationMenu1.Name = "ApplicationMenu1"
@@ -112,6 +123,13 @@ Partial Class RfrmMain
         Me.bbiAccountTop.Id = 2
         Me.bbiAccountTop.ImageUri.Uri = "Edit"
         Me.bbiAccountTop.Name = "bbiAccountTop"
+        '
+        'bbiAboutTop
+        '
+        Me.bbiAboutTop.Caption = "Thông tin Phần mềm"
+        Me.bbiAboutTop.Glyph = CType(resources.GetObject("bbiAboutTop.Glyph"), System.Drawing.Image)
+        Me.bbiAboutTop.Id = 13
+        Me.bbiAboutTop.Name = "bbiAboutTop"
         '
         'bbiLogout
         '
@@ -144,23 +162,70 @@ Partial Class RfrmMain
         '
         'bbiAddAccount
         '
-        Me.bbiAddAccount.Caption = "Thêm tài khoản"
+        Me.bbiAddAccount.Caption = "Quản lý Tài khoản"
+        Me.bbiAddAccount.Glyph = CType(resources.GetObject("bbiAddAccount.Glyph"), System.Drawing.Image)
         Me.bbiAddAccount.Id = 5
-        Me.bbiAddAccount.ImageUri.Uri = "Add"
         Me.bbiAddAccount.Name = "bbiAddAccount"
+        Me.bbiAddAccount.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
+        '
+        'bbtnLogout
+        '
+        Me.bbtnLogout.Caption = "Đăng xuất"
+        Me.bbtnLogout.Id = 10
+        Me.bbtnLogout.ImageUri.Uri = "Undo"
+        Me.bbtnLogout.Name = "bbtnLogout"
+        '
+        'bbtnExit
+        '
+        Me.bbtnExit.Caption = "Thoát"
+        Me.bbtnExit.Id = 11
+        Me.bbtnExit.ImageUri.Uri = "Close"
+        Me.bbtnExit.Name = "bbtnExit"
+        '
+        'bbiAbout
+        '
+        Me.bbiAbout.Caption = "Thông tin Phần mềm"
+        Me.bbiAbout.Glyph = CType(resources.GetObject("bbiAbout.Glyph"), System.Drawing.Image)
+        Me.bbiAbout.Id = 12
+        Me.bbiAbout.Name = "bbiAbout"
+        Me.bbiAbout.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large
         '
         'RibbonPage1
         '
-        Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1})
+        Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup2, Me.RibbonPageGroup1})
         Me.RibbonPage1.Name = "RibbonPage1"
         Me.RibbonPage1.Text = "Hệ thống"
         '
+        'RibbonPageGroup2
+        '
+        Me.RibbonPageGroup2.AllowTextClipping = False
+        Me.RibbonPageGroup2.ItemLinks.Add(Me.bbtnLogout)
+        Me.RibbonPageGroup2.ItemLinks.Add(Me.bbtnExit)
+        Me.RibbonPageGroup2.MergeOrder = 0
+        Me.RibbonPageGroup2.Name = "RibbonPageGroup2"
+        Me.RibbonPageGroup2.Text = "Chương trình"
+        '
         'RibbonPageGroup1
         '
+        Me.RibbonPageGroup1.AllowTextClipping = False
         Me.RibbonPageGroup1.ItemLinks.Add(Me.bbiAccountInformation)
         Me.RibbonPageGroup1.ItemLinks.Add(Me.bbiAddAccount)
+        Me.RibbonPageGroup1.MergeOrder = 1
         Me.RibbonPageGroup1.Name = "RibbonPageGroup1"
         Me.RibbonPageGroup1.Text = "Tài khoản"
+        '
+        'RibbonPage2
+        '
+        Me.RibbonPage2.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup3})
+        Me.RibbonPage2.Name = "RibbonPage2"
+        Me.RibbonPage2.Text = "Trợ giúp"
+        '
+        'RibbonPageGroup3
+        '
+        Me.RibbonPageGroup3.AllowTextClipping = False
+        Me.RibbonPageGroup3.ItemLinks.Add(Me.bbiAbout)
+        Me.RibbonPageGroup3.Name = "RibbonPageGroup3"
+        Me.RibbonPageGroup3.Text = "Thông tin"
         '
         'RibbonStatusBar
         '
@@ -185,7 +250,7 @@ Partial Class RfrmMain
         'aceMain
         '
         Me.aceMain.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.[False]
-        Me.aceMain.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.aceEmployees, Me.aceCategories})
+        Me.aceMain.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.aceEmployees, Me.aceCategories, Me.aceAccounts})
         Me.aceMain.Expanded = True
         Me.aceMain.ImageLayoutMode = DevExpress.XtraBars.Navigation.ImageLayoutMode.Squeeze
         Me.aceMain.Text = "Quản lý Hệ thống"
@@ -293,7 +358,7 @@ Partial Class RfrmMain
         '
         'aceAccountInformation
         '
-        Me.aceAccountInformation.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.aceAccountName, Me.aceEmployeeName, Me.aceEmployeeRole, Me.aceSystemTime})
+        Me.aceAccountInformation.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.aceAccountName, Me.aceEmployeeName, Me.aceEmployeeRole, Me.aceSystemTime, Me.aceVersion})
         Me.aceAccountInformation.Expanded = True
         Me.aceAccountInformation.Text = "Tài khoản"
         '
@@ -349,6 +414,26 @@ Partial Class RfrmMain
         Me.aceSystemTime.SuperTip = SuperToolTip8
         Me.aceSystemTime.Text = "Thời gian hệ thống:"
         '
+        'aceVersion
+        '
+        Me.aceVersion.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.aceVersion.Text = "Phiên bản: 19.01.2016 12:22 AM"
+        '
+        'aceAccounts
+        '
+        Me.aceAccounts.Appearance.Disabled.Font = New System.Drawing.Font("Tahoma", 9.0!)
+        Me.aceAccounts.Appearance.Disabled.Options.UseFont = True
+        Me.aceAccounts.Appearance.Hovered.Font = New System.Drawing.Font("Tahoma", 9.0!)
+        Me.aceAccounts.Appearance.Hovered.Options.UseFont = True
+        Me.aceAccounts.Appearance.Normal.Font = New System.Drawing.Font("Tahoma", 9.0!)
+        Me.aceAccounts.Appearance.Normal.Options.UseFont = True
+        Me.aceAccounts.Appearance.Pressed.Font = New System.Drawing.Font("Tahoma", 9.0!)
+        Me.aceAccounts.Appearance.Pressed.Options.UseFont = True
+        Me.aceAccounts.Image = CType(resources.GetObject("aceAccounts.Image"), System.Drawing.Image)
+        Me.aceAccounts.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.aceAccounts.Text = "Danh mục tài khoản"
+        Me.aceAccounts.TextToImageDistance = 15
+        '
         'RfrmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -399,4 +484,13 @@ Partial Class RfrmMain
     Friend WithEvents aceEmployeeName As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents aceEmployeeRole As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents aceSystemTime As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents bbtnLogout As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents bbtnExit As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents RibbonPageGroup2 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
+    Friend WithEvents aceVersion As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents bbiAboutTop As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents bbiAbout As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents RibbonPage2 As DevExpress.XtraBars.Ribbon.RibbonPage
+    Friend WithEvents RibbonPageGroup3 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
+    Friend WithEvents aceAccounts As DevExpress.XtraBars.Navigation.AccordionControlElement
 End Class

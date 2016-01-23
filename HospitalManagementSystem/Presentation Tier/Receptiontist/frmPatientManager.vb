@@ -1,5 +1,6 @@
 ﻿Imports HospitalManagementSystem.BUS
 Imports HospitalManagementSystem.DTO
+Imports Microsoft.Office.Interop
 
 Public Class frmPatientManager
     Private _patientBus As BusPatient
@@ -136,11 +137,11 @@ Public Class frmPatientManager
         LoadPatientsList()
     End Sub
 
-    Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
+    Private Sub btnReset_Click(sender As Object, e As EventArgs)
         ReNew()
     End Sub
 
-    Private Sub cmdClose_Click(sender As Object, e As EventArgs) Handles cmdClose.Click
+    Private Sub cmdClose_Click(sender As Object, e As EventArgs)
         Me.Hide()
     End Sub
 
@@ -353,8 +354,7 @@ Public Class frmPatientManager
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-        If txtSearch_Id.Text.Trim = "" And txtSearch_Name.Text.Trim = "" And txtSearch_IdCard.Text.Trim = "" _
-           And txtSearch_Phone.Text.Trim = "" And txtSearchInsuranceId.Text.Trim = "" Then
+        If txtSearch_Id.Text.Trim = "" Then
             MsgBox("Bạn cần nhập ít nhất một thông tin")
         Else
             Dim id As Integer
@@ -376,7 +376,7 @@ Public Class frmPatientManager
     End Sub
 
     Private Sub btnAppointment_Click(sender As Object, e As EventArgs) Handles btnNewAppointment.Click
-        Dim frmAppointment As New frmAppointment("New", GetPatientFromDataGridView)
+        Dim frmAppointment As New frmAppointment("New", GetPatientFromDataGridView, Nothing, Nothing)
         frmAppointment.ShowDialog()
     End Sub
 
@@ -386,7 +386,7 @@ Public Class frmPatientManager
     End Sub
 
     Private Sub btnAdmission_Click(sender As Object, e As EventArgs) Handles btnAdmission.Click
-        Dim frmAdmission As New frmAdmission(My.Forms.frmMain._account.Employee, _patient)
+        Dim frmAdmission As New frmAdmission(My.Forms.RfrmMain._account.Employee, _patient)
         frmAdmission.ShowDialog()
         LoadPatientsList()
         LoadPatientInformation(_patient)
@@ -406,10 +406,69 @@ Public Class frmPatientManager
     End Sub
 
     Private Sub btnDischarge_Click(sender As Object, e As EventArgs) Handles btnDischarge.Click
-        Dim frmDischarge As New frmDischarge(My.Forms.frmMain._account.Employee, _patient)
+        Dim frmDischarge As New frmDischarge(My.Forms.RfrmMain._account.Employee, _patient)
         frmDischarge.ShowDialog()
         LoadPatientsList()
         LoadPatientInformation(_patient)
+    End Sub
+
+    Private Sub bbiReLoad_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles bbiReLoad.ItemClick
+        ReNew()
+    End Sub
+
+    Private Sub bbiClose_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles bbiClose.ItemClick
+        Me.Hide()
+    End Sub
+
+    Private Sub btnPrintPatient_Click(sender As Object, e As EventArgs) Handles btnPrintPatient.Click
+        CreateWord()
+    End Sub
+
+    Private Sub CreateWord()
+        Dim objApp As New Word.Application
+        Dim objDocumet As New Word.Document
+
+        objApp.Visible = True
+        objApp.Activate()
+        objDocumet = objApp.Documents.Add
+        Dim objselection As Word.Selection
+        objselection = objDocumet.Application.Selection
+        objselection.TypeParagraph()
+        objselection.Font.Color = Word.WdColor.wdColorRed
+        objselection.Font.Size = 18
+        objselection.Font.Bold = 1
+
+        objselection.ParagraphFormat.Alignment = Word.WdParagraphAlignment.wdAlignParagraphCenter
+
+        objselection.TypeText("THÔNG TIN BỆNH NHÂN" & vbCrLf)
+        objselection.TypeParagraph()
+
+        objselection.Font.Color = Word.WdColor.wdColorBlack
+        objselection.Font.Size = 13
+        objselection.Font.Bold = 0
+
+        objselection.ParagraphFormat.Alignment = Word.WdParagraphAlignment.wdAlignParagraphLeft
+
+        objselection.TypeText("Mã bệnh nhân: " & txtPatientId.Text & vbTab & vbTab)
+        objselection.TypeText("Họ tên: " & txtPatientName.Text & vbTab & vbTab)
+        objselection.TypeText("Giới tính: " & cboxPatientSex.Text & vbCrLf)
+
+        objselection.TypeText("Ngày sinh: " & dtpPatientDoB.Text & vbTab)
+        objselection.TypeText("Số CMND: " & txtPatientIdCard.Text & vbTab & vbTab)
+        objselection.TypeText("Điện thoại: " & txtPatientPhone.Text & vbTab & vbTab)
+        objselection.TypeText("Dân tộc: " & txtPatientFolk.Text & vbCrLf)
+
+        objselection.TypeText("Địa chỉ: " & txtPatientAddress.Text & vbCrLf)
+
+        objselection.TypeParagraph()
+
+        objselection.TypeText("Số bảo hiểm: " & txtPatientInsuranceId.Text & vbCrLf)
+        objselection.TypeText("Ngày cấp: " & dtpPatientInsuranceIssueDate.Text & vbCrLf)
+        objselection.TypeText("Ngày hết hạn: " & dtpPatientInsuranceExpiryDate.Text & vbCrLf)
+
+
+
+        objDocumet.SaveAs(Application.StartupPath & "\Patient.doc")
     End Sub
 
 #End Region

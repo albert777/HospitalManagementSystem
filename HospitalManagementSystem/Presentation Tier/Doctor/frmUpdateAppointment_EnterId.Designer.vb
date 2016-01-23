@@ -24,32 +24,31 @@ Partial Class frmUpdateAppointment_EnterId
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmUpdateAppointment_EnterId))
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.btnViewAppointment = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtAppointmentId = New System.Windows.Forms.TextBox()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.btnViewAppointment = New System.Windows.Forms.Button()
-        Me.cmdClose = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel1.SuspendLayout()
+        Me.RibbonControl1 = New DevExpress.XtraBars.Ribbon.RibbonControl()
+        Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
+        Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.BarButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TableLayoutPanel1
+        'btnViewAppointment
         '
-        Me.TableLayoutPanel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.btnViewAppointment, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.cmdClose, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(225, 118)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 1
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(198, 30)
-        Me.TableLayoutPanel1.TabIndex = 0
+        Me.btnViewAppointment.BackgroundImage = CType(resources.GetObject("btnViewAppointment.BackgroundImage"), System.Drawing.Image)
+        Me.btnViewAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnViewAppointment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnViewAppointment.ForeColor = System.Drawing.Color.DarkBlue
+        Me.btnViewAppointment.Location = New System.Drawing.Point(403, 67)
+        Me.btnViewAppointment.Name = "btnViewAppointment"
+        Me.btnViewAppointment.Size = New System.Drawing.Size(93, 24)
+        Me.btnViewAppointment.TabIndex = 68
+        Me.btnViewAppointment.Text = "&Xem phiếu"
+        Me.btnViewAppointment.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -84,43 +83,46 @@ Partial Class frmUpdateAppointment_EnterId
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
-        'btnViewAppointment
+        'RibbonControl1
         '
-        Me.btnViewAppointment.BackgroundImage = CType(resources.GetObject("btnViewAppointment.BackgroundImage"), System.Drawing.Image)
-        Me.btnViewAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnViewAppointment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnViewAppointment.ForeColor = System.Drawing.Color.DarkBlue
-        Me.btnViewAppointment.Location = New System.Drawing.Point(3, 3)
-        Me.btnViewAppointment.Name = "btnViewAppointment"
-        Me.btnViewAppointment.Size = New System.Drawing.Size(93, 24)
-        Me.btnViewAppointment.TabIndex = 68
-        Me.btnViewAppointment.Text = "&Xem phiếu"
-        Me.btnViewAppointment.UseVisualStyleBackColor = True
+        Me.RibbonControl1.ExpandCollapseItem.Id = 0
+        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.BarButtonItem1})
+        Me.RibbonControl1.Location = New System.Drawing.Point(0, 0)
+        Me.RibbonControl1.MaxItemId = 2
+        Me.RibbonControl1.Name = "RibbonControl1"
+        Me.RibbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
+        Me.RibbonControl1.Size = New System.Drawing.Size(539, 141)
         '
-        'cmdClose
+        'RibbonPage1
         '
-        Me.cmdClose.BackgroundImage = CType(resources.GetObject("cmdClose.BackgroundImage"), System.Drawing.Image)
-        Me.cmdClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.cmdClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdClose.ForeColor = System.Drawing.Color.DarkRed
-        Me.cmdClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.cmdClose.Location = New System.Drawing.Point(102, 3)
-        Me.cmdClose.Name = "cmdClose"
-        Me.cmdClose.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.cmdClose.Size = New System.Drawing.Size(93, 24)
-        Me.cmdClose.TabIndex = 67
-        Me.cmdClose.Text = "&Đóng"
-        Me.cmdClose.UseVisualStyleBackColor = True
+        Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1})
+        Me.RibbonPage1.Name = "RibbonPage1"
+        Me.RibbonPage1.Text = "Hệ thống"
+        '
+        'RibbonPageGroup1
+        '
+        Me.RibbonPageGroup1.AllowTextClipping = False
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.BarButtonItem1)
+        Me.RibbonPageGroup1.Name = "RibbonPageGroup1"
+        Me.RibbonPageGroup1.Text = "Cập nhật Phiếu khám"
+        '
+        'BarButtonItem1
+        '
+        Me.BarButtonItem1.Caption = "Đóng"
+        Me.BarButtonItem1.Id = 1
+        Me.BarButtonItem1.ImageUri.Uri = "Close"
+        Me.BarButtonItem1.Name = "BarButtonItem1"
         '
         'frmUpdateAppointment_EnterId
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(435, 159)
+        Me.ClientSize = New System.Drawing.Size(539, 159)
+        Me.Controls.Add(Me.btnViewAppointment)
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.txtAppointmentId)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.RibbonControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -128,17 +130,20 @@ Partial Class frmUpdateAppointment_EnterId
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Cập nhật kết quả khám"
-        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents Label1 As Label
     Friend WithEvents txtAppointmentId As TextBox
     Private WithEvents lblTitle As Label
-    Private WithEvents cmdClose As Button
     Private WithEvents btnViewAppointment As Button
     Friend WithEvents ErrorProvider1 As ErrorProvider
+    Friend WithEvents RibbonControl1 As DevExpress.XtraBars.Ribbon.RibbonControl
+    Friend WithEvents BarButtonItem1 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents RibbonPage1 As DevExpress.XtraBars.Ribbon.RibbonPage
+    Friend WithEvents RibbonPageGroup1 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
 End Class

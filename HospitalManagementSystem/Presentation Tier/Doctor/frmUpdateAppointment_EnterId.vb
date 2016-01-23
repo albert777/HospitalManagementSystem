@@ -36,12 +36,15 @@ Public Class frmUpdateAppointment_EnterId
     End Sub
 
     Private Sub btnViewAppointment_Click(sender As Object, e As EventArgs) Handles btnViewAppointment.Click
-        Dim frmViewAppointment As New frmAppointment("Update", , _appoint, My.Forms.frmMain._account.Employee)
+        Dim frmViewAppointment As New frmAppointment("Update", , _appoint, My.Forms.RfrmMain._account.Employee)
         frmViewAppointment.ShowDialog()
     End Sub
 
-    Private Sub cmdClose_Click(sender As Object, e As EventArgs) Handles cmdClose.Click
+    Private Sub cmdClose_Click(sender As Object, e As EventArgs)
         Me.Hide()
     End Sub
 
+    Private Sub BarButtonItem1_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem1.ItemClick
+        Me.Hide()
+    End Sub
 End Class

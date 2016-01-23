@@ -24,8 +24,8 @@ Partial Class frmCategoryManager
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCategoryManager))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.chkbDeptChief = New System.Windows.Forms.CheckBox()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -79,7 +79,13 @@ Partial Class frmCategoryManager
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.cmdClose = New System.Windows.Forms.Button()
+        Me.RibbonControl1 = New DevExpress.XtraBars.Ribbon.RibbonControl()
+        Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
+        Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.BarButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
+        Me.bbiReLoad = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem3 = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarButtonItem2 = New DevExpress.XtraBars.BarButtonItem()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvDepartment, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -88,6 +94,7 @@ Partial Class frmCategoryManager
         CType(Me.dgvClinics, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
         CType(Me.dgvBeds, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -455,28 +462,28 @@ Partial Class frmCategoryManager
         Me.dgvClinics.AllowUserToResizeColumns = False
         Me.dgvClinics.AllowUserToResizeRows = False
         Me.dgvClinics.BackgroundColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvClinics.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvClinics.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
         Me.dgvClinics.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvClinics.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colClinicId, Me.colClinicName})
         Me.dgvClinics.Location = New System.Drawing.Point(10, 85)
         Me.dgvClinics.MultiSelect = False
         Me.dgvClinics.Name = "dgvClinics"
         Me.dgvClinics.ReadOnly = True
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvClinics.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvClinics.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
         Me.dgvClinics.RowHeadersVisible = False
         Me.dgvClinics.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.dgvClinics.Size = New System.Drawing.Size(285, 184)
@@ -746,25 +753,62 @@ Partial Class frmCategoryManager
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Tên Khoa"
         '
-        'cmdClose
+        'RibbonControl1
         '
-        Me.cmdClose.BackgroundImage = CType(resources.GetObject("cmdClose.BackgroundImage"), System.Drawing.Image)
-        Me.cmdClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.cmdClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdClose.ForeColor = System.Drawing.Color.DarkRed
-        Me.cmdClose.Location = New System.Drawing.Point(930, 480)
-        Me.cmdClose.Name = "cmdClose"
-        Me.cmdClose.Size = New System.Drawing.Size(88, 23)
-        Me.cmdClose.TabIndex = 4
-        Me.cmdClose.Text = "&Đóng"
-        Me.cmdClose.UseVisualStyleBackColor = True
+        Me.RibbonControl1.ExpandCollapseItem.Id = 0
+        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.BarButtonItem1, Me.bbiReLoad, Me.BarButtonItem3, Me.BarButtonItem2})
+        Me.RibbonControl1.Location = New System.Drawing.Point(0, 0)
+        Me.RibbonControl1.MaxItemId = 5
+        Me.RibbonControl1.Name = "RibbonControl1"
+        Me.RibbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
+        Me.RibbonControl1.Size = New System.Drawing.Size(1034, 141)
+        '
+        'RibbonPage1
+        '
+        Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1})
+        Me.RibbonPage1.Name = "RibbonPage1"
+        Me.RibbonPage1.Text = "Hệ thống"
+        '
+        'RibbonPageGroup1
+        '
+        Me.RibbonPageGroup1.AllowTextClipping = False
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.bbiReLoad)
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.BarButtonItem3)
+        Me.RibbonPageGroup1.Name = "RibbonPageGroup1"
+        Me.RibbonPageGroup1.Text = "Danh mục đối tượng"
+        '
+        'BarButtonItem1
+        '
+        Me.BarButtonItem1.Caption = "BarButtonItem1"
+        Me.BarButtonItem1.Id = 1
+        Me.BarButtonItem1.Name = "BarButtonItem1"
+        '
+        'bbiReLoad
+        '
+        Me.bbiReLoad.Caption = "Làm mới"
+        Me.bbiReLoad.Id = 2
+        Me.bbiReLoad.ImageUri.Uri = "Refresh"
+        Me.bbiReLoad.Name = "bbiReLoad"
+        '
+        'BarButtonItem3
+        '
+        Me.BarButtonItem3.Caption = "Đóng"
+        Me.BarButtonItem3.Id = 3
+        Me.BarButtonItem3.ImageUri.Uri = "Close"
+        Me.BarButtonItem3.Name = "BarButtonItem3"
+        '
+        'BarButtonItem2
+        '
+        Me.BarButtonItem2.Caption = "BarButtonItem2"
+        Me.BarButtonItem2.Id = 4
+        Me.BarButtonItem2.Name = "BarButtonItem2"
         '
         'frmCategoryManager
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1034, 518)
-        Me.Controls.Add(Me.cmdClose)
+        Me.Controls.Add(Me.RibbonControl1)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
@@ -772,7 +816,7 @@ Partial Class frmCategoryManager
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmCategoryManager"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
-        Me.Text = "Quản lý Phòng ban"
+        Me.Text = "Quản lý danh mục đối tượng"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -786,7 +830,9 @@ Partial Class frmCategoryManager
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         CType(Me.dgvBeds, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents GroupBox1 As GroupBox
@@ -802,7 +848,6 @@ Partial Class frmCategoryManager
     Private WithEvents btnDept_Edit As Button
     Private WithEvents btnDept_Add As Button
     Private WithEvents btnDept_Delete As Button
-    Private WithEvents cmdClose As Button
     Friend WithEvents dgvBeds As DataGridView
     Friend WithEvents tboxBedId As TextBox
     Friend WithEvents Label7 As Label
@@ -843,4 +888,11 @@ Partial Class frmCategoryManager
     Friend WithEvents colBedDeptName As DataGridViewTextBoxColumn
     Friend WithEvents colSpecName As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents RibbonControl1 As DevExpress.XtraBars.Ribbon.RibbonControl
+    Friend WithEvents BarButtonItem1 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents RibbonPage1 As DevExpress.XtraBars.Ribbon.RibbonPage
+    Friend WithEvents RibbonPageGroup1 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
+    Friend WithEvents bbiReLoad As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarButtonItem3 As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarButtonItem2 As DevExpress.XtraBars.BarButtonItem
 End Class

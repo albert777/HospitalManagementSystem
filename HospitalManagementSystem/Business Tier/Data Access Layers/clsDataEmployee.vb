@@ -22,7 +22,7 @@ Namespace DAO
                 Return GetDataTable(query)
 
             Catch ex As Exception
-                My.Forms.frmMain.txtStatus.Text = "Không thể lấy dữ liệu nhân viên"
+                'My.Forms.frmMain.txtStatus.Text = "Không thể lấy dữ liệu nhân viên"
                 Return Nothing
             End Try
 
@@ -43,7 +43,7 @@ Namespace DAO
                 Return GetDataTable(query)
 
             Catch ex As Exception
-                My.Forms.frmMain.txtStatus.Text = "Không thể lấy dữ liệu nhân viên"
+                'My.Forms.frmMain.txtStatus.Text = "Không thể lấy dữ liệu nhân viên"
                 Return Nothing
             End Try
 
@@ -64,7 +64,7 @@ Namespace DAO
                 Return GetDataTable(query)
 
             Catch ex As Exception
-                My.Forms.frmMain.txtStatus.Text = "Không thể lấy dữ liệu nhân viên"
+                'My.Forms.frmMain.txtStatus.Text = "Không thể lấy dữ liệu nhân viên"
                 Return Nothing
             End Try
         End Function
@@ -75,11 +75,11 @@ Namespace DAO
                     String.Format("DELETE FROM EMPLOYEES WHERE Id = {0}",
                                   employeeId)
 
-                My.Forms.frmMain.txtStatus.Text = "Xóa nhân viên thành công"
+                'My.Forms.frmMain.txtStatus.Text = "Xóa nhân viên thành công"
                 Return ExecuteNoneQuery(query)
 
             Catch ex As Exception
-                My.Forms.frmMain.txtStatus.Text = "Không thể xóa nhân viên"
+                'My.Forms.frmMain.txtStatus.Text = "Không thể xóa nhân viên"
                 Return False
             End Try
 
@@ -107,15 +107,21 @@ Namespace DAO
                         Empl.Position, emplDeptId, emplSpecId)
 
 
-                My.Forms.frmMain.txtStatus.Text = "Thêm nhân viên thành công"
+                'My.Forms.frmMain.txtStatus.Text = "Thêm nhân viên thành công"
                 Return ExecuteNoneQuery(query)
 
             Catch ex As Exception
 
-                My.Forms.frmMain.txtStatus.Text = "Không thể thêm nhân viên"
+                'My.Forms.frmMain.txtStatus.Text = "Không thể thêm nhân viên"
                 Return False
 
             End Try
+        End Function
+
+        Friend Function ExistEmployee(id As Integer) As Boolean
+            Dim query As String =
+                String.Format("SELECT COUNT(Id) FROM EMPLOYEES WHERE Id = {0}", id)
+            Return CBool(GetScalar(query))
         End Function
 
         Friend Function InpatientAdmission(employeeId As Integer, patientId As Integer, BedId As Integer, patientType As String) As Boolean
@@ -217,11 +223,11 @@ Namespace DAO
                         Empl.Position, Empl.Department.Id, Empl.Speciality.Id,
                         Empl.Id)
 
-                My.Forms.frmMain.txtStatus.Text = "Sửa nhân viên thành công"
+                'My.Forms.frmMain.txtStatus.Text = "Sửa nhân viên thành công"
                 Return ExecuteNoneQuery(query)
 
             Catch ex As Exception
-                My.Forms.frmMain.txtStatus.Text = "Không thể sửa nhân viên"
+                'My.Forms.frmMain.txtStatus.Text = "Không thể sửa nhân viên"
                 Return False
             End Try
         End Function

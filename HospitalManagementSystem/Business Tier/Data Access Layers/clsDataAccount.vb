@@ -38,6 +38,55 @@ Namespace DAO
             Return account
         End Function
 
+        Friend Function DeleteAccount(user As String) As Boolean
+            Dim query As String =
+                String.Format("DELETE FROM ACCOUNTS WHERE Username = '{0}'", user)
+            Return _dbAccess.ExecuteNoneQuery(query)
+        End Function
+
+        Friend Function ExistUsername(user As String) As Boolean
+            Dim query As String =
+                String.Format("SELECT COUNT(id) FROM ACCOUNTS WHERE Username = '{0}'", user)
+            Return CBool(_dbAccess.GetScalar(query))
+        End Function
+
+        Friend Function EmployeeHaveAccount(eid As Integer) As Boolean
+            Dim query As String =
+                String.Format("SELECT COUNT(id) FROM ACCOUNTS WHERE EmployeeId = {0}", eid)
+
+            Return CBool(_dbAccess.GetScalar(query))
+            'If _dbAccess.GetScalar(query) = DBNull.Value Then
+            '    Return False
+            'Else
+            '    Return True
+            'End If
+        End Function
+
+        Friend Function CreateAccount(user As String, pass As String, eid As Integer, role As Integer) As Boolean
+            Dim query As String =
+                String.Format("INSERT INTO ACCOUNTS (Username, Password, EmployeeId, Role) VALUES ('{0}', '{1}', {2}, {3})", user, pass, eid, role)
+
+            Return _dbAccess.ExecuteNoneQuery(query)
+        End Function
+
+        Friend Function GetAccountsInfos() As DataTable
+            Try
+                Dim query As String = "SELECT A.Username, IIF(A.Role = 0, 'Records System', IIF(A.Role = 1, 'Doctor', IIF(A.Role = 2, 'Receptionist', null))) As Role, E.Id, E.Name, E.Sex, E.DoB, E.IdCard, E.Address, E.Phone, E.Folk, 
+										   E.HireDate, E.BasicSalary, E.Subsidy, E.Ratio, 
+										   E.Position, E.DeptId, D.Name AS DeptName, S.Name AS SpecName, E.SpecId
+										   FROM EMPLOYEES AS E LEFT OUTER JOIN
+										   SPECIALITIES AS S ON E.SpecId = S.Id LEFT OUTER JOIN
+										   DEPARTMENTS AS D ON E.DeptId = D.Id LEFT OUTER JOIN
+										   ACCOUNTS AS A ON E.Id = A.EmployeeId"
+
+                Return _dbAccess.GetDataTable(query)
+
+            Catch ex As Exception
+                'My.Forms.frmMain.txtStatus.Text = "Không thể lấy dữ liệu nhân viên"
+                Return Nothing
+            End Try
+        End Function
+
         Friend Function ChangePassword(username As String, password As String) As Boolean
             Dim query As String =
                 String.Format("UPDATE dbo.ACCOUNTS SET Password = '{0}' WHERE Username = '{1}'", password, username)

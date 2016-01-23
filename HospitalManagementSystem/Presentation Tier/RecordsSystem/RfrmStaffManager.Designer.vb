@@ -21,9 +21,7 @@ Partial Class RfrmStaffManager
     Private Sub InitializeComponent()
         Me.gcStaffs = New DevExpress.XtraGrid.GridControl()
         Me.AdvBandedGridView1 = New DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView()
-        Me.GridBand1 = New DevExpress.XtraGrid.Views.BandedGrid.GridBand()
         Me.bgc1 = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
-        Me.gridBand2 = New DevExpress.XtraGrid.Views.BandedGrid.GridBand()
         Me.bgc5 = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
         Me.bgc2 = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
         Me.bgc4 = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
@@ -32,15 +30,19 @@ Partial Class RfrmStaffManager
         Me.bgc10 = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
         Me.bgc11 = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
         Me.bgc7 = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
-        Me.gridBand3 = New DevExpress.XtraGrid.Views.BandedGrid.GridBand()
         Me.bgc6 = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
-        Me.gridBand4 = New DevExpress.XtraGrid.Views.BandedGrid.GridBand()
         Me.bgc12 = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
         Me.bgc14 = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
         Me.bgc8 = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
         Me.bgc13 = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
         Me.bgc15 = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
         Me.bgc16 = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
+        Me.bgcAccount = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
+        Me.bgcRole = New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn()
+        Me.gridBand5 = New DevExpress.XtraGrid.Views.BandedGrid.GridBand()
+        Me.gridBand2 = New DevExpress.XtraGrid.Views.BandedGrid.GridBand()
+        Me.gridBand3 = New DevExpress.XtraGrid.Views.BandedGrid.GridBand()
+        Me.gridBand4 = New DevExpress.XtraGrid.Views.BandedGrid.GridBand()
         CType(Me.gcStaffs, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AdvBandedGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -51,32 +53,22 @@ Partial Class RfrmStaffManager
         Me.gcStaffs.Location = New System.Drawing.Point(0, 0)
         Me.gcStaffs.MainView = Me.AdvBandedGridView1
         Me.gcStaffs.Name = "gcStaffs"
-        Me.gcStaffs.Size = New System.Drawing.Size(940, 507)
+        Me.gcStaffs.Size = New System.Drawing.Size(1032, 507)
         Me.gcStaffs.TabIndex = 0
         Me.gcStaffs.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.AdvBandedGridView1})
         '
         'AdvBandedGridView1
         '
-        Me.AdvBandedGridView1.Bands.AddRange(New DevExpress.XtraGrid.Views.BandedGrid.GridBand() {Me.GridBand1, Me.gridBand2, Me.gridBand3, Me.gridBand4})
-        Me.AdvBandedGridView1.Columns.AddRange(New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn() {Me.bgc1, Me.bgc5, Me.bgc3, Me.bgc2, Me.bgc10, Me.bgc4, Me.bgc11, Me.bgc9, Me.bgc7, Me.bgc6, Me.bgc8, Me.bgc12, Me.bgc13, Me.bgc14, Me.bgc15, Me.bgc16})
+        Me.AdvBandedGridView1.Bands.AddRange(New DevExpress.XtraGrid.Views.BandedGrid.GridBand() {Me.gridBand5, Me.gridBand2, Me.gridBand3, Me.gridBand4})
+        Me.AdvBandedGridView1.Columns.AddRange(New DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn() {Me.bgc1, Me.bgc5, Me.bgc3, Me.bgc2, Me.bgc10, Me.bgc4, Me.bgc11, Me.bgc9, Me.bgc7, Me.bgc6, Me.bgc8, Me.bgc12, Me.bgc13, Me.bgc14, Me.bgc15, Me.bgc16, Me.bgcAccount, Me.bgcRole})
         Me.AdvBandedGridView1.GridControl = Me.gcStaffs
+        Me.AdvBandedGridView1.GroupPanelText = "Danh sách Nhân viên"
         Me.AdvBandedGridView1.Name = "AdvBandedGridView1"
         Me.AdvBandedGridView1.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.[False]
         Me.AdvBandedGridView1.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.[True]
         Me.AdvBandedGridView1.OptionsBehavior.AutoSelectAllInEditor = False
         Me.AdvBandedGridView1.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm
         Me.AdvBandedGridView1.OptionsBehavior.ReadOnly = True
-        '
-        'GridBand1
-        '
-        Me.GridBand1.AppearanceHeader.Options.UseTextOptions = True
-        Me.GridBand1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.GridBand1.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center
-        Me.GridBand1.Caption = "Ảnh"
-        Me.GridBand1.Columns.Add(Me.bgc1)
-        Me.GridBand1.Name = "GridBand1"
-        Me.GridBand1.VisibleIndex = 0
-        Me.GridBand1.Width = 61
         '
         'bgc1
         '
@@ -88,21 +80,6 @@ Partial Class RfrmStaffManager
         Me.bgc1.Name = "bgc1"
         Me.bgc1.Visible = True
         Me.bgc1.Width = 61
-        '
-        'gridBand2
-        '
-        Me.gridBand2.Caption = "Thông tin cá nhân"
-        Me.gridBand2.Columns.Add(Me.bgc5)
-        Me.gridBand2.Columns.Add(Me.bgc2)
-        Me.gridBand2.Columns.Add(Me.bgc4)
-        Me.gridBand2.Columns.Add(Me.bgc9)
-        Me.gridBand2.Columns.Add(Me.bgc3)
-        Me.gridBand2.Columns.Add(Me.bgc10)
-        Me.gridBand2.Columns.Add(Me.bgc11)
-        Me.gridBand2.Columns.Add(Me.bgc7)
-        Me.gridBand2.Name = "gridBand2"
-        Me.gridBand2.VisibleIndex = 1
-        Me.gridBand2.Width = 537
         '
         'bgc5
         '
@@ -183,14 +160,6 @@ Partial Class RfrmStaffManager
         Me.bgc7.Visible = True
         Me.bgc7.Width = 100
         '
-        'gridBand3
-        '
-        Me.gridBand3.Caption = "Địa chỉ"
-        Me.gridBand3.Columns.Add(Me.bgc6)
-        Me.gridBand3.Name = "gridBand3"
-        Me.gridBand3.VisibleIndex = 2
-        Me.gridBand3.Width = 216
-        '
         'bgc6
         '
         Me.bgc6.AutoFillDown = True
@@ -203,17 +172,6 @@ Partial Class RfrmStaffManager
         Me.bgc6.OptionsEditForm.UseEditorColRowSpan = False
         Me.bgc6.Visible = True
         Me.bgc6.Width = 216
-        '
-        'gridBand4
-        '
-        Me.gridBand4.Caption = "Thông tin công việc"
-        Me.gridBand4.Columns.Add(Me.bgc12)
-        Me.gridBand4.Columns.Add(Me.bgc14)
-        Me.gridBand4.Columns.Add(Me.bgc8)
-        Me.gridBand4.Columns.Add(Me.bgc13)
-        Me.gridBand4.Name = "gridBand4"
-        Me.gridBand4.VisibleIndex = 3
-        Me.gridBand4.Width = 250
         '
         'bgc12
         '
@@ -271,11 +229,71 @@ Partial Class RfrmStaffManager
         Me.bgc16.Name = "bgc16"
         Me.bgc16.Visible = True
         '
+        'bgcAccount
+        '
+        Me.bgcAccount.Caption = "Username"
+        Me.bgcAccount.FieldName = "Username"
+        Me.bgcAccount.Name = "bgcAccount"
+        Me.bgcAccount.Visible = True
+        Me.bgcAccount.Width = 111
+        '
+        'bgcRole
+        '
+        Me.bgcRole.Caption = "Role"
+        Me.bgcRole.FieldName = "Role"
+        Me.bgcRole.Name = "bgcRole"
+        Me.bgcRole.RowIndex = 1
+        Me.bgcRole.Visible = True
+        Me.bgcRole.Width = 111
+        '
+        'gridBand5
+        '
+        Me.gridBand5.Caption = "Tài khoản"
+        Me.gridBand5.Columns.Add(Me.bgcAccount)
+        Me.gridBand5.Columns.Add(Me.bgcRole)
+        Me.gridBand5.Name = "gridBand5"
+        Me.gridBand5.VisibleIndex = 0
+        Me.gridBand5.Width = 111
+        '
+        'gridBand2
+        '
+        Me.gridBand2.Caption = "Thông tin cá nhân"
+        Me.gridBand2.Columns.Add(Me.bgc5)
+        Me.gridBand2.Columns.Add(Me.bgc2)
+        Me.gridBand2.Columns.Add(Me.bgc4)
+        Me.gridBand2.Columns.Add(Me.bgc9)
+        Me.gridBand2.Columns.Add(Me.bgc3)
+        Me.gridBand2.Columns.Add(Me.bgc10)
+        Me.gridBand2.Columns.Add(Me.bgc11)
+        Me.gridBand2.Columns.Add(Me.bgc7)
+        Me.gridBand2.Name = "gridBand2"
+        Me.gridBand2.VisibleIndex = 1
+        Me.gridBand2.Width = 537
+        '
+        'gridBand3
+        '
+        Me.gridBand3.Caption = "Địa chỉ"
+        Me.gridBand3.Columns.Add(Me.bgc6)
+        Me.gridBand3.Name = "gridBand3"
+        Me.gridBand3.VisibleIndex = 2
+        Me.gridBand3.Width = 216
+        '
+        'gridBand4
+        '
+        Me.gridBand4.Caption = "Thông tin công việc"
+        Me.gridBand4.Columns.Add(Me.bgc12)
+        Me.gridBand4.Columns.Add(Me.bgc14)
+        Me.gridBand4.Columns.Add(Me.bgc8)
+        Me.gridBand4.Columns.Add(Me.bgc13)
+        Me.gridBand4.Name = "gridBand4"
+        Me.gridBand4.VisibleIndex = 3
+        Me.gridBand4.Width = 250
+        '
         'RfrmStaffManager
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(940, 507)
+        Me.ClientSize = New System.Drawing.Size(1032, 507)
         Me.Controls.Add(Me.gcStaffs)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "RfrmStaffManager"
@@ -301,10 +319,12 @@ Partial Class RfrmStaffManager
     Friend WithEvents bgc14 As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
     Friend WithEvents bgc8 As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
     Friend WithEvents bgc13 As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
-    Friend WithEvents GridBand1 As DevExpress.XtraGrid.Views.BandedGrid.GridBand
+    Friend WithEvents bgc15 As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
+    Friend WithEvents bgc16 As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
+    Friend WithEvents gridBand5 As DevExpress.XtraGrid.Views.BandedGrid.GridBand
+    Friend WithEvents bgcAccount As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
+    Friend WithEvents bgcRole As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
     Friend WithEvents gridBand2 As DevExpress.XtraGrid.Views.BandedGrid.GridBand
     Friend WithEvents gridBand3 As DevExpress.XtraGrid.Views.BandedGrid.GridBand
     Friend WithEvents gridBand4 As DevExpress.XtraGrid.Views.BandedGrid.GridBand
-    Friend WithEvents bgc15 As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
-    Friend WithEvents bgc16 As DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn
 End Class

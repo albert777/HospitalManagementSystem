@@ -14,6 +14,7 @@ Public Class RfrmMain
     Private frmCategoryManager As New frmCategoryManager
     Private frmPatientManager As frmPatientManager
     Private frmUpdateAppointment_EnterID As New frmUpdateAppointment_EnterId
+    Private frmAccountsManager As New RfrmAccountsManager
 
     Public Sub New()
 
@@ -31,23 +32,29 @@ Public Class RfrmMain
     End Sub
 
     Private Sub HideAllMdi()
-        Me.frmStaffManager.Hide()
-        Me.frmCategoryManager.Hide()
-        Me.frmPatientManager.Hide()
-        Me.frmUpdateAppointment_EnterID.Hide()
+        Try
+            Me.frmStaffManager.Hide()
+            Me.frmCategoryManager.Hide()
+            Me.frmPatientManager.Hide()
+            Me.frmUpdateAppointment_EnterID.Hide()
+            Me.frmAccountsManager.Hide()
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 
-    Private Sub bbiAccountInformation_ItemClick(sender As Object, e As ItemClickEventArgs) Handles bbiAccountInformation.ItemClick, bbiAccountTop.ItemClick
+    Private Sub bbiAccountInformation_ItemClick(sender As Object, e As EventArgs) _
+        Handles bbiAccountInformation.ItemClick, bbiAccountTop.ItemClick, aceAccountName.Click, aceEmployeeName.Click, aceEmployeeRole.Click
         Dim frmAccountDetail As New frmAccountInformation(_account)
         frmAccountDetail.ShowDialog()
     End Sub
 
-    Private Sub bbiLogout_ItemClick(sender As Object, e As ItemClickEventArgs) Handles bbiLogout.ItemClick
-        _account = Nothing
-        CheckSeasion()
+    Private Sub bbiLogout_ItemClick(sender As Object, e As ItemClickEventArgs) Handles bbiLogout.ItemClick, bbtnLogout.ItemClick
+        Application.Restart()
     End Sub
 
-    Private Sub bbiExitTop_ItemClick(sender As Object, e As ItemClickEventArgs) Handles bbiExitTop.ItemClick
+    Private Sub bbiExitTop_ItemClick(sender As Object, e As ItemClickEventArgs) Handles bbiExitTop.ItemClick, bbtnExit.ItemClick
         Application.Exit()
     End Sub
 
@@ -180,24 +187,53 @@ Public Class RfrmMain
                 aceHealth.Visible = True
                 acePatients.Visible = True
                 aceUpdateAppointment.Visible = True
+                bbiAddAccount.Visibility = BarItemVisibility.Always
 
             Case Account.AccountRole.Doctor
                 aceMain.Visible = False
                 aceHealth.Visible = True
                 acePatients.Visible = False
                 aceUpdateAppointment.Visible = True
+                bbiAddAccount.Visibility = BarItemVisibility.Never
 
             Case Account.AccountRole.Receptiontist
                 aceMain.Visible = False
                 aceHealth.Visible = True
                 acePatients.Visible = True
                 aceUpdateAppointment.Visible = False
+                bbiAddAccount.Visibility = BarItemVisibility.Never
 
             Case Else
                 aceMain.Visible = False
                 aceHealth.Visible = False
+                acePatients.Visible = False
+                aceUpdateAppointment.Visible = False
+                bbiAddAccount.Visibility = BarItemVisibility.Never
+
+                MsgBox("Bạn không có quyền hạn truy cập phần mềm!")
+                Application.Restart()
         End Select
 
     End Sub
 
+    Private Sub bbiAbout_ItemClick(sender As Object, e As EventArgs) Handles bbiAbout.ItemClick, bbiAboutTop.ItemClick, aceVersion.Click
+        Dim frmAbout As New frmAbout
+        frmAbout.ShowDialog()
+    End Sub
+
+    Private Sub bbiAddAccount_ItemClick(sender As Object, e As EventArgs) Handles bbiAddAccount.ItemClick, aceAccounts.Click
+        HideAllMdi()
+
+        Try
+            If Me.frmAccountsManager Is Nothing Then
+                Me.frmAccountsManager = New RfrmAccountsManager
+            End If
+
+            Me.frmAccountsManager.MdiParent = Me
+            Me.frmAccountsManager.Show()
+        Catch ex As Exception
+            'txtStatus.Text = "Lỗi: Không thể mở Cập nhật kết quả phiếu khám."
+
+        End Try
+    End Sub
 End Class

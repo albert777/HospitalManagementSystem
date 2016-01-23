@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Hospital Management System.exe.manifest" size="17242">
+    <dependentAssembly dependencyType="install" codebase="Hospital Management System.exe.manifest" size="64238">
       <assemblyIdentity name="Hospital Management System.exe" version="1.0.0.14" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>QVhG3zZm1x970qhIlIQjzkJqgyFDyazVmwr5f8WVGp8=</dsig:DigestValue>
+        <dsig:DigestValue>1CrWnyqB0aYCvbbmluJ5bhjF9pu1lxVx5eSD9uB1cIc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

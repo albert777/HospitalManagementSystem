@@ -25,6 +25,8 @@ Public Class frmStaffManager
         _specialityBus = New BusiSpeciality
 
         _selectedRow = -1
+
+
     End Sub
 
 #Region "Windows Events"
@@ -43,8 +45,8 @@ Public Class frmStaffManager
         btnDeleteEmpl.Enabled = False
         btnUpdateEmpl.Enabled = False
 
-        cboxSearchDepartments.SelectedIndex = -1
-        cboxSearchSpecialities.SelectedIndex = -1
+        'cboxSearchDepartments.SelectedIndex = -1
+        'cboxSearchSpecialities.SelectedIndex = -1
 
 
     End Sub
@@ -69,7 +71,7 @@ Public Class frmStaffManager
             dgrEmplResult.Rows(_selectedRow).Cells(0).Selected = True
 
         Catch ex As Exception
-            My.Forms.frmMain.txtStatus.Text = "Lỗi: Không thể lấy danh sách nhân viên."
+            'My.Forms.frmMain.txtStatus.Text = "Lỗi: Không thể lấy danh sách nhân viên."
         End Try
 
     End Sub
@@ -81,29 +83,29 @@ Public Class frmStaffManager
             dgrEmplResult.Rows(_selectedRow).Cells(0).Selected = True
 
         Catch ex As Exception
-            My.Forms.frmMain.txtStatus.Text = "Lỗi: Không thể lấy danh sách nhân viên."
+            'My.Forms.frmMain.txtStatus.Text = "Lỗi: Không thể lấy danh sách nhân viên."
         End Try
 
     End Sub
 
     Private Sub LoadDepartmentsList()
         cboxEmployeeDepartment.DataSource = _departmentBus.LoadDepartmentsList()
-        cboxSearchDepartments.DataSource = _departmentBus.LoadDepartmentsList
+        'cboxSearchDepartments.DataSource = _departmentBus.LoadDepartmentsList
     End Sub
 
     Private Sub LoadSpecialitiesList()
         cboxEmployeeSpeciality.DataSource = _specialityBus.LoadSpecialitiesList()
-        cboxSearchSpecialities.DataSource = _specialityBus.LoadSpecialitiesList
+        'cboxSearchSpecialities.DataSource = _specialityBus.LoadSpecialitiesList
     End Sub
 
     Private Sub cmdReSearch_Click(sender As Object, e As EventArgs) Handles btnReSearch.Click
         txtSearch_Empl_ID.Clear()
-        txtSearch_Empl_IDCard.Clear()
-        txtSearch_Empl_Name.Clear()
-        txtSearch_Empl_Phone.Clear()
+        'txtSearch_Empl_IDCard.Clear()
+        'txtSearch_Empl_Name.Clear()
+        'txtSearch_Empl_Phone.Clear()
         txtSearch_Empl_ID.Focus()
-        cboxSearchDepartments.SelectedIndex = -1
-        cboxSearchSpecialities.SelectedIndex = -1
+        'cboxSearchDepartments.SelectedIndex = -1
+        'cboxSearchSpecialities.SelectedIndex = -1
 
         LoadEmployeesList()
 
@@ -221,12 +223,13 @@ Public Class frmStaffManager
 
     End Sub
 
-    Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
+    Private Sub btnReset_Click(sender As Object, e As EventArgs)
+
         ReNew()
 
     End Sub
 
-    Private Sub cmdClose_Click(sender As Object, e As EventArgs) Handles cmdClose.Click
+    Private Sub cmdClose_Click(sender As Object, e As EventArgs)
         Me.Hide()
     End Sub
 #End Region
@@ -436,6 +439,16 @@ Public Class frmStaffManager
             LoadEmployeesList()
         End If
 
+    End Sub
+
+    Private Sub bbiReLoad_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles bbiReLoad.ItemClick
+        txtSearch_Empl_ID.Clear()
+        txtSearch_Empl_ID.Focus()
+        ReNew()
+    End Sub
+
+    Private Sub bbiClose_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles bbiClose.ItemClick
+        Me.Hide()
     End Sub
 
 #End Region

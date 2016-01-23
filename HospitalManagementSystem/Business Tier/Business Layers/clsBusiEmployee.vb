@@ -93,6 +93,10 @@ Namespace BUS
             Return empl
         End Function
 
+        Friend Function ExistEmployee(Id As Integer) As Boolean
+            Return _emplData.ExistEmployee(Id)
+        End Function
+
         Friend Sub AddEmployee(Employee As Employee)
             If MessageBox.Show("Bạn có muốn thêm nhân viên?", "Thêm nhân viên", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                 If _emplData.AddEmployee(Employee) Then

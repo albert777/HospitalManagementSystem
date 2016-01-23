@@ -58,7 +58,7 @@ Public Class frmCategoryManager
 
     End Sub
 
-    Private Sub cmdClose_Click(sender As Object, e As EventArgs) Handles cmdClose.Click
+    Private Sub cmdClose_Click(sender As Object, e As EventArgs)
         Me.Hide()
     End Sub
 
@@ -313,6 +313,19 @@ Public Class frmCategoryManager
 
     Private Sub btnBed_Reset_Click(sender As Object, e As EventArgs) Handles btnBed_Reset.Click
         LoadBedsList()
+    End Sub
+
+    Private Sub bbiReLoad_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles bbiReLoad.ItemClick
+        LoadSpecialitiesList()
+        LoadDepartmentsList()
+        LoadClinicsList()
+        LoadBedsList()
+
+        LoadChiefsComboBox()
+    End Sub
+
+    Private Sub BarButtonItem3_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem3.ItemClick
+        Me.Hide()
     End Sub
 
 

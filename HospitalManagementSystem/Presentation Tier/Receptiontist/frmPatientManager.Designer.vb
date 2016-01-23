@@ -34,17 +34,11 @@ Partial Class frmPatientManager
         Me.txtPatientAddress = New System.Windows.Forms.TextBox()
         Me.label11 = New System.Windows.Forms.Label()
         Me.txtPatientFolk = New System.Windows.Forms.TextBox()
-        Me.txtSearch_IdCard = New System.Windows.Forms.MaskedTextBox()
-        Me.Label33 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.groupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txtSearchInsuranceId = New System.Windows.Forms.TextBox()
-        Me.txtSearch_Phone = New System.Windows.Forms.MaskedTextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtSearch_Name = New System.Windows.Forms.TextBox()
         Me.txtSearch_Id = New System.Windows.Forms.TextBox()
-        Me.label2 = New System.Windows.Forms.Label()
         Me.label1 = New System.Windows.Forms.Label()
+        Me.btnReSearch = New System.Windows.Forms.Button()
+        Me.btnSearch = New System.Windows.Forms.Button()
         Me.txtPatientIdCard = New System.Windows.Forms.MaskedTextBox()
         Me.dtpPatientDoB = New System.Windows.Forms.DateTimePicker()
         Me.label10 = New System.Windows.Forms.Label()
@@ -72,7 +66,6 @@ Partial Class frmPatientManager
         Me.lblInsExpDate = New System.Windows.Forms.Label()
         Me.txtPatientStatus = New System.Windows.Forms.TextBox()
         Me.txtEmployee = New System.Windows.Forms.Label()
-        Me.lblTitle = New System.Windows.Forms.Label()
         Me.label12 = New System.Windows.Forms.Label()
         Me.label9 = New System.Windows.Forms.Label()
         Me.dgvPatients = New System.Windows.Forms.DataGridView()
@@ -101,17 +94,19 @@ Partial Class frmPatientManager
         Me.btnDischarge = New System.Windows.Forms.Button()
         Me.btnAdmission = New System.Windows.Forms.Button()
         Me.btnNewAppointment = New System.Windows.Forms.Button()
-        Me.btnReset = New System.Windows.Forms.Button()
         Me.btnUpdatePatient = New System.Windows.Forms.Button()
-        Me.cmdClose = New System.Windows.Forms.Button()
         Me.btnAddPatient = New System.Windows.Forms.Button()
         Me.btnDeletePatient = New System.Windows.Forms.Button()
-        Me.btnReSearch = New System.Windows.Forms.Button()
-        Me.btnSearch = New System.Windows.Forms.Button()
+        Me.RibbonControl1 = New DevExpress.XtraBars.Ribbon.RibbonControl()
+        Me.bbiReLoad = New DevExpress.XtraBars.BarButtonItem()
+        Me.bbiClose = New DevExpress.XtraBars.BarButtonItem()
+        Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
+        Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.groupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.dgvPatients, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.groupBox2.SuspendLayout()
+        CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label28
@@ -225,96 +220,19 @@ Partial Class frmPatientManager
         Me.txtPatientFolk.Size = New System.Drawing.Size(100, 22)
         Me.txtPatientFolk.TabIndex = 17
         '
-        'txtSearch_IdCard
-        '
-        Me.txtSearch_IdCard.Enabled = False
-        Me.txtSearch_IdCard.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearch_IdCard.Location = New System.Drawing.Point(110, 51)
-        Me.txtSearch_IdCard.Mask = "000000000"
-        Me.txtSearch_IdCard.Name = "txtSearch_IdCard"
-        Me.txtSearch_IdCard.Size = New System.Drawing.Size(103, 22)
-        Me.txtSearch_IdCard.TabIndex = 5
-        '
-        'Label33
-        '
-        Me.Label33.AutoSize = True
-        Me.Label33.Enabled = False
-        Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label33.Location = New System.Drawing.Point(17, 54)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(48, 16)
-        Me.Label33.TabIndex = 4
-        Me.Label33.Text = "CMND"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Enabled = False
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(245, 54)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(67, 16)
-        Me.Label5.TabIndex = 6
-        Me.Label5.Text = "Điện thoại"
-        '
         'groupBox1
         '
-        Me.groupBox1.Controls.Add(Me.txtSearchInsuranceId)
-        Me.groupBox1.Controls.Add(Me.txtSearch_Phone)
-        Me.groupBox1.Controls.Add(Me.Label4)
-        Me.groupBox1.Controls.Add(Me.txtSearch_IdCard)
-        Me.groupBox1.Controls.Add(Me.Label33)
-        Me.groupBox1.Controls.Add(Me.Label5)
-        Me.groupBox1.Controls.Add(Me.txtSearch_Name)
         Me.groupBox1.Controls.Add(Me.txtSearch_Id)
-        Me.groupBox1.Controls.Add(Me.label2)
         Me.groupBox1.Controls.Add(Me.label1)
+        Me.groupBox1.Controls.Add(Me.btnReSearch)
+        Me.groupBox1.Controls.Add(Me.btnSearch)
         Me.groupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.groupBox1.Location = New System.Drawing.Point(12, 41)
+        Me.groupBox1.Location = New System.Drawing.Point(12, 12)
         Me.groupBox1.Name = "groupBox1"
-        Me.groupBox1.Size = New System.Drawing.Size(628, 82)
+        Me.groupBox1.Size = New System.Drawing.Size(446, 58)
         Me.groupBox1.TabIndex = 1
         Me.groupBox1.TabStop = False
         Me.groupBox1.Text = "Tiêu chí tìm kiếm"
-        '
-        'txtSearchInsuranceId
-        '
-        Me.txtSearchInsuranceId.Enabled = False
-        Me.txtSearchInsuranceId.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearchInsuranceId.Location = New System.Drawing.Point(520, 50)
-        Me.txtSearchInsuranceId.Name = "txtSearchInsuranceId"
-        Me.txtSearchInsuranceId.Size = New System.Drawing.Size(96, 22)
-        Me.txtSearchInsuranceId.TabIndex = 9
-        '
-        'txtSearch_Phone
-        '
-        Me.txtSearch_Phone.Enabled = False
-        Me.txtSearch_Phone.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearch_Phone.Location = New System.Drawing.Point(319, 50)
-        Me.txtSearch_Phone.Mask = "00000000000"
-        Me.txtSearch_Phone.Name = "txtSearch_Phone"
-        Me.txtSearch_Phone.Size = New System.Drawing.Size(88, 22)
-        Me.txtSearch_Phone.TabIndex = 7
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Enabled = False
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(432, 53)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(85, 16)
-        Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Số Bảo hiểm"
-        '
-        'txtSearch_Name
-        '
-        Me.txtSearch_Name.Enabled = False
-        Me.txtSearch_Name.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearch_Name.Location = New System.Drawing.Point(319, 24)
-        Me.txtSearch_Name.Name = "txtSearch_Name"
-        Me.txtSearch_Name.Size = New System.Drawing.Size(297, 22)
-        Me.txtSearch_Name.TabIndex = 3
         '
         'txtSearch_Id
         '
@@ -323,17 +241,6 @@ Partial Class frmPatientManager
         Me.txtSearch_Id.Name = "txtSearch_Id"
         Me.txtSearch_Id.Size = New System.Drawing.Size(103, 22)
         Me.txtSearch_Id.TabIndex = 1
-        '
-        'label2
-        '
-        Me.label2.AutoSize = True
-        Me.label2.Enabled = False
-        Me.label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label2.Location = New System.Drawing.Point(245, 28)
-        Me.label2.Name = "label2"
-        Me.label2.Size = New System.Drawing.Size(50, 16)
-        Me.label2.TabIndex = 2
-        Me.label2.Text = "Họ tên "
         '
         'label1
         '
@@ -344,6 +251,28 @@ Partial Class frmPatientManager
         Me.label1.Size = New System.Drawing.Size(92, 16)
         Me.label1.TabIndex = 0
         Me.label1.Text = "Mã bệnh nhân"
+        '
+        'btnReSearch
+        '
+        Me.btnReSearch.BackgroundImage = CType(resources.GetObject("btnReSearch.BackgroundImage"), System.Drawing.Image)
+        Me.btnReSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnReSearch.Location = New System.Drawing.Point(219, 25)
+        Me.btnReSearch.Name = "btnReSearch"
+        Me.btnReSearch.Size = New System.Drawing.Size(98, 23)
+        Me.btnReSearch.TabIndex = 2
+        Me.btnReSearch.Text = "&Làm lại"
+        Me.btnReSearch.UseVisualStyleBackColor = True
+        '
+        'btnSearch
+        '
+        Me.btnSearch.BackgroundImage = CType(resources.GetObject("btnSearch.BackgroundImage"), System.Drawing.Image)
+        Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnSearch.Location = New System.Drawing.Point(323, 25)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(98, 23)
+        Me.btnSearch.TabIndex = 3
+        Me.btnSearch.Text = "&Tìm kiếm"
+        Me.btnSearch.UseVisualStyleBackColor = True
         '
         'txtPatientIdCard
         '
@@ -443,7 +372,7 @@ Partial Class frmPatientManager
         Me.GroupBox3.Controls.Add(Me.txtPatientStatus)
         Me.GroupBox3.Controls.Add(Me.txtEmployee)
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 456)
+        Me.GroupBox3.Location = New System.Drawing.Point(12, 403)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(844, 114)
         Me.GroupBox3.TabIndex = 15
@@ -626,18 +555,6 @@ Partial Class frmPatientManager
         Me.txtEmployee.TabIndex = 8
         Me.txtEmployee.Text = "Tình trạng"
         '
-        'lblTitle
-        '
-        Me.lblTitle.AutoSize = True
-        Me.lblTitle.BackColor = System.Drawing.Color.Transparent
-        Me.lblTitle.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitle.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.lblTitle.Location = New System.Drawing.Point(339, 9)
-        Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(292, 29)
-        Me.lblTitle.TabIndex = 0
-        Me.lblTitle.Text = "DANH MỤC BỆNH NHÂN"
-        '
         'label12
         '
         Me.label12.AutoSize = True
@@ -668,7 +585,7 @@ Partial Class frmPatientManager
         Me.dgvPatients.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders
         Me.dgvPatients.BackgroundColor = System.Drawing.SystemColors.Window
         Me.dgvPatients.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colPatientId, Me.colPatientName, Me.colPatientType, Me.colPatientStatus, Me.colPatientInsuranceId, Me.colPatientInsuranceIssueDate, Me.colPatientInsuranceExpiryDate, Me.colchkboxPatientSex, Me.colPatientIdCard, Me.colPatientDoB, Me.colPatientAddress, Me.colPatientPhone, Me.colPatientFolk, Me.colPatientBedId, Me.colPatientRoomId})
-        Me.dgvPatients.Location = New System.Drawing.Point(12, 129)
+        Me.dgvPatients.Location = New System.Drawing.Point(12, 76)
         Me.dgvPatients.MultiSelect = False
         Me.dgvPatients.Name = "dgvPatients"
         Me.dgvPatients.ReadOnly = True
@@ -830,7 +747,7 @@ Partial Class frmPatientManager
         Me.groupBox2.Controls.Add(Me.label12)
         Me.groupBox2.Controls.Add(Me.label9)
         Me.groupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.groupBox2.Location = New System.Drawing.Point(12, 332)
+        Me.groupBox2.Location = New System.Drawing.Point(12, 279)
         Me.groupBox2.Name = "groupBox2"
         Me.groupBox2.Size = New System.Drawing.Size(844, 118)
         Me.groupBox2.TabIndex = 14
@@ -841,7 +758,7 @@ Partial Class frmPatientManager
         '
         Me.btnPrintPatient.BackgroundImage = CType(resources.GetObject("btnPrintPatient.BackgroundImage"), System.Drawing.Image)
         Me.btnPrintPatient.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnPrintPatient.Location = New System.Drawing.Point(862, 456)
+        Me.btnPrintPatient.Location = New System.Drawing.Point(860, 373)
         Me.btnPrintPatient.Name = "btnPrintPatient"
         Me.btnPrintPatient.Size = New System.Drawing.Size(98, 23)
         Me.btnPrintPatient.TabIndex = 20
@@ -855,7 +772,7 @@ Partial Class frmPatientManager
         Me.btnViewAppointmentsList.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnViewAppointmentsList.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnViewAppointmentsList.ForeColor = System.Drawing.Color.DarkBlue
-        Me.btnViewAppointmentsList.Location = New System.Drawing.Point(737, 301)
+        Me.btnViewAppointmentsList.Location = New System.Drawing.Point(737, 248)
         Me.btnViewAppointmentsList.Name = "btnViewAppointmentsList"
         Me.btnViewAppointmentsList.Size = New System.Drawing.Size(119, 25)
         Me.btnViewAppointmentsList.TabIndex = 12
@@ -869,7 +786,7 @@ Partial Class frmPatientManager
         Me.btnPatientRelatives.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnPatientRelatives.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPatientRelatives.ForeColor = System.Drawing.Color.DarkBlue
-        Me.btnPatientRelatives.Location = New System.Drawing.Point(529, 301)
+        Me.btnPatientRelatives.Location = New System.Drawing.Point(529, 248)
         Me.btnPatientRelatives.Name = "btnPatientRelatives"
         Me.btnPatientRelatives.Size = New System.Drawing.Size(98, 25)
         Me.btnPatientRelatives.TabIndex = 10
@@ -884,7 +801,7 @@ Partial Class frmPatientManager
         Me.btnPatientRecords.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnPatientRecords.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPatientRecords.ForeColor = System.Drawing.Color.DarkBlue
-        Me.btnPatientRecords.Location = New System.Drawing.Point(633, 301)
+        Me.btnPatientRecords.Location = New System.Drawing.Point(633, 248)
         Me.btnPatientRecords.Name = "btnPatientRecords"
         Me.btnPatientRecords.Size = New System.Drawing.Size(98, 25)
         Me.btnPatientRecords.TabIndex = 11
@@ -899,7 +816,7 @@ Partial Class frmPatientManager
         Me.btnSupplyMedication.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnSupplyMedication.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSupplyMedication.ForeColor = System.Drawing.Color.DarkBlue
-        Me.btnSupplyMedication.Location = New System.Drawing.Point(311, 301)
+        Me.btnSupplyMedication.Location = New System.Drawing.Point(311, 248)
         Me.btnSupplyMedication.Name = "btnSupplyMedication"
         Me.btnSupplyMedication.Size = New System.Drawing.Size(98, 25)
         Me.btnSupplyMedication.TabIndex = 8
@@ -914,7 +831,7 @@ Partial Class frmPatientManager
         Me.btnPaidPayment.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnPaidPayment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPaidPayment.ForeColor = System.Drawing.Color.DarkBlue
-        Me.btnPaidPayment.Location = New System.Drawing.Point(415, 301)
+        Me.btnPaidPayment.Location = New System.Drawing.Point(415, 248)
         Me.btnPaidPayment.Name = "btnPaidPayment"
         Me.btnPaidPayment.Size = New System.Drawing.Size(98, 25)
         Me.btnPaidPayment.TabIndex = 9
@@ -929,7 +846,7 @@ Partial Class frmPatientManager
         Me.btnDischarge.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnDischarge.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDischarge.ForeColor = System.Drawing.Color.DarkBlue
-        Me.btnDischarge.Location = New System.Drawing.Point(219, 301)
+        Me.btnDischarge.Location = New System.Drawing.Point(219, 248)
         Me.btnDischarge.Name = "btnDischarge"
         Me.btnDischarge.Size = New System.Drawing.Size(86, 25)
         Me.btnDischarge.TabIndex = 7
@@ -943,7 +860,7 @@ Partial Class frmPatientManager
         Me.btnAdmission.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnAdmission.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAdmission.ForeColor = System.Drawing.Color.DarkBlue
-        Me.btnAdmission.Location = New System.Drawing.Point(127, 301)
+        Me.btnAdmission.Location = New System.Drawing.Point(127, 248)
         Me.btnAdmission.Name = "btnAdmission"
         Me.btnAdmission.Size = New System.Drawing.Size(86, 25)
         Me.btnAdmission.TabIndex = 6
@@ -957,55 +874,29 @@ Partial Class frmPatientManager
         Me.btnNewAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnNewAppointment.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNewAppointment.ForeColor = System.Drawing.Color.DarkBlue
-        Me.btnNewAppointment.Location = New System.Drawing.Point(12, 301)
+        Me.btnNewAppointment.Location = New System.Drawing.Point(12, 248)
         Me.btnNewAppointment.Name = "btnNewAppointment"
         Me.btnNewAppointment.Size = New System.Drawing.Size(109, 25)
         Me.btnNewAppointment.TabIndex = 5
         Me.btnNewAppointment.Text = "&Đăng ký Khám"
         Me.btnNewAppointment.UseVisualStyleBackColor = True
         '
-        'btnReset
-        '
-        Me.btnReset.BackgroundImage = CType(resources.GetObject("btnReset.BackgroundImage"), System.Drawing.Image)
-        Me.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnReset.Location = New System.Drawing.Point(862, 427)
-        Me.btnReset.Name = "btnReset"
-        Me.btnReset.Size = New System.Drawing.Size(98, 23)
-        Me.btnReset.TabIndex = 19
-        Me.btnReset.Text = "Làm &mới"
-        Me.btnReset.UseVisualStyleBackColor = True
-        '
         'btnUpdatePatient
         '
         Me.btnUpdatePatient.BackgroundImage = CType(resources.GetObject("btnUpdatePatient.BackgroundImage"), System.Drawing.Image)
         Me.btnUpdatePatient.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnUpdatePatient.Location = New System.Drawing.Point(862, 398)
+        Me.btnUpdatePatient.Location = New System.Drawing.Point(862, 344)
         Me.btnUpdatePatient.Name = "btnUpdatePatient"
         Me.btnUpdatePatient.Size = New System.Drawing.Size(98, 23)
         Me.btnUpdatePatient.TabIndex = 18
         Me.btnUpdatePatient.Text = "&Sửa"
         Me.btnUpdatePatient.UseVisualStyleBackColor = True
         '
-        'cmdClose
-        '
-        Me.cmdClose.BackgroundImage = CType(resources.GetObject("cmdClose.BackgroundImage"), System.Drawing.Image)
-        Me.cmdClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.cmdClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cmdClose.ForeColor = System.Drawing.Color.DarkRed
-        Me.cmdClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.cmdClose.Location = New System.Drawing.Point(862, 547)
-        Me.cmdClose.Name = "cmdClose"
-        Me.cmdClose.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.cmdClose.Size = New System.Drawing.Size(98, 23)
-        Me.cmdClose.TabIndex = 0
-        Me.cmdClose.Text = "&Đóng"
-        Me.cmdClose.UseVisualStyleBackColor = True
-        '
         'btnAddPatient
         '
         Me.btnAddPatient.BackgroundImage = CType(resources.GetObject("btnAddPatient.BackgroundImage"), System.Drawing.Image)
         Me.btnAddPatient.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnAddPatient.Location = New System.Drawing.Point(862, 340)
+        Me.btnAddPatient.Location = New System.Drawing.Point(862, 286)
         Me.btnAddPatient.Name = "btnAddPatient"
         Me.btnAddPatient.Size = New System.Drawing.Size(98, 23)
         Me.btnAddPatient.TabIndex = 16
@@ -1016,40 +907,57 @@ Partial Class frmPatientManager
         '
         Me.btnDeletePatient.BackgroundImage = CType(resources.GetObject("btnDeletePatient.BackgroundImage"), System.Drawing.Image)
         Me.btnDeletePatient.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnDeletePatient.Location = New System.Drawing.Point(862, 369)
+        Me.btnDeletePatient.Location = New System.Drawing.Point(862, 315)
         Me.btnDeletePatient.Name = "btnDeletePatient"
         Me.btnDeletePatient.Size = New System.Drawing.Size(98, 23)
         Me.btnDeletePatient.TabIndex = 17
         Me.btnDeletePatient.Text = "&Xóa"
         Me.btnDeletePatient.UseVisualStyleBackColor = True
         '
-        'btnReSearch
+        'RibbonControl1
         '
-        Me.btnReSearch.BackgroundImage = CType(resources.GetObject("btnReSearch.BackgroundImage"), System.Drawing.Image)
-        Me.btnReSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnReSearch.Location = New System.Drawing.Point(654, 65)
-        Me.btnReSearch.Name = "btnReSearch"
-        Me.btnReSearch.Size = New System.Drawing.Size(98, 23)
-        Me.btnReSearch.TabIndex = 2
-        Me.btnReSearch.Text = "&Làm lại"
-        Me.btnReSearch.UseVisualStyleBackColor = True
+        Me.RibbonControl1.ExpandCollapseItem.Id = 0
+        Me.RibbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl1.ExpandCollapseItem, Me.bbiReLoad, Me.bbiClose})
+        Me.RibbonControl1.Location = New System.Drawing.Point(0, 0)
+        Me.RibbonControl1.MaxItemId = 3
+        Me.RibbonControl1.Name = "RibbonControl1"
+        Me.RibbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1})
+        Me.RibbonControl1.Size = New System.Drawing.Size(970, 141)
         '
-        'btnSearch
+        'bbiReLoad
         '
-        Me.btnSearch.BackgroundImage = CType(resources.GetObject("btnSearch.BackgroundImage"), System.Drawing.Image)
-        Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnSearch.Location = New System.Drawing.Point(654, 92)
-        Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(98, 23)
-        Me.btnSearch.TabIndex = 3
-        Me.btnSearch.Text = "&Tìm kiếm"
-        Me.btnSearch.UseVisualStyleBackColor = True
+        Me.bbiReLoad.Caption = "Làm mới"
+        Me.bbiReLoad.Id = 1
+        Me.bbiReLoad.ImageUri.Uri = "Refresh"
+        Me.bbiReLoad.Name = "bbiReLoad"
+        '
+        'bbiClose
+        '
+        Me.bbiClose.Caption = "Đóng"
+        Me.bbiClose.Id = 2
+        Me.bbiClose.ImageUri.Uri = "Close"
+        Me.bbiClose.Name = "bbiClose"
+        '
+        'RibbonPage1
+        '
+        Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1})
+        Me.RibbonPage1.Name = "RibbonPage1"
+        Me.RibbonPage1.Text = "Hệ thống"
+        '
+        'RibbonPageGroup1
+        '
+        Me.RibbonPageGroup1.AllowTextClipping = False
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.bbiReLoad)
+        Me.RibbonPageGroup1.ItemLinks.Add(Me.bbiClose)
+        Me.RibbonPageGroup1.Name = "RibbonPageGroup1"
+        Me.RibbonPageGroup1.Text = "Danh mục bệnh nhân"
         '
         'frmPatientManager
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(970, 587)
+        Me.ClientSize = New System.Drawing.Size(970, 537)
+        Me.Controls.Add(Me.RibbonControl1)
         Me.Controls.Add(Me.btnPrintPatient)
         Me.Controls.Add(Me.btnViewAppointmentsList)
         Me.Controls.Add(Me.dgvPatients)
@@ -1060,21 +968,17 @@ Partial Class frmPatientManager
         Me.Controls.Add(Me.btnDischarge)
         Me.Controls.Add(Me.btnAdmission)
         Me.Controls.Add(Me.btnNewAppointment)
-        Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.groupBox1)
         Me.Controls.Add(Me.GroupBox3)
-        Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.btnUpdatePatient)
-        Me.Controls.Add(Me.cmdClose)
         Me.Controls.Add(Me.btnAddPatient)
         Me.Controls.Add(Me.btnDeletePatient)
-        Me.Controls.Add(Me.btnReSearch)
-        Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.groupBox2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmPatientManager"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Danh mục Bệnh nhân"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.groupBox1.ResumeLayout(False)
         Me.groupBox1.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
@@ -1082,6 +986,7 @@ Partial Class frmPatientManager
         CType(Me.dgvPatients, System.ComponentModel.ISupportInitialize).EndInit()
         Me.groupBox2.ResumeLayout(False)
         Me.groupBox2.PerformLayout()
+        CType(Me.RibbonControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1097,13 +1002,8 @@ Partial Class frmPatientManager
     Private WithEvents txtPatientAddress As TextBox
     Private WithEvents label11 As Label
     Private WithEvents txtPatientFolk As TextBox
-    Private WithEvents txtSearch_IdCard As MaskedTextBox
-    Private WithEvents Label33 As Label
-    Private WithEvents Label5 As Label
     Private WithEvents groupBox1 As GroupBox
-    Private WithEvents txtSearch_Name As TextBox
     Private WithEvents txtSearch_Id As TextBox
-    Private WithEvents label2 As Label
     Private WithEvents label1 As Label
     Private WithEvents txtPatientIdCard As MaskedTextBox
     Private WithEvents dtpPatientDoB As DateTimePicker
@@ -1117,20 +1017,15 @@ Partial Class frmPatientManager
     Private WithEvents lblInsExpDate As Label
     Private WithEvents txtPatientStatus As TextBox
     Private WithEvents txtEmployee As Label
-    Private WithEvents btnReset As Button
     Private WithEvents btnUpdatePatient As Button
-    Private WithEvents cmdClose As Button
     Private WithEvents btnAddPatient As Button
     Private WithEvents btnDeletePatient As Button
     Private WithEvents btnReSearch As Button
     Private WithEvents btnSearch As Button
-    Private WithEvents lblTitle As Label
     Private WithEvents label12 As Label
     Private WithEvents label9 As Label
     Private WithEvents dgvPatients As DataGridView
     Private WithEvents groupBox2 As GroupBox
-    Private WithEvents txtSearch_Phone As MaskedTextBox
-    Private WithEvents Label4 As Label
     Friend WithEvents cboxPatientType As ComboBox
     Private WithEvents Label14 As Label
     Private WithEvents Label13 As Label
@@ -1148,7 +1043,6 @@ Partial Class frmPatientManager
     Private WithEvents txtPatientBedId As TextBox
     Private WithEvents lblBedId As Label
     Private WithEvents btnPatientRelatives As Button
-    Private WithEvents txtSearchInsuranceId As TextBox
     Private WithEvents txtPatientInsuranceId As TextBox
     Private WithEvents txtPatientDischargeTime As TextBox
     Private WithEvents txtPatientAdmissionTime As TextBox
@@ -1171,4 +1065,9 @@ Partial Class frmPatientManager
     Friend WithEvents colPatientFolk As DataGridViewTextBoxColumn
     Friend WithEvents colPatientBedId As DataGridViewTextBoxColumn
     Friend WithEvents colPatientRoomId As DataGridViewTextBoxColumn
+    Friend WithEvents RibbonControl1 As DevExpress.XtraBars.Ribbon.RibbonControl
+    Friend WithEvents bbiReLoad As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents bbiClose As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents RibbonPage1 As DevExpress.XtraBars.Ribbon.RibbonPage
+    Friend WithEvents RibbonPageGroup1 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
 End Class

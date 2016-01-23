@@ -1,5 +1,6 @@
 ﻿Imports HospitalManagementSystem.BUS
 Imports HospitalManagementSystem.DTO
+Imports Microsoft.Office.Interop
 
 Public Class frmAdmission
     Private _employee As Employee
@@ -136,4 +137,53 @@ Public Class frmAdmission
             txtPatientInsuranceExpiryDate.Enabled = True
         End If
     End Sub
+
+    Private Sub btnPrintAdmission_Click(sender As Object, e As EventArgs) Handles btnPrintAdmission.Click
+        CreateWord()
+    End Sub
+
+    Private Sub CreateWord()
+        Dim objApp As New Word.Application
+        Dim objDocumet As New Word.Document
+
+        objApp.Visible = True
+        objApp.Activate()
+        objDocumet = objApp.Documents.Add
+        Dim objselection As Word.Selection
+        objselection = objDocumet.Application.Selection
+        objselection.TypeParagraph()
+        objselection.Font.Color = Word.WdColor.wdColorRed
+        objselection.Font.Size = 18
+        objselection.Font.Bold = 1
+
+        objselection.ParagraphFormat.Alignment = Word.WdParagraphAlignment.wdAlignParagraphCenter
+
+        objselection.TypeText("PHIẾU NHẬP VIỆN" & vbCrLf)
+        objselection.TypeParagraph()
+
+        objselection.Font.Color = Word.WdColor.wdColorBlack
+        objselection.Font.Size = 13
+        objselection.Font.Bold = 0
+
+        objselection.ParagraphFormat.Alignment = Word.WdParagraphAlignment.wdAlignParagraphLeft
+
+        objselection.TypeText("Số phiếu: " & txtAdmissionId.Text & vbCrLf)
+        objselection.TypeText("Người lập phiếu: " & txtEmployeeName.Text & vbCrLf)
+        objselection.TypeText("Thời gian lập: " & txtAdmissionTime.Text & vbCrLf)
+
+        objselection.TypeParagraph()
+
+        objselection.TypeText("Mã bệnh nhân: " & txtPatientId.Text & vbCrLf)
+        objselection.TypeText("Tên bệnh nhân: " & txtPatientName.Text & vbCrLf)
+        objselection.TypeText("Ngày sinh: " & txtPatientDoB.Text & vbCrLf)
+
+        objselection.TypeText("Số bảo hiểm: " & txtPatientInsuranceId.Text & vbCrLf)
+        objselection.TypeText("Ngày cấp: " & txtPatientInsuranceIssueDate.Text & vbCrLf)
+        objselection.TypeText("Ngày hết hạn: " & txtPatientInsuranceExpiryDate.Text & vbCrLf)
+
+        objDocumet.SaveAs(Application.StartupPath & "\Admission.doc")
+    End Sub
+
+
+
 End Class
