@@ -830,7 +830,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>l/Vr/GOjxUuQqX4TE8czVwwx2JkF5ZrHEK4DoRluh1c=</dsig:DigestValue>
+        <dsig:DigestValue>BbQTLNkJtcj3+iE3q3zD/DCLJM99fULn7g4GfKH9QP0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1020,7 +1020,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>lWsMxLscjHAaN/W37+RTL4aCjCcj6bL96ZbfQno4gyY=</dsig:DigestValue>
+      <dsig:DigestValue>/rV12K3Q70lTRyNIC/znuuadNSjjxQAn1c16vcwOGJA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Database\dbHospital_log.ldf" size="1048576" writeableType="applicationData">
@@ -1029,7 +1029,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Z+TGx88ig+OJfeddCG+m5YIxse6gJsoMsWMGI6zK4v8=</dsig:DigestValue>
+      <dsig:DigestValue>mn/778qw5lwBOTBx+k7iKLMme2qz919jZuX/a36f4R4=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Hospital Management System.exe.config" size="539">

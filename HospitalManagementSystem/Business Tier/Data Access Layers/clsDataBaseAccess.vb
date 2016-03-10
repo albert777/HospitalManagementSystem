@@ -20,8 +20,8 @@ Namespace DAO
         ' used to reconcile changes made to a 
         Protected SqlComb As SqlCommandBuilder
 
-        Private ConnectionString As String = '"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=.\Database\dbHospital.mdf;Integrated Security=True" ';Database=dbHospital"
-        "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Hospital\Database\dbHospital.mdf;Integrated Security=True"
+        Private ConnectionString As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Limited\Documents\Visual Studio 2015\Projects\HospitalManagementSystem\HospitalManagementSystem\Database\dbHospital.mdf;Integrated Security=True;Connect Timeout=30" ';Database=dbHospital"
+        '"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Hospital\Database\dbHospital.mdf;Integrated Security=True"
 
         'Purpose: Class constructor.
         Public Sub New()
